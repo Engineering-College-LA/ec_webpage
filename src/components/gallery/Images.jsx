@@ -45,11 +45,11 @@ const Images = () => {
         ></div>
         {/* Left Arrow */}
         <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-3 bg-black/20 text-white cursor-pointer">
-          <ChevronLeft size={32} color="#F6C90E" onClick={prevSlide} />
+          <ChevronLeft size={32} className="text-n-blue" onClick={prevSlide} />
         </div>
         {/* Right Arrow */}
         <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-3 bg-black/20 text-white cursor-pointer">
-          <ChevronRight size={32} color="#F6C90E" onClick={nextSlide} />
+          <ChevronRight size={32} className="text-n-blue" onClick={nextSlide} />
         </div>
         <div className="flex top-4 justify-center py-2">
           {slides.map((slide, slideIndex) => (
@@ -59,7 +59,7 @@ const Images = () => {
               className="text-2xl cursor-pointer"
             >
               {slideIndex === currentIndex ? (
-                <Dot size={48} color="#F6C90E" className="-mx-1" />
+                <Dot size={48} className="-mx-1 text-n-blue" />
               ) : (
                 <Dot size={48} className="-mx-1" />
               )}

@@ -7,26 +7,32 @@ function Hero() {
   return (
     <div className="page h-screen max-h-[1200px] bg-slate-800 bg-hero-gradient bg-no-repeat bg-cover bg-bottom w-full flex items-center justify-center px-6">
       <div className="text-center text-white">
-        <div className="max-w-[800px]">
-          <h1 className="text-3xl md:text-5xl font-bold max-w-[740px]">
-            <span className="block ">{t("home.heroSection.welcome")}</span>
-            {t("home.heroSection.title")}
+        <div className="mx-auto text-center">
+          <h1 className="font-bold">
+            <span className="text-3xl md:text-5xl block">
+              {t("home.heroSection.welcome")}
+            </span>
+            <span className="text-5xl md:text-7xl">
+              {t("home.heroSection.title")}
+            </span>
           </h1>
-          <p className="my-6 text-base">{t("home.heroSection.description")}</p>
+          <p className="max-w-[760px] mx-auto my-6 text-base">
+            {t("home.heroSection.description")}
+          </p>
           <div className="flex justify-center gap-4">
             <Link to="/academics">
-              <Button className="relative from-slate-200 bg-gradient-to-r to-slate-100">
+              <Button className="py-4 relative from-slate-200 bg-gradient-to-r to-slate-100 rounded-lg">
                 <span className="absolute inset-0 rounded-[inherit] shimmer-gradient bg-[length:250%_250%,100%_100%] bg-[position:200%_0,0_0] bg-no-repeat transition-all animate-shimmer"></span>
                 {t("home.heroSection.primaryButton")}
               </Button>
             </Link>
             <a href="#contact">
               <div className="relative">
-                <Button className="relative bg-main shadow-lg z-10">
+                <Button className="py-4 relative bg-n-bluish shadow-lg z-10 rounded-lg">
                   {t("home.heroSection.secondaryButton")}
                 </Button>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-32 h-32 rounded-full border-4 border-yellow-300 animate-pulseRing"></div>
+                  <div className="w-32 h-32 rounded-full border-4 border-n-bluish animate-pulseRing"></div>
                 </div>
               </div>
             </a>

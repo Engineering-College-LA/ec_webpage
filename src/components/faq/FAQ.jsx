@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { ChevronDown } from "lucide-react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const AccordionItem = ({ title, content }) => {
@@ -13,14 +14,15 @@ const AccordionItem = ({ title, content }) => {
       className={`accordion py-8 border-b border-solid border-slate-200 ${isOpen ? "active" : ""}`}
     >
       <button
-        className={`accordion-toggle group inline-flex items-center justify-between text-xl font-normal leading-8 text-slate-600 w-full transition duration-500 hover:text-main ${isOpen ? "accordion-active:font-medium accordion-active:text-main" : ""}`}
+        className={`accordion-toggle group inline-flex items-center justify-between text-xl font-normal leading-8 text-slate-600 w-full transition duration-500 hover:text-n-blue ${isOpen ? "accordion-active:font-medium accordion-active:text-main" : ""}`}
         onClick={toggleAccordion}
         aria-expanded={isOpen}
         aria-controls={`basic-collapse-${title}`}
       >
         <div className="w-full text-center sm:text-start">{title}</div>
-        <svg
-          className={`text-slate-900 transition duration-500 group-hover:text-main ${isOpen ? "accordion-active:rotate-180" : ""}`}
+        <ChevronDown className="text-n-blue"/>
+        {/* <svg
+          className={`text-slate-900 transition duration-500 group-hover:text-n-blue ${isOpen ? "accordion-active:rotate-180" : ""}`}
           width="22"
           height="22"
           viewBox="0 0 22 22"
@@ -34,7 +36,7 @@ const AccordionItem = ({ title, content }) => {
             strokeLinecap="round"
             strokeLinejoin="round"
           ></path>
-        </svg>
+        </svg> */}
       </button>
       <div
         id={`basic-collapse-${title}`}

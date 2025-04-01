@@ -131,7 +131,7 @@ function Academics() {
       >
         <FormTelegram />
       </BaseModal>
-      <ContactUsButton />
+      {/* <ContactUsButton /> */}
     </div>
   );
 }

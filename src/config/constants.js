@@ -6,31 +6,32 @@ export const navLinks = [
   { to: "/admissions", label: "navbar.admissions" },
 ];
 
-export const companyLinks = [
-  { to: "/about", label: "About L.A.C.E" },
+const companyLinks = [
+  { to: "/about", label: "About E|C" },
   { to: "/academics", label: "Accademics" },
   { to: "/admissions", label: "Admissions" },
 ];
 
-export const helpfulLinks = [
+const helpfulLinks = [
   { to: "/#contact", label: "Contact" },
   { to: "/#faq", label: "FAQs" },
 ];
 
-export const contactLinks = [
+const contactLinks = [
   {
     href: "tel:+996501990550",
     label: "+996 501 99 05 50",
     labelStart: "Phone",
   },
   {
-    href: "mailto:lightacademycollege@gmail.com",
-    label: "lightacademycollege@gmail.com",
+    href: "mailto:info@college.edu.kg",
+    label: "info@college.edu.kg",
     labelStart: "Email",
   },
   {
     href: "https://2gis.kg/bishkek/inside/70030076373364328/firm/70000001089690237",
-    label: "Саякбая Каралаева, 7а/1 · Сухэ-Батора, 23 ",
+    // label: "Саякбая Каралаева, 7а/1 · Сухэ-Батора, 23",
+    label: "Suhe Bator, 23",
     labelStart: "Address",
   },
 ];

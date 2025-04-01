@@ -3,7 +3,8 @@ import { Toaster } from "sonner";
 import Header from "../header/Header";
 import { Outlet, useLocation } from "react-router-dom";
 import Footer from "../footer/Footer";
-import CallButton from "../contact/CallButton";
+// import CallButton from "../contact/CallButton";
+import ChatBot from "../chat-bot/ChatBot";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -24,7 +25,8 @@ function BaseLayout() {
       <ScrollToTop />
       <Outlet />
       <Footer />
-      <CallButton />
+      <ChatBot />
+      {/* <CallButton /> */}
       <Toaster richColors={true} />
     </>
   );

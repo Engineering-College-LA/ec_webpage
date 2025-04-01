@@ -4,6 +4,16 @@ export default {
   theme: {
     extend: {
       colors: {
+        "n-gray": "#62656F",
+        "n-bluish": "#A0BAD7",
+        "n-bluish-90": "#aac1db",
+        "n-bluish-80": "#b3c8df",
+        "n-bluish-70": "#bdcfe3",
+        "n-bluish-60": "#c6d6e7",
+        "n-bluish-50": "#d9e3ef",
+        "n-blue": "#2259A4",
+        "n-blue-hard": "#1C3C71",
+        "n-blue-light": "#e9eef6",
         main: "#F6C90E",
         "main-100": "#ddb50d",
         "main-gray": "#F5F7F8",
@@ -46,6 +56,10 @@ export default {
         "pulse-shadow": "pulse-shadow 2s infinite",
         pulseRing: "pulseRing 1.5s cubic-bezier(0.7, 0, 0.3, 1) infinite",
         shimmer: "shimmer 3.5s linear infinite",
+      },
+      boxShadow: {
+        custom: "rgba(7, 65, 210, 0.1) 0px 9px 30px",
+        custom2: "rgba(0, 0, 0, 0.08) 0px 4px 12px",
       },
     },
   },

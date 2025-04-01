@@ -10,7 +10,7 @@ function CustomList({ list, className = "" }) {
       {list.map((req, index) => (
         <li key={index} className="flex items-center">
           <span>
-            <SquareCheck className={"h-4 w-4 me-2 text-main font-bold"} />
+            <SquareCheck className={"h-4 w-4 me-2 text-n-blue font-bold"} />
           </span>
           {req.link ? (
             <Link to={req.link} className="hover:text-blue-700">{req.text}</Link>

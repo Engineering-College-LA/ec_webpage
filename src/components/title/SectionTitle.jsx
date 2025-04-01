@@ -5,11 +5,11 @@ function SectionTitle({ children, className = "" }) {
   return (
     <h2
       className={twMerge(
-        "text-3xl font-semibold text-center mb-6 leading-7 section-title uppercase",
+        "text-3xl font-semibold text-center mb-8 lg:mb-10 leading-7 section-title uppercase",
         className
       )}
     >
-      <span className="text-main">{firstWord}</span> {rest.join(" ")}
+      <span className="text-n-blue">{firstWord}</span> {rest.join(" ")}
     </h2>
   );
 }

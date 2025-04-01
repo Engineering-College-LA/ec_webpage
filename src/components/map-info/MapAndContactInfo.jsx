@@ -60,17 +60,44 @@ function MapAndContactInfo() {
                   {/* Email */}
                   <article className="mt-1 text-slate-600">
                     <a
-                      href="mailto:lightacademycollege@gmail.com"
+                      href="mailto:info@college.edu.kg"
                       className="flex justify-start items-center gap-2"
                     >
                       <span className="text-slate-700 w-8 h-8 flex justify-center items-center">
                         {socialMediaIcons.email}
                       </span>
-                      <span>lightacademycollege@gmail.com</span>
+                      <span>info@college.edu.kg</span>
                     </a>
                   </article>
 
                   {/* Phone Numbers */}
+                  <article className="mt-1 text-slate-600 flex flex-col lg:flex-row justify-start items-start lg:items-center gap-2">
+                    <a
+                      href="https://t.me/+996501990550"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div className="flex justify-center items-center gap-2">
+                        <span className="text-slate-700 w-8 h-8 flex justify-center items-center">
+                          {socialMediaIcons.telegram}
+                        </span>
+                        <span>+996 501 99 05 50</span>
+                      </div>
+                    </a>
+                    <a
+                      href="https://api.whatsapp.com/send?phone=996501990550"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div className="flex justify-center items-center gap-2">
+                        <span className="text-slate-700 w-8 h-8 flex justify-center items-center">
+                          {socialMediaIcons.whatsapp}
+                        </span>
+                        <span>+996 501 99 05 50</span>
+                      </div>
+                    </a>
+                  </article>
+
                   <article className="mt-1 text-slate-600 flex flex-col lg:flex-row justify-start items-start lg:items-center gap-2">
                     <div
                       itemScope
@@ -90,51 +117,6 @@ function MapAndContactInfo() {
                         </a>
                       </span>
                     </div>
-                    <a
-                      href="https://t.me/+996501990550"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="flex justify-center items-center gap-2">
-                        <span className="text-slate-700 w-8 h-8 flex justify-center items-center">
-                          {socialMediaIcons.telegram}
-                        </span>
-                        <span>+996 501 99 05 50</span>
-                      </div>
-                    </a>
-                  </article>
-
-                  <article className="mt-1 text-slate-600 flex flex-col lg:flex-row justify-start items-start lg:items-center gap-2">
-                    <div
-                      itemScope
-                      itemType="https://schema.org/WebPage"
-                      className="flex justify-center items-center gap-2"
-                    >
-                      <span className="text-slate-700 w-8 h-8 flex justify-center items-center">
-                        {socialMediaIcons.phone}
-                      </span>
-                      <span itemProp="telephone">
-                        <a
-                          href="tel:+996755990550"
-                          className="text-slate-700"
-                          aria-label="Call Light Academy College"
-                        >
-                          +996 755 99 05 50
-                        </a>
-                      </span>
-                    </div>
-                    <a
-                      href="https://api.whatsapp.com/send?phone=996755990550"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="flex justify-center items-center gap-2">
-                        <span className="text-slate-700 w-8 h-8 flex justify-center items-center">
-                          {socialMediaIcons.whatsapp}
-                        </span>
-                        <span>+996 755 99 05 50</span>
-                      </div>
-                    </a>
                   </article>
                 </div>
               </div>

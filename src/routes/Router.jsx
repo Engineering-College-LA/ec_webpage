@@ -8,6 +8,7 @@ import ReactGA from "react-ga4";
 import Home from "../pages/home/Home";
 import BaseLayout from "../components/layouts/BaseLayout";
 import Spinner from "../components/spinner/Spinner";
+import Colors from "../pages/Colors";
 
 // Lazy load the pages
 const AboutPage = lazy(() => import("../pages/about/AboutPage"));
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "/thank-you",
         element: <ThankYou />,
+      },
+      {
+        path: "/colors",
+        element: <Colors />,
       },
     ],
   },

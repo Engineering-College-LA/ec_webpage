@@ -9,16 +9,16 @@
   },
   "home": {
     "heroSection": {
-      "welcome": "Welcome to the",
-      "title": "Light Academy College of Engineering",
-      "description": "Join us at L.A.C.E., where innovation meets inspiration. Dive into cutting-edge engineering programs and be part of a future-focused community dedicated to excellence and sustainability.",
+      "welcome": "Welcome to",
+      "title": "E|C Engineering College",
+      "description": "Join us at E|C, where innovation meets inspiration. Dive into cutting-edge engineering programs and be part of a future-focused community dedicated to excellence and sustainability.",
       "primaryButton": "Explore Programs",
       "secondaryButton": "Contact Us"
     },
     "aboutSection": {
       "title": "About Us",
-      "description": "Light Academy College of Engineering (L.A.C.E.) is an institution dedicated to advancing knowledge and innovation in the fields of engineering and technology. Located in the heart of a vibrant urban center, L.A.C.E. offers a dynamic learning environment that combines modern facilities, research, and a commitment to sustainability and environmental stewardship.",
-      "learnMoreButton": "Discover L.A.C.E.",
+      "description": "E|C Engineering College is an institution dedicated to advancing knowledge and innovation in the fields of engineering and technology. Located in the heart of a vibrant urban center, E|C offers a dynamic learning environment that combines modern facilities, research, and a commitment to sustainability and environmental stewardship.",
+      "learnMoreButton": "Discover E|C",
       "listItems": {
         "history": "History",
         "missionAndVision": "Mission and Vision",
@@ -249,13 +249,13 @@
   "about": {
     "title": "Light Academy",
     "description": "Light Academy (L.A.) is an educational brand which started its path in 2018 and at the moment operates 5 international schools in different regions of Kyrgyzstan. This year L.A. is opening new engineering college in Bishkek L.A. College of Engineering.",
-    "collegeTitle": "Light Academy College of Engineering",
+    "collegeTitle": "Engineering College | LA",
     "overview": "Overview",
-    "overviewDescription": "Light Academy College of Engineering (L.A.C.E.) is an institution dedicated to advancing knowledge and innovation in the fields of engineering and technology. Located in the heart of a vibrant urban center, L.A.C.E. offers a dynamic learning environment that combines modern facilities, research, and a commitment to sustainability and environmental stewardship.",
+    "overviewDescription": "E|C Engineering College is an institution dedicated to advancing knowledge and innovation in the fields of engineering and technology. Located in the heart of a vibrant urban center, E|C offers a dynamic learning environment that combines modern facilities, research, and a commitment to sustainability and environmental stewardship.",
     "mission": "Mission",
-    "missionDescription": "Our mission is to educate and inspire the next generation of engineers and technologists to solve industries pressing challenges through innovation, ethical practice, and a deep understanding of global environmental issues.",
+    "missionDescription": "Our mission is to educate and inspire the next generation of engineers and technologists to solve the industry's pressing challenges through innovation, ethical practice, and a deep understanding of global environmental issues.",
     "vision": "Vision",
-    "visionDescription": "At Light Academy College of Engineering (LACE), we envision becoming a leading institution recognized globally for excellence in engineering education and research. Our commitment is to empower students through innovative learning experiences and cutting-edge research, fostering leaders who are prepared to solve the world's most pressing technological challenges. We aim to cultivate an environment where creativity, diversity, and collaboration are the cornerstones of advancing knowledge and driving sustainable progress in society."
+    "visionDescription": "At E|C Engineering College, we envision becoming a leading institution recognized globally for excellence in engineering education and research. Our commitment is to empower students through innovative learning experiences and cutting-edge research, fostering leaders who are prepared to solve the world's most pressing technological challenges. We aim to cultivate an environment where creativity, diversity, and collaboration are the cornerstones of advancing knowledge and driving sustainable progress in society."
   },
   "academics": {
     "programs": "Programs",

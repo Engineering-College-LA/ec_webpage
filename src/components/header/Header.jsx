@@ -20,7 +20,7 @@ function Header({ isHomePage }) {
   const [bgOpacity, setBgOpacity] = useState(0);
 
   useEffect(() => {
-    const opacity = Math.min(scrollY / 160, 0.9);
+    const opacity = Math.min(scrollY / 0, 0.9);
     setBgOpacity(opacity);
   }, [scrollY]);
 
@@ -28,12 +28,13 @@ function Header({ isHomePage }) {
     <HeaderProvider>
       <header
         className={twMerge(
-          "w-full fixed top-0 z-50 bg-black text-white transition-opacity duration-300 ease-in-out",
+          "w-full fixed top-0 z-50 shadow-sm transition-opacity duration-300 ease-in-out  bg-[#1C3C71] bg-opacity-90",
           `${bgOpacity > 0 ? "shadow-sm" : ""}`
+          // isHomePage ? "bg-black" : "bg-opacity-0"
         )}
-        style={{
-          backgroundColor: isHomePage ? `rgba(0, 0, 0, ${bgOpacity})` : "black",
-        }}
+        // style={{
+        //   backgroundColor: isHomePage ? `rgba(0, 0, 0, ${bgOpacity})` : "black",
+        // }}
       >
         <div className="max-container">
           <Navbar />

@@ -1,18 +1,18 @@
 import { footerColumns } from "../../config/constants";
 import Logo from "../header/Logo";
-import logo from "../../assets/la-black-logo.webp";
+import logoWhite from "../../assets/logo-white.svg";
 import { socialMediaIcons } from "../../config/icons";
 import { Link } from "react-router-dom";
 
 // Define social icons data
-export const socialIcons = [
+const socialIcons = [
   {
     href: "https://www.instagram.com/light_academy.college",
     icon: socialMediaIcons.instagram,
     label: "Instagram",
   },
   {
-    href: "https://api.whatsapp.com/send?phone=996755990550",
+    href: "https://api.whatsapp.com/send?phone=996501990550",
     icon: socialMediaIcons.whatsapp,
     label: "WhatsApp",
   },
@@ -26,14 +26,14 @@ export const socialIcons = [
 // FooterColumn component
 const FooterColumn = ({ title, links }) => (
   <div>
-    <p className="font-medium text-gray-900">{title}</p>
+    <p className="font-medium text-white">{title}</p>
     <ul className="mt-6 space-y-4 text-sm">
       {links.map((link, index) => (
         <li key={index}>
           {link.href ? (
             <a
               href={link.href}
-              className="text-gray-700 transition hover:opacity-75"
+              className="text-n-bluish-50 transition hover:opacity-75"
             >
               {link.labelStart && <span>{link.labelStart}:</span>}{" "}
               <span className="block">{link.label}</span>
@@ -41,7 +41,7 @@ const FooterColumn = ({ title, links }) => (
           ) : (
             <Link
               to={link.to}
-              className="text-gray-700 transition hover:opacity-75"
+              className="text-n-bluish-50 transition hover:opacity-75"
             >
               {link.labelStart && <span>{link.labelStart}:</span>}{" "}
               <span className="block">{link.label}</span>
@@ -60,7 +60,7 @@ const SocialIcon = ({ href, icon, label }) => (
       href={href}
       rel="noreferrer"
       target="_blank"
-      className="text-gray-700 transition hover:opacity-75"
+      className="text-n-bluish transition hover:opacity-75"
     >
       <span className="sr-only">{label}</span>
       {icon}
@@ -84,15 +84,15 @@ const SocialLinks = () => (
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-100">
+    <footer className="bg-n-blue-hard text-white">
       <div className="mx-auto max-w-screen-xl space-y-8 px-8 py-16 lg:space-y-16">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div>
-              <Logo logoSrc={logo} />
-              <span className="text-sm font-medium">
-                Light Academy College of Engineering
-              </span>
+              <Logo logoSrc={logoWhite} width={200} height={56} />
+              {/* <span className="text-sm font-medium">
+                Engineering College | LA
+              </span> */}
             </div>
 
             <SocialLinks />
@@ -108,8 +108,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <p className="text-xs text-gray-500">
-          &copy; 2024. L.A.C.E All rights reserved.
+        <p className="text-sm text-white">
+          &copy; 2024–2025. EC All rights reserved.
         </p>
       </div>
     </footer>

@@ -20,8 +20,8 @@ function LanguageSelecter() {
       <div className="shadow-sm rounded-md" role="group">
         <button
           type="button"
-          className={`outline-none rounded-l-lg border border-gray-200 bg-white text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-main ${
-            currentLanguage === "en" ? "bg-gray-100 text-main-100" : ""
+          className={`outline-none rounded-l-lg border border-gray-200 bg-white text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 ${
+            currentLanguage === "en" ? "bg-gray-100 text-n-blue" : ""
           }`}
           onClick={() => handleLanguageChange("en")}
         >
@@ -29,8 +29,8 @@ function LanguageSelecter() {
         </button>
         <button
           type="button"
-          className={`outline-none rounded-r-md border border-gray-200 bg-white text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-main ${
-            currentLanguage === "ru" ? "bg-gray-100 text-main-100" : ""
+          className={`outline-none rounded-r-md border border-gray-200 bg-white text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 ${
+            currentLanguage === "ru" ? "bg-gray-100 text-n-blue" : ""
           }`}
           onClick={() => handleLanguageChange("ru")}
         >

@@ -125,7 +125,7 @@ export function FormTelegram() {
         <div className="p-2 w-full">
           <Button
             type="submit"
-            className="bg-main text-white relative"
+            className="bg-n-blue text-white relative"
             disabled={isSubmitting}
           >
             <span className="absolute inset-0 rounded-[inherit] shimmer-gradient bg-[length:250%_250%,100%_100%] bg-[position:200%_0,0_0] bg-no-repeat transition-all animate-shimmer"></span>
