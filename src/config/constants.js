@@ -2,6 +2,7 @@
 export const navLinks = [
   { to: "/", label: "navbar.home" },
   { to: "/about", label: "navbar.about" },
+  { to: "/affiliations", label: "navbar.affiliations" },
   { to: "/academics", label: "navbar.academics" },
   { to: "/admissions", label: "navbar.admissions" },
 ];

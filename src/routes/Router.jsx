@@ -9,11 +9,15 @@ import Home from "../pages/home/Home";
 import BaseLayout from "../components/layouts/BaseLayout";
 import Spinner from "../components/spinner/Spinner";
 import Colors from "../pages/Colors";
+import AboutPage from "../pages/about/AboutPage";
+import Academics from "../pages/academics/Academics";
+import Admission from "../pages/admission/Admission";
+import Affiliations from "../pages/affiliations/Affiliations";
 
 // Lazy load the pages
-const AboutPage = lazy(() => import("../pages/about/AboutPage"));
-const Academics = lazy(() => import("../pages/academics/Academics"));
-const Admission = lazy(() => import("../pages/admission/Admission"));
+// const AboutPage = lazy(() => import("../pages/about/AboutPage"));
+// const Academics = lazy(() => import("../pages/academics/Academics"));
+// const Admission = lazy(() => import("../pages/admission/Admission"));
 const ThankYou = lazy(() => import("../pages/thank-you/ThankYou"));
 const CareerTestPage = lazy(() => import("../pages/careertest/CareerTest"));
 const NotFound = lazy(() => import("../pages/not-found/NotFound"));
@@ -21,7 +25,6 @@ const NotFound = lazy(() => import("../pages/not-found/NotFound"));
 // Initialize Google Analytics
 ReactGA.initialize("G-2M2GPPXSPW");
 
-// Define the router configuration
 const router = createBrowserRouter([
   {
     element: <BaseLayout />,
@@ -37,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "/academics",
         element: <Academics />,
+      },
+      {
+        path: "/affiliations",
+        element: <Affiliations />,
       },
       {
         path: "/career-test",

@@ -10,12 +10,9 @@ const layoutClasses = [
   "row-start-2 md:col-start-1 md:row-start-2 md:col-span-2 lg:col-start-3 lg:row-start-1 lg:col-span-1",
   "row-start-3 md:row-start-3 md:col-start-1 lg:col-span-2 lg:row-start-2",
   "row-start-4 md:col-start-2 md:row-start-3 lg:col-start-3 lg:row-start-2",
-  "row-start-5 md:row-start-4 lg:row-start-3",
-  "row-start-6 md:row-start-4 lg:row-start-3",
-  "row-start-7 md:row-start-5 md:col-span-2 lg:col-span-1 lg:row-start-3",
-  "row-start-8 md:row-start-6 lg:row-start-4",
-  "row-start-9 md:row-start-6 lg:col-span-2 lg:row-start-4",
-  "row-start-10 md:row-start-7 lg:row-start-5",
+  "row-start-5 md:row-start-4 md:col-span-2 lg:col-span-1 lg:row-start-3",
+  "row-start-6 md:row-start-5 lg:row-start-3 lg:col-span-2",
+  "row-start-7 md:row-start-5 lg:col-span-1 lg:row-start-4",
 ];
 
 export const ContactLinkButton = ({ children, label = "", icon, ...props }) => {
@@ -42,7 +39,7 @@ function ReasonsToStudy() {
       <SectionTitle className="md:hidden text-4xl md:text-6xl m-0 my-8">
         {t("home.reasonsSection.title")}
       </SectionTitle>
-      <div className="grid gap-4 grid-cols-1 grid-rows-11 md:grid-cols-2 md:grid-rows-7 lg:grid-cols-3 lg:grid-rows-5">
+      <div className="grid gap-4 grid-cols-1 grid-rows-8 md:grid-cols-2 md:grid-rows-6 lg:grid-cols-3 lg:grid-rows-4">
         <div className="hidden row-start-1 md:col-start-1 md:flex justify-center items-center rounded-3xl">
           <SectionTitle className="text-4xl md:text-6xl text-n-gray">
             {t("home.reasonsSection.title")}
@@ -70,11 +67,11 @@ function ReasonsToStudy() {
             </div>
           </div>
         ))}
-        <div className="row-start-11 md:col-start-2 md:row-start-7 lg:col-start-2 lg:col-span-2 lg:row-start-5 flex flex-col items-center justify-center">
+        <div className="row-start-8 md:col-start-1 md:row-start-6 md:col-span-2 lg:col-start-2 lg:col-span-2 lg:row-start-4 flex flex-col items-center justify-center">
           <SectionTitle className="text-4xl md:text-6xl mb-4 text-n-gray">
             {t("home.reasonsSection.cta.title")}
           </SectionTitle>
-          <p className="mb-8 text-base text-center">
+          <p className="mb-8 text-base text-center max-w-lg">
             {t("home.reasonsSection.cta.description")}
           </p>
           <a href={t("home.reasonsSection.cta.buttonLink")}>

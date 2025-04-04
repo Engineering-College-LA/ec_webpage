@@ -9,7 +9,7 @@ function ContactTelegram() {
     <div className="page py-14 sm:py-20 px-4 md:px-12">
       <div className="flex flex-col text-center w-full mb-12 text-slate-900">
         <SectionTitle>{t("home.contactSection.sectionTitle")}</SectionTitle>
-        <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+        <p className="w-full mx-auto leading-relaxed text-base max-w-3xl">
           {t("home.contactSection.description")}
         </p>
       </div>

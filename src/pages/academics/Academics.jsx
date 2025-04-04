@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
 import BaseModal from "../../components/modal/BaseModal";
 import { ContactLinkButton } from "../../components/reasons/ReasonsToStudy";
-import ContactUsButton from "../../components/contact/CallButton";
+// import ContactUsButton from "../../components/contact/CallButton";
 import { FormTelegram } from "../../components/contact/FormTelegram";
 
 const programs = [
@@ -25,7 +25,7 @@ const programs = [
   },
 ];
 
-const reasons = Array.from({ length: 10 }, (_, i) => ({
+const reasons = Array.from({ length: 7 }, (_, i) => ({
   key: `reasons.${i}`,
 }));
 
@@ -61,13 +61,20 @@ function Academics() {
       <div className="container mx-auto text-slate-700">
         <h2 className="page-title">{t("academics.programs")}</h2>
         {programs.map((program) => (
-          <div id={program.id} key={program.key} className="mb-6">
+          <article id={program.id} key={program.key} className="mb-6">
             <h3 className="page-subtitle">
               {t(`academics.${program.key}.name`)}
             </h3>
-            <p className="page-paragraph">
-              {t(`academics.${program.key}.description`)}
-            </p>
+            {(() => {
+              const paragraphs = t(`academics.${program.key}.description`, {
+                returnObjects: true,
+              });
+              return paragraphs.map((paragraph, index) => (
+                <p key={index} className="mb-4 indent-8 text-pretty">
+                  {paragraph}
+                </p>
+              ));
+            })()}
             <h4 className="page-subtitle text-lg font-medium">
               {t(`academics.${program.key}.jobRoles`)}
             </h4>
@@ -86,7 +93,7 @@ function Academics() {
                 onClick={() => openModal()}
               />
             </div>
-          </div>
+          </article>
         ))}
 
         <h2 className="page-title pt-12">{t("academics.reasonsTitle")}</h2>

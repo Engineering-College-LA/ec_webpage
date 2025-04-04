@@ -4,6 +4,7 @@
     "about": "About Us",
     "academics": "Academics",
     "admissions": "Admissions",
+    "affiliations": "Affiliations",
     "news": "News + Events",
     "btnText": "Get details"
   },
@@ -61,17 +62,13 @@
       "data": [
         {
           "title": "Affordable Education in English",
-          "description": "Our College of Engineering offers lower tuition rates compared to four-year universities, making education more accessible and reducing student debt. Access to the licensed tailored curriculums, courses & specialization tracks of Coursera.org and personal laptop which student gets upon admission.",
+          "description": "Our College of Engineering offers lower tuition rates compared to four-year universities, making education more accessible and reducing student debt. Students gain access to licensed tailored curricula, courses, and specialization tracks on Coursera.org, as well as a personal laptop upon admission.",
           "btnText": "Learn More"
         },
-        {
-          "title": "Small Class Sizes",
-          "description": "Smaller class sizes at our college allow for more personalized attention from instructors, fostering a better learning environment and stronger student-teacher relationships. 40 students per cohort.",
-          "btnText": "Schedule a Tour"
-        },
+
         {
           "title": "Focused Programs",
-          "description": "Our College of Engineering offers focused, career-oriented programs that are designed to meet the needs of the local and global job market, ensuring that students gain relevant skills for immediate employment. Our College of Engineering offers four programs: Software Engineering, Cyber Security, IT & Entrepreneurship, STEAM Pedagogy.",
+          "description": "Our College of Engineering offers focused, career-oriented programs that are designed to meet the needs of the local and global job market, ensuring that students gain relevant skills for immediate employment. Our College of Engineering offers four programs: Software Engineering, Cybersecurity, IT & Entrepreneurship, STEAM Pedagogy.",
           "btnText": "Check Requirements"
         },
         {
@@ -79,16 +76,7 @@
           "description": "College of Engineering emphasizes practical, hands-on learning experiences in their engineering programs, providing students with valuable real-world skills. Each curriculum supports multiple tracks of specialization.",
           "btnText": "Contact Us"
         },
-        {
-          "title": "Flexible Scheduling",
-          "description": "With options for part-time, self-study session and online classes, our college offers flexible scheduling to accommodate working students or those with other commitments.",
-          "btnText": "Apply Now"
-        },
-        {
-          "title": "Transfer Opportunities",
-          "description": "Our college has articulation agreements with four-year universities, making it easier for students to transfer credits and continue their education at a bachelor’s level.",
-          "btnText": "How to Transfer?"
-        },
+
         {
           "title": "Industry Connections",
           "description": "Our college has strong ties with local and international industries and businesses, providing students with networking opportunities, internships, and job placement assistance.",
@@ -137,85 +125,58 @@
       "title": "Frequently Asked Questions (FAQ)",
       "questions": [
         {
-          "question": "How long does the program last for students who have completed 9th grade?",
-          "answer": "2 years and 10 months"
+          "question": "What is the duration of the program if starting after grade 9?",
+          "answer": "The standard duration of study is 2 years and 10 months."
         },
         {
-          "question": "What is the language of instruction?",
-          "answer": "The language of instruction is English. The 1st-year program for 10th and 11th grades will be conducted in the language in which the school instruction was conducted. The 2nd and 3rd-year instruction will be entirely in English."
+          "question": "What is the duration of the program if starting after grade 11?",
+          "answer": "The standard duration of study is 1 year and 10 months (with knowledge of English). The standard duration of study is 2 years and 10 months (without knowledge of English)."
         },
         {
-          "question": "Can I know the tuition fees?",
-          "answer": "The initial payment is 30% of the total fee. Detailed information on the cost is available upon contacting the admissions office. Please call: 0501 990 550, 0755 990 550"
+          "question": "What subjects are included in the entrance exams?",
+          "answer": "Entrance exams in mathematics, English, and an essay (in Kyrgyz/Russian)."
         },
         {
-          "question": "Will the contract price change?",
-          "answer": "No, the contract price at the time of enrollment will not change for all 3 years."
+          "question": "What language is used for instruction at the college?",
+          "answer": "The language of instruction is English. The first year of the program will be conducted in Russian. The second and third years will be conducted in English."
         },
         {
-          "question": "Can I work with the diploma after graduating from your college?",
-          "answer": "After graduation, you can work with a diploma of secondary technical education, or continue your studies at a university."
+          "question": "What is the cost of the tuition fee?",
+          "answer": "The tuition cost is $4000, with an initial payment of 30% required. For more detailed information about the tuition fee, please reach out to the admissions office. Contact us at: 0501 990 550."
         },
         {
-          "question": "What are the criteria for placing students abroad, in Japan and Germany?",
-          "answer": "A minimum level of B1 in German or Japanese and an academic performance of over 85 out of 100 are required."
+          "question": "What is covered by the tuition fee?",
+          "answer": "Along with tuition, each student receives a new corporate access subscription to internal educational platforms, a corporate license for Coursera.org (starting from the second year), licenses for other products, and a personal laptop."
         },
         {
-          "question": "What type of diploma will I receive after graduating from the college?",
-          "answer": "After graduation, a diploma of secondary technical education of the Kyrgyz Republic standard will be issued."
+          "question": "Does the tuition fee include meals and accommodation?",
+          "answer": "No, the college does not provide accommodation or meals."
         },
         {
-          "question": "What is included in the contract?",
-          "answer": "In addition to education, the college provides a new, individual laptop to each admitted student."
+          "question": "Will the tuition fee change during the study?",
+          "answer": "The tuition fee that you agreed upon at enrollment will remain unchanged throughout the entire standard duration of study."
         },
         {
-          "question": "Does the contract amount include accommodation and meals?",
-          "answer": "No, our education does not include accommodation and meals."
+          "question": "Can I work with a diploma received after successfully completing the program?",
+          "answer": "Upon successful completion, graduates receive a diploma of secondary vocational education. You can work in your chosen field with the diploma or continue your studies at a university from the second year."
         },
         {
-          "question": "What is the contract price if I have my own laptop?",
-          "answer": "The contract is $2200 with your own laptop"
+          "question": "Can graduates find job opportunities abroad?",
+          "answer": "Yes, after graduation, you can seek employment in Germany and Japan, as long as you have at least a B1 level in German or Japanese and maintain an academic performance of over 85 out of 100."
         },
         {
-          "question": "My English is not good enough. How can I study at your college?",
-          "answer": "If your English level does not meet our minimum requirement, students can enroll in a preparatory course. If you have only completed the 9th grade, you will study both English and the 10th-11th grade program in the first year."
+          "question": "What diploma is awarded upon graduation?",
+          "answer": "After graduation, a diploma of secondary vocational education is awarded."
         },
         {
-          "question": "Can I know the class schedule?",
-          "answer": "The class schedule is from 09.00 to 17.00"
+          "question": "I don’t have a strong knowledge of English, can I study at your college?",
+          "answer": "Upon admission, each student takes an English exam. Based on the results, we determine the level of language proficiency and place students into appropriate groups. In addition to the 10th-11th grade subjects, there will be an intensified study of English."
+        },
+        {
+          "question": "What is the study schedule?",
+          "answer": "The classes are held from 9:00 AM to 5:00 PM"
         }
       ]
-    },
-    "admission": {
-      "title": "Admission",
-      "requirements": {
-        "title": "Admission Requirements",
-        "description": "To be eligible for admission, you must meet the following criteria:",
-        "list": [
-          "Successful completion of 9th or 11th grade",
-          "Preparation of required documents (diploma, passport, etc.)",
-          "No entrance exams required"
-        ]
-      },
-      "cost": {
-        "title": "Cost of Education",
-        "description": "The initial payment is $1200. For detailed information about the cost, please contact the admissions office."
-      },
-      "documents": {
-        "title": "Documents Required for Admission",
-        "list": [
-          "Copy of passport (or birth certificate)",
-          "Original state-issued certificate of completion of 9th grade",
-          "4 photos (3x4 cm)",
-          "Copies of parents' passports",
-          "Medical certificate (form 086/U)",
-          "Copy of military ID or registration certificate (for males over 18)"
-        ]
-      },
-      "contact": {
-        "title": "Contact Information",
-        "phone": "For more information, please contact us at: 0501 990 550 or 0755 990 550"
-      }
     },
     "campusSection": {
       "title": "Our Campus"
@@ -226,7 +187,7 @@
         "error": "Something went wrong!"
       },
       "sectionTitle": "Contact Us",
-      "description": "Feel free to contact us? Submit your message here and we will get back to you as soon as possible.",
+      "description": "Feel free to contact us. Submit your message here, and we will get back to you as soon as possible.",
       "name": "Name",
       "phone": "Phone Number",
       "message": "Message",
@@ -263,7 +224,9 @@
     "btnApplyText": "Apply Now",
     "softwareEngineering": {
       "name": "Software Engineering",
-      "description": "The Software Engineering Program is dedicated to advancing the discipline of software development through comprehensive educational programs, research, and collaboration with industry. Focused on the application of engineering principles to the design, development, and implementation of software, the program offers both theoretical and practical training. Students learn about various software development methodologies, project management, and effective team collaboration, preparing them to tackle complex software challenges in a dynamic technological landscape.",
+      "description": [
+        "The Software Engineering Program is dedicated to advancing the discipline of software development through comprehensive educational programs, research, and collaboration with industry. Focused on the application of engineering principles to the design, development, and implementation of software, the program offers both theoretical and practical training. Students learn about various software development methodologies, project management, and effective team collaboration, preparing them to tackle complex software challenges in a dynamic technological landscape."
+      ],
       "jobRoles": "Potential job roles for graduates:",
       "roles": [
         "Software Developer",
@@ -278,7 +241,9 @@
     },
     "cyberSecurity": {
       "name": "Cyber Security",
-      "description": "The Cybersecurity Program provides rigorous training and research opportunities in the field of information security. Addressing the increasing threats in the digital world, the program's curriculum covers areas such as network security, ethical hacking, cryptography, and data protection. Through hands-on labs and real-world projects, students are equipped with the skills needed to design, implement, and manage secure systems and to anticipate and mitigate potential security breaches, thus preparing them for high-demand roles in both public and private sectors.",
+      "description": [
+        "The Cybersecurity Program provides rigorous training and research opportunities in the field of information security. Addressing the increasing threats in the digital world, the program's curriculum covers areas such as network security, ethical hacking, cryptography, and data protection. Through hands-on labs and real-world projects, students are equipped with the skills needed to design, implement, and manage secure systems and to anticipate and mitigate potential security breaches, thus preparing them for high-demand roles in both public and private sectors."
+      ],
       "jobRoles": "Potential job roles for graduates:",
       "roles": [
         "Information Security Analyst",
@@ -294,7 +259,9 @@
     },
     "itEntrepreneurship": {
       "name": "IT & Entrepreneurship",
-      "description": "The IT & Entrepreneurship Program bridges the gap between advanced technological skills and innovative business strategies. This program focuses on leveraging technology for business growth, covering topics such as digital transformation, tech startups, and venture capital. It encourages students to develop entrepreneurial thinking alongside strong IT skills, fostering the creation of new ventures and innovations in the tech industry. The curriculum is designed to empower students to launch and manage technology-driven businesses effectively.",
+      "description": [
+        "The IT & Entrepreneurship Program bridges the gap between advanced technological skills and innovative business strategies. This program focuses on leveraging technology for business growth, covering topics such as digital transformation, tech startups, and venture capital. It encourages students to develop entrepreneurial thinking alongside strong IT skills, fostering the creation of new ventures and innovations in the tech industry. The curriculum is designed to empower students to launch and manage technology-driven businesses effectively."
+      ],
       "jobRoles": "Potential job roles for graduates:",
       "roles": [
         "Project Manager",
@@ -311,7 +278,9 @@
     },
     "stemPedagogy": {
       "name": "STEM Pedagogy",
-      "description": "The STEM Pedagogy program focuses on the education and training of future educators in the fields of science, technology, engineering, and mathematics. This program emphasizes the development of effective teaching strategies, curriculum design, and the integration of technology into education. By combining educational theory with practical teaching experiences, the program aims to prepare educators who can inspire and engage the next generation of scientists and engineers, enhancing the overall quality of STEM education.",
+      "description": [
+        "The STEM Pedagogy program focuses on the education and training of future educators in the fields of science, technology, engineering, and mathematics. This program emphasizes the development of effective teaching strategies, curriculum design, and the integration of technology into education. By combining educational theory with practical teaching experiences, the program aims to prepare educators who can inspire and engage the next generation of scientists and engineers, enhancing the overall quality of STEM education."
+      ],
       "jobRoles": "Potential job roles for graduates:",
       "roles": [
         "STEM Teacher",
@@ -325,15 +294,11 @@
         "STEM Program Director"
       ]
     },
-    "reasonsTitle": "Ten Reasons to Study at LA College of Engineering",
+    "reasonsTitle": "7 Reasons to Study at LA College of Engineering",
     "reasons": [
       {
         "keywords": "Affordable Education in English",
         "description": "Our College of Engineering offers lower tuition rates compared to four-year universities, making education more accessible and reducing student debt. Access to the licensed tailored curriculums, courses & specialization tracks of Coursera.org and personal laptop which student gets upon admission."
-      },
-      {
-        "keywords": "Small Class Sizes",
-        "description": "Smaller class sizes at our college allow for more personalized attention from instructors, fostering a better learning environment and stronger student-teacher relationships. 40 students per cohort."
       },
       {
         "keywords": "Hands-On Learning",
@@ -350,14 +315,6 @@
             "STEAM Pedagogy: Informatics, Physics, Biology, Chemistry, Mathematics."
           ]
         }
-      },
-      {
-        "keywords": "Flexible Scheduling",
-        "description": "With options for part-time, self-study session and online classes, our college offers flexible scheduling to accommodate working students or those with other commitments."
-      },
-      {
-        "keywords": "Transfer Opportunities",
-        "description": "Our college has articulation agreements with four-year universities, making it easier for students to transfer credits and continue their education at a bachelor’s level."
       },
       {
         "keywords": "Industry Connections",
@@ -388,9 +345,9 @@
       "title": "Admission Requirements",
       "description": "To apply for our programs, you need to meet the following requirements:",
       "list": [
-        "Successful completion of 9th or 11th grade.",
-        "Preparation of necessary documents (certificate, passport, etc.).",
-        "No entrance exams required."
+        "Applicants must successfully pass entrance exams, which include: Math, English, and an essay (in Kyrgyz or Russian).",
+        "Successful completion of Grade 9 or 11.",
+        "Preparation of necessary documents (certificate, passport, etc.)."
       ]
     },
     "cost": {
@@ -405,7 +362,7 @@
       "title": "Required Documents",
       "list": [
         "Copy of passport (or birth certificate).",
-        "Original state-issued certificate of completion of 9th grade.",
+        "Original state-issued certificate of completion of Grade 9 or 11.",
         "Four 3/4 photos.",
         "Copies of parents' passports.",
         "Medical certificate 086/U.",

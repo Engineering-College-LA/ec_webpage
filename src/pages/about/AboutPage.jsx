@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import ContactUsButton from "../../components/contact/CallButton";
+// import ContactUsButton from "../../components/contact/CallButton";
 import ContactTelegram from "../../components/contact/ContactTelegram";
 
 function AboutPage() {
@@ -16,9 +16,6 @@ function AboutPage() {
         <p className="page-paragraph">{t("about.missionDescription")}</p>
         <h3 className="page-subtitle">{t("about.vision")}</h3>
         <p className="page-paragraph">{t("about.visionDescription")}</p>
-
-        <h2 className="page-title pt-6">{t("about.title")}</h2>
-        <p className="page-paragraph">{t("about.description")}</p>
       </div>
       <ContactTelegram />
       {/* <ContactUsButton /> */}
