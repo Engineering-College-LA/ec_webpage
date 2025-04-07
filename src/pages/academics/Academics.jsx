@@ -109,7 +109,7 @@ function Academics() {
                 className="relative flex flex-col p-4 border rounded-lg"
               >
                 <div className="page-subtitle">
-                  <span className="text-slate-200 text-6xl absolute -z-10 top-2">
+                  <span className="text-slate-200 text-6xl absolute -z-10 top-2 select-none">
                     {index + 1}
                   </span>{" "}
                   {t(`academics.${reason.key}.keywords`)}

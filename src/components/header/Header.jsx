@@ -28,7 +28,7 @@ function Header({ isHomePage }) {
     <HeaderProvider>
       <header
         className={twMerge(
-          "w-full fixed top-0 z-50 shadow-sm transition-opacity duration-300 ease-in-out  bg-[#1C3C71] bg-opacity-90",
+          "w-full fixed top-0 z-50 shadow-sm transition-opacity duration-300 ease-in-out  bg-[#1C3C71] bg-opacity-90 select-none",
           `${bgOpacity > 0 ? "shadow-sm" : ""}`
           // isHomePage ? "bg-black" : "bg-opacity-0"
         )}

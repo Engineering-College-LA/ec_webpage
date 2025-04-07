@@ -1,4 +1,3 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 import { socialMediaIcons } from "../../config/icons";
 
@@ -46,10 +45,7 @@ function MapAndContactInfo() {
                   {t("home.contactSection.hours.content.mondayToFriday")}
                 </p>
                 <p className="mt-1 text-slate-600">
-                  {t("home.contactSection.hours.content.saturday")}
-                </p>
-                <p className="mt-1 text-slate-600">
-                  {t("home.contactSection.hours.content.sunday")}
+                  {t("home.contactSection.hours.content.weekend")}
                 </p>
               </div>
               <div className="border-t border-slate-200 px-6 py-4">

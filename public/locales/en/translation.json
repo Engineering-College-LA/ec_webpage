@@ -84,12 +84,12 @@
         },
         {
           "title": "Supportive Environment",
-          "description": "Our LA College of Engineering offers a supportive and inclusive environment with resources such as tutoring, counseling, and career services to help students succeed.",
+          "description": "Our College of Engineering offers a supportive and inclusive environment with resources such as tutoring, counseling, and career services to help students succeed.",
           "btnText": "Submit Application"
         },
         {
           "title": "Community Engagement",
-          "description": "Being smaller and more localized, our LA College of Engineering encourages students to engage with the community through service learning, local/global contests, hackathons, projects, and collaborations, enhancing both personal and professional development.",
+          "description": "Being smaller and more localized, our College of Engineering encourages students to engage with the community through service learning, local/global contests, hackathons, projects, and collaborations, enhancing both personal and professional development.",
           "btnText": "Book a Spot"
         },
         {
@@ -174,7 +174,7 @@
         },
         {
           "question": "What is the study schedule?",
-          "answer": "The classes are held from 9:00 AM to 5:00 PM"
+          "answer": "The classes are held from 9:00 AM to 5:00 PM (Monday - Friday)"
         }
       ]
     },
@@ -194,14 +194,13 @@
       "sendMessage": "Send Message",
       "address": {
         "title": "Address",
-        "content": "Саякбая Каралаева, 7а/1 · Сухэ-Батора, 23"
+        "content": "Suhe Bator, 23"
       },
       "hours": {
         "title": "Hours",
         "content": {
           "mondayToFriday": "Monday - Friday: 9:00 - 17:00",
-          "saturday": "Saturday: 10:00 - 16:00",
-          "sunday": "Sunday: Closed"
+          "weekend": "Saturday - Sunday: Closed"
         }
       },
       "contact": "Contact"
@@ -294,11 +293,11 @@
         "STEM Program Director"
       ]
     },
-    "reasonsTitle": "7 Reasons to Study at LA College of Engineering",
+    "reasonsTitle": "7 Reasons to Study at E|C College of Engineering",
     "reasons": [
       {
         "keywords": "Affordable Education in English",
-        "description": "Our College of Engineering offers lower tuition rates compared to four-year universities, making education more accessible and reducing student debt. Access to the licensed tailored curriculums, courses & specialization tracks of Coursera.org and personal laptop which student gets upon admission."
+        "description": "Our College of Engineering offers lower tuition rates compared to four-year universities, making education more accessible and reducing student debt. Students gain access to licensed tailored curricula, courses, and specialization tracks on Coursera.org, as well as a personal laptop upon admission."
       },
       {
         "keywords": "Hands-On Learning",
@@ -307,7 +306,7 @@
       {
         "keywords": "Focused Programs",
         "description": {
-          "text": "Our College of Engineering offers focused, career-oriented programs that are designed to meet the needs of the local and global job market, ensuring that students gain relevant skills for immediate employment. Our College of Engineering offers four programs: Software Engineering, Cyber Security, IT & Entrepreneurship, STEAM Pedagogy.",
+          "text": "Our College of Engineering offers focused, career-oriented programs that are designed to meet the needs of the local and global job market, ensuring that students gain relevant skills for immediate employment. Our College of Engineering offers four programs: Software Engineering, Cybersecurity, IT & Entrepreneurship, STEAM Pedagogy.",
           "list": [
             "Software Engineering: Front-end, Back-end, Full-stack, Mobile App development.",
             "Cybersecurity: Security Engineering, DevOps, DevSecOps.",
@@ -327,7 +326,7 @@
       },
       {
         "keywords": "Supportive Environment",
-        "description": "Our LA College of Engineering offers a supportive and inclusive environment with resources such as tutoring, counseling, and career services to help students succeed."
+        "description": "Our College of Engineering offers a supportive and inclusive environment with resources such as tutoring, counseling, and career services to help students succeed."
       },
       {
         "keywords": "Diverse Student Body",
@@ -335,7 +334,7 @@
       },
       {
         "keywords": "Community Engagement",
-        "description": "Being smaller and more localized, our LA College of Engineering encourages students to engage with the community through service learning, local/global contests, hackathons, projects, and collaborations, enhancing both personal and professional development. Studying at a College of Engineering can provide a strong foundation in engineering principles while offering numerous advantages that cater to diverse needs and goals."
+        "description": "Being smaller and more localized, our College of Engineering encourages students to engage with the community through service learning, local/global contests, hackathons, projects, and collaborations, enhancing both personal and professional development. Studying at a College of Engineering can provide a strong foundation in engineering principles while offering numerous advantages that cater to diverse needs and goals."
       }
     ]
   },

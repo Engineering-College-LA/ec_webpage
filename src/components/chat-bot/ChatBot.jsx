@@ -31,14 +31,14 @@
 // }
 
 import { Webchat, WebchatProvider, Fab, getClient } from "@botpress/webchat";
-import { buildTheme } from "@botpress/webchat-generator";
+// import { buildTheme } from "@botpress/webchat-generator";
 import { MessageCircle } from "lucide-react";
 import { useState } from "react";
 
-const { style } = buildTheme({
-  themeName: "prism",
-  themeColor: "#634433",
-});
+// const { style } = buildTheme({
+//   themeName: "prism",
+//   themeColor: "#634433",
+// });
 
 const clientId = "0df3ad6a-2820-46da-9fd4-3ee698b627f2";
 
