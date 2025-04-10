@@ -6,62 +6,75 @@ import { slides } from "../../config/icons";
 
 const Images = () => {
   const { t } = useTranslation();
-  const [images, setImages] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Cache all images on the first load
+  // Preload images on mount
   useEffect(() => {
-    const preloadedImages = slides.map((slide) => {
+    slides.forEach((slide) => {
       const img = new Image();
       img.src = slide.url;
-      return img;
     });
-    setImages(preloadedImages);
   }, []);
 
   const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+    const newIndex = currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
 
   const nextSlide = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    const newIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
 
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
   };
 
   return (
     <div className="page py-14 sm:py-20 text-slate-900 px-2 sm:px-8 md:px-20">
       <SectionTitle>{t("home.gallerySection.title")}</SectionTitle>
-      <div className="max-w-[800px] sm:max-w-[1000px] h-[620px] sm:h-[700px] w-full mx-auto pb-16 relative group">
+      <div className="relative mx-auto pb-16 overflow-hidden max-w-[800px] xl:max-w-[1000px] h-[500px] sm:h-[600px] xl:h-[700px] group rounded-2xl">
+        {/* Slide Container using flex layout for smooth transform transitions */}
         <div
-          style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-          className="w-full h-full rounded-2xl bg-center bg-cover transition-all ease-in-out duration-500"
-        ></div>
+          className="flex h-full transition-transform ease-in-out duration-500"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {slides.map((slide, index) => (
+            <div key={index} className="min-w-full h-full">
+              <img
+                src={slide.url}
+                alt={`Slide ${index + 1}`}
+                className="w-full h-full object-cover rounded-2xl"
+              />
+            </div>
+          ))}
+        </div>
         {/* Left Arrow */}
-        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-3 bg-black/20 text-white cursor-pointer">
-          <ChevronLeft size={32} className="text-n-blue" onClick={prevSlide} />
+        <div
+          onClick={prevSlide}
+          className="hidden group-hover:block absolute top-1/2 left-5 transform -translate-y-1/2 cursor-pointer bg-black/20 p-3 rounded-full text-2xl"
+        >
+          <ChevronLeft size={32} className="text-n-bluish" />
         </div>
         {/* Right Arrow */}
-        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-3 bg-black/20 text-white cursor-pointer">
-          <ChevronRight size={32} className="text-n-blue" onClick={nextSlide} />
+        <div
+          onClick={nextSlide}
+          className="hidden group-hover:block absolute top-1/2 right-5 transform -translate-y-1/2 cursor-pointer bg-black/20 p-3 rounded-full text-2xl"
+        >
+          <ChevronRight size={32} className="text-n-bluish" />
         </div>
-        <div className="flex top-4 justify-center py-2">
-          {slides.map((slide, slideIndex) => (
+        {/* Navigation Dots */}
+        <div className="absolute bottom-4 w-full flex justify-center space-x-2">
+          {slides.map((_, index) => (
             <div
-              key={slideIndex}
-              onClick={() => goToSlide(slideIndex)}
-              className="text-2xl cursor-pointer"
+              key={index}
+              onClick={() => goToSlide(index)}
+              className="cursor-pointer"
             >
-              {slideIndex === currentIndex ? (
-                <Dot size={48} className="-mx-1 text-n-blue" />
+              {index === currentIndex ? (
+                <Dot size={48} className="text-n-blue" />
               ) : (
-                <Dot size={48} className="-mx-1" />
+                <Dot size={48} />
               )}
             </div>
           ))}

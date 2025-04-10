@@ -31,25 +31,22 @@
       "programs": [
         {
           "name": "Software Engineering",
-          "description": "Our Software Engineering program equips students with the skills needed to design, develop, and maintain software systems. From front-end development to back-end infrastructure, students learn the latest technologies and best practices.",
-          "learnMore": "Learn more"
+          "description": "Our Software Engineering program equips students with the skills needed to design, develop, and maintain software systems. From front-end development to back-end infrastructure, students learn the latest technologies and best practices."
         },
         {
           "name": "Cybersecurity",
-          "description": "In the Cybersecurity program, students learn to protect digital assets from cyber threats. With hands-on training in ethical hacking, network security, and cryptography, graduates are prepared for careers in information security.",
-          "learnMore": "Learn more"
+          "description": "In the Cybersecurity program, students learn to protect digital assets from cyber threats. With hands-on training in ethical hacking, network security, and cryptography, graduates are prepared for careers in information security."
         },
         {
           "name": "IT & Entrepreneurship",
-          "description": "The IT & Entrepreneurship program combines technical skills with business acumen. Students learn to leverage technology for innovation and entrepreneurship, with courses in business analytics, project management, and digital marketing.",
-          "learnMore": "Learn more"
+          "description": "The IT & Entrepreneurship program combines technical skills with business acumen. Students learn to leverage technology for innovation and entrepreneurship, with courses in business analytics, project management, and digital marketing."
         },
         {
           "name": "STEM Pedagogy",
-          "description": "Our STEM Pedagogy program trains educators in science, technology, engineering, and mathematics. Through curriculum development and instructional design, graduates inspire the next generation of STEM professionals.",
-          "learnMore": "Learn more"
+          "description": "Our STEM Pedagogy program trains educators in science, technology, engineering, and mathematics. Through curriculum development and instructional design, graduates inspire the next generation of STEM professionals."
         }
-      ]
+      ],
+      "learnMore": "Learn more"
     },
     "reasonsSection": {
       "title": "Why Our College?",

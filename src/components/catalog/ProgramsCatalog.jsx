@@ -10,25 +10,21 @@ function ProgramsCatalog() {
     {
       name: t("home.programsSection.programs.0.name"),
       description: t("home.programsSection.programs.0.description"),
-      learnMore: t("home.programsSection.programs.0.learnMore"),
       link: "/academics#program-1",
     },
     {
       name: t("home.programsSection.programs.1.name"),
       description: t("home.programsSection.programs.1.description"),
-      learnMore: t("home.programsSection.programs.1.learnMore"),
       link: "/academics#program-2",
     },
     {
       name: t("home.programsSection.programs.2.name"),
       description: t("home.programsSection.programs.2.description"),
-      learnMore: t("home.programsSection.programs.2.learnMore"),
       link: "/academics#program-3",
     },
     {
       name: t("home.programsSection.programs.3.name"),
       description: t("home.programsSection.programs.3.description"),
-      learnMore: t("home.programsSection.programs.3.learnMore"),
       link: "/academics#program-4",
     },
   ];
@@ -53,7 +49,6 @@ function ProgramsCatalog() {
               className="w-12 h-12 flex-center absolute rounded-full bottom-2 right-2 bg-n-blue"
             >
               <MoveUpRight className="text-white" />
-              {/* <ArrowUpRight className="text-white"/> */}
             </Link>
           </div>
         ))}

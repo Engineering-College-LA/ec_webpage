@@ -1,10 +1,19 @@
-import image1 from "../assets/students_1.webp";
-import image2 from "../assets/students_2.webp";
-import image3 from "../assets/students_3.webp";
-import image7 from "../assets/class_students_1.webp";
-import image8 from "../assets/class_students_2.webp";
-import image9 from "../assets/class_students_3.webp";
-import image6 from "../assets/class_students_4.webp";
+// import image1 from "../assets/students_1.webp";
+// import image2 from "../assets/students_2.webp";
+// import image3 from "../assets/students_3.webp";
+// import image7 from "../assets/class_students_1.webp";
+// import image8 from "../assets/class_students_2.webp";
+// import image9 from "../assets/class_students_3.webp";
+// import image6 from "../assets/class_students_4.webp";
+import image1 from "../assets/img_01.jpg";
+import image2 from "../assets/img_02.jpg";
+import image3 from "../assets/img_03.jpg";
+import image4 from "../assets/img_04.jpg";
+import image5 from "../assets/img_05.jpg";
+import image6 from "../assets/img_06.jpg";
+import image7 from "../assets/img_07.jpg";
+import image8 from "../assets/img_08.jpg";
+import image9 from "../assets/img_09.jpg";
 
 export const socialMediaIcons = {
   phone: (
@@ -69,10 +78,13 @@ export const socialMediaIcons = {
 
 export const slides = [
   {
-    url: image9,
+    url: image5,
   },
   {
-    url: image1,
+    url: image4,
+  },
+  {
+    url: image9,
   },
   {
     url: image2,
@@ -81,12 +93,15 @@ export const slides = [
     url: image3,
   },
   {
+    url: image1,
+  },
+  {
     url: image6,
   },
   {
-    url: image7,
+    url: image8,
   },
   {
-    url: image8,
+    url: image7,
   },
 ];

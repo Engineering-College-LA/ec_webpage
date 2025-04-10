@@ -22,6 +22,15 @@ const ThankYou = lazy(() => import("../pages/thank-you/ThankYou"));
 const CareerTestPage = lazy(() => import("../pages/careertest/CareerTest"));
 const NotFound = lazy(() => import("../pages/not-found/NotFound"));
 
+const SoftwareEngineering = lazy(
+  () => import("../pages/academics/SoftwareEngineering")
+);
+const CyberSecurity = lazy(() => import("../pages/academics/CyberSecurity"));
+const ITEentrepreneurship = lazy(
+  () => import("../pages/academics/ITEentrepreneurship")
+);
+const STEMPedagogy = lazy(() => import("../pages/academics/STEMPedagogy"));
+
 // Initialize Google Analytics
 ReactGA.initialize("G-2M2GPPXSPW");
 
@@ -39,7 +48,28 @@ const router = createBrowserRouter([
       },
       {
         path: "/academics",
-        element: <Academics />,
+        // The Academics path acts as a parent for the listing page and the individual program pages.
+        children: [
+          // The listing page:
+          { index: true, element: <Academics /> },
+          // Separate pages for each program:
+          {
+            path: "software-engineering",
+            element: <SoftwareEngineering />,
+          },
+          {
+            path: "cyber-security",
+            element: <CyberSecurity />,
+          },
+          {
+            path: "it-entrepreneurship",
+            element: <ITEentrepreneurship />,
+          },
+          {
+            path: "stem-pedagogy",
+            element: <STEMPedagogy />,
+          },
+        ],
       },
       {
         path: "/affiliations",
