@@ -1,46 +1,23 @@
-// import { Webchat, WebchatProvider, Fab, getClient } from "@botpress/webchat";
-// import { buildTheme } from "@botpress/webchat-generator";
-// import { useState } from "react";
-// const { theme, style } = buildTheme({
-//   themeName: "prism",
-//   themeColor: "#634433",
-// });
-
-// const clientId = "0df3ad6a-2820-46da-9fd4-3ee698b627f2";
-// export default function ChatBot() {
-//   const client = getClient({ clientId });
-//   const [isWebchatOpen, setIsWebchatOpen] = useState(false);
-//   const toggleWebchat = () => {
-//     setIsWebchatOpen((prevState) => !prevState);
-//   };
-//   return (
-//     <div style={{ width: "100vw", height: "100vh" }}>
-//       <style>{style}</style>
-//       <WebchatProvider theme={theme} client={client}>
-//         <Fab onClick={toggleWebchat} />
-//         <div
-//           style={{
-//             display: isWebchatOpen ? "block" : "none",
-//           }}
-//         >
-//           <Webchat />
-//         </div>
-//       </WebchatProvider>
-//     </div>
-//   );
-// }
-
 import { Webchat, WebchatProvider, Fab, getClient } from "@botpress/webchat";
 // import { buildTheme } from "@botpress/webchat-generator";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, X } from "lucide-react";
 import { useState } from "react";
 
-// const { style } = buildTheme({
+// const { theme } = buildTheme({
 //   themeName: "prism",
 //   themeColor: "#634433",
 // });
 
 const clientId = "0df3ad6a-2820-46da-9fd4-3ee698b627f2";
+
+const config = {
+  composerPlaceholder: "Задайте ваш вопрос о колледже E|C...",
+  botName: "EC Support",
+  botAvatar:
+    "https://i.pinimg.com/736x/35/ab/67/35ab67e56fc122ebba708f553ac45255.jpg", // You can replace this with a custom avatar URL if desired
+  botDescription:
+    "Привет! 👋 Я — виртуальный помощник колледжа инженерии E|C. Спрашивайте про поступление, программы и учёбу!",
+};
 
 export default function ChatBot() {
   const client = getClient({ clientId });
@@ -54,13 +31,18 @@ export default function ChatBot() {
     <div
       style={{
         position: "fixed",
-        bottom: "20px",
-        right: "20px",
+        bottom: "16px",
+        right: "16px",
         zIndex: 1000,
         fontFamily: "Arial, sans-serif",
       }}
     >
-      <WebchatProvider client={client}>
+      <WebchatProvider
+        // key={JSON.stringify(config)}
+        // theme={theme}
+        configuration={config}
+        client={client}
+      >
         <div
           onClick={toggleWebchat}
           className="flex-center rounded-2xl shadow-custom cursor-pointer w-16 h-16  bg-gradient-to-r from-blue-400 to-blue-500 z-50"
@@ -77,14 +59,28 @@ export default function ChatBot() {
             bottom: "70px", // Adjusts the position above the FAB
             right: 0,
             width: "360px",
-            height: "450px",
-            // boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
+            height: "470px",
             borderRadius: "8px",
-            overflow: "hidden",
+            // overflow: "hidden",
             backgroundColor: "#fff",
+            display: isWebchatOpen ? "block" : "none",
           }}
           className="shadow-custom"
         >
+          <div
+            onClick={toggleWebchat}
+            className="bg-slate-200 rounded-full p-2"
+            style={{
+              position: "absolute",
+              top: "-10px",
+              left: "-10px",
+              cursor: "pointer",
+              zIndex: 1,
+            }}
+          >
+            <X size={24} />
+          </div>
+
           <Webchat />
         </div>
       </WebchatProvider>
