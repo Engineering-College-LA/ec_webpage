@@ -1,20 +1,20 @@
 import { Webchat, WebchatProvider, Fab, getClient } from "@botpress/webchat";
-// import { buildTheme } from "@botpress/webchat-generator";
+import { buildTheme } from "@botpress/webchat-generator";
 import { MessageCircle, X } from "lucide-react";
 import { useState } from "react";
 
-// const { theme } = buildTheme({
-//   themeName: "prism",
-//   themeColor: "#634433",
-// });
+const { theme } = buildTheme({
+  themeName: "prism",
+  themeColor: "#634433",
+});
 
-const clientId = "0df3ad6a-2820-46da-9fd4-3ee698b627f2";
+const clientId = import.meta.env.VITE_APP_BOTPRESS_ID;
 
 const config = {
   composerPlaceholder: "Задайте ваш вопрос о колледже E|C...",
   botName: "EC Консультант",
   botAvatar:
-    "https://i.pinimg.com/736x/35/ab/67/35ab67e56fc122ebba708f553ac45255.jpg", // You can replace this with a custom avatar URL if desired
+    "https://i.pinimg.com/736x/59/81/8e/59818e14c46a5e5df70771643343fa39.jpg", // You can replace this with a custom avatar URL if desired
   botDescription:
     "Привет! 👋 Я — виртуальный помощник колледжа инженерии E|C. Спрашивайте про поступление, программы и учёбу!",
 };
@@ -39,7 +39,7 @@ export default function ChatBot() {
     >
       <WebchatProvider
         // key={JSON.stringify(config)}
-        // theme={theme}
+        theme={theme}
         configuration={config}
         client={client}
       >
@@ -75,7 +75,7 @@ export default function ChatBot() {
               top: "-10px",
               left: "-10px",
               cursor: "pointer",
-              zIndex: 1,
+              zIndex: 50,
             }}
           >
             <X size={24} />
