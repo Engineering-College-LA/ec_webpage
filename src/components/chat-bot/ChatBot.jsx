@@ -12,7 +12,7 @@ const clientId = "0df3ad6a-2820-46da-9fd4-3ee698b627f2";
 
 const config = {
   composerPlaceholder: "Задайте ваш вопрос о колледже E|C...",
-  botName: "EC Support",
+  botName: "EC Консультант",
   botAvatar:
     "https://i.pinimg.com/736x/35/ab/67/35ab67e56fc122ebba708f553ac45255.jpg", // You can replace this with a custom avatar URL if desired
   botDescription:
