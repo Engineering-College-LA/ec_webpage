@@ -64,7 +64,7 @@ const Images = () => {
           <ChevronRight size={32} className="text-n-bluish" />
         </div>
         {/* Navigation Dots */}
-        <div className="absolute bottom-4 w-full flex justify-center space-x-2">
+        <div className="absolute bottom-4 w-full flex justify-center -space-x-1">
           {slides.map((_, index) => (
             <div
               key={index}

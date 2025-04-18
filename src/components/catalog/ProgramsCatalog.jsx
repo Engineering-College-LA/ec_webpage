@@ -10,22 +10,22 @@ function ProgramsCatalog() {
     {
       name: t("home.programsSection.programs.0.name"),
       description: t("home.programsSection.programs.0.description"),
-      link: "/academics#program-1",
+      link: "/academics/software-engineering",
     },
     {
       name: t("home.programsSection.programs.1.name"),
       description: t("home.programsSection.programs.1.description"),
-      link: "/academics#program-2",
+      link: "/academics/cyber-security",
     },
     {
       name: t("home.programsSection.programs.2.name"),
       description: t("home.programsSection.programs.2.description"),
-      link: "/academics#program-3",
+      link: "/academics/it-entrepreneurship",
     },
     {
       name: t("home.programsSection.programs.3.name"),
       description: t("home.programsSection.programs.3.description"),
-      link: "/academics#program-4",
+      link: "/academics/stem-pedagogy",
     },
   ];
   return (

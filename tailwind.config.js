@@ -24,7 +24,7 @@ export default {
       },
       backgroundImage: {
         "hero-gradient":
-          'linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./assets/img_01.jpg")',
+          'linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("./assets/img_1.jpg")',
         "h-gradient":
           "linear-gradient(180deg, rgba(255,255,255,0) 65%, #F6C90E 65%)",
         mission: "url('./assets/img_04.jpg')",
