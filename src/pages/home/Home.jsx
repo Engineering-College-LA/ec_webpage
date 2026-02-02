@@ -8,7 +8,8 @@ import MapAndContactInfo from "../../components/map-info/MapAndContactInfo";
 import Images from "../../components/gallery/Images";
 import { useLocation } from "react-router-dom";
 import ContactTelegram from "../../components/contact/ContactTelegram";
-import QuoteSection from "../../components/QuoteSection";
+import CEOQuote from "../../components/CEOQuote";
+import SloganBanner from "../../components/SloganBanner";
 
 function Home() {
   const location = useLocation();
@@ -32,9 +33,11 @@ function Home() {
       <section id="hero">
         <Hero />
       </section>
+      <SloganBanner />
       <section id="about">
         <AboutSection />
-        <QuoteSection />
+        <CEOQuote />
+        {/* <QuoteSection /> */}
         <ProgramsCatalog />
       </section>
       <section id="reasons">
