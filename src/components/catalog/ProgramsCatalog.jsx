@@ -20,12 +20,12 @@ function ProgramsCatalog() {
     {
       name: t("home.programsSection.programs.2.name"),
       description: t("home.programsSection.programs.2.description"),
-      link: "/academics/it-entrepreneurship",
+      link: "/academics/management-in-it",
     },
     {
       name: t("home.programsSection.programs.3.name"),
       description: t("home.programsSection.programs.3.description"),
-      link: "/academics/stem-pedagogy",
+      link: "/academics/industrial-design",
     },
   ];
   return (

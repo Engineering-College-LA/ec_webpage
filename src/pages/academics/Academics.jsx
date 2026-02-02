@@ -9,8 +9,8 @@ const reasons = Array.from({ length: 7 }, (_, i) => ({
 const programs = [
   { key: "programs.0", path: "software-engineering" },
   { key: "programs.1", path: "cyber-security" },
-  { key: "programs.2", path: "it-entrepreneurship" },
-  { key: "programs.3", path: "stem-pedagogy" },
+  { key: "programs.2", path: "management-in-it" },
+  { key: "programs.3", path: "industrial-design" },
 ];
 
 function Academics() {
@@ -30,7 +30,10 @@ function Academics() {
           <p className="mb-4 text-balance">
             {t(`home.programsSection.${program.key}.description`)}
           </p>
-          <Link to={`/academics/${program.path}`} className="text-blue-700 flex items-center gap-1 hover:text-blue-500">
+          <Link
+            to={`/academics/${program.path}`}
+            className="text-blue-700 flex items-center gap-1 hover:text-blue-500"
+          >
             <span>{t("home.programsSection.learnMore")}</span>
             <ArrowRight size={18} className="inline" />
           </Link>
@@ -45,10 +48,7 @@ function Academics() {
           });
 
           return (
-            <div
-              key={index}
-              className="relative flex flex-col p-4 rounded-lg"
-            >
+            <div key={index} className="relative flex flex-col p-4 rounded-lg">
               <div className="page-subtitle">
                 <span className="text-slate-200 text-6xl absolute -z-10 top-2 select-none">
                   {index + 1}

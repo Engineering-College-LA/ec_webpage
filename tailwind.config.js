@@ -29,6 +29,7 @@ export default {
           "linear-gradient(180deg, rgba(255,255,255,0) 65%, #F6C90E 65%)",
         mission: "url('./assets/img_04.jpg')",
         application: "url('./assets/img_11.jpg')",
+        quote: "url('./assets/person_01.jpg')",
       },
       backgroundSize: {
         "full-40": "100% 40%",
@@ -73,7 +74,7 @@ export default {
               "linear-gradient(45deg, transparent 25%, rgba(255, 255, 255, 0.65) 50%, transparent 75%, transparent 100%)",
           },
         },
-        ["responsive", "hover"]
+        ["responsive", "hover"],
       );
     },
   ],

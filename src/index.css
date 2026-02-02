@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Teko:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Teko:wght@600&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -13,7 +13,7 @@
 }
 
 :root {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -42,9 +42,8 @@
   }
 
   .section-title {
-    font-family: 'Teko', sans-serif;
+    font-family: "Teko", sans-serif;
   }
-
 
   .page-title {
     @apply text-2xl font-bold my-4 text-slate-800;
@@ -55,21 +54,29 @@
   }
 
   .page-paragraph {
-    @apply text-base my-2 text-slate-600;
+    @apply text-base my-2 text-slate-600 text-pretty;
   }
 
   .half-highlight {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 65%, #b1c4da8e 65%);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 65%,
+      #b1c4da8e 65%
+    );
   }
 
   .grid-layout {
     z-index: 0;
-    background-image: repeating-linear-gradient(to right,
+    background-image: repeating-linear-gradient(
+        to right,
         transparent 0 60px,
-        #a0bad737 60px 61px),
-      repeating-linear-gradient(to bottom,
+        #a0bad737 60px 61px
+      ),
+      repeating-linear-gradient(
+        to bottom,
         transparent 0 60px,
-        #a0bad737 60px 61px);
+        #a0bad737 60px 61px
+      );
   }
 }
 
@@ -112,7 +119,7 @@ html {
   padding: 1.5rem;
 
   border: 1px solid #9999993f;
-  border-radius: .6rem;
+  border-radius: 0.6rem;
 }
 
 .dialog::backdrop {
@@ -136,17 +143,17 @@ html {
 
 @keyframes pulse {
   0% {
-    -moz-box-shadow: 0 0 0 0 rgba(160, 186, 215, .9);
-    box-shadow: 0 0 0 0 rgba(160, 186, 215, .9);
+    -moz-box-shadow: 0 0 0 0 rgba(160, 186, 215, 0.9);
+    box-shadow: 0 0 0 0 rgba(160, 186, 215, 0.9);
   }
 
   70% {
-    -moz-box-shadow: 0 0 0 10px rgba(160, 186, 215, .1);
-    box-shadow: 0 0 0 10px rgba(160, 186, 215, .1);
+    -moz-box-shadow: 0 0 0 10px rgba(160, 186, 215, 0.1);
+    box-shadow: 0 0 0 10px rgba(160, 186, 215, 0.1);
   }
 
   100% {
-    -moz-box-shadow: 0 0 0 0 rgba(160, 186, 215, .0);
-    box-shadow: 0 0 0 0 rgba(160, 186, 215, .0);
+    -moz-box-shadow: 0 0 0 0 rgba(160, 186, 215, 0);
+    box-shadow: 0 0 0 0 rgba(160, 186, 215, 0);
   }
 }

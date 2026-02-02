@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Hero from "../../components/hero/Hero";
 import AboutSection from "../../components/about-us/AboutSection";
 import ProgramsCatalog from "../../components/catalog/ProgramsCatalog";
@@ -8,6 +8,7 @@ import MapAndContactInfo from "../../components/map-info/MapAndContactInfo";
 import Images from "../../components/gallery/Images";
 import { useLocation } from "react-router-dom";
 import ContactTelegram from "../../components/contact/ContactTelegram";
+import QuoteSection from "../../components/QuoteSection";
 
 function Home() {
   const location = useLocation();
@@ -33,6 +34,7 @@ function Home() {
       </section>
       <section id="about">
         <AboutSection />
+        <QuoteSection />
         <ProgramsCatalog />
       </section>
       <section id="reasons">

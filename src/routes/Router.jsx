@@ -14,22 +14,18 @@ import Academics from "../pages/academics/Academics";
 import Admission from "../pages/admission/Admission";
 import Affiliations from "../pages/affiliations/Affiliations";
 
-// Lazy load the pages
-// const AboutPage = lazy(() => import("../pages/about/AboutPage"));
-// const Academics = lazy(() => import("../pages/academics/Academics"));
-// const Admission = lazy(() => import("../pages/admission/Admission"));
 const ThankYou = lazy(() => import("../pages/thank-you/ThankYou"));
 const CareerTestPage = lazy(() => import("../pages/careertest/CareerTest"));
 const NotFound = lazy(() => import("../pages/not-found/NotFound"));
 
 const SoftwareEngineering = lazy(
-  () => import("../pages/academics/SoftwareEngineering")
+  () => import("../pages/academics/SoftwareEngineering"),
 );
 const CyberSecurity = lazy(() => import("../pages/academics/CyberSecurity"));
-const ITEentrepreneurship = lazy(
-  () => import("../pages/academics/ITEentrepreneurship")
+const ManagementInIT = lazy(() => import("../pages/academics/ManagementInIT"));
+const IndustrialDesign = lazy(
+  () => import("../pages/academics/IndustrialDesign"),
 );
-const STEMPedagogy = lazy(() => import("../pages/academics/STEMPedagogy"));
 
 // Initialize Google Analytics
 ReactGA.initialize("G-2M2GPPXSPW");
@@ -48,11 +44,10 @@ const router = createBrowserRouter([
       },
       {
         path: "/academics",
-        // The Academics path acts as a parent for the listing page and the individual program pages.
+
         children: [
-          // The listing page:
           { index: true, element: <Academics /> },
-          // Separate pages for each program:
+
           {
             path: "software-engineering",
             element: <SoftwareEngineering />,
@@ -62,12 +57,12 @@ const router = createBrowserRouter([
             element: <CyberSecurity />,
           },
           {
-            path: "it-entrepreneurship",
-            element: <ITEentrepreneurship />,
+            path: "management-in-it",
+            element: <ManagementInIT />,
           },
           {
-            path: "stem-pedagogy",
-            element: <STEMPedagogy />,
+            path: "industrial-design",
+            element: <IndustrialDesign />,
           },
         ],
       },
