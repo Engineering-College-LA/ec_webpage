@@ -8,7 +8,6 @@ import ReactGA from "react-ga4";
 import Home from "../pages/home/Home";
 import BaseLayout from "../components/layouts/BaseLayout";
 import Spinner from "../components/spinner/Spinner";
-import Colors from "../pages/Colors";
 import AboutPage from "../pages/about/AboutPage";
 import Academics from "../pages/academics/Academics";
 import Admission from "../pages/admission/Admission";
@@ -81,10 +80,6 @@ const router = createBrowserRouter([
       {
         path: "/thank-you",
         element: <ThankYou />,
-      },
-      {
-        path: "/colors",
-        element: <Colors />,
       },
     ],
   },

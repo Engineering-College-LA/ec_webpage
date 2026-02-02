@@ -109,7 +109,7 @@ const Footer = () => {
         </div>
 
         <p className="text-sm text-white">
-          &copy; 2024–2025. EC All rights reserved.
+          &copy; 2024–2026. EC All rights reserved.
         </p>
       </div>
     </footer>
