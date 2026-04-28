@@ -40,9 +40,8 @@ const CallButton = () => {
 
       {/* Sub left */}
       <div
-        className={`absolute rounded-full transition-all duration-200 ease-out p-2 hover:p-3 bg-green-400 hover:bg-green-500 text-white ${
-          isOpen ? "scale-y-100 -translate-x-[80px]" : "scale-y-0"
-        }`}
+        className={`absolute rounded-full transition-all duration-200 ease-out p-2 hover:p-3 bg-green-400 hover:bg-green-500 text-white ${isOpen ? "scale-y-100 -translate-x-[80px]" : "scale-y-0"
+          }`}
       >
         <a
           href={socialIcons[1].href}
@@ -55,9 +54,8 @@ const CallButton = () => {
 
       {/* Sub top */}
       <div
-        className={`absolute rounded-full transition-all duration-200 ease-out p-2 hover:p-3 bg-blue-400 hover:bg-blue-500 text-white ${
-          isOpen ? "scale-x-100 -translate-y-[80px]" : "scale-x-0"
-        }`}
+        className={`absolute rounded-full transition-all duration-200 ease-out p-2 hover:p-3 bg-blue-400 hover:bg-blue-500 text-white ${isOpen ? "scale-x-100 -translate-y-[80px]" : "scale-x-0"
+          }`}
       >
         <a
           href={socialIcons[2].href}
@@ -70,11 +68,10 @@ const CallButton = () => {
 
       {/* Sub middle */}
       <div
-        className={`absolute rounded-full transition-all duration-200 ease-out p-2 hover:p-3 bg-yellow-400 hover:bg-yellow-500 text-white ${
-          isOpen
-            ? "scale-x-100 -translate-y-[68px] -translate-x-[68px]"
-            : "scale-x-0"
-        }`}
+        className={`absolute rounded-full transition-all duration-200 ease-out p-2 hover:p-3 bg-yellow-400 hover:bg-yellow-500 text-white ${isOpen
+          ? "scale-x-100 -translate-y-[68px] -translate-x-[68px]"
+          : "scale-x-0"
+          }`}
       >
         <a
           href={socialIcons[0].href}

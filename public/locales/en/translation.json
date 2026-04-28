@@ -42,19 +42,23 @@
       "programs": [
         {
           "name": "Software Engineering",
-          "description": "Our Software Engineering program equips students with the skills needed to design, develop, and maintain software systems. From front-end development to back-end infrastructure, students learn the latest technologies and best practices."
+          "description": "Learn to design, develop, and maintain modern software systems using industry-standard tools and technologies, from front-end interfaces to back-end infrastructure."
         },
         {
           "name": "Cybersecurity",
-          "description": "In the Cybersecurity program, students learn to protect digital assets from cyber threats. With hands-on training in ethical hacking, network security, and cryptography, graduates are prepared for careers in information security."
+          "description": "Gain practical skills to protect systems, networks, and data from cyber threats through hands-on training in ethical hacking, network security, and data protection."
         },
         {
-          "name": "Management in IT",
-          "description": "The Management in IT program prepares students to lead technology-driven projects and organizations. Combining business strategy with information technology, students gain the skills needed to manage teams, systems, and digital transformation."
+          "name": "Management",
+          "description": "Develop the skills to manage teams, projects, and business processes by combining leadership, strategy, and modern management practices."
         },
         {
-          "name": "Industrial Design",
-          "description": "The Industrial Design program prepares students to design functional, user-centered, and visually compelling products. Students combine creativity, engineering thinking, and modern design tools to develop innovative solutions for real-world problems."
+          "name": "Design",
+          "description": "Build creative and technical skills to design user-centered visual and digital products, combining aesthetics, functionality, and modern design tools."
+        },
+        {
+          "name": "Marketing",
+          "description": "Learn how to promote products and services through digital marketing, branding, and market analysis, gaining skills востребованные in modern business."
         }
       ],
       "learnMore": "Learn more"
@@ -230,74 +234,83 @@
     "softwareEngineering": {
       "name": "Software Engineering",
       "description": [
-        "The Software Engineering Program is dedicated to advancing the discipline of software development through comprehensive educational programs, research, and collaboration with industry. Focused on the application of engineering principles to the design, development, and implementation of software, the program offers both theoretical and practical training. Students learn about various software development methodologies, project management, and effective team collaboration, preparing them to tackle complex software challenges in a dynamic technological landscape."
+        "The Software Engineering Program is designed to prepare students for careers in software development by combining strong theoretical foundations with hands-on experience. Students learn how to design, build, test, and maintain scalable software systems using modern programming languages, frameworks, and development tools.",
+        "The program emphasizes problem-solving, system thinking, and teamwork, while introducing students to software development methodologies, version control, and project management practices. Graduates are equipped to work in fast-paced technology environments and contribute to real-world software solutions."
       ],
       "jobRoles": "Potential job roles for graduates:",
       "roles": [
         "Software Developer",
+        "Front-end Developer",
+        "Back-end Developer",
+        "Full-stack Developer",
         "DevOps Engineer",
-        "Quality Assurance Analyst",
-        "Mobile Application Developer",
-        "User Interface Designer",
-        "Project Manager",
-        "Scrum Master",
-        "Embedded Systems Engineer"
+        "QA Engineer",
+        "Mobile App Developer",
+        "UI/UX Designer"
       ]
     },
     "cyberSecurity": {
-      "name": "Cyber Security",
+      "name": "Cybersecurity",
       "description": [
-        "The Cybersecurity Program provides rigorous training and research opportunities in the field of information security. Addressing the increasing threats in the digital world, the program's curriculum covers areas such as network security, ethical hacking, cryptography, and data protection. Through hands-on labs and real-world projects, students are equipped with the skills needed to design, implement, and manage secure systems and to anticipate and mitigate potential security breaches, thus preparing them for high-demand roles in both public and private sectors."
+        "The Cybersecurity Program prepares students to protect digital systems and information in an increasingly connected world. Through practical training and real-world scenarios, students learn how to identify vulnerabilities, prevent cyberattacks, and secure networks and data.",
+        "The program covers areas such as ethical hacking, network security, cryptography, and risk management. Graduates gain the skills needed to respond to security threats and ensure the integrity of digital systems across various industries."
       ],
       "jobRoles": "Potential job roles for graduates:",
       "roles": [
-        "Information Security Analyst",
-        "Penetration Tester",
-        "Cybersecurity Consultant",
+        "Cybersecurity Analyst",
+        "Information Security Specialist",
+        "Ethical Hacker (Penetration Tester)",
         "Network Security Engineer",
-        "Security Operations Center (SOC) Analyst",
-        "Cryptographer",
-        "Forensic Computer Analyst",
-        "Vulnerability Assessor",
-        "Compliance and Controls Analyst"
+        "Security Consultant",
+        "SOC Analyst"
       ]
     },
-    "industrialDesign": {
-      "name": "Industrial Design",
+    "management": {
+      "name": "Management",
       "description": [
-        "The Industrial Design Program focuses on the creation and development of products that balance functionality, aesthetics, and user experience. The curriculum integrates design thinking, materials science, ergonomics, prototyping, and digital modeling to guide students through the complete product development process—from concept to production.",
-        "Students gain both theoretical knowledge and hands-on experience through studio work, real-world projects, and collaboration across engineering and technology disciplines. Emphasis is placed on sustainability, usability, and innovation, preparing graduates to design products that meet modern industry and societal needs."
+        "The Management Program prepares students to lead teams, manage projects, and make strategic decisions in a business environment. The program combines core business knowledge with practical skills in leadership, communication, and organizational management.",
+        "Students learn how to plan, execute, and evaluate projects, work with teams, and adapt to changing business environments. Graduates are ready to take on leadership roles across different industries."
       ],
       "jobRoles": "Potential job roles for graduates:",
       "roles": [
-        "Industrial Designer",
+        "Project Manager",
+        "Business Manager",
+        "Operations Manager",
+        "Team Lead",
+        "Business Development Specialist",
+        "Entrepreneur"
+      ]
+    },
+    "design": {
+      "name": "Design",
+      "description": [
+        "The Design Program focuses on developing creative and technical skills to create visual and digital products. Students learn to design user-centered solutions by combining creativity, design principles, and modern tools.",
+        "The program covers areas such as graphic design, digital design, branding, and user experience (UX/UI). Graduates are prepared to work on real-world design projects across different industries."
+      ],
+      "jobRoles": "Potential job roles for graduates:",
+      "roles": [
+        "Graphic Designer",
+        "UI/UX Designer",
         "Product Designer",
-        "UX/UI Designer",
-        "Design Engineer",
-        "CAD Specialist",
-        "Prototype Developer",
-        "Packaging Designer",
-        "Creative Technologist",
-        "Design Consultant"
+        "Visual Designer",
+        "Brand Designer",
+        "Motion Designer"
       ]
     },
-    "managementInIT": {
-      "name": "Management in IT",
+    "marketing": {
+      "name": "Marketing",
       "description": [
-        "The Management in IT Program bridges the gap between technology and business leadership. It focuses on preparing students to manage IT resources, oversee technology projects, and support organizational decision-making in a digital environment.",
-        "The curriculum covers key areas such as IT project management, information systems, business analytics, digital strategy, and organizational leadership. Through case studies, team-based projects, and practical applications, students develop both technical awareness and managerial competence."
+        "The Marketing Program prepares students to promote products and services in a competitive market. Students learn how to analyze consumer behavior, build brands, and develop effective marketing strategies using digital tools and platforms.",
+        "The program focuses on digital marketing, social media, content creation, and data-driven decision-making. Graduates are equipped to work in modern marketing environments and drive business growth."
       ],
       "jobRoles": "Potential job roles for graduates:",
       "roles": [
-        "IT Project Manager",
-        "IT Manager",
-        "Business Analyst",
-        "Product Manager",
-        "Technology Consultant",
-        "Systems Manager",
-        "Digital Transformation Manager",
-        "Operations Manager (IT)",
-        "Scrum Product Owner"
+        "Marketing Specialist",
+        "Digital Marketer",
+        "Social Media Manager",
+        "Brand Manager",
+        "Content Creator",
+        "Marketing Analyst"
       ]
     },
     "reasonsTitle": "7 Reasons to Study at E|C College of Engineering",
@@ -388,5 +401,28 @@
     "title": "Page not found",
     "subtitle": "Incorrectly entered web address or the page does not exist",
     "goBackBtn": "Go Back Home"
+  },
+  "footer": {
+    "titles": {
+      "main": "Main",
+      "helpfulLinks": "Helpful Links",
+      "contacts": "Contacts"
+    },
+    "companyLinks": {
+      "about": "About E|C",
+      "academics": "Academics",
+      "admissions": "Admissions"
+    },
+    "helpfulLinks": {
+      "contact": "Contact",
+      "faq": "FAQs"
+    },
+    "contactLinks": {
+      "phone": "Phone",
+      "email": "Email",
+      "addressLabel": "Suhe Bator, 23",
+      "address": "Address"
+    },
+    "copyright": "© 2024–2026. EC All rights reserved."
   }
 }

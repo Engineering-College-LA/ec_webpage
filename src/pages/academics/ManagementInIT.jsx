@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-const LANG_KEY = "academics.managementInIT";
+const LANG_KEY = "academics.management";
 
 function ManagementInIT() {
   const { t } = useTranslation();

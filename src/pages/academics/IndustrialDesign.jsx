@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-const LANG_KEY = "academics.industrialDesign";
+const LANG_KEY = "academics.design";
 
 function IndustrialDesign() {
   const { t } = useTranslation();

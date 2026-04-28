@@ -27,6 +27,11 @@ function ProgramsCatalog() {
       description: t("home.programsSection.programs.3.description"),
       link: "/academics/industrial-design",
     },
+    {
+      name: t("home.programsSection.programs.4.name"),
+      description: t("home.programsSection.programs.4.description"),
+      link: "/academics/marketing",
+    },
   ];
   return (
     <div className="page py-14 sm:py-20 px-4 md:px-8 text-slate-900">
