@@ -25,6 +25,7 @@ const ManagementInIT = lazy(() => import("../pages/academics/ManagementInIT"));
 const IndustrialDesign = lazy(
   () => import("../pages/academics/IndustrialDesign"),
 );
+const Marketing = lazy(() => import("../pages/academics/Marketing"));
 
 // Initialize Google Analytics
 ReactGA.initialize("G-2M2GPPXSPW");
@@ -62,6 +63,10 @@ const router = createBrowserRouter([
           {
             path: "industrial-design",
             element: <IndustrialDesign />,
+          },
+          {
+            path: "marketing",
+            element: <Marketing />,
           },
         ],
       },

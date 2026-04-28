@@ -11,6 +11,7 @@ const programs = [
   { key: "programs.1", path: "cyber-security" },
   { key: "programs.2", path: "management-in-it" },
   { key: "programs.3", path: "industrial-design" },
+  { key: "programs.4", path: "marketing" },
 ];
 
 function Academics() {
