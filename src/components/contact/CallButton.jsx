@@ -4,17 +4,17 @@ import { socialMediaIcons } from "../../config/icons";
 
 const socialIcons = [
   {
-    href: "tel:+996755990550",
+    href: "tel:+996226142222",
     icon: socialMediaIcons.phone,
     label: "telegram",
   },
   {
-    href: "https://api.whatsapp.com/send?phone=996755990550",
+    href: "https://api.whatsapp.com/send?phone=996226142222",
     icon: socialMediaIcons.whatsapp,
     label: "WhatsApp",
   },
   {
-    href: "https://t.me/+996501990550",
+    href: "https://t.me/+996226142222",
     icon: socialMediaIcons.telegram,
     label: "Telegram",
   },

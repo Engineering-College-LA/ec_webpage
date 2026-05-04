@@ -20,8 +20,8 @@ const helpfulLinks = [
 
 const contactLinks = [
   {
-    href: "tel:+996501990550",
-    label: "+996 501 99 05 50",
+    href: "tel:+996226142222",
+    label: "+996 226 14 22 22",
     labelStart: "footer.contactLinks.phone",
   },
   {
