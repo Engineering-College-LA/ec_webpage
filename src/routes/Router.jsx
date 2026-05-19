@@ -16,6 +16,7 @@ import Affiliations from "../pages/affiliations/Affiliations";
 const ThankYou = lazy(() => import("../pages/thank-you/ThankYou"));
 const CareerTestPage = lazy(() => import("../pages/careertest/CareerTest"));
 const NotFound = lazy(() => import("../pages/not-found/NotFound"));
+const AppLanding = lazy(() => import("../pages/app-landing/AppLanding"));
 
 const SoftwareEngineering = lazy(
   () => import("../pages/academics/SoftwareEngineering"),
@@ -87,6 +88,10 @@ const router = createBrowserRouter([
         element: <ThankYou />,
       },
     ],
+  },
+  {
+    path: "/ec_app",
+    element: <AppLanding />,
   },
   {
     path: "*",

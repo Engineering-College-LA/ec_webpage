@@ -6,7 +6,20 @@
     "admissions": "Admissions",
     "affiliations": "Affiliations",
     "news": "News + Events",
-    "btnText": "Get details"
+    "btnText": "Get details",
+    "appModal": {
+      "buttonLabel": "Mobile App",
+      "title": "E|C College App",
+      "subtitle": "Your campus in your pocket",
+      "description": "Digital student ID, transcript, class schedule, and campus updates — all in one app.",
+      "appStore": {
+        "badge": "Download on the"
+      },
+      "googlePlay": {
+        "badge": "Get it on"
+      },
+      "seeMore": "Learn more about the app"
+    }
   },
   "home": {
     "heroSection": {
@@ -424,5 +437,36 @@
       "address": "Address"
     },
     "copyright": "© 2024–2026. EC All rights reserved."
+  },
+  "appLanding": {
+    "hero": {
+      "badge": "Now available on iOS & Android",
+      "title": "Your student life,\nin your pocket.",
+      "description": "Digital ID, transcript, schedule, and campus updates — everything you need as an E|C student, always with you."
+    },
+    "features": {
+      "eyebrow": "What's inside",
+      "title": "Built for E|C students",
+      "digitalId": {
+        "title": "Digital Student ID",
+        "desc": "Your official E|C student ID, always on your phone. Show it at the entrance, library, or any campus facility."
+      },
+      "transcript": {
+        "title": "Transcript & Grades",
+        "desc": "View your full academic transcript and current grades for all subjects in one place, anytime."
+      },
+      "schedule": {
+        "title": "Class Schedule",
+        "desc": "See your daily and weekly timetable in real time. Know exactly where to be and when."
+      },
+      "updates": {
+        "title": "Campus Updates",
+        "desc": "Get instant notifications for announcements, exam reminders, and important news from the college."
+      }
+    },
+    "cta": {
+      "title": "Everything you need as a student, in one app.",
+      "description": "Free for all E|C Engineering College students. Available on iOS and Android."
+    }
   }
 }
