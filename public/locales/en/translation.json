@@ -441,8 +441,9 @@
   "appLanding": {
     "hero": {
       "badge": "Now available on iOS & Android",
-      "title": "Your student life,\nin your pocket.",
-      "description": "Digital ID, transcript, schedule, and campus updates — everything you need as an E|C student, always with you."
+      "description": "Digital ID, transcript, schedule, and campus updates — everything you need as an E|C student, always with you.",
+      "title1": "Your student life,",
+      "title2": "in your pocket."
     },
     "features": {
       "eyebrow": "What's inside",
@@ -467,6 +468,9 @@
     "cta": {
       "title": "Everything you need as a student, in one app.",
       "description": "Free for all E|C Engineering College students. Available on iOS and Android."
+    },
+    "footer": {
+      "rights": "All rights reserved."
     }
   }
 }

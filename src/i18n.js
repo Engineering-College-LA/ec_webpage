@@ -7,7 +7,7 @@ i18n.use(Backend).use(LanguageDetector).use(initReactI18next).init({
   fallbackLng: "ru",
   lng: "ru",
   backend: {
-    queryStringParams: { v: "2" },
+    queryStringParams: { v: "3" },
   },
 });
 
