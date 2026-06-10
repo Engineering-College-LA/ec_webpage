@@ -231,6 +231,7 @@
   },
   "about": {
     "title": "Light Academy",
+    "partnersTitle": "Our Partners",
     "description": "Light Academy (L.A.) is an educational brand that began its journey in 2018 and currently operates five international schools across different regions of Kyrgyzstan. This year, Light Academy is opening a new engineering college in Bishkek — E|C Engineering College.",
     "collegeTitle": "Engineering College | LA",
     "overview": "Overview",
@@ -402,6 +403,52 @@
         "Diploma of secondary vocational education: The main document confirming the receipt of secondary vocational education in a specific specialty. It can be with honors (red diploma) or without honors (blue diploma), depending on the student's performance.",
         "Diploma supplement: This document lists all the subjects the student studied and the grades received. The supplement is an integral part of the diploma.",
         "Certificates: Depending on the training program and additional courses, the student may receive various certificates. These may include certificates for completing advanced training courses or certificates of specific professional skills."
+      ]
+    },
+    "sections": {
+      "howToApply": "How to Apply",
+      "tuition": "Tuition & Fees",
+      "scholarships": "Scholarships & Financial Support",
+      "faq": "FAQ"
+    },
+    "scholarship": {
+      "title": "Scholarships, Discounts & Financial Support",
+      "intro": [
+        "At E|C Engineering College, we believe that high-quality education should be accessible to talented and motivated students, regardless of their background or circumstances. To support this commitment, the College offers a range of scholarships, tuition discounts, and financial support opportunities for prospective and current students.",
+        "Our support programs are designed to recognize academic achievement, leadership potential, community involvement, and to provide assistance to families facing financial or social challenges."
+      ],
+      "eligibilityTitle": "Who May Be Eligible?",
+      "eligibilityIntro": "Students may be considered for financial support under one or more of the following categories:",
+      "eligibilityList": [
+        "Outstanding academic achievement",
+        "Winners and participants of Olympiads, competitions, hackathons, and other academic or technical events",
+        "Students from large families",
+        "Students raised in single-parent households",
+        "Students requiring financial assistance",
+        "Students with disabilities",
+        "Applicants from regions across the Kyrgyz Republic",
+        "Families with multiple children enrolled at E|C Engineering College",
+        "Graduates of partner schools",
+        "Students demonstrating leadership, initiative, and active community involvement",
+        "Applicants who complete the admission process during the early enrollment period",
+        "Students choosing to pay tuition for the full academic year in advance",
+        "Applicants referred by E|C students, alumni, parents, or institutional partners"
+      ],
+      "howToTitle": "How to Apply",
+      "howToText": [
+        "During the admissions process, our Admissions Team will help determine which scholarships, discounts, or financial support opportunities you may be eligible for.",
+        "Applicants may be asked to provide supporting documentation to verify eligibility for specific categories. Each application is reviewed individually based on the submitted documents and the College's current financial support policies."
+      ],
+      "importantTitle": "Important Information",
+      "importantText": [
+        "The value and conditions of scholarships and discounts vary depending on the category and supporting documentation provided.",
+        "In some cases, a student may qualify for more than one category of support. The possibility of combining different forms of financial assistance is determined in accordance with the College's policies and procedures.",
+        "Please note that scholarships and discounts are not granted automatically. All awards are subject to review, verification, and formal approval by the College."
+      ],
+      "moreTitle": "Need More Information?",
+      "moreText": [
+        "If you would like to learn more about the scholarships, discounts, and financial support opportunities available to you, please contact the Admissions Office.",
+        "Our team will be happy to guide you through the available options and help identify the forms of support for which you may be eligible."
       ]
     }
   },
