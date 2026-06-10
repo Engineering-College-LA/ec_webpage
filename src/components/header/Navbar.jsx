@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { HeaderContext } from "./Header";
 import { twMerge } from "tailwind-merge";
 import { AlignJustify } from "lucide-react";
@@ -8,6 +8,7 @@ import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import LanguageSelecter from "../langage-selector/LanguageSelecter";
 import { useTranslation } from "react-i18next";
+import { AppModal, AppButton } from "./AppModal";
 
 /* Mobile Toggle component */
 const MobileNavToggle = () => {
@@ -53,21 +54,21 @@ const DesktopNav = () => {
 };
 
 function Navbar() {
-  // const { t } = useTranslation();
+  const [appModalOpen, setAppModalOpen] = useState(false);
+
   return (
-    <nav className="w-full flex item-center justify-between p-3 lg:px-8">
-      <Logo logoSrc={logoWhite} width={200} height={56} />
-      <DesktopNav />
-      {/* <div className="flex items-center lg:hidden">
-        <WhatsappButton withAnimation={true}>
-          {t("navbar.btnText")}
-        </WhatsappButton>
-      </div> */}
-      <div className="hidden lg:flex justify-end items-center gap-2">
-        <LanguageSelecter />
-      </div>
-      <MobileNavToggle />
-    </nav>
+    <>
+      <nav className="w-full flex item-center justify-between p-3 lg:px-8">
+        <Logo logoSrc={logoWhite} width={200} height={56} />
+        <DesktopNav />
+        <div className="hidden lg:flex justify-end items-center gap-2">
+          <AppButton onClick={() => setAppModalOpen(true)} />
+          <LanguageSelecter />
+        </div>
+        <MobileNavToggle />
+      </nav>
+      <AppModal isOpen={appModalOpen} onClose={() => setAppModalOpen(false)} />
+    </>
   );
 }
 

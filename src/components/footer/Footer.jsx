@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { footerColumns } from "../../config/constants";
 import Logo from "../header/Logo";
 import logoWhite from "../../assets/logo-white.svg";
@@ -12,46 +13,54 @@ const socialIcons = [
     label: "Instagram",
   },
   {
-    href: "https://api.whatsapp.com/send?phone=996501990550",
+    href: "https://api.whatsapp.com/send?phone=996226142222",
     icon: socialMediaIcons.whatsapp,
     label: "WhatsApp",
   },
   {
-    href: "https://t.me/+996501990550",
+    href: "https://t.me/+996226142222",
     icon: socialMediaIcons.telegram,
     label: "Telegram",
   },
 ];
 
 // FooterColumn component
-const FooterColumn = ({ title, links }) => (
-  <div>
-    <p className="font-medium text-white">{title}</p>
-    <ul className="mt-6 space-y-4 text-sm">
-      {links.map((link, index) => (
-        <li key={index}>
-          {link.href ? (
-            <a
-              href={link.href}
-              className="text-n-bluish-50 transition hover:opacity-75"
-            >
-              {link.labelStart && <span>{link.labelStart}:</span>}{" "}
-              <span className="block">{link.label}</span>
-            </a>
-          ) : (
-            <Link
-              to={link.to}
-              className="text-n-bluish-50 transition hover:opacity-75"
-            >
-              {link.labelStart && <span>{link.labelStart}:</span>}{" "}
-              <span className="block">{link.label}</span>
-            </Link>
-          )}
-        </li>
-      ))}
-    </ul>
-  </div>
-);
+const FooterColumn = ({ title, links }) => {
+  const { t } = useTranslation();
+
+  return (
+    <div>
+      <p className="font-medium text-white">{t(title)}</p>
+      <ul className="mt-6 space-y-4 text-sm">
+        {links.map((link, index) => (
+          <li key={index}>
+            {link.href ? (
+              <a
+                href={link.href}
+                className="text-n-bluish-50 transition hover:opacity-75"
+              >
+                {link.labelStart && <span>{t(link.labelStart)}:</span>}{" "}
+                <span className="block">
+                  {link.label.includes("footer.") ? t(link.label) : link.label}
+                </span>
+              </a>
+            ) : (
+              <Link
+                to={link.to}
+                className="text-n-bluish-50 transition hover:opacity-75"
+              >
+                {link.labelStart && <span>{t(link.labelStart)}:</span>}{" "}
+                <span className="block">
+                  {link.label.includes("footer.") ? t(link.label) : link.label}
+                </span>
+              </Link>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
 // SocialIcon component
 const SocialIcon = ({ href, icon, label }) => (
@@ -83,6 +92,8 @@ const SocialLinks = () => (
 );
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-n-blue-hard text-white">
       <div className="mx-auto max-w-screen-xl space-y-8 px-8 py-16 lg:space-y-16">
@@ -109,7 +120,7 @@ const Footer = () => {
         </div>
 
         <p className="text-sm text-white">
-          &copy; 2024–2026. EC All rights reserved.
+          {t("footer.copyright")}
         </p>
       </div>
     </footer>

@@ -1,5 +1,5 @@
 import SectionTitle from "../title/SectionTitle";
-import { FormTelegram } from "./FormTelegram";
+import { AmoCRMForm } from "./AmoCRMForm";
 import { useTranslation } from "react-i18next";
 
 function ContactTelegram() {
@@ -14,7 +14,7 @@ function ContactTelegram() {
         </p>
       </div>
       <div className="lg:w-1/2 md:w-2/3 mx-auto">
-        <FormTelegram />
+        <AmoCRMForm />
       </div>
     </div>
   );

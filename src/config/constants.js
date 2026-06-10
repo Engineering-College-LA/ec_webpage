@@ -8,39 +8,39 @@ export const navLinks = [
 ];
 
 const companyLinks = [
-  { to: "/about", label: "About E|C" },
-  { to: "/academics", label: "Accademics" },
-  { to: "/admissions", label: "Admissions" },
+  { to: "/about", label: "footer.companyLinks.about" },
+  { to: "/academics", label: "footer.companyLinks.academics" },
+  { to: "/admissions", label: "footer.companyLinks.admissions" },
 ];
 
 const helpfulLinks = [
-  { to: "/#contact", label: "Contact" },
-  { to: "/#faq", label: "FAQs" },
+  { to: "/#contact", label: "footer.helpfulLinks.contact" },
+  { to: "/#faq", label: "footer.helpfulLinks.faq" },
 ];
 
 const contactLinks = [
   {
-    href: "tel:+996501990550",
-    label: "+996 501 99 05 50",
-    labelStart: "Phone",
+    href: "tel:+996226142222",
+    label: "+996 226 14 22 22",
+    labelStart: "footer.contactLinks.phone",
   },
   {
     href: "mailto:info@college.edu.kg",
     label: "info@college.edu.kg",
-    labelStart: "Email",
+    labelStart: "footer.contactLinks.email",
   },
   {
     href: "https://2gis.kg/bishkek/inside/70030076373364328/firm/70000001089690237",
     // label: "Саякбая Каралаева, 7а/1 · Сухэ-Батора, 23",
-    label: "Suhe Bator, 23",
-    labelStart: "Address",
+    label: "footer.contactLinks.addressLabel",
+    labelStart: "footer.contactLinks.address",
   },
 ];
 
 export const footerColumns = [
-  { title: "Main", links: companyLinks },
-  { title: "Helpful Links", links: helpfulLinks },
-  { title: "Contacts", links: contactLinks },
+  { title: "footer.titles.main", links: companyLinks },
+  { title: "footer.titles.helpfulLinks", links: helpfulLinks },
+  { title: "footer.titles.contacts", links: contactLinks },
 ];
 
 export const listForMission = [

@@ -69,7 +69,7 @@ function MapAndContactInfo() {
                   {/* Phone Numbers */}
                   <article className="mt-1 text-slate-600 flex flex-col lg:flex-row justify-start items-start lg:items-center gap-2">
                     <a
-                      href="https://t.me/+996501990550"
+                      href="https://t.me/+996226142222"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -77,11 +77,11 @@ function MapAndContactInfo() {
                         <span className="text-slate-700 w-8 h-8 flex justify-center items-center">
                           {socialMediaIcons.telegram}
                         </span>
-                        <span>+996 501 99 05 50</span>
+                        <span>+996 226 14 22 22</span>
                       </div>
                     </a>
                     <a
-                      href="https://api.whatsapp.com/send?phone=996501990550"
+                      href="https://api.whatsapp.com/send?phone=996226142222"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -89,7 +89,7 @@ function MapAndContactInfo() {
                         <span className="text-slate-700 w-8 h-8 flex justify-center items-center">
                           {socialMediaIcons.whatsapp}
                         </span>
-                        <span>+996 501 99 05 50</span>
+                        <span>+996 226 14 22 22</span>
                       </div>
                     </a>
                   </article>
@@ -105,11 +105,11 @@ function MapAndContactInfo() {
                       </span>
                       <span itemProp="telephone">
                         <a
-                          href="tel:+996501990550"
+                          href="tel:+996226142222"
                           className="text-slate-700"
                           aria-label="Call Light Academy College"
                         >
-                          +996 501 99 05 50
+                          +996 226 14 22 22
                         </a>
                       </span>
                     </div>

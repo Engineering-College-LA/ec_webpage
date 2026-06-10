@@ -10,6 +10,7 @@ import { useLocation } from "react-router-dom";
 import ContactTelegram from "../../components/contact/ContactTelegram";
 import CEOQuote from "../../components/CEOQuote";
 import SloganBanner from "../../components/SloganBanner";
+import PartnersCarousel from "../../components/partners/PartnersCarousel";
 
 function Home() {
   const location = useLocation();
@@ -45,6 +46,9 @@ function Home() {
       </section>
       <section id="gallery">
         <Images />
+      </section>
+      <section id="partners">
+        <PartnersCarousel fullWidth hideTitle />
       </section>
       <section id="faq">
         <FAQ />

@@ -16,6 +16,7 @@ import Affiliations from "../pages/affiliations/Affiliations";
 const ThankYou = lazy(() => import("../pages/thank-you/ThankYou"));
 const CareerTestPage = lazy(() => import("../pages/careertest/CareerTest"));
 const NotFound = lazy(() => import("../pages/not-found/NotFound"));
+const AppLanding = lazy(() => import("../pages/app-landing/AppLanding"));
 
 const SoftwareEngineering = lazy(
   () => import("../pages/academics/SoftwareEngineering"),
@@ -25,6 +26,7 @@ const ManagementInIT = lazy(() => import("../pages/academics/ManagementInIT"));
 const IndustrialDesign = lazy(
   () => import("../pages/academics/IndustrialDesign"),
 );
+const Marketing = lazy(() => import("../pages/academics/Marketing"));
 
 // Initialize Google Analytics
 ReactGA.initialize("G-2M2GPPXSPW");
@@ -63,6 +65,10 @@ const router = createBrowserRouter([
             path: "industrial-design",
             element: <IndustrialDesign />,
           },
+          {
+            path: "marketing",
+            element: <Marketing />,
+          },
         ],
       },
       {
@@ -82,6 +88,10 @@ const router = createBrowserRouter([
         element: <ThankYou />,
       },
     ],
+  },
+  {
+    path: "/ec_app",
+    element: <AppLanding />,
   },
   {
     path: "*",

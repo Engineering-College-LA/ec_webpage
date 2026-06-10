@@ -7,16 +7,17 @@ function Hero() {
   return (
     <div className="page h-screen max-h-[1200px] bg-slate-800 bg-hero-gradient bg-no-repeat bg-cover bg-top w-full flex items-center justify-center px-6">
       <div className="text-center text-white">
-        <div className="mx-auto text-center">
-          <h1 className="font-bold">
-            <span className="text-3xl md:text-5xl block">
-              {t("home.heroSection.welcome")}
-            </span>
-            <span className="text-4xl md:text-6xl lg:text-7xl">
-              {t("home.heroSection.title")}
-            </span>
+        <div className="mx-auto max-w-4xl text-center">
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-5 py-2 mb-6 text-xs md:text-sm tracking-[0.25em] uppercase text-white/70 [text-shadow:0_1px_6px_rgba(0,0,0,0.6)]">
+            {t("home.heroSection.welcome")}
+          </div>
+          <h1 className="font-black text-5xl md:text-7xl lg:text-8xl leading-none tracking-tight mb-5 [text-shadow:0_2px_16px_rgba(0,0,0,0.7)]">
+            {t("home.heroSection.title")}
           </h1>
-          <p className="max-w-[760px] mx-auto my-6 text-sm md:text-base">
+          <div className="flex justify-center mb-7">
+            <div className="w-14 h-[3px] bg-n-bluish rounded-full"></div>
+          </div>
+          <p className="max-w-[600px] mx-auto mb-8 text-sm md:text-base text-white/80 leading-relaxed [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]">
             {t("home.heroSection.description")}
           </p>
           <div className="flex justify-center gap-4">
