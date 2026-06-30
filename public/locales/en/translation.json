@@ -536,25 +536,32 @@
         "Participation is individual. This means each participant develops their own idea, prepares a presentation, and pitches it to the jury."
       ]
     },
-    "theme": {
-      "title": "Main theme",
-      "name": "“Ideas that improve our community”",
-      "intro": "Participants need to choose a real problem and propose a solution. Directions can vary:",
-      "directions": [
-        "education",
-        "ecology",
-        "health",
-        "transport",
-        "safety",
-        "technology",
-        "tourism",
-        "social projects",
-        "city or regional development"
+    “theme”: {
+      “title”: “Main theme”,
+      “name”: “”Ideas that improve our community””,
+      “intro”: “Start with something simple — find a problem you notice yourself every day. It could be anything: inconveniences at school, environmental pollution, transport issues, learning challenges, or everyday life in your city.”,
+      “findText”: “Don't try to come up with the «perfect startup». It's better to pick a real problem and propose a clear solution.”,
+      “inspirationLabel”: “Where to find inspiration”,
+      “directions”: [
+        “Education”,
+        “Ecology”,
+        “Health”,
+        “Transport”,
+        “Safety”,
+        “Technology”,
+        “Tourism”,
+        “Social projects”,
+        “City or regional development”
       ],
-      "note": "You don't have to build a finished app or a complex technical product. What matters most is a clear problem, an interesting idea, a realistic solution, and the ability to explain your thinking."
+      “note”: “Remember: a good idea isn't the most complex one — it's the one that can truly help people.”,
+      “questions”: [
+        “What would you change in your city if you had the chance?”,
+        “What problem around you is most frustrating? Maybe that's exactly your project.”
+      ]
     },
     "process": {
       "title": "How does the olympiad work?",
+      "stepLabel": "STEP",
       "steps": {
         "registration": {
           "title": "1. Online registration",
@@ -578,19 +585,19 @@
           ]
         },
         "workshops": {
-          "title": "3. Free workshops",
+          "title": "Free workshops",
           "text": "Finalists get access to free educational workshops. Workshop topics:",
           "items": [
             {
-              "name": "Workshop 1: How to find a good idea",
+              "name": "How to find a good idea",
               "desc": "Participants learn how to notice real problems around them and choose a strong topic for their project."
             },
             {
-              "name": "Workshop 2: How to come up with a solution",
+              "name": "How to come up with a solution",
               "desc": "Participants learn to turn a problem into a clear idea and build a simple prototype."
             },
             {
-              "name": "Workshop 3: How to present a project",
+              "name": "How to present a project",
               "desc": "Participants prepare for their pitch and learn to talk about their idea confidently and clearly."
             }
           ]
