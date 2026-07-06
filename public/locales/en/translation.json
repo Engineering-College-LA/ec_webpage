@@ -519,5 +519,193 @@
     "footer": {
       "rights": "All rights reserved."
     }
+  },
+  "olympiad": {
+    "title": "EC Young Innovators Olympiad",
+    "subtitle": "An olympiad of innovative ideas for 9th-grade students",
+    "slogan": "Come up with an idea. Prepare your project. Pitch to the jury. Build your future.",
+    "intro": [
+      "EC Young Innovators Olympiad is an educational olympiad for 9th-grade students, where every participant can propose an idea aimed at solving a real problem in their school, city, region, or society.",
+      "The olympiad is organized by Engineering College in cooperation with APRD.",
+      "The main goal of the project is to help students develop creative thinking, presentation skills, self-confidence, and an interest in engineering, technology, and entrepreneurship."
+    ],
+    "forWhom": {
+      "title": "Who is this olympiad for?",
+      "text": [
+        "The olympiad is intended for 9th-grade students.",
+        "Participation is individual. This means each participant develops their own idea, prepares a presentation, and pitches it to the jury."
+      ]
+    },
+    “theme”: {
+      “title”: “Main theme”,
+      “name”: “”Ideas that improve our community””,
+      “intro”: “Start with something simple — find a problem you notice yourself every day. It could be anything: inconveniences at school, environmental pollution, transport issues, learning challenges, or everyday life in your city.”,
+      “findText”: “Don't try to come up with the «perfect startup». It's better to pick a real problem and propose a clear solution.”,
+      “inspirationLabel”: “Where to find inspiration”,
+      “directions”: [
+        “Education”,
+        “Ecology”,
+        “Health”,
+        “Transport”,
+        “Safety”,
+        “Technology”,
+        “Tourism”,
+        “Social projects”,
+        “City or regional development”
+      ],
+      “note”: “Remember: a good idea isn't the most complex one — it's the one that can truly help people.”,
+      “questions”: [
+        “What would you change in your city if you had the chance?”,
+        “What problem around you is most frustrating? Maybe that's exactly your project.”
+      ]
+    },
+    "process": {
+      "title": "How does the olympiad work?",
+      "stepLabel": "STEP",
+      "steps": {
+        "registration": {
+          "title": "1. Online registration",
+          "text": "Participants fill out an online form and upload a pitch deck — a short presentation of their idea. The application must include:",
+          "fields": [
+            "first and last name",
+            "school",
+            "city or region",
+            "contact details",
+            "project name",
+            "problem description",
+            "solution description",
+            "project presentation"
+          ]
+        },
+        "selection": {
+          "title": "2. Selection stage",
+          "text": [
+            "After registration closes, the organizers review all applications and presentations.",
+            "Only selected participants advance to the final, so that everyone has a chance to present well and the jury can carefully evaluate the projects."
+          ]
+        },
+        "workshops": {
+          "title": "Free workshops",
+          "text": "Finalists get access to free educational workshops. Workshop topics:",
+          "items": [
+            {
+              "name": "How to find a good idea",
+              "desc": "Participants learn how to notice real problems around them and choose a strong topic for their project."
+            },
+            {
+              "name": "How to come up with a solution",
+              "desc": "Participants learn to turn a problem into a clear idea and build a simple prototype."
+            },
+            {
+              "name": "How to present a project",
+              "desc": "Participants prepare for their pitch and learn to talk about their idea confidently and clearly."
+            }
+          ]
+        },
+        "finalPitch": {
+          "title": "4. Final pitch",
+          "text": "The final will take place on July 29.",
+          "formatIntro": "Each finalist pitches to the jury in a pitch presentation format:",
+          "format": [
+            "4 minutes for the presentation",
+            "3 minutes for jury questions"
+          ]
+        }
+      }
+    },
+    "prepare": {
+      "title": "What do you need to prepare?",
+      "text": "Participants need to prepare a 5–7 slide presentation. Presentation structure:",
+      "structure": [
+        "Project name",
+        "What problem is being solved",
+        "Who faces this problem",
+        "What solution is proposed",
+        "What the benefit will be",
+        "Prototype, mockup, poster, or visual idea",
+        "Why the participant chose this topic"
+      ],
+      "prototypeText": "The prototype can be simple:",
+      "prototypeList": [
+        "a drawing",
+        "a poster",
+        "a Canva design",
+        "a Figma mockup",
+        "a website mockup",
+        "a video",
+        "a physical model",
+        "a presentation demo"
+      ]
+    },
+    "criteria": {
+      "title": "How will projects be evaluated?",
+      "intro": "The jury will evaluate projects against clear criteria:",
+      "list": [
+        "how important the problem is",
+        "how creative the idea is",
+        "whether the solution can be implemented",
+        "what social impact the project may have",
+        "how well the presentation is prepared",
+        "how the participant answers questions"
+      ],
+      "note": "The olympiad evaluates not only knowledge, but also thinking, initiative, confidence, and the desire to solve real problems."
+    },
+    "prizes": {
+      "title": "Prizes",
+      "intro": "Winners receive educational discounts on tuition at Engineering College:",
+      "places": [
+        "1st place — 100% tuition discount",
+        "2nd place — 50% tuition discount",
+        "3rd place — 25% tuition discount"
+      ],
+      "specialTitle": "There may also be special nominations:",
+      "special": [
+        "Most creative idea",
+        "Best social project",
+        "Best presentation",
+        "Best prototype",
+        "Audience choice award"
+      ]
+    },
+    "why": {
+      "title": "Why take part?",
+      "intro": "Taking part in the olympiad is an opportunity to:",
+      "list": [
+        "show your potential",
+        "gain public-speaking experience",
+        "learn to create ideas and projects",
+        "get to know Engineering College",
+        "receive feedback from experts",
+        "compete for an educational discount",
+        "take the first step toward your future profession"
+      ],
+      "note": "Even if a participant doesn't win, they gain valuable experience, new knowledge, and confidence in their abilities."
+    },
+    "organizer": {
+      "title": "Who organizes it?",
+      "text": [
+        "The olympiad is organized by Engineering College in cooperation with APRD.",
+        "The project aims to develop young talent, support students, and promote innovative thinking among 9th-grade students."
+      ]
+    },
+    "banner": {
+      "tag": "New",
+      "title": "EC Young Innovators Olympiad",
+      "text": "9th-graders: pitch an idea and win up to a 100% tuition scholarship.",
+      "cta": "Learn more"
+    },
+    "cta": {
+      "register": "Register & Submit",
+      "warning": "Before submitting, double-check your presentation carefully. Make sure every slide is complete and correct — you will not be able to edit your entry after submission.",
+      "deadlineLabel": "Submission deadline",
+      "deadlineDate": "July 16, 11:45 PM (Bishkek time)",
+      "closed": "Registration is closed",
+      "units": {
+        "days": "Days",
+        "hours": "Hours",
+        "minutes": "Minutes",
+        "seconds": "Seconds"
+      }
+    }
   }
 }

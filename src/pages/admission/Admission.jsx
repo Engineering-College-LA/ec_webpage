@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link, useLocation } from "react-router-dom";
+import { Trophy, ArrowRight } from "lucide-react";
 import ContactTelegram from "../../components/contact/ContactTelegram";
 import FAQ from "../../components/faq/FAQ";
 
@@ -12,7 +14,22 @@ const SECTIONS = [
 
 const Admission = () => {
   const { t } = useTranslation();
+  const location = useLocation();
   const [active, setActive] = useState(SECTIONS[0].id);
+
+  // Honor a #section hash when arriving from another page (e.g. event CTA).
+  useEffect(() => {
+    if (!location.hash) return;
+    const id = location.hash.slice(1);
+    const el = document.getElementById(id);
+    if (el) {
+      const timer = setTimeout(
+        () => el.scrollIntoView({ behavior: "smooth", block: "start" }),
+        100,
+      );
+      return () => clearTimeout(timer);
+    }
+  }, [location.hash]);
 
   const renderList = (list) => (
     <ul className="list-disc pl-5 space-y-1">
@@ -70,6 +87,31 @@ const Admission = () => {
       </nav>
 
       <div className="mx-auto max-w-[860px] px-4 pb-16 pt-10 text-slate-700">
+        {/* Scholarship / Olympiad event banner */}
+        <Link
+          to="/events/young-innovators-olympiad"
+          className="group mb-8 flex flex-col gap-4 overflow-hidden rounded-2xl bg-n-blue-hard p-5 text-white transition-shadow hover:shadow-custom sm:flex-row sm:items-center sm:gap-5"
+        >
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-main/20">
+            <Trophy className="h-6 w-6 text-main" />
+          </div>
+          <div className="flex-1">
+            <span className="inline-block rounded-full bg-main px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide text-n-blue-hard">
+              {t("olympiad.banner.tag")}
+            </span>
+            <p className="mt-2 text-lg font-bold leading-snug">
+              {t("olympiad.banner.title")}
+            </p>
+            <p className="mt-1 text-sm text-n-bluish-50">
+              {t("olympiad.banner.text")}
+            </p>
+          </div>
+          <span className="inline-flex shrink-0 items-center gap-1.5 self-start rounded-full bg-white/10 px-4 py-2 text-sm font-semibold transition-colors group-hover:bg-white/20 sm:self-center">
+            {t("olympiad.banner.cta")}
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+          </span>
+        </Link>
+
         <h2 className="page-title">{t("admission.title")}</h2>
 
         {/* How to Apply */}
