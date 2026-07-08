@@ -16,6 +16,8 @@ This folder stores durable project context for future Codex sessions.
   - styling stack, token ownership, and design-system direction
 - `STATE-AND-DATA-FLOW-CONTEXT.md`
   - current state usage, data-flow issues, and Supabase-ready state boundaries
+- `SECURITY-AUDIT-BRIEF.md`
+  - assignment-ready security audit scope, checklist, and deliverables
 
 ## Suggested Usage
 
@@ -27,5 +29,6 @@ When starting a future frontend task, read these files first:
 4. `commands/NAVIGATION-CONTEXT.md`
 5. `commands/STYLES-AND-DESIGN-SYSTEM-CONTEXT.md`
 6. `commands/STATE-AND-DATA-FLOW-CONTEXT.md`
+7. `commands/SECURITY-AUDIT-BRIEF.md`
 
 That gives the minimum shared context before making architecture or UI changes.
