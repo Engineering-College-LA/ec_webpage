@@ -11,7 +11,7 @@ function CyberSecurity() {
   return (
     <div className="page-style">
       <h2 className="page-title">{t("academics.cyberSecurity.name")}</h2>
-      {descriptionParagraphs.map((paragraph, index) => (
+      {Array.isArray(descriptionParagraphs) && descriptionParagraphs.map((paragraph, index) => (
         <p key={index} className="mb-4 text-pretty">
           {paragraph}
         </p>
@@ -20,7 +20,7 @@ function CyberSecurity() {
         {t("academics.cyberSecurity.jobRoles")}
       </h3>
       <ul className="list-disc ml-5">
-        {jobRoles.map((role, index) => (
+        {Array.isArray(jobRoles) && jobRoles.map((role, index) => (
           <li key={index} className="mb-2">
             {role}
           </li>

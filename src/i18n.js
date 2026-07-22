@@ -7,8 +7,10 @@ i18n.use(Backend).use(LanguageDetector).use(initReactI18next).init({
   fallbackLng: "ru",
   lng: "ru",
   backend: {
+    loadPath: `${import.meta.env.BASE_URL}locales/{{lng}}/{{ns}}.json`,
     queryStringParams: { v: "3" },
   },
+  initImmediate: false,
 });
 
 export default i18n;

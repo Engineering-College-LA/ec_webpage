@@ -504,7 +504,7 @@ const RegisterBlock = ({ t }) => {
 const YoungInnovatorsOlympiad = () => {
   const { t } = useTranslation();
   const ol = (key, opts) => t(`olympiad.${key}`, opts);
-  const arr = (key) => ol(key, { returnObjects: true });
+  const arr = (key) => { const v = ol(key, { returnObjects: true }); return Array.isArray(v) ? v : []; };
 
   const intro = arr("intro");
   const criteria = arr("criteria.list");

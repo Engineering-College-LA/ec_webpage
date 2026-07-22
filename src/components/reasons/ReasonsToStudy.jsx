@@ -46,7 +46,7 @@ function ReasonsToStudy() {
           </SectionTitle>
         </div>
 
-        {data.map((item, index) => (
+        {Array.isArray(data) && data.map((item, index) => (
           <div
             key={index}
             className={twMerge(

@@ -31,13 +31,16 @@ const Admission = () => {
     }
   }, [location.hash]);
 
-  const renderList = (list) => (
-    <ul className="list-disc pl-5 space-y-1">
-      {list.map((item, index) => (
-        <li key={index}>{item}</li>
-      ))}
-    </ul>
-  );
+  const renderList = (list) => {
+    if (!Array.isArray(list)) return null;
+    return (
+      <ul className="list-disc pl-5 space-y-1">
+        {list.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    );
+  };
 
   // Highlight the sub-nav button for whichever section is in view.
   useEffect(() => {
@@ -158,7 +161,7 @@ const Admission = () => {
         <section id="scholarships" className="scroll-mt-[150px] pt-12">
           <h3 className="page-subtitle">{sch("title")}</h3>
           <div className="page-paragraph space-y-3">
-            {sch("intro", { returnObjects: true }).map((p, i) => (
+            {(Array.isArray(sch("intro", { returnObjects: true })) ? sch("intro", { returnObjects: true }) : []).map((p, i) => (
               <p key={i}>{p}</p>
             ))}
           </div>
@@ -175,7 +178,7 @@ const Admission = () => {
             {sch("howToTitle")}
           </h4>
           <div className="mt-2 space-y-3">
-            {sch("howToText", { returnObjects: true }).map((p, i) => (
+            {(Array.isArray(sch("howToText", { returnObjects: true })) ? sch("howToText", { returnObjects: true }) : []).map((p, i) => (
               <p key={i}>{p}</p>
             ))}
           </div>
@@ -184,7 +187,7 @@ const Admission = () => {
             {sch("importantTitle")}
           </h4>
           <div className="mt-2 space-y-3">
-            {sch("importantText", { returnObjects: true }).map((p, i) => (
+            {(Array.isArray(sch("importantText", { returnObjects: true })) ? sch("importantText", { returnObjects: true }) : []).map((p, i) => (
               <p key={i}>{p}</p>
             ))}
           </div>
@@ -192,7 +195,7 @@ const Admission = () => {
           <div className="mt-6 rounded-xl border border-n-bluish-50 bg-n-blue-light p-5">
             <h4 className="font-semibold text-slate-800">{sch("moreTitle")}</h4>
             <div className="mt-2 space-y-3">
-              {sch("moreText", { returnObjects: true }).map((p, i) => (
+              {(Array.isArray(sch("moreText", { returnObjects: true })) ? sch("moreText", { returnObjects: true }) : []).map((p, i) => (
                 <p key={i}>{p}</p>
               ))}
             </div>
