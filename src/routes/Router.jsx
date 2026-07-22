@@ -34,7 +34,8 @@ const Marketing = lazy(() => import("../pages/academics/Marketing"));
 // Initialize Google Analytics
 ReactGA.initialize("G-2M2GPPXSPW");
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
   {
     element: <BaseLayout />,
     children: [
@@ -104,7 +105,9 @@ const router = createBrowserRouter([
     path: "*",
     element: <NotFound />,
   },
-]);
+  ],
+  { basename: "/ec_webpage/" }
+);
 
 function GAListener() {
   const location = useLocation();
