@@ -555,6 +555,10 @@ const TeachersConveyor = () => {
   const [active, setActive]       = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [modal, setModal]         = useState(null); // teacher object or null
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 1200
+  );
+  const touchStartX = useRef(null);
   const timerRef = useRef(null);
   const { i18n } = useTranslation();
   const lang = i18n.language?.startsWith("ru") ? "ru" : "en";
@@ -563,36 +567,78 @@ const TeachersConveyor = () => {
   const prev = useCallback(() => setActive((p) => (p - 1 + TOTAL) % TOTAL), []);
 
   useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
     if (isHovered || modal) return;
     timerRef.current = setTimeout(next, AUTO_DELAY);
     return () => clearTimeout(timerRef.current);
   }, [active, isHovered, modal, next]);
 
+  const isMobile = windowWidth < 640;
+  const isTablet = windowWidth >= 640 && windowWidth < 1024;
+
+  const sideOffset = isMobile
+    ? 0
+    : isTablet
+    ? Math.min(210, Math.floor(windowWidth * 0.26))
+    : 320;
+  const cardWidth = isMobile
+    ? Math.min(windowWidth - 48, 310)
+    : isTablet
+    ? 280
+    : 340;
+  const containerHeight = isMobile ? 470 : isTablet ? 500 : 540;
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e) => {
+    if (touchStartX.current === null) return;
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX.current - touchEndX;
+    if (diff > 40) {
+      next();
+    } else if (diff < -40) {
+      prev();
+    }
+    touchStartX.current = null;
+  };
+
   return (
-    <section className="py-12 select-none">
+    <section className="py-12 select-none overflow-hidden w-full px-2 sm:px-4">
       <SectionTitle>
         {lang === "ru" ? "Преподавательский состав" : "Our Faculty"}
       </SectionTitle>
 
       <div
-        className="relative mx-auto"
-        style={{ height: 540, maxWidth: 980 }}
+        className="relative mx-auto w-full"
+        style={{ height: containerHeight, maxWidth: 980 }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
       >
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
           {teachers.map((t, idx) => {
             const off       = getOffset(idx, active);
             const isCenter  = off === 0;
             const isVisible = Math.abs(off) <= 1;
 
-            const translateX   = off * SIDE_OFFSET;
-            const scale        = isCenter ? 1 : 0.72;
-            const opacity      = isCenter ? 1 : isVisible ? 0.65 : 0;
+            const translateX   = off * sideOffset;
+            const scale        = isCenter ? 1 : isMobile ? 0.85 : 0.72;
+            const opacity      = isCenter ? 1 : isMobile ? 0 : isVisible ? 0.65 : 0;
             const zIndex       = isCenter ? 10 : isVisible ? 5 : 0;
             const hasInfo      = !!t.info;
-            const clickable    = (isVisible && !isCenter) || (isCenter && hasInfo);
+            const clickable    = (isVisible && !isCenter && !isMobile) || (isCenter && hasInfo);
             const cardCursor   = isCenter && hasInfo ? "pointer" : isVisible && !isCenter ? "pointer" : "default";
+
+            const centerPhotoH = isMobile ? 330 : isTablet ? 370 : 420;
+            const sidePhotoH = isMobile ? 260 : isTablet ? 270 : 290;
 
             return (
               <div
@@ -604,13 +650,13 @@ const TeachersConveyor = () => {
                 }}
                 style={{
                   position: "absolute",
-                  width: 340,
+                  width: cardWidth,
                   transform: `translateX(${translateX}px) scale(${scale})`,
                   opacity,
                   zIndex,
                   pointerEvents: clickable ? "auto" : "none",
                   cursor: cardCursor,
-                  transition: "transform 1.4s cubic-bezier(0.4,0,0.2,1), opacity 1.4s ease",
+                  transition: "transform 0.8s cubic-bezier(0.4,0,0.2,1), opacity 0.8s ease",
                   transformOrigin: "center center",
                   willChange: "transform, opacity",
                 }}
@@ -621,15 +667,15 @@ const TeachersConveyor = () => {
                     boxShadow: isCenter
                       ? "0 20px 55px rgba(34,89,164,0.26)"
                       : "0 4px 18px rgba(0,0,0,0.10)",
-                    transition: "box-shadow 1.4s ease",
+                    transition: "box-shadow 0.8s ease",
                   }}
                 >
                   {/* Photo */}
                   <div
                     className="overflow-hidden w-full relative flex items-center justify-center"
                     style={{
-                      height: isCenter ? 420 : 290,
-                      transition: "height 1.4s cubic-bezier(0.4,0,0.2,1)",
+                      height: isCenter ? centerPhotoH : sidePhotoH,
+                      transition: "height 0.8s cubic-bezier(0.4,0,0.2,1)",
                       background: t.img ? undefined : THEMES[t.field]?.gradient ?? THEMES.general.gradient,
                     }}
                   >
@@ -649,15 +695,15 @@ const TeachersConveyor = () => {
                         <div
                           className="relative z-10 rounded-full flex items-center justify-center"
                           style={{
-                            width: isCenter ? 110 : 76,
-                            height: isCenter ? 110 : 76,
+                            width: isCenter ? (isMobile ? 90 : 110) : 76,
+                            height: isCenter ? (isMobile ? 90 : 110) : 76,
                             background: "rgba(255,255,255,0.12)",
                             border: `2px solid rgba(255,255,255,0.22)`,
-                            transition: "width 1.4s ease, height 1.4s ease",
+                            transition: "width 0.8s ease, height 0.8s ease",
                           }}
                         >
                           <svg viewBox="0 0 60 60" fill="none"
-                            style={{ width: isCenter ? 58 : 40, height: isCenter ? 58 : 40 }}>
+                            style={{ width: isCenter ? (isMobile ? 48 : 58) : 40, height: isCenter ? (isMobile ? 48 : 58) : 40 }}>
                             <circle cx="30" cy="22" r="12" fill="rgba(255,255,255,0.35)"/>
                             <path d="M8 56c0-12.15 9.85-22 22-22s22 9.85 22 22" fill="rgba(255,255,255,0.35)"/>
                           </svg>
@@ -694,7 +740,7 @@ const TeachersConveyor = () => {
                       background: isCenter
                         ? "linear-gradient(135deg,#1C3C71,#2259A4)"
                         : "#f1f5f9",
-                      transition: "background 1.4s ease",
+                      transition: "background 0.8s ease",
                       paddingTop: isCenter ? 10 : 6,
                       paddingBottom: isCenter ? 12 : 6,
                     }}
@@ -702,9 +748,9 @@ const TeachersConveyor = () => {
                     <p
                       className="font-semibold leading-snug truncate"
                       style={{
-                        fontSize: isCenter ? 14 : 11,
+                        fontSize: isCenter ? (isMobile ? 13 : 14) : 11,
                         color: isCenter ? "#fff" : "#475569",
-                        transition: "color 1.4s ease, font-size 1.4s ease",
+                        transition: "color 0.8s ease, font-size 0.8s ease",
                       }}
                     >
                       {t.name}
@@ -742,10 +788,19 @@ const TeachersConveyor = () => {
         <button
           onClick={prev}
           className="absolute z-30 flex items-center justify-center rounded-full transition-all duration-200 hover:scale-110 active:scale-95"
-          style={{ left: "calc(50% - 460px)", top: "50%", transform: "translateY(-50%)", width: 48, height: 48, background: "rgba(34,89,164,0.12)", border: "1.5px solid rgba(34,89,164,0.25)", backdropFilter: "blur(6px)" }}
+          style={{
+            left: isMobile ? 4 : isTablet ? 8 : "calc(50% - 460px)",
+            top: "50%",
+            transform: "translateY(-50%)",
+            width: isMobile ? 38 : 48,
+            height: isMobile ? 38 : 48,
+            background: "rgba(34,89,164,0.18)",
+            border: "1.5px solid rgba(34,89,164,0.3)",
+            backdropFilter: "blur(6px)",
+          }}
           aria-label="Предыдущий"
         >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <svg width={isMobile ? "14" : "18"} height={isMobile ? "14" : "18"} viewBox="0 0 24 24" fill="none">
             <path d="M15 18l-6-6 6-6" stroke="#2259A4" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </button>
@@ -754,17 +809,26 @@ const TeachersConveyor = () => {
         <button
           onClick={next}
           className="absolute z-30 flex items-center justify-center rounded-full transition-all duration-200 hover:scale-110 active:scale-95"
-          style={{ right: "calc(50% - 460px)", top: "50%", transform: "translateY(-50%)", width: 48, height: 48, background: "rgba(34,89,164,0.12)", border: "1.5px solid rgba(34,89,164,0.25)", backdropFilter: "blur(6px)" }}
+          style={{
+            right: isMobile ? 4 : isTablet ? 8 : "calc(50% - 460px)",
+            top: "50%",
+            transform: "translateY(-50%)",
+            width: isMobile ? 38 : 48,
+            height: isMobile ? 38 : 48,
+            background: "rgba(34,89,164,0.18)",
+            border: "1.5px solid rgba(34,89,164,0.3)",
+            backdropFilter: "blur(6px)",
+          }}
           aria-label="Следующий"
         >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <svg width={isMobile ? "14" : "18"} height={isMobile ? "14" : "18"} viewBox="0 0 24 24" fill="none">
             <path d="M9 18l6-6-6-6" stroke="#2259A4" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </button>
       </div>
 
       {/* Dots */}
-      <div className="flex items-center justify-center gap-2 mt-3">
+      <div className="flex items-center justify-center gap-1.5 sm:gap-2 mt-3 flex-wrap max-w-xs sm:max-w-md mx-auto px-2">
         {teachers.map((_, i) => (
           <button
             key={i}

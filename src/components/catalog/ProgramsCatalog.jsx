@@ -36,26 +36,26 @@ function ProgramsCatalog() {
   return (
     <div className="page py-14 sm:py-20 px-4 md:px-8 text-slate-900">
       <SectionTitle>{t("home.programsSection.title")}</SectionTitle>
-      <div className="flex flex-wrap justify-center gap-6 lg:gap-8 items-stretch">
+      <div className="flex flex-wrap justify-center gap-5 sm:gap-6 lg:gap-8 items-stretch">
         {programs.map((program, index) => (
-          <div
+          <Link
             key={index}
-            className="relative w-full max-w-[300px] bg-white rounded-3xl transition-transform hover:scale-105 p-6 text-center cursor-pointer shadow-custom"
+            to={program.link}
+            className="relative w-full max-w-[290px] sm:max-w-[300px] bg-white rounded-3xl transition-transform hover:scale-105 p-5 sm:p-6 text-center cursor-pointer shadow-custom flex flex-col justify-between"
           >
-            <div className="w-full flex justify-center items-center text-n-blue">
-              <GraduationCap className="w-[56px] h-[56px]" />
+            <div>
+              <div className="w-full flex justify-center items-center text-n-blue mb-2">
+                <GraduationCap className="w-12 h-12 sm:w-[56px] sm:h-[56px]" />
+              </div>
+              <h3 className="mb-3 font-semibold text-base sm:text-lg text-slate-800">{program.name}</h3>
+              <p className="pb-8 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                {program.description}
+              </p>
             </div>
-            <h3 className="mb-4 font-medium text-lg">{program.name}</h3>
-            <p className="pb-8 text-sm text-slate-700 ">
-              {program.description}
-            </p>
-            <Link
-              to={program.link}
-              className="w-12 h-12 flex-center absolute rounded-full bottom-2 right-2 bg-n-blue"
-            >
-              <MoveUpRight className="text-white" />
-            </Link>
-          </div>
+            <div className="w-10 h-10 sm:w-12 sm:h-12 flex-center absolute rounded-full bottom-3 right-3 bg-n-blue shadow-md">
+              <MoveUpRight className="text-white w-5 h-5 sm:w-6 sm:h-6" />
+            </div>
+          </Link>
         ))}
       </div>
     </div>

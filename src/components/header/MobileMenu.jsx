@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { HeaderContext } from "./Header";
 import { useClickOutsideMouseDown } from "../../hooks/useClickOutside";
 import { X } from "lucide-react";
@@ -7,9 +7,11 @@ import { navLinks } from "../../config/constants";
 import { NavLink } from "react-router-dom";
 import LanguageSelecter from "../langage-selector/LanguageSelecter";
 import { useTranslation } from "react-i18next";
+import { AppButton, AppModal } from "./AppModal";
 
 function MobileMenu() {
   const { mobileMenuOpen, setMobileMenuOpen } = useContext(HeaderContext);
+  const [appModalOpen, setAppModalOpen] = useState(false);
   const mobileMenuRef = useClickOutsideMouseDown(() =>
     setMobileMenuOpen(false)
   );
@@ -22,53 +24,61 @@ function MobileMenu() {
 
   return (
     mobileMenuOpen && (
-      <div
-        className={twMerge(
-          "lg:hidden",
-          mobileMenuOpen ? "bg-black bg-opacity-40" : "hidden"
-        )}
-        role="dialog"
-        aria-modal="true"
-      >
-        <div className="fixed inset-0 z-10 blur-sm backdrop-blur-sm backdrop-filter"></div>
+      <>
+        {/* Semi-transparent Backdrop */}
+        <div
+          className="fixed inset-0 z-40 bg-black/40 backdrop-blur-xs transition-opacity lg:hidden"
+          onClick={handleCloseMenu}
+        />
+
+        {/* Compact Floating Mobile Menu Window */}
         <div
           ref={mobileMenuRef}
-          className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+          className="fixed top-16 right-3 left-3 sm:left-auto sm:right-6 sm:w-80 z-50 rounded-2xl bg-white p-4 shadow-2xl border border-slate-100 lg:hidden overflow-hidden transition-all"
         >
-          {/* Mobile Header - START*/}
-          <div className="flex items-end justify-end">
-            {/* <div>LOGO</div> */}
-            <div
-              className="-m-2.5 rounded-md p-2.5 text-n-blue cursor-pointer"
+          {/* Header row: AppButton + Close button */}
+          <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+            <AppButton onClick={() => { handleCloseMenu(); setAppModalOpen(true); }} />
+            <button
+              type="button"
+              className="p-1.5 rounded-full text-slate-500 hover:bg-slate-100 transition-colors"
               onClick={handleCloseMenu}
+              aria-label="Close menu"
             >
-              <span className="sr-only">Close menu</span>
-              <X className="h-6 w-6" />
-            </div>
+              <X className="h-5 w-5" />
+            </button>
           </div>
-          {/* Mobile Header - END*/}
 
-          {/* Mobile Menu Content - START */}
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10 text-red-400 ">
-              {navLinks.map((link) => (
-                <NavLink
-                  to={link.to}
-                  key={link.label}
-                  onClick={handleCloseMenu}
-                  className="-mx-3 block rounded-lg px-3 py-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  {t(link.label)}
-                </NavLink>
-              ))}
-              <span className="-mx-3 block rounded-lg px-3 py-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                <LanguageSelecter />
-              </span>
-            </div>
+          {/* Navigation Links */}
+          <div className="py-2 space-y-1">
+            {navLinks.map((link) => (
+              <NavLink
+                to={link.to}
+                key={link.label}
+                onClick={handleCloseMenu}
+                className={({ isActive }) =>
+                  twMerge(
+                    "block rounded-xl px-3 py-2.5 text-sm font-semibold transition-colors",
+                    isActive
+                      ? "bg-n-blue/10 text-n-blue"
+                      : "text-slate-700 hover:bg-slate-100"
+                  )
+                }
+              >
+                {t(link.label)}
+              </NavLink>
+            ))}
           </div>
-          {/* Mobile Menu Content - END */}
+
+          {/* Language Selector Footer */}
+          <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
+            <span className="text-xs text-slate-500 font-medium">Язык</span>
+            <LanguageSelecter />
+          </div>
         </div>
-      </div>
+
+        <AppModal isOpen={appModalOpen} onClose={() => setAppModalOpen(false)} />
+      </>
     )
   );
 }

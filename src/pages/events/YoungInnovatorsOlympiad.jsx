@@ -348,7 +348,7 @@ const HorizontalProcess = ({ ol, arr }) => {
                       </div>
                     </div>
                     {/* Content */}
-                    <div className="relative mt-4 flex-1 space-y-3 overflow-hidden px-6 pb-6 text-slate-700 sm:px-8 sm:pb-8">
+                    <div className="relative mt-4 flex-1 space-y-3 overflow-y-auto px-5 pb-6 text-slate-700 sm:px-8 sm:pb-8">
                       {stepContents[i]}
                     </div>
                   </div>

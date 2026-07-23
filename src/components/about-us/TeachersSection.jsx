@@ -8,7 +8,7 @@ const TeachersSection = () => {
   return (
     <div className="page py-16 sm:py-24 px-4 sm:px-6 md:px-8 text-slate-900">
       <div className="flex flex-col items-center lg:flex-row justify-center gap-12">
-        <div className="w-full max-w-[600px] h-[400px] p-1.5 bg-white shadow-custom rounded-2xl">
+        <div className="w-full max-w-[600px] h-[220px] sm:h-[320px] md:h-[400px] p-1.5 bg-white shadow-custom rounded-2xl">
           <img src={teachersImg} alt="Наши преподаватели" className="w-full h-full object-cover rounded-2xl" />
         </div>
         <div className="w-full max-w-[500px]">
