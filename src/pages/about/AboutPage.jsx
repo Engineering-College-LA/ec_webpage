@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 // import ContactUsButton from "../../components/contact/CallButton";
 import ContactTelegram from "../../components/contact/ContactTelegram";
+import TeachersConveyor from "../../components/about-us/TeachersConveyor";
 
 function AboutPage() {
   const { t } = useTranslation();
@@ -17,6 +18,7 @@ function AboutPage() {
         <h3 className="page-subtitle">{t("about.vision")}</h3>
         <p className="page-paragraph">{t("about.visionDescription")}</p>
       </div>
+      <TeachersConveyor />
       <ContactTelegram />
       {/* <ContactUsButton /> */}
     </div>
