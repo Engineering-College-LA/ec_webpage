@@ -35,11 +35,57 @@ const Marketing = lazy(() => import("../pages/academics/Marketing"));
 // Initialize Google Analytics
 ReactGA.initialize("G-2M2GPPXSPW");
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error("Uncaught error:", error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div style={{ padding: "40px", textAlign: "center", fontFamily: "sans-serif" }}>
+          <h2>Что-то пошло не так / Something went wrong</h2>
+          <p style={{ color: "#888", marginTop: "8px" }}>{this.state.error?.toString()}</p>
+          <button
+            onClick={() => window.location.reload()}
+            style={{
+              padding: "10px 20px",
+              background: "#1C3C71",
+              color: "#fff",
+              border: "none",
+              borderRadius: "8px",
+              cursor: "pointer",
+              marginTop: "16px",
+            }}
+          >
+            Обновить страницу
+          </button>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
 function RootLayout() {
   const location = useLocation();
 
   useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
+    try {
+      ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
+    } catch (err) {
+      console.warn("Analytics hit skipped:", err);
+    }
   }, [location]);
 
   return <Outlet />;
@@ -125,9 +171,11 @@ const router = createBrowserRouter(
 
 function Router() {
   return (
-    <Suspense fallback={<Spinner />}>
-      <RouterProvider router={router} />
-    </Suspense>
+    <ErrorBoundary>
+      <Suspense fallback={<Spinner />}>
+        <RouterProvider router={router} />
+      </Suspense>
+    </ErrorBoundary>
   );
 }
 
