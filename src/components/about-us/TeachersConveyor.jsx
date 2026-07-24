@@ -610,7 +610,7 @@ const TeachersConveyor = () => {
   };
 
   return (
-    <section className="py-12 select-none overflow-hidden w-full px-2 sm:px-4">
+    <section id="teachers" className="py-12 select-none overflow-hidden w-full px-2 sm:px-4 scroll-mt-24">
       <SectionTitle>
         {lang === "ru" ? "Преподавательский состав" : "Our Faculty"}
       </SectionTitle>
@@ -864,17 +864,24 @@ const TeacherModal = ({ teacher, lang, onClose }) => {
     return () => window.removeEventListener("keydown", fn);
   }, [onClose]);
 
-  // Prevent body scroll
+  // Prevent body & html scroll
   useEffect(() => {
+    const origBody = document.body.style.overflow;
+    const origHtml = document.documentElement.style.overflow;
     document.body.style.overflow = "hidden";
-    return () => { document.body.style.overflow = ""; };
+    document.documentElement.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = origBody;
+      document.documentElement.style.overflow = origHtml;
+    };
   }, []);
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 overscroll-contain"
       style={{ background: "rgba(10,15,30,0.72)", backdropFilter: "blur(6px)", animation: "fadeIn 0.25s ease" }}
       onClick={handleBackdrop}
+      onWheel={(e) => e.stopPropagation()}
     >
       <div
         className="relative w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl"
@@ -890,8 +897,8 @@ const TeacherModal = ({ teacher, lang, onClose }) => {
         {/* ── Close button — outside header so overflow:hidden doesn't kill clicks ── */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-20 w-9 h-9 flex items-center justify-center rounded-full transition-all hover:scale-110 active:scale-95"
-          style={{ background: "rgba(255,255,255,0.18)", border: "1px solid rgba(255,255,255,0.28)", pointerEvents: "auto" }}
+          className="absolute top-3.5 right-3.5 z-20 w-9 h-9 flex items-center justify-center rounded-full transition-all hover:scale-110 active:scale-95 shadow-md"
+          style={{ background: "rgba(0,0,0,0.3)", border: "1px solid rgba(255,255,255,0.3)", pointerEvents: "auto" }}
           aria-label="Закрыть"
         >
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
@@ -899,10 +906,10 @@ const TeacherModal = ({ teacher, lang, onClose }) => {
           </svg>
         </button>
 
-          <div className="relative z-10 flex items-end gap-5 p-6 pt-8">
+          <div className="relative z-10 flex items-end gap-3.5 sm:gap-5 p-4 sm:p-6 pt-10 sm:pt-8 pr-12 sm:pr-6">
             {/* Photo circle */}
             <div
-              className="flex-shrink-0 w-24 h-24 rounded-2xl overflow-hidden border-4 flex items-center justify-center"
+              className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-4 flex items-center justify-center"
               style={{ borderColor: `${theme.accent}55`, boxShadow: `0 8px 24px rgba(0,0,0,0.4)`, background: theme.gradient }}
             >
               {teacher.img ? (
@@ -918,22 +925,22 @@ const TeacherModal = ({ teacher, lang, onClose }) => {
             {/* Name + position */}
             <div className="flex-1 min-w-0 pb-1">
               <div
-                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold mb-2"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl text-xs font-semibold mb-2 max-w-full leading-normal"
                 style={{ background: `${theme.accent}22`, color: theme.accent, border: `1px solid ${theme.accent}44` }}
               >
                 {theme.icon && <span className="w-4 h-4 shrink-0 flex items-center justify-center">{theme.icon}</span>}
-                <span>{label}</span>
+                <span className="break-words">{label}</span>
               </div>
-              <h3 className="text-white font-bold text-xl leading-tight">{teacher.name}</h3>
+              <h3 className="text-white font-bold text-lg sm:text-xl leading-tight">{teacher.name}</h3>
               {info && (
-                <p className="text-sm mt-0.5" style={{ color: `${theme.accent}cc` }}>{info.position}</p>
+                <p className="text-xs sm:text-sm mt-0.5" style={{ color: `${theme.accent}cc` }}>{info.position}</p>
               )}
             </div>
           </div>
         </div>
 
         {/* ── Body ── */}
-        <div className="bg-white px-6 py-5 max-h-72 overflow-y-auto" style={{ scrollbarWidth: "thin" }}>
+        <div className="bg-white px-6 py-5 max-h-72 overflow-y-auto overscroll-contain" style={{ scrollbarWidth: "thin", overscrollBehavior: "contain" }}>
           {info ? (
             info.bio.split("\n\n").map((para, i) => (
               <p key={i} className="text-sm text-slate-600 leading-relaxed mb-3 last:mb-0">{para}</p>

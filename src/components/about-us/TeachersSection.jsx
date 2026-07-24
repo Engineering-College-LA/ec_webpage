@@ -18,10 +18,10 @@ const TeachersSection = () => {
           <p className="text-base my-2">
             В E|C Инженерном колледже обучение ведут преподаватели, сочетающие глубокие академические знания и практический опыт. Среди них — специалисты с учеными степенями, включая PhD, а также эксперты с многолетним опытом работы в сфере информационных технологий, инженерии и других технических направлений. Используя современные методы обучения и индивидуальный подход, они помогают студентам получить фундаментальные знания, развить практические навыки и подготовиться к успешной профессиональной карьере.
           </p>
-          <Link to={"/about"} preventScrollReset={true}>
+          <Link to={"/about#teachers"}>
             <Button className="uppercase bg-n-blue text-white relative">
               <span className="absolute inset-0 rounded-[inherit] shimmer-gradient bg-[length:250%_250%,100%_100%] bg-[position:200%_0,0_0] bg-no-repeat transition-all animate-shimmer"></span>
-              Узнать об преподавателях
+              Узнать о преподавателях
             </Button>
           </Link>
         </div>
