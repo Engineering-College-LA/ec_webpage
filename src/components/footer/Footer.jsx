@@ -41,7 +41,7 @@ const FooterColumn = ({ title, links }) => {
               >
                 {link.labelStart && <span>{t(link.labelStart)}:</span>}{" "}
                 <span className="block">
-                  {link.label.includes("footer.") ? t(link.label) : link.label}
+                  {link.label.includes(".") ? t(link.label) : link.label}
                 </span>
               </a>
             ) : (
@@ -51,7 +51,7 @@ const FooterColumn = ({ title, links }) => {
               >
                 {link.labelStart && <span>{t(link.labelStart)}:</span>}{" "}
                 <span className="block">
-                  {link.label.includes("footer.") ? t(link.label) : link.label}
+                  {link.label.includes(".") ? t(link.label) : link.label}
                 </span>
               </Link>
             )}

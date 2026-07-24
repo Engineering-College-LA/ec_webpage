@@ -4,6 +4,7 @@
     "about": "О колледже",
     "academics": "Учебные программы",
     "affiliations": "Партнеры",
+    "studentLife": "Студенческая жизнь",
     "admissions": "Поступление",
     "news": "Новости и события",
     "btnText": "Узнай детали",
@@ -702,5 +703,29 @@
         "seconds": "Секунд"
       }
     }
+  },
+  "footer": {
+    "titles": {
+      "main": "Навигация",
+      "helpfulLinks": "Полезное",
+      "contacts": "Контакты"
+    },
+    "companyLinks": {
+      "about": "О колледже",
+      "academics": "Учебные программы",
+      "studentLife": "Студенческая жизнь",
+      "admissions": "Поступление"
+    },
+    "helpfulLinks": {
+      "contact": "Связаться с нами",
+      "faq": "Частые вопросы"
+    },
+    "contactLinks": {
+      "phone": "Телефон",
+      "email": "Email",
+      "address": "Адрес",
+      "addressLabel": "Саякбая Каралаева, 7а/1 · Сухэ-Батора, 23"
+    },
+    "copyright": "© E|C Engineering College. Все права защищены."
   }
 }

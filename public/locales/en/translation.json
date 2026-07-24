@@ -3,6 +3,7 @@
     "home": "Home",
     "about": "About Us",
     "academics": "Academics",
+    "studentLife": "Student Life",
     "admissions": "Admissions",
     "affiliations": "Affiliations",
     "news": "News + Events",
@@ -707,5 +708,29 @@
         "seconds": "Seconds"
       }
     }
+  },
+  "footer": {
+    "titles": {
+      "main": "Navigation",
+      "helpfulLinks": "Quick Links",
+      "contacts": "Contact Us"
+    },
+    "companyLinks": {
+      "about": "About Us",
+      "academics": "Academics",
+      "studentLife": "Student Life",
+      "admissions": "Admissions"
+    },
+    "helpfulLinks": {
+      "contact": "Contact Us",
+      "faq": "FAQ"
+    },
+    "contactLinks": {
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "addressLabel": "Sayakbay Karalaev 7a/1 · Sukhe-Bator 23"
+    },
+    "copyright": "© E|C Engineering College. All rights reserved."
   }
 }

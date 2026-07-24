@@ -32,6 +32,8 @@ const IndustrialDesign = lazy(
 );
 const Marketing = lazy(() => import("../pages/academics/Marketing"));
 
+const StudentLife = lazy(() => import("../pages/student-life/StudentLife"));
+
 // Initialize Google Analytics
 ReactGA.initialize("G-2M2GPPXSPW");
 
@@ -148,6 +150,13 @@ const router = createBrowserRouter(
             {
               path: "/events/young-innovators-olympiad",
               element: <YoungInnovatorsOlympiad />,
+            },
+            {
+              path: "/student-life",
+              children: [
+                { index: true, element: <StudentLife /> },
+                { path: ":clubId", element: <StudentLife /> },
+              ],
             },
             {
               path: "/thank-you",

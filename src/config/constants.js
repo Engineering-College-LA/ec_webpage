@@ -4,12 +4,14 @@ export const navLinks = [
   { to: "/about", label: "navbar.about" },
   { to: "/affiliations", label: "navbar.affiliations" },
   { to: "/academics", label: "navbar.academics" },
+  { to: "/student-life", label: "navbar.studentLife" },
   { to: "/admissions", label: "navbar.admissions" },
 ];
 
 const companyLinks = [
   { to: "/about", label: "footer.companyLinks.about" },
   { to: "/academics", label: "footer.companyLinks.academics" },
+  { to: "/student-life", label: "footer.companyLinks.studentLife" },
   { to: "/admissions", label: "footer.companyLinks.admissions" },
 ];
 
