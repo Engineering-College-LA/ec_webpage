@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight, Dot } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import SectionTitle from "../title/SectionTitle";
 import { slides } from "../../config/icons";

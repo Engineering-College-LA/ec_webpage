@@ -1,6 +1,7 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect } from "react";
 import {
   createBrowserRouter,
+  Outlet,
   RouterProvider,
   useLocation,
 } from "react-router-dom";
@@ -34,95 +35,98 @@ const Marketing = lazy(() => import("../pages/academics/Marketing"));
 // Initialize Google Analytics
 ReactGA.initialize("G-2M2GPPXSPW");
 
-const router = createBrowserRouter(
-  [
-  {
-    element: <BaseLayout />,
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/about",
-        element: <AboutPage />,
-      },
-      {
-        path: "/academics",
-
-        children: [
-          { index: true, element: <Academics /> },
-
-          {
-            path: "software-engineering",
-            element: <SoftwareEngineering />,
-          },
-          {
-            path: "cyber-security",
-            element: <CyberSecurity />,
-          },
-          {
-            path: "management-in-it",
-            element: <ManagementInIT />,
-          },
-          {
-            path: "industrial-design",
-            element: <IndustrialDesign />,
-          },
-          {
-            path: "marketing",
-            element: <Marketing />,
-          },
-        ],
-      },
-      {
-        path: "/affiliations",
-        element: <Affiliations />,
-      },
-      {
-        path: "/career-test",
-        element: <CareerTestPage />,
-      },
-      {
-        path: "/admissions",
-        element: <Admission />,
-      },
-      {
-        path: "/events/young-innovators-olympiad",
-        element: <YoungInnovatorsOlympiad />,
-      },
-      {
-        path: "/thank-you",
-        element: <ThankYou />,
-      },
-    ],
-  },
-  {
-    path: "/ec_app",
-    element: <AppLanding />,
-  },
-  {
-    path: "*",
-    element: <NotFound />,
-  },
-  ],
-  { basename: "/ec_webpage/" }
-);
-
-function GAListener() {
+function RootLayout() {
   const location = useLocation();
 
   useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: location.pathname });
+    ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
   }, [location]);
+
+  return <Outlet />;
 }
+
+const router = createBrowserRouter(
+  [
+    {
+      element: <RootLayout />,
+      children: [
+        {
+          element: <BaseLayout />,
+          children: [
+            {
+              path: "/",
+              element: <Home />,
+            },
+            {
+              path: "/about",
+              element: <AboutPage />,
+            },
+            {
+              path: "/academics",
+              children: [
+                { index: true, element: <Academics /> },
+                {
+                  path: "software-engineering",
+                  element: <SoftwareEngineering />,
+                },
+                {
+                  path: "cyber-security",
+                  element: <CyberSecurity />,
+                },
+                {
+                  path: "management-in-it",
+                  element: <ManagementInIT />,
+                },
+                {
+                  path: "industrial-design",
+                  element: <IndustrialDesign />,
+                },
+                {
+                  path: "marketing",
+                  element: <Marketing />,
+                },
+              ],
+            },
+            {
+              path: "/affiliations",
+              element: <Affiliations />,
+            },
+            {
+              path: "/career-test",
+              element: <CareerTestPage />,
+            },
+            {
+              path: "/admissions",
+              element: <Admission />,
+            },
+            {
+              path: "/events/young-innovators-olympiad",
+              element: <YoungInnovatorsOlympiad />,
+            },
+            {
+              path: "/thank-you",
+              element: <ThankYou />,
+            },
+          ],
+        },
+        {
+          path: "/ec_app",
+          element: <AppLanding />,
+        },
+        {
+          path: "*",
+          element: <NotFound />,
+        },
+      ],
+    },
+  ],
+  { basename: "/ec_webpage" }
+);
 
 function Router() {
   return (
     <Suspense fallback={<Spinner />}>
-      <RouterProvider router={router}>
-        <GAListener />
-      </RouterProvider>
+      <RouterProvider router={router} />
     </Suspense>
   );
 }
