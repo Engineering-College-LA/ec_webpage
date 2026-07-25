@@ -77,6 +77,32 @@ const CLUBS_DATA = [
         desc: "Понимание сильных сторон, подходящих специализаций, профессиональных траекторий и требований современной IT-индустрии.",
       },
     ],
+    servicesEn: [
+      {
+        title: "Psychological & Emotional Support",
+        desc: "Specialists help manage study stress, emotional tension, interpersonal challenges, and personal concerns.",
+      },
+      {
+        title: "Academic Adaptation",
+        desc: "Support during admission and adjustment to intensive coursework, English-speaking academic environment, and new requirements.",
+      },
+      {
+        title: "Prevention of Academic Difficulties",
+        desc: "Collaboration with faculty and Student Affairs to proactively identify situations requiring assistance.",
+      },
+      {
+        title: "Soft Skills Development",
+        desc: "Workshops on stress management, emotional resilience, time management, self-governance, and peer support.",
+      },
+      {
+        title: "Parental Engagement",
+        desc: "Trusted communication line between the college and parents, balancing support with student privacy.",
+      },
+      {
+        title: "Career & Specialty Guidance",
+        desc: "Understanding individual strengths, suitable specializations, career pathways, and modern IT industry expectations.",
+      },
+    ],
     confidentialityRu: "Все обращения студентов рассматриваются конфиденциально с соблюдением законодательства КР. Центр работает независимо от дисциплинарных процедур: обращение НЕ влияет на оценки или академический статус.",
     ctaBtnRu: "Записаться на консультацию",
     ctaBtnEn: "Book a Consultation",
@@ -109,6 +135,13 @@ const CLUBS_DATA = [
       "Тренинги по питчингу, финансовому моделированию и PM",
       "Нетворкинг с топ-предпринимателями и экспертами КР",
       "Выездные тимбилдинги, мастер-классы и тренинги",
+    ],
+    highlightsEn: [
+      "Building & launching real business startups",
+      "Participating in National Cup & Enactus World Cup",
+      "Workshops on pitching, financial modeling & PM",
+      "Networking with top Kyrgyz & international entrepreneurs",
+      "Off-site teambuildings, masterclasses & bootcamps",
     ],
     careersRu: [
       "Project Management",
@@ -181,6 +214,44 @@ const CLUBS_DATA = [
         desc: "Развивает экологическую культуру, сортировку отходов, проводит акции по озеленению, субботники и волонтерские проекты.",
       },
     ],
+    ministriesEn: [
+      {
+        role: "President",
+        icon: Crown,
+        color: "text-amber-500",
+        desc: "Leads the parliament, sets strategic priorities, coordinates executive ministries, and represents student interests to college leadership.",
+      },
+      {
+        role: "Vice President",
+        icon: ShieldCheck,
+        color: "text-indigo-500",
+        desc: "Assists the president, oversees execution of decisions, manages the campus event calendar and joint projects.",
+      },
+      {
+        role: "Minister of Sports",
+        icon: Dumbbell,
+        color: "text-emerald-500",
+        desc: "Organizes sports tournaments, marathons, forms varsity college teams, and promotes a healthy lifestyle.",
+      },
+      {
+        role: "Minister of Culture",
+        icon: Palette,
+        color: "text-rose-500",
+        desc: "Oversees concerts, themed evenings, Open Days, music, dance, and creative performing arts initiatives.",
+      },
+      {
+        role: "Minister of Education",
+        icon: GraduationCap,
+        color: "text-blue-500",
+        desc: "Represents academic interests, facilitates workshops, olympiads, and bridges students with DevClub and ICPC.",
+      },
+      {
+        role: "Minister of Ecology",
+        icon: Trees,
+        color: "text-teal-500",
+        desc: "Promotes environmental sustainability, waste sorting, campus greening campaigns, community cleanups, and volunteer projects.",
+      },
+    ],
     ctaBtnRu: "Подать заявку в Парламент",
     ctaBtnEn: "Apply for Parliament",
   },
@@ -208,12 +279,23 @@ const CLUBS_DATA = [
       title: "🚀 Поддержка компании APRD",
       desc: "APRD предоставляет участникам DevClub структурированные практические стажировки, коммерческие задачи, профессиональное наставничество от Senior-разработчиков и проекты с возможностью внедрения.",
     },
+    aprdCardEn: {
+      title: "🚀 Industry Support by APRD",
+      desc: "APRD provides DevClub members with structured internships, commercial project tasks, Senior Engineer mentorship, and production-ready project deployment.",
+    },
     workflowRu: [
       "1. Формирование команды и выбор проекта",
       "2. Анализ требований и архитектуры",
       "3. Спринты разработки и код-ревью",
       "4. Тестирование, доработка и рефакторинг",
       "5. Презентация и запуск готового продукта",
+    ],
+    workflowEn: [
+      "1. Team Formation & Project Selection",
+      "2. Requirements Analysis & Architecture",
+      "3. Development Sprints & Code Reviews",
+      "4. Testing, Refactoring & Quality Assurance",
+      "5. Product Presentation & Production Launch",
     ],
     ctaBtnRu: "Присоединиться к DevClub",
     ctaBtnEn: "Join DevClub",
@@ -252,7 +334,22 @@ const CLUBS_DATA = [
         desc: "Сложная олимпиадная математика, продвинутые структуры данных, командная стратегия на ICPC Regionals.",
       },
     ],
+    levelsEn: [
+      {
+        div: "Div 3 — Beginner",
+        desc: "Syntax, conditions, loops, arrays, simulations, and basic brute-force problem solving.",
+      },
+      {
+        div: "Div 2 — Intermediate",
+        desc: "Data structures, graph algorithms, binary search, dynamic programming (DP).",
+      },
+      {
+        div: "Div 1 — Advanced",
+        desc: "Advanced competitive math, complex data structures, and team strategy for ICPC Regionals.",
+      },
+    ],
     modelRu: "⚡ Модель обучения «2+1»: 2 тематических занятия в неделю + 1 тренировочный контест по выходным с обязательным разбором и upsolving.",
+    modelEn: "⚡ '2+1' Training Model: 2 weekly core lectures + 1 weekend practice contest with mandatory solution analysis & upsolving.",
     ctaBtnRu: "Присоединиться к ICPC Club",
     ctaBtnEn: "Join ICPC Club",
   },
@@ -453,7 +550,7 @@ export default function StudentLife() {
                           <span>{lang === "ru" ? "Чем мы помогаем студентам:" : "Services Offered:"}</span>
                         </h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                          {club.servicesRu.map((srv, idx) => (
+                          {(lang === "ru" ? club.servicesRu : club.servicesEn || []).map((srv, idx) => (
                             <div key={idx} className="p-5 rounded-2xl bg-slate-50 border border-slate-200/70 space-y-2 hover:border-blue-300 transition-colors">
                               <h4 className="font-bold text-slate-800 text-sm sm:text-base">{srv.title}</h4>
                               <p className="text-xs sm:text-sm text-slate-600 leading-normal">{srv.desc}</p>
@@ -481,7 +578,7 @@ export default function StudentLife() {
                             <span>{lang === "ru" ? "Возможности для участников:" : "Member Opportunities:"}</span>
                           </h3>
                           <ul className="space-y-2.5">
-                            {club.highlightsRu.map((item, idx) => (
+                            {(lang === "ru" ? club.highlightsRu : club.highlightsEn || []).map((item, idx) => (
                               <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700 font-medium">
                                 <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" />
                                 <span>{item}</span>
@@ -496,7 +593,7 @@ export default function StudentLife() {
                             <span>{lang === "ru" ? "Карьерные направления:" : "Career Pathways:"}</span>
                           </h3>
                           <div className="flex flex-wrap gap-2">
-                            {club.careersRu.map((car, idx) => (
+                            {(lang === "ru" ? club.careersRu : club.careersEn || []).map((car, idx) => (
                               <span key={idx} className="px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-800 text-xs font-semibold">
                                 {car}
                               </span>
@@ -516,7 +613,7 @@ export default function StudentLife() {
                       </h3>
 
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {club.ministriesRu.map((min, idx) => {
+                        {(lang === "ru" ? club.ministriesRu : club.ministriesEn || []).map((min, idx) => {
                           const MinIcon = min.icon;
                           return (
                             <div key={idx} className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 hover:border-purple-300 transition-colors">
@@ -537,8 +634,12 @@ export default function StudentLife() {
                     <div className="space-y-8 pt-4">
                       {/* APRD Card */}
                       <div className="p-6 rounded-2xl bg-gradient-to-r from-cyan-900 to-blue-900 text-white space-y-2">
-                        <div className="font-bold text-cyan-300 text-lg">{club.aprdCardRu.title}</div>
-                        <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">{club.aprdCardRu.desc}</p>
+                        <div className="font-bold text-cyan-300 text-lg">
+                          {(lang === "ru" ? club.aprdCardRu : club.aprdCardEn || club.aprdCardRu).title}
+                        </div>
+                        <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                          {(lang === "ru" ? club.aprdCardRu : club.aprdCardEn || club.aprdCardRu).desc}
+                        </p>
                       </div>
 
                       <div>
@@ -547,7 +648,7 @@ export default function StudentLife() {
                           <span>{lang === "ru" ? "Этапы разработки продуктов:" : "Product SDLC Stages:"}</span>
                         </h3>
                         <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-                          {club.workflowRu.map((step, idx) => (
+                          {(lang === "ru" ? club.workflowRu : club.workflowEn || []).map((step, idx) => (
                             <div key={idx} className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-center font-medium text-xs text-slate-700">
                               {step}
                             </div>
@@ -561,7 +662,7 @@ export default function StudentLife() {
                   {club.id === "icpc" && (
                     <div className="space-y-8 pt-4">
                       <div className="p-5 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-950 font-medium text-xs sm:text-sm">
-                        {club.modelRu}
+                        {lang === "ru" ? club.modelRu : club.modelEn || club.modelRu}
                       </div>
 
                       <div>
@@ -570,7 +671,7 @@ export default function StudentLife() {
                           <span>{lang === "ru" ? "3 Уровня подготовки:" : "3 Division Levels:"}</span>
                         </h3>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                          {club.levelsRu.map((lvl, idx) => (
+                          {(lang === "ru" ? club.levelsRu : club.levelsEn || []).map((lvl, idx) => (
                             <div key={idx} className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
                               <h4 className="font-extrabold text-emerald-700 text-base">{lvl.div}</h4>
                               <p className="text-xs sm:text-sm text-slate-600 leading-normal">{lvl.desc}</p>
