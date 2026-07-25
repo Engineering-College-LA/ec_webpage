@@ -537,27 +537,27 @@
         "Participation is individual. This means each participant develops their own idea, prepares a presentation, and pitches it to the jury."
       ]
     },
-    “theme”: {
-      “title”: “Main theme”,
-      “name”: “”Ideas that improve our community””,
-      “intro”: “Start with something simple — find a problem you notice yourself every day. It could be anything: inconveniences at school, environmental pollution, transport issues, learning challenges, or everyday life in your city.”,
-      “findText”: “Don't try to come up with the «perfect startup». It's better to pick a real problem and propose a clear solution.”,
-      “inspirationLabel”: “Where to find inspiration”,
-      “directions”: [
-        “Education”,
-        “Ecology”,
-        “Health”,
-        “Transport”,
-        “Safety”,
-        “Technology”,
-        “Tourism”,
-        “Social projects”,
-        “City or regional development”
+    "theme": {
+      "title": "Main theme",
+      "name": "\"Ideas that improve our community\"",
+      "intro": "Start with something simple — find a problem you notice yourself every day. It could be anything: inconveniences at school, environmental pollution, transport issues, learning challenges, or everyday life in your city.",
+      "findText": "Don't try to come up with the \"perfect startup\". It's better to pick a real problem and propose a clear solution.",
+      "inspirationLabel": "Where to find inspiration",
+      "directions": [
+        "Education",
+        "Ecology",
+        "Health",
+        "Transport",
+        "Safety",
+        "Technology",
+        "Tourism",
+        "Social projects",
+        "City or regional development"
       ],
-      “note”: “Remember: a good idea isn't the most complex one — it's the one that can truly help people.”,
-      “questions”: [
-        “What would you change in your city if you had the chance?”,
-        “What problem around you is most frustrating? Maybe that's exactly your project.”
+      "note": "Remember: a good idea isn't the most complex one — it's the one that can truly help people.",
+      "questions": [
+        "What would you change in your city if you had the chance?",
+        "What problem around you is most frustrating? Maybe that's exactly your project."
       ]
     },
     "process": {
