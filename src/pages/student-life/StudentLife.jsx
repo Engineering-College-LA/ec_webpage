@@ -9,6 +9,7 @@ import {
   Sparkles,
   ArrowRight,
   CheckCircle2,
+  ShieldCheck,
   Award,
   Crown,
   Briefcase,
