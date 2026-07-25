@@ -9,7 +9,6 @@ import {
   Sparkles,
   ArrowRight,
   CheckCircle2,
-  ShieldCheck,
   Award,
   Crown,
   Briefcase,
@@ -462,24 +461,6 @@ export default function StudentLife() {
                         </div>
                       </div>
 
-                      {/* Confidentiality Card */}
-                      <div className="p-6 rounded-2xl bg-slate-900 text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-                        <div className="space-y-1 max-w-2xl">
-                          <div className="flex items-center gap-2 text-amber-400 font-bold text-sm">
-                            <ShieldCheck className="w-5 h-5" />
-                            <span>{lang === "ru" ? "100% Конфиденциальность и Безопасность" : "100% Confidentiality Guarantee"}</span>
-                          </div>
-                          <p className="text-xs sm:text-sm text-slate-300">
-                            {club.confidentialityRu}
-                          </p>
-                        </div>
-                        <button
-                          onClick={() => handleJoinClick(club)}
-                          className="px-5 py-2.5 rounded-xl bg-blue-600 text-white hover:bg-blue-500 font-semibold text-xs sm:text-sm whitespace-nowrap"
-                        >
-                          {lang === "ru" ? "Записаться" : "Book Now"}
-                        </button>
-                      </div>
                     </div>
                   )}
 
