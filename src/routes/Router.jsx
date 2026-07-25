@@ -14,25 +14,43 @@ import Academics from "../pages/academics/Academics";
 import Admission from "../pages/admission/Admission";
 import Affiliations from "../pages/affiliations/Affiliations";
 
-const ThankYou = lazy(() => import("../pages/thank-you/ThankYou"));
-const CareerTestPage = lazy(() => import("../pages/careertest/CareerTest"));
-const NotFound = lazy(() => import("../pages/not-found/NotFound"));
-const AppLanding = lazy(() => import("../pages/app-landing/AppLanding"));
-const YoungInnovatorsOlympiad = lazy(
+// Helper for lazy imports to auto-reload if an outdated deployment chunk error occurs
+const safeLazy = (importFn) =>
+  lazy(async () => {
+    const isRefreshed = sessionStorage.getItem("chunk_reload_done");
+    try {
+      const component = await importFn();
+      sessionStorage.removeItem("chunk_reload_done");
+      return component;
+    } catch (error) {
+      if (!isRefreshed) {
+        sessionStorage.setItem("chunk_reload_done", "true");
+        window.location.reload();
+        return new Promise(() => {});
+      }
+      throw error;
+    }
+  });
+
+const ThankYou = safeLazy(() => import("../pages/thank-you/ThankYou"));
+const CareerTestPage = safeLazy(() => import("../pages/careertest/CareerTest"));
+const NotFound = safeLazy(() => import("../pages/not-found/NotFound"));
+const AppLanding = safeLazy(() => import("../pages/app-landing/AppLanding"));
+const YoungInnovatorsOlympiad = safeLazy(
   () => import("../pages/events/YoungInnovatorsOlympiad"),
 );
 
-const SoftwareEngineering = lazy(
+const SoftwareEngineering = safeLazy(
   () => import("../pages/academics/SoftwareEngineering"),
 );
-const CyberSecurity = lazy(() => import("../pages/academics/CyberSecurity"));
-const ManagementInIT = lazy(() => import("../pages/academics/ManagementInIT"));
-const IndustrialDesign = lazy(
+const CyberSecurity = safeLazy(() => import("../pages/academics/CyberSecurity"));
+const ManagementInIT = safeLazy(() => import("../pages/academics/ManagementInIT"));
+const IndustrialDesign = safeLazy(
   () => import("../pages/academics/IndustrialDesign"),
 );
-const Marketing = lazy(() => import("../pages/academics/Marketing"));
+const Marketing = safeLazy(() => import("../pages/academics/Marketing"));
 
-const StudentLife = lazy(() => import("../pages/student-life/StudentLife"));
+const StudentLife = safeLazy(() => import("../pages/student-life/StudentLife"));
 
 // Initialize Google Analytics
 ReactGA.initialize("G-2M2GPPXSPW");
@@ -49,16 +67,25 @@ class ErrorBoundary extends React.Component {
 
   componentDidCatch(error, errorInfo) {
     console.error("Uncaught error:", error, errorInfo);
+    if (!sessionStorage.getItem("error_reload_done")) {
+      sessionStorage.setItem("error_reload_done", "true");
+      window.location.reload();
+    }
   }
 
   render() {
     if (this.state.hasError) {
       return (
         <div style={{ padding: "40px", textAlign: "center", fontFamily: "sans-serif" }}>
-          <h2>Что-то пошло не так / Something went wrong</h2>
-          <p style={{ color: "#888", marginTop: "8px" }}>{this.state.error?.toString()}</p>
+          <h2>Страница обновляется... / Updating page...</h2>
+          <p style={{ color: "#888", marginTop: "8px" }}>
+            Загрузка свежей версии сайта
+          </p>
           <button
-            onClick={() => window.location.reload()}
+            onClick={() => {
+              sessionStorage.clear();
+              window.location.reload();
+            }}
             style={{
               padding: "10px 20px",
               background: "#1C3C71",
@@ -69,7 +96,7 @@ class ErrorBoundary extends React.Component {
               marginTop: "16px",
             }}
           >
-            Обновить страницу
+            Обновить вручную
           </button>
         </div>
       );
