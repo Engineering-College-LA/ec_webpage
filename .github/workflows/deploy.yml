@@ -3,10 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change to 'master' if that's your default branch
+      - main
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -32,6 +32,15 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Create 404.html SPA fallback
+        run: cp dist/index.html dist/404.html
+
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
