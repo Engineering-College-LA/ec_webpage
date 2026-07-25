@@ -1,0 +1,736 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "academics": "Academics",
+    "studentLife": "Student Life",
+    "admissions": "Admissions",
+    "affiliations": "Affiliations",
+    "news": "News + Events",
+    "btnText": "Get details",
+    "appModal": {
+      "buttonLabel": "Mobile App",
+      "title": "E|C College App",
+      "subtitle": "Your campus in your pocket",
+      "description": "Digital student ID, transcript, class schedule, and campus updates — all in one app.",
+      "appStore": {
+        "badge": "Download on the"
+      },
+      "googlePlay": {
+        "badge": "Get it on"
+      },
+      "seeMore": "Learn more about the app"
+    }
+  },
+  "home": {
+    "heroSection": {
+      "welcome": "Welcome to",
+      "title": "E|C Engineering College",
+      "description": "Real skills. Real projects. Real careers. Join E|C and become a specialist in Software Engineering, Cybersecurity, Design, Management, or Marketing.",
+      "primaryButton": "Explore Programs",
+      "secondaryButton": "Contact Us"
+    },
+    "aboutSection": {
+      "title": "About Us",
+      "description": "E|C Engineering College is an institution dedicated to advancing knowledge and innovation in the fields of engineering and technology. Located in the heart of a vibrant urban center, E|C offers a dynamic learning environment that combines modern facilities, research, and a commitment to sustainability and environmental stewardship.",
+      "learnMoreButton": "Discover E|C",
+      "listItems": {
+        "history": "History",
+        "missionAndVision": "Mission and Vision",
+        "programs": "Educational programs"
+      }
+    },
+    "quoteSection": {
+      "slogan": {
+        "part1": "Inspired by the Past.",
+        "part2": "Designed for the Future."
+      },
+      "quote": "Knowledge without application remains incomplete. The mission of E|C is to guide students from understanding to execution, from theory to production, and from education to tangible outcomes that strengthen our regional economy.",
+      "author": {
+        "name": "Nurlan Shaidullaev",
+        "title": "CEO, Engineering College (E|C)"
+      }
+    },
+    "programsSection": {
+      "title": "Our Programs",
+      "programs": [
+        {
+          "name": "Software Engineering",
+          "description": "Learn to design, develop, and maintain modern software systems using industry-standard tools and technologies, from front-end interfaces to back-end infrastructure."
+        },
+        {
+          "name": "Cybersecurity",
+          "description": "Gain practical skills to protect systems, networks, and data from cyber threats through hands-on training in ethical hacking, network security, and data protection."
+        },
+        {
+          "name": "Management",
+          "description": "Develop the skills to manage teams, projects, and business processes by combining leadership, strategy, and modern management practices."
+        },
+        {
+          "name": "Design",
+          "description": "Build creative and technical skills to design user-centered visual and digital products, combining aesthetics, functionality, and modern design tools."
+        },
+        {
+          "name": "Marketing",
+          "description": "Learn how to promote products and services through digital marketing, branding, and market analysis, gaining skills востребованные in modern business."
+        }
+      ],
+      "learnMore": "Learn more"
+    },
+    "reasonsSection": {
+      "title": "Why Our College?",
+      "cta": {
+        "title": "Ready to Apply?",
+        "description": "Take the next step towards your future at E|C College of Engineering. Contact us today to learn more about our programs and admissions.",
+        "buttonText": "Contact Us",
+        "buttonLink": "#contact"
+      },
+      "data": [
+        {
+          "title": "Hybrid Education with Global Opportunities",
+          "description": "E|C College of Engineering offers a hybrid education model that combines in-person learning with digital tools and flexible formats. Alongside academic programs, students receive preparation for IELTS, TOEFL, SAT, and guidance for studying abroad.",
+          "btnText": "Learn More"
+        },
+        {
+          "title": "Learning Through Practice",
+          "description": "Our students do not simply memorize information — they learn through practice. Education is built around real projects, applied tasks, and problem-solving under the guidance of experienced and highly engaged instructors.",
+          "btnText": "Contact Us"
+        },
+        {
+          "title": "Focused, Career-Oriented Programs",
+          "description": "We offer focused programs designed around the most in-demand skills in the global job market. Software Engineering, Cybersecurity, Management in IT, and Industrial Design prepare students for immediate employment and long-term career growth.",
+          "btnText": "Check Programs"
+        },
+        {
+          "title": "Outstanding Faculty",
+          "description": "Our greatest strength is our faculty. Most instructors hold PhD degrees and combine strong academic backgrounds with real industry and research experience, actively mentoring and guiding students throughout their studies.",
+          "btnText": "Meet Faculty"
+        },
+        {
+          "title": "Strong Industry Connections",
+          "description": "E|C maintains close collaboration with local and international companies, enabling students to participate in internships, industry projects, competitions, and professional networking opportunities.",
+          "btnText": "Career Opportunities"
+        },
+        {
+          "title": "Supportive Student-Centered Environment",
+          "description": "Inclusiveness, support, and respect are at the core of our values. We provide a safe and welcoming environment where students receive academic guidance, mentoring, and personal support.",
+          "btnText": "Submit Application"
+        },
+        {
+          "title": "Active Student Life",
+          "description": "Students actively engage in extracurricular and competitive activities such as Enactus, ICPC, hackathons, innovation challenges, research projects, and community initiatives, building leadership and teamwork skills.",
+          "btnText": "Join Community"
+        }
+      ]
+    },
+    "gallerySection": {
+      "title": "Gallery",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam error ea veniam. A dolore amet dolores magnam consequuntur odio, expedita, dolorum iusto neque aliquam laborum minus cumque impedit ipsa officia eum earum porro repudiandae inventore ipsum! Quam ex laudantium modi! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, fuga possimus necessitatibus doloribus et beatae, earum deleniti accusantium blanditiis, deserunt iure aliquam esse vitae minima porro voluptate quia exercitationem quidem!",
+      "images": [
+        {
+          "bgImage": "campus",
+          "title": "Campus"
+        },
+        {
+          "bgImage": "cafeteria",
+          "title": "Cafeteria"
+        },
+        {
+          "bgImage": "sport",
+          "title": "Sport"
+        },
+        {
+          "bgImage": "library",
+          "title": "Library"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions (FAQ)",
+      "questions": [
+        {
+          "question": "What is the duration of the program if starting after grade 9?",
+          "answer": "The standard duration of study is 2 years and 10 months."
+        },
+        {
+          "question": "What is the duration of the program if starting after grade 11?",
+          "answer": "The standard duration of study is 1 year and 10 months (with knowledge of English). The standard duration of study is 2 years and 10 months (without knowledge of English)."
+        },
+        {
+          "question": "What subjects are included in the entrance exams?",
+          "answer": "Entrance exams in mathematics, English, and an essay (in Kyrgyz/Russian)."
+        },
+        {
+          "question": "What language is used for instruction at the college?",
+          "answer": "The language of instruction is English. The first year of the program will be conducted in Russian. The second and third years will be conducted in English."
+        },
+        {
+          "question": "What is the cost of the tuition fee?",
+          "answer": "The tuition cost is $4000, with an initial payment of 30% required. For more detailed information about the tuition fee, please reach out to the admissions office. Contact us at: 0501 990 550."
+        },
+        {
+          "question": "What is covered by the tuition fee?",
+          "answer": "Along with tuition, each student receives a new corporate access subscription to internal educational platforms, a corporate license for Coursera.org (starting from the second year), licenses for other products, and a personal laptop."
+        },
+        {
+          "question": "Does the tuition fee include meals and accommodation?",
+          "answer": "No, the college does not provide accommodation or meals."
+        },
+        {
+          "question": "Will the tuition fee change during the study?",
+          "answer": "The tuition fee that you agreed upon at enrollment will remain unchanged throughout the entire standard duration of study."
+        },
+        {
+          "question": "Can I work with a diploma received after successfully completing the program?",
+          "answer": "Upon successful completion, graduates receive a diploma of secondary vocational education. You can work in your chosen field with the diploma or continue your studies at a university from the second year."
+        },
+        {
+          "question": "Can graduates find job opportunities abroad?",
+          "answer": "Yes, after graduation, you can seek employment in Germany and Japan, as long as you have at least a B1 level in German or Japanese and maintain an academic performance of over 85 out of 100."
+        },
+        {
+          "question": "What diploma is awarded upon graduation?",
+          "answer": "After graduation, a diploma of secondary vocational education is awarded."
+        },
+        {
+          "question": "I don’t have a strong knowledge of English, can I study at your college?",
+          "answer": "Upon admission, each student takes an English exam. Based on the results, we determine the level of language proficiency and place students into appropriate groups. In addition to the 10th-11th grade subjects, there will be an intensified study of English."
+        },
+        {
+          "question": "What is the study schedule?",
+          "answer": "The classes are held from 9:00 AM to 5:00 PM (Monday - Friday)"
+        }
+      ]
+    },
+    "campusSection": {
+      "title": "Our Campus"
+    },
+    "contactSection": {
+      "form": {
+        "success": "The message was successfully sent!",
+        "error": "Something went wrong!"
+      },
+      "sectionTitle": "Contact Us",
+      "description": "Feel free to contact us. Submit your message here, and we will get back to you as soon as possible.",
+      "name": "Name",
+      "phone": "Phone Number",
+      "message": "Message",
+      "sendMessage": "Send Message",
+      "address": {
+        "title": "Address",
+        "content": "Suhe Bator, 23, Bishkek"
+      },
+      "hours": {
+        "title": "Hours",
+        "content": {
+          "mondayToFriday": "Monday - Friday: 9:00 - 17:00",
+          "weekend": "Saturday - Sunday: Closed"
+        }
+      },
+      "contact": "Contact"
+    }
+  },
+  "about": {
+    "title": "Light Academy",
+    "partnersTitle": "Our Partners",
+    "description": "Light Academy (L.A.) is an educational brand that began its journey in 2018 and currently operates five international schools across different regions of Kyrgyzstan. This year, Light Academy is opening a new engineering college in Bishkek — E|C Engineering College.",
+    "collegeTitle": "Engineering College | LA",
+    "overview": "Overview",
+    "overviewDescription": "E|C Engineering College is a modern institution focused on educating future engineers, designers, and technology leaders. Located in the heart of a vibrant urban environment, the college provides a learning space where innovation, creativity, and practical knowledge come together. We combine strong academic foundations with hands-on experience, modern facilities, and digital learning tools to help students turn ideas into real solutions.\n\nAt E|C, education goes beyond classrooms. Students learn by doing—through projects, research, collaboration, and engagement with real-world challenges. Our programs are designed to adapt to the rapidly changing world of technology while remaining grounded in ethical responsibility and sustainable development.",
+    "mission": "Mission",
+    "missionDescription": "Our mission is to educate, support, and inspire the next generation of engineers and technologists. We aim to equip students with the technical skills, critical thinking abilities, and creative mindset needed to solve complex industry challenges. Through practical learning, strong mentorship, and a values-driven approach, we prepare students to build solutions that are innovative, responsible, and meaningful for society.",
+    "vision": "Vision",
+    "visionDescription": "At E|C Engineering College, we envision a future where our graduates play an active role in shaping technological progress around the world. We strive to become a globally recognized institution known for excellence in engineering education, applied research, and industry collaboration.\n\nOur vision is to create an open and inclusive academic community where creativity is encouraged, diversity is valued, and collaboration drives innovation. By fostering curiosity, leadership, and a commitment to sustainability, we aim to prepare students not only for successful careers, but also for lifelong learning and positive impact in an ever-evolving global society."
+  },
+  "academics": {
+    "programs": "Programs",
+    "modalTitle": "Contact us",
+    "btnApplyText": "Apply Now",
+    "softwareEngineering": {
+      "name": "Software Engineering",
+      "description": [
+        "The Software Engineering Program is designed to prepare students for careers in software development by combining strong theoretical foundations with hands-on experience. Students learn how to design, build, test, and maintain scalable software systems using modern programming languages, frameworks, and development tools.",
+        "The program emphasizes problem-solving, system thinking, and teamwork, while introducing students to software development methodologies, version control, and project management practices. Graduates are equipped to work in fast-paced technology environments and contribute to real-world software solutions."
+      ],
+      "jobRoles": "Potential job roles for graduates:",
+      "roles": [
+        "Software Developer",
+        "Front-end Developer",
+        "Back-end Developer",
+        "Full-stack Developer",
+        "DevOps Engineer",
+        "QA Engineer",
+        "Mobile App Developer",
+        "UI/UX Designer"
+      ]
+    },
+    "cyberSecurity": {
+      "name": "Cybersecurity",
+      "description": [
+        "The Cybersecurity Program prepares students to protect digital systems and information in an increasingly connected world. Through practical training and real-world scenarios, students learn how to identify vulnerabilities, prevent cyberattacks, and secure networks and data.",
+        "The program covers areas such as ethical hacking, network security, cryptography, and risk management. Graduates gain the skills needed to respond to security threats and ensure the integrity of digital systems across various industries."
+      ],
+      "jobRoles": "Potential job roles for graduates:",
+      "roles": [
+        "Cybersecurity Analyst",
+        "Information Security Specialist",
+        "Ethical Hacker (Penetration Tester)",
+        "Network Security Engineer",
+        "Security Consultant",
+        "SOC Analyst"
+      ]
+    },
+    "management": {
+      "name": "Management",
+      "description": [
+        "The Management Program prepares students to lead teams, manage projects, and make strategic decisions in a business environment. The program combines core business knowledge with practical skills in leadership, communication, and organizational management.",
+        "Students learn how to plan, execute, and evaluate projects, work with teams, and adapt to changing business environments. Graduates are ready to take on leadership roles across different industries."
+      ],
+      "jobRoles": "Potential job roles for graduates:",
+      "roles": [
+        "Project Manager",
+        "Business Manager",
+        "Operations Manager",
+        "Team Lead",
+        "Business Development Specialist",
+        "Entrepreneur"
+      ]
+    },
+    "design": {
+      "name": "Design",
+      "description": [
+        "The Design Program focuses on developing creative and technical skills to create visual and digital products. Students learn to design user-centered solutions by combining creativity, design principles, and modern tools.",
+        "The program covers areas such as graphic design, digital design, branding, and user experience (UX/UI). Graduates are prepared to work on real-world design projects across different industries."
+      ],
+      "jobRoles": "Potential job roles for graduates:",
+      "roles": [
+        "Graphic Designer",
+        "UI/UX Designer",
+        "Product Designer",
+        "Visual Designer",
+        "Brand Designer",
+        "Motion Designer"
+      ]
+    },
+    "marketing": {
+      "name": "Marketing",
+      "description": [
+        "The Marketing Program prepares students to promote products and services in a competitive market. Students learn how to analyze consumer behavior, build brands, and develop effective marketing strategies using digital tools and platforms.",
+        "The program focuses on digital marketing, social media, content creation, and data-driven decision-making. Graduates are equipped to work in modern marketing environments and drive business growth."
+      ],
+      "jobRoles": "Potential job roles for graduates:",
+      "roles": [
+        "Marketing Specialist",
+        "Digital Marketer",
+        "Social Media Manager",
+        "Brand Manager",
+        "Content Creator",
+        "Marketing Analyst"
+      ]
+    },
+    "reasonsTitle": "7 Reasons to Study at E|C College of Engineering",
+    "reasons": [
+      {
+        "keywords": "Hybrid Education with Global Opportunities",
+        "description": "E|C College of Engineering offers a hybrid education model, combining in-person learning with digital resources and flexible formats. In addition to core academic programs, we provide preparation courses for IELTS, TOEFL, SAT, and other language-based exams, as well as guidance and support for students planning to study abroad."
+      },
+      {
+        "keywords": "Learning Through Understanding and Practice",
+        "description": "Our students do not simply memorize material—they understand it through practice. Learning is built around real projects, problem-solving, and applied tasks guided by experienced and highly engaged instructors. Our teaching approach ensures that theory is always connected to real-world application."
+      },
+      {
+        "keywords": "Focused, Career-Oriented Programs",
+        "description": {
+          "text": "E|C College of Engineering offers focused programs designed around the most in-demand skills in the global job market. Each program emphasizes depth, specialization, and practical relevance, preparing students for immediate career entry or further academic growth. Our programs include:",
+          "list": [
+            "Software Engineering: Front-end, Back-end, Full-stack, Mobile Application Development",
+            "Cybersecurity: Security Engineering, DevOps, DevSecOps",
+            "Management in IT: IT Project Management, Business Analytics, Digital Strategy, Technology Leadership",
+            "Industrial Design: Product Design, CAD & Prototyping, User Experience, Sustainable Design"
+          ]
+        }
+      },
+      {
+        "keywords": "Outstanding Faculty as Our Core Strength",
+        "description": "The main value of E|C College of Engineering is its faculty. Most of our instructors hold PhD degrees in their respective fields and combine strong academic backgrounds with real industry and research experience. Students learn directly from experts who actively mentor, guide, and inspire them."
+      },
+      {
+        "keywords": "Strong Industry Connections",
+        "description": "Our college maintains close collaboration with local and international companies, enabling students to participate in internships, industry-driven projects, competitions, and professional networking opportunities that support career development."
+      },
+      {
+        "keywords": "Supportive, Inclusive, and Student-Centered Environment",
+        "description": "Inclusiveness, support, and respect are at the core of our values. E|C College of Engineering provides a safe and welcoming environment where students receive academic guidance, mentoring, and personal support, allowing them to grow with confidence both academically and personally."
+      },
+      {
+        "keywords": "Active Student Life and Community Engagement",
+        "description": "Students actively participate in extracurricular and competitive activities such as Enactus, ICPC, hackathons, innovation challenges, research projects, and community initiatives. These experiences strengthen leadership, teamwork, and professional skills beyond the classroom."
+      }
+    ]
+  },
+  "admission": {
+    "title": "Admission Information",
+    "requirements": {
+      "title": "Admission Requirements",
+      "description": "To apply for our programs, you need to meet the following requirements:",
+      "list": [
+        "Applicants must successfully pass entrance exams, which include: Math, English, and an essay (in Kyrgyz or Russian).",
+        "Successful completion of Grade 9 or 11.",
+        "Preparation of necessary documents (certificate, passport, etc.)."
+      ]
+    },
+    "cost": {
+      "title": "Tuition Fees",
+      "description": "Initial fee: $1200. Detailed information about tuition fees is available at the admissions office."
+    },
+    "contact": {
+      "title": "Contact Information",
+      "phone": "Phone numbers: 0501 990 550, 0755 990 550"
+    },
+    "documents": {
+      "title": "Required Documents",
+      "list": [
+        "Copy of passport (or birth certificate).",
+        "Original state-issued certificate of completion of Grade 9 or 11.",
+        "Four 3/4 photos.",
+        "Copies of parents' passports.",
+        "Medical certificate 086/U.",
+        "Copy of military registration certificate or military ID (for males over 18)."
+      ]
+    },
+    "graduationDocuments": {
+      "title": "Graduation Documents",
+      "list": [
+        "Diploma of secondary vocational education: The main document confirming the receipt of secondary vocational education in a specific specialty. It can be with honors (red diploma) or without honors (blue diploma), depending on the student's performance.",
+        "Diploma supplement: This document lists all the subjects the student studied and the grades received. The supplement is an integral part of the diploma.",
+        "Certificates: Depending on the training program and additional courses, the student may receive various certificates. These may include certificates for completing advanced training courses or certificates of specific professional skills."
+      ]
+    },
+    "sections": {
+      "howToApply": "How to Apply",
+      "tuition": "Tuition & Fees",
+      "scholarships": "Scholarships & Financial Support",
+      "faq": "FAQ"
+    },
+    "scholarship": {
+      "title": "Scholarships, Discounts & Financial Support",
+      "intro": [
+        "At E|C Engineering College, we believe that high-quality education should be accessible to talented and motivated students, regardless of their background or circumstances. To support this commitment, the College offers a range of scholarships, tuition discounts, and financial support opportunities for prospective and current students.",
+        "Our support programs are designed to recognize academic achievement, leadership potential, community involvement, and to provide assistance to families facing financial or social challenges."
+      ],
+      "eligibilityTitle": "Who May Be Eligible?",
+      "eligibilityIntro": "Students may be considered for financial support under one or more of the following categories:",
+      "eligibilityList": [
+        "Outstanding academic achievement",
+        "Winners and participants of Olympiads, competitions, hackathons, and other academic or technical events",
+        "Students from large families",
+        "Students raised in single-parent households",
+        "Students requiring financial assistance",
+        "Students with disabilities",
+        "Applicants from regions across the Kyrgyz Republic",
+        "Families with multiple children enrolled at E|C Engineering College",
+        "Graduates of partner schools",
+        "Students demonstrating leadership, initiative, and active community involvement",
+        "Applicants who complete the admission process during the early enrollment period",
+        "Students choosing to pay tuition for the full academic year in advance",
+        "Applicants referred by E|C students, alumni, parents, or institutional partners"
+      ],
+      "howToTitle": "How to Apply",
+      "howToText": [
+        "During the admissions process, our Admissions Team will help determine which scholarships, discounts, or financial support opportunities you may be eligible for.",
+        "Applicants may be asked to provide supporting documentation to verify eligibility for specific categories. Each application is reviewed individually based on the submitted documents and the College's current financial support policies."
+      ],
+      "importantTitle": "Important Information",
+      "importantText": [
+        "The value and conditions of scholarships and discounts vary depending on the category and supporting documentation provided.",
+        "In some cases, a student may qualify for more than one category of support. The possibility of combining different forms of financial assistance is determined in accordance with the College's policies and procedures.",
+        "Please note that scholarships and discounts are not granted automatically. All awards are subject to review, verification, and formal approval by the College."
+      ],
+      "moreTitle": "Need More Information?",
+      "moreText": [
+        "If you would like to learn more about the scholarships, discounts, and financial support opportunities available to you, please contact the Admissions Office.",
+        "Our team will be happy to guide you through the available options and help identify the forms of support for which you may be eligible."
+      ]
+    }
+  },
+  "thankYou": {
+    "title": "Thank you for your submission!",
+    "description": "We will contact you soon.",
+    "btnText": "Home"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "subtitle": "Incorrectly entered web address or the page does not exist",
+    "goBackBtn": "Go Back Home"
+  },
+  "footer": {
+    "titles": {
+      "main": "Main",
+      "helpfulLinks": "Helpful Links",
+      "contacts": "Contacts"
+    },
+    "companyLinks": {
+      "about": "About E|C",
+      "academics": "Academics",
+      "admissions": "Admissions"
+    },
+    "helpfulLinks": {
+      "contact": "Contact",
+      "faq": "FAQs"
+    },
+    "contactLinks": {
+      "phone": "Phone",
+      "email": "Email",
+      "addressLabel": "Suhe Bator, 23",
+      "address": "Address"
+    },
+    "copyright": "© 2024–2026. EC All rights reserved."
+  },
+  "appLanding": {
+    "hero": {
+      "badge": "Now available on iOS & Android",
+      "description": "Digital ID, transcript, schedule, and campus updates — everything you need as an E|C student, always with you.",
+      "title1": "Your student life,",
+      "title2": "in your pocket."
+    },
+    "features": {
+      "eyebrow": "What's inside",
+      "title": "Built for E|C students",
+      "digitalId": {
+        "title": "Digital Student ID",
+        "desc": "Your official E|C student ID, always on your phone. Show it at the entrance, library, or any campus facility."
+      },
+      "transcript": {
+        "title": "Transcript & Grades",
+        "desc": "View your full academic transcript and current grades for all subjects in one place, anytime."
+      },
+      "schedule": {
+        "title": "Class Schedule",
+        "desc": "See your daily and weekly timetable in real time. Know exactly where to be and when."
+      },
+      "updates": {
+        "title": "Campus Updates",
+        "desc": "Get instant notifications for announcements, exam reminders, and important news from the college."
+      }
+    },
+    "cta": {
+      "title": "Everything you need as a student, in one app.",
+      "description": "Free for all E|C Engineering College students. Available on iOS and Android."
+    },
+    "footer": {
+      "rights": "All rights reserved."
+    }
+  },
+  "olympiad": {
+    "title": "EC Young Innovators Olympiad",
+    "subtitle": "An olympiad of innovative ideas for 9th-grade students",
+    "slogan": "Come up with an idea. Prepare your project. Pitch to the jury. Build your future.",
+    "intro": [
+      "EC Young Innovators Olympiad is an educational olympiad for 9th-grade students, where every participant can propose an idea aimed at solving a real problem in their school, city, region, or society.",
+      "The olympiad is organized by Engineering College in cooperation with APRD.",
+      "The main goal of the project is to help students develop creative thinking, presentation skills, self-confidence, and an interest in engineering, technology, and entrepreneurship."
+    ],
+    "forWhom": {
+      "title": "Who is this olympiad for?",
+      "text": [
+        "The olympiad is intended for 9th-grade students.",
+        "Participation is individual. This means each participant develops their own idea, prepares a presentation, and pitches it to the jury."
+      ]
+    },
+    "theme": {
+      "title": "Main theme",
+      "name": "\"Ideas that improve our community\"",
+      "intro": "Start with something simple — find a problem you notice yourself every day. It could be anything: inconveniences at school, environmental pollution, transport issues, learning challenges, or everyday life in your city.",
+      "findText": "Don't try to come up with the \"perfect startup\". It's better to pick a real problem and propose a clear solution.",
+      "inspirationLabel": "Where to find inspiration",
+      "directions": [
+        "Education",
+        "Ecology",
+        "Health",
+        "Transport",
+        "Safety",
+        "Technology",
+        "Tourism",
+        "Social projects",
+        "City or regional development"
+      ],
+      "note": "Remember: a good idea isn't the most complex one — it's the one that can truly help people.",
+      "questions": [
+        "What would you change in your city if you had the chance?",
+        "What problem around you is most frustrating? Maybe that's exactly your project."
+      ]
+    },
+    "process": {
+      "title": "How does the olympiad work?",
+      "stepLabel": "STEP",
+      "steps": {
+        "registration": {
+          "title": "1. Online registration",
+          "text": "Participants fill out an online form and upload a pitch deck — a short presentation of their idea. The application must include:",
+          "fields": [
+            "first and last name",
+            "school",
+            "city or region",
+            "contact details",
+            "project name",
+            "problem description",
+            "solution description",
+            "project presentation"
+          ]
+        },
+        "selection": {
+          "title": "2. Selection stage",
+          "text": [
+            "After registration closes, the organizers review all applications and presentations.",
+            "Only selected participants advance to the final, so that everyone has a chance to present well and the jury can carefully evaluate the projects."
+          ]
+        },
+        "workshops": {
+          "title": "Free workshops",
+          "text": "Finalists get access to free educational workshops. Workshop topics:",
+          "items": [
+            {
+              "name": "How to find a good idea",
+              "desc": "Participants learn how to notice real problems around them and choose a strong topic for their project."
+            },
+            {
+              "name": "How to come up with a solution",
+              "desc": "Participants learn to turn a problem into a clear idea and build a simple prototype."
+            },
+            {
+              "name": "How to present a project",
+              "desc": "Participants prepare for their pitch and learn to talk about their idea confidently and clearly."
+            }
+          ]
+        },
+        "finalPitch": {
+          "title": "4. Final pitch",
+          "text": "The final will take place on July 29.",
+          "formatIntro": "Each finalist pitches to the jury in a pitch presentation format:",
+          "format": [
+            "4 minutes for the presentation",
+            "3 minutes for jury questions"
+          ]
+        }
+      }
+    },
+    "prepare": {
+      "title": "What do you need to prepare?",
+      "text": "Participants need to prepare a 5–7 slide presentation. Presentation structure:",
+      "structure": [
+        "Project name",
+        "What problem is being solved",
+        "Who faces this problem",
+        "What solution is proposed",
+        "What the benefit will be",
+        "Prototype, mockup, poster, or visual idea",
+        "Why the participant chose this topic"
+      ],
+      "prototypeText": "The prototype can be simple:",
+      "prototypeList": [
+        "a drawing",
+        "a poster",
+        "a Canva design",
+        "a Figma mockup",
+        "a website mockup",
+        "a video",
+        "a physical model",
+        "a presentation demo"
+      ]
+    },
+    "criteria": {
+      "title": "How will projects be evaluated?",
+      "intro": "The jury will evaluate projects against clear criteria:",
+      "list": [
+        "how important the problem is",
+        "how creative the idea is",
+        "whether the solution can be implemented",
+        "what social impact the project may have",
+        "how well the presentation is prepared",
+        "how the participant answers questions"
+      ],
+      "note": "The olympiad evaluates not only knowledge, but also thinking, initiative, confidence, and the desire to solve real problems."
+    },
+    "prizes": {
+      "title": "Prizes",
+      "intro": "Winners receive educational discounts on tuition at Engineering College:",
+      "places": [
+        "1st place — 100% tuition discount",
+        "2nd place — 50% tuition discount",
+        "3rd place — 25% tuition discount"
+      ],
+      "specialTitle": "There may also be special nominations:",
+      "special": [
+        "Most creative idea",
+        "Best social project",
+        "Best presentation",
+        "Best prototype",
+        "Audience choice award"
+      ]
+    },
+    "why": {
+      "title": "Why take part?",
+      "intro": "Taking part in the olympiad is an opportunity to:",
+      "list": [
+        "show your potential",
+        "gain public-speaking experience",
+        "learn to create ideas and projects",
+        "get to know Engineering College",
+        "receive feedback from experts",
+        "compete for an educational discount",
+        "take the first step toward your future profession"
+      ],
+      "note": "Even if a participant doesn't win, they gain valuable experience, new knowledge, and confidence in their abilities."
+    },
+    "organizer": {
+      "title": "Who organizes it?",
+      "text": [
+        "The olympiad is organized by Engineering College in cooperation with APRD.",
+        "The project aims to develop young talent, support students, and promote innovative thinking among 9th-grade students."
+      ]
+    },
+    "banner": {
+      "tag": "New",
+      "title": "EC Young Innovators Olympiad",
+      "text": "9th-graders: pitch an idea and win up to a 100% tuition scholarship.",
+      "cta": "Learn more"
+    },
+    "cta": {
+      "register": "Register & Submit",
+      "warning": "Before submitting, double-check your presentation carefully. Make sure every slide is complete and correct — you will not be able to edit your entry after submission.",
+      "deadlineLabel": "Submission deadline",
+      "deadlineDate": "July 16, 11:45 PM (Bishkek time)",
+      "closed": "Registration is closed",
+      "units": {
+        "days": "Days",
+        "hours": "Hours",
+        "minutes": "Minutes",
+        "seconds": "Seconds"
+      }
+    }
+  },
+  "footer": {
+    "titles": {
+      "main": "Navigation",
+      "helpfulLinks": "Quick Links",
+      "contacts": "Contact Us"
+    },
+    "companyLinks": {
+      "about": "About Us",
+      "academics": "Academics",
+      "studentLife": "Student Life",
+      "admissions": "Admissions"
+    },
+    "helpfulLinks": {
+      "contact": "Contact Us",
+      "faq": "FAQ"
+    },
+    "contactLinks": {
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "addressLabel": "Sayakbay Karalaev 7a/1 · Sukhe-Bator 23"
+    },
+    "copyright": "© E|C Engineering College. All rights reserved."
+  }
+}
