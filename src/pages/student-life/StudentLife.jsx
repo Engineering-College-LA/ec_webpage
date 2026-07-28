@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
@@ -363,52 +363,75 @@ export default function StudentLife() {
 
   const [activeTab, setActiveTab] = useState(clubId || "support-center");
 
+  const navContainerRef = useRef(null);
+  const isManualClickRef = useRef(false);
+
   useEffect(() => {
     if (clubId && CLUBS_DATA.some((c) => c.id === clubId)) {
       setActiveTab(clubId);
       const element = document.getElementById(clubId);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
+        const yOffset = -130;
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
       }
     }
   }, [clubId]);
 
-  // IntersectionObserver to highlight current active section during manual scroll
+  // Robust scroll listener to track current active section accurately during manual scroll
   useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: "-20% 0px -50% 0px",
-      threshold: 0.1,
-    };
+    const handleScroll = () => {
+      if (isManualClickRef.current) return;
 
-    const observerCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveTab(entry.target.id);
+      const scrollPosition = window.scrollY + 200;
+      let currentSection = CLUBS_DATA[0].id;
+
+      for (const club of CLUBS_DATA) {
+        const el = document.getElementById(club.id);
+        if (el) {
+          const top = el.offsetTop;
+          if (scrollPosition >= top) {
+            currentSection = club.id;
+          }
         }
-      });
+      }
+
+      setActiveTab(currentSection);
     };
 
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-    CLUBS_DATA.forEach((club) => {
-      const el = document.getElementById(club.id);
-      if (el) observer.observe(el);
-    });
-
-    return () => observer.disconnect();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Auto-scroll active tab pill inside the top sub-nav bar so it follows movement
+  useEffect(() => {
+    if (navContainerRef.current) {
+      const activeBtn = navContainerRef.current.querySelector(`[data-tab="${activeTab}"]`);
+      if (activeBtn) {
+        activeBtn.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      }
+    }
+  }, [activeTab]);
 
   const handleTabChange = (tabId) => {
     setActiveTab(tabId);
+    isManualClickRef.current = true;
+
     if (tabId === "all") {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       const element = document.getElementById(tabId);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
+        const yOffset = -130;
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
       }
     }
+
+    setTimeout(() => {
+      isManualClickRef.current = false;
+    }, 850);
   };
 
   // Click handler for Join buttons: opens external joinUrl or scrolls to bottom join section
@@ -418,25 +441,28 @@ export default function StudentLife() {
     } else {
       const joinSection = document.getElementById("join-block");
       if (joinSection) {
-        joinSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        const yOffset = -130;
+        const y = joinSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
       }
     }
   };
 
   return (
-    <div className="page pt-24 pb-16 text-slate-900">
-      {/* ── Internal Sticky Navigation (Only 5 Organization Tabs) ── */}
-      <nav className="sticky top-[72px] z-30 border-b border-slate-200 bg-white/90 backdrop-blur mb-10">
-        <div className="max-w-5xl mx-auto flex items-center gap-2 overflow-x-auto px-4 sm:px-6 lg:px-8 py-3 no-scrollbar">
+    <div className="page pt-[124px] pb-16 text-slate-900">
+      {/* ── Fixed Sub-Navigation Bar at TOP of Screen ── */}
+      <nav className="fixed top-[64px] left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200/80">
+        <div ref={navContainerRef} className="max-w-5xl mx-auto flex items-center gap-2 overflow-x-auto px-4 sm:px-6 lg:px-8 py-2.5 no-scrollbar">
           <style>{`.no-scrollbar::-webkit-scrollbar{display:none;}`}</style>
           {CLUBS_DATA.map((c) => (
             <button
               key={c.id}
+              data-tab={c.id}
               onClick={() => handleTabChange(c.id)}
-              className={`whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+              className={`whitespace-nowrap rounded-full px-4 py-1.5 text-xs sm:text-sm font-semibold transition-all duration-200 ${
                 activeTab === c.id
-                  ? "bg-n-blue text-white"
-                  : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                  ? "bg-n-blue text-white shadow-sm"
+                  : "bg-slate-100/90 text-slate-600 hover:bg-slate-200 hover:text-slate-900"
               }`}
             >
               {c.id === "support-center"
@@ -702,62 +728,6 @@ export default function StudentLife() {
             );
           })}
         </div>
-
-        {/* ── 3. BOTTOM JOIN BLOCK (Приглашение вступать во все организации) ── */}
-        <section id="join-block" className="mt-20 p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-[#1C3C71] via-slate-900 to-indigo-950 text-white shadow-2xl relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:24px_24px]" />
-
-          <div className="relative z-10 max-w-3xl mx-auto text-center space-y-4 mb-10">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-md text-xs font-semibold uppercase tracking-wider text-amber-300 border border-white/20">
-              <UserCheck className="w-4 h-4" />
-              <span>{lang === "ru" ? "Вступить в студенческие сообщества" : "Join Student Organizations"}</span>
-            </div>
-            
-            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight">
-              {lang === "ru" ? "Присоединяйся к жизни E|C!" : "Become Part of E|C Student Community!"}
-            </h2>
-            
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-              {lang === "ru"
-                ? "Выбери направление по душе: развивай социальные стартапы, участвуй в олимпиадах, пиши приложения или влияй на развитие колледжа."
-                : "Choose your path: launch social startups, compete in algorithms, code real apps, or shape campus life."}
-            </p>
-          </div>
-
-          {/* Cards for each organization */}
-          <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {CLUBS_DATA.map((c) => {
-              const IconComponent = c.icon;
-              const title = lang === "ru" ? c.titleRu : c.titleEn;
-              const ctaText = lang === "ru" ? c.ctaBtnRu : c.ctaBtnEn;
-
-              return (
-                <div
-                  key={c.id}
-                  className="p-5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 flex flex-col justify-between space-y-4 hover:bg-white/15 transition-all"
-                >
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-amber-300 font-bold text-sm">
-                      <IconComponent className="w-5 h-5 shrink-0" />
-                      <span className="truncate">{title}</span>
-                    </div>
-                    <p className="text-xs text-slate-300 line-clamp-2 leading-relaxed">
-                      {lang === "ru" ? c.subtitleRu : c.subtitleEn}
-                    </p>
-                  </div>
-
-                  <button
-                    onClick={() => handleJoinClick(c)}
-                    className="w-full py-2.5 px-4 rounded-xl bg-white text-slate-900 hover:bg-slate-100 font-bold text-xs flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-md"
-                  >
-                    <span>{ctaText}</span>
-                    {c.joinUrl ? <ExternalLink className="w-3.5 h-3.5" /> : <ChevronRight className="w-3.5 h-3.5" />}
-                  </button>
-                </div>
-              );
-            })}
-          </div>
-        </section>
       </div>
     </div>
   );

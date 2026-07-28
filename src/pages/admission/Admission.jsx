@@ -62,25 +62,29 @@ const Admission = () => {
 
   const scrollTo = (id) => {
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (el) {
+      const yOffset = -130;
+      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
   };
 
   const sch = (key, opts) => t(`admission.scholarship.${key}`, opts);
 
   return (
-    <div className="page pt-24 text-slate-900">
-      {/* Sticky sub-navigation */}
-      <nav className="sticky top-[72px] z-30 border-b border-slate-200 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-[860px] gap-2 overflow-x-auto px-4 py-3 no-scrollbar">
+    <div className="page pt-[124px] text-slate-900">
+      {/* ── Fixed Sub-Navigation Bar at TOP of Screen ── */}
+      <nav className="fixed top-[64px] left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200/80">
+        <div className="mx-auto flex max-w-[860px] gap-2 overflow-x-auto px-4 py-2.5 no-scrollbar">
           <style>{`.no-scrollbar::-webkit-scrollbar{display:none;}`}</style>
           {SECTIONS.map(({ id, label }) => (
             <button
               key={id}
               onClick={() => scrollTo(id)}
-              className={`whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+              className={`whitespace-nowrap rounded-full px-4 py-1.5 text-xs sm:text-sm font-semibold transition-all duration-200 ${
                 active === id
-                  ? "bg-n-blue text-white"
-                  : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                  ? "bg-n-blue text-white shadow-sm"
+                  : "bg-slate-100/90 text-slate-600 hover:bg-slate-200 hover:text-slate-900"
               }`}
             >
               {t(label)}

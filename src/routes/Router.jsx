@@ -140,6 +140,7 @@ const router = createBrowserRouter(
               path: "/academics",
               children: [
                 { index: true, element: <Academics /> },
+                { path: ":programId", element: <Academics /> },
                 {
                   path: "software-engineering",
                   element: <SoftwareEngineering />,

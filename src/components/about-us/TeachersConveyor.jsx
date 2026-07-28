@@ -66,8 +66,8 @@ const THEMES = {
     gradient: "linear-gradient(135deg,#451a03 0%,#92400e 55%,#b45309 100%)",
     accent: "#f59e0b",
     soft: "#fffbeb",
-    labelRu: "Менеджмент",
-    labelEn: "Management",
+    labelRu: "IT Management",
+    labelEn: "IT Management",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
         <rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" strokeWidth="1.8"/>
@@ -242,18 +242,33 @@ const THEMES = {
   },
 };
 
+// ─── Helper to resolve localized teacher name ────────────────────────────────
+const getTeacherName = (t, lang = "ru") => {
+  if (!t) return "";
+  if (typeof t.name === "object" && t.name !== null) {
+    return t.name[lang] || t.name.ru || t.name.en || "";
+  }
+  return t.name || "";
+};
+
 // ─── Teacher data ─────────────────────────────────────────────────────────────
 const teachers = [
   // 1. Нурлан
   {
-    name: "Nurlan",
+    name: {
+      ru: "Нурлан",
+      en: "Nurlan",
+    },
     img: img_Nurlan,
     field: "general",
     info: null,
   },
   // 2. Доолос
   {
-    name: "Aibek Doolos",
+    name: {
+      ru: "Айбек Доолос",
+      en: "Aibek Doolos",
+    },
     img: img_Aibek,
     field: "cybersecurity",
     info: {
@@ -269,7 +284,10 @@ const teachers = [
   },
   // 3. Зумрад
   {
-    name: "Zumrad Uysal",
+    name: {
+      ru: "Зумрад Уйсал",
+      en: "Zumrad Uysal",
+    },
     img: img_Zumrad,
     field: "english",
     info: {
@@ -285,23 +303,29 @@ const teachers = [
   },
   // 4. Жибек
   {
-    name: "Zhibek Alykulova",
+    name: {
+      ru: "Жибек Алыкулова",
+      en: "Zhibek Alykulova",
+    },
     img: img_Zhibek,
     field: "management",
     info: {
       ru: {
-        position: "Руководитель программы «Менеджмент», старший преподаватель",
-        bio: "Степень магистра по направлению «Менеджмент».\n\nБолее 16 лет опыта в образовании и управлении. Руководит программой «Менеджмент» в Инженерном колледже, ведёт преподавательскую, методическую и административную работу.\n\nФокусируется на развитии образовательных программ и внедрении современных технологий обучения. Сильные лидерские и организационные качества.",
+        position: "Руководитель программы «IT Management», старший преподаватель",
+        bio: "Степень магистра по направлению «Менеджмент».\n\nБолее 16 лет опыта в образовании и управлении. Руководит программой «IT Management» в Инженерном колледже, ведёт преподавательскую, методическую и административную работу.\n\nФокусируется на развитии образовательных программ и внедрении современных технологий обучения. Сильные лидерские и организационные качества.",
       },
       en: {
-        position: "Head of Management Program, Senior Lecturer",
-        bio: "Holds a Master's degree in Management.\n\nOver 16 years of experience in education and management. Leads the Management program at the Engineering College, combining teaching with methodological and administrative responsibilities.\n\nFocuses on developing educational programs and implementing modern teaching approaches. Known for strong leadership and organizational skills.",
+        position: "Head of IT Management Program, Senior Lecturer",
+        bio: "Holds a Master's degree in Management.\n\nOver 16 years of experience in education and management. Leads the IT Management program at the Engineering College, combining teaching with methodological and administrative responsibilities.\n\nFocuses on developing educational programs and implementing modern teaching approaches. Known for strong leadership and organizational skills.",
       },
     },
   },
   // 5. Жылдыз
   {
-    name: "Jyldyz Biigeldieva",
+    name: {
+      ru: "Жылдыз Биигелдиева",
+      en: "Jyldyz Biigeldieva",
+    },
     img: img_Jyldyz,
     field: "english",
     info: {
@@ -317,7 +341,10 @@ const teachers = [
   },
   // 6. Нуржан
   {
-    name: "Nurzhan Beksultanova",
+    name: {
+      ru: "Нуржан Бексултанова",
+      en: "Nurzhan Beksultanova",
+    },
     img: img_Nurzhan,
     field: "chemistry",
     info: {
@@ -333,7 +360,10 @@ const teachers = [
   },
   // 7. Мунара
   {
-    name: "Munara Bekbolotova",
+    name: {
+      ru: "Мунара Бекболотова",
+      en: "Munara Bekbolotova",
+    },
     img: img_Munara,
     field: "psychology",
     info: {
@@ -349,7 +379,10 @@ const teachers = [
   },
   // 8. Рамиль
   {
-    name: "Ramil Salikhar",
+    name: {
+      ru: "Рамиль Салихар",
+      en: "Ramil Salikhar",
+    },
     img: img_Ramil,
     field: "software",
     info: {
@@ -366,7 +399,10 @@ const teachers = [
 
   // ── Остальные преподаватели ───────────────────────────────────────────────────
   {
-    name: "Azamat Askarov",
+    name: {
+      ru: "Азамат Аскаров",
+      en: "Azamat Askarov",
+    },
     img: img_Azamat,
     field: "math",
     info: {
@@ -381,7 +417,10 @@ const teachers = [
     },
   },
   {
-    name: "Eldar Ulanov",
+    name: {
+      ru: "Эльдар Уланов",
+      en: "Eldar Ulanov",
+    },
     img: img_Eldar,
     field: "computer_literacy",
     info: {
@@ -396,7 +435,10 @@ const teachers = [
     },
   },
   {
-    name: "Elnazar Ulanbek",
+    name: {
+      ru: "Эльназар Уланбек",
+      en: "Elnazar Ulanbek",
+    },
     img: img_Elnazar,
     field: "backend",
     info: {
@@ -411,13 +453,19 @@ const teachers = [
     },
   },
   {
-    name: "Erbol",
+    name: {
+      ru: "Эрбол",
+      en: "Erbol",
+    },
     img: img_Erbol,
     field: "general",
     info: null,
   },
   {
-    name: "Асанова Бактыгуль",
+    name: {
+      ru: "Асанова Бактыгуль",
+      en: "Baktygul Asanova",
+    },
     img: null,
     field: "literature",
     info: {
@@ -432,7 +480,10 @@ const teachers = [
     },
   },
   {
-    name: "Адил Самара",
+    name: {
+      ru: "Адил Самара",
+      en: "Samara Adil",
+    },
     img: null,
     field: "history",
     info: {
@@ -447,7 +498,10 @@ const teachers = [
     },
   },
   {
-    name: "Осмонова Наргул",
+    name: {
+      ru: "Осмонова Наргул",
+      en: "Nargul Osmonova",
+    },
     img: null,
     field: "kyrgyz",
     info: {
@@ -462,7 +516,10 @@ const teachers = [
     },
   },
   {
-    name: "Молдокулов Бакыт",
+    name: {
+      ru: "Молдокулов Бакыт",
+      en: "Bakyt Moldokulov",
+    },
     img: null,
     field: "military",
     info: {
@@ -477,7 +534,10 @@ const teachers = [
     },
   },
   {
-    name: "Орозалиева Журсун",
+    name: {
+      ru: "Орозалиева Журсун",
+      en: "Zhursun Orozalieva",
+    },
     img: null,
     field: "kyrgyz",
     info: {
@@ -492,7 +552,10 @@ const teachers = [
     },
   },
   {
-    name: "Улан Нуркасымов",
+    name: {
+      ru: "Улан Нуркасымов",
+      en: "Ulan Nurkasymov",
+    },
     img: null,
     field: "economics",
     info: {
@@ -507,7 +570,10 @@ const teachers = [
     },
   },
   {
-    name: "Талант Асан уулу",
+    name: {
+      ru: "Талант Асан уулу",
+      en: "Talant Asan uulu",
+    },
     img: null,
     field: "management",
     info: {
@@ -524,7 +590,10 @@ const teachers = [
 
   // ── Последний ────────────────────────────────────────────────────────────────
   {
-    name: "Abdyldaev Baktyar",
+    name: {
+      ru: "Бактияр Абдылдаев",
+      en: "Baktyar Abdyldaev",
+    },
     img: img_Abdyldaev,
     field: "sports",
     info: {
@@ -625,6 +694,7 @@ const TeachersConveyor = () => {
       >
         <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
           {teachers.map((t, idx) => {
+            const tName     = getTeacherName(t, lang);
             const off       = getOffset(idx, active);
             const isCenter  = off === 0;
             const isVisible = Math.abs(off) <= 1;
@@ -682,7 +752,7 @@ const TeachersConveyor = () => {
                     {t.img ? (
                       <img
                         src={t.img}
-                        alt={t.name}
+                        alt={tName}
                         className="w-full h-full object-cover object-top"
                         draggable={false}
                       />
@@ -711,7 +781,7 @@ const TeachersConveyor = () => {
                         {/* Initials */}
                         <p className="relative z-10 font-bold tracking-widest text-white opacity-60"
                           style={{ fontSize: isCenter ? 13 : 10 }}>
-                          {t.name.split(" ").slice(0, 2).map(w => w[0]).join("").toUpperCase()}
+                          {tName.split(" ").slice(0, 2).map(w => w[0]).join("").toUpperCase()}
                         </p>
                       </div>
                     )}
@@ -753,7 +823,7 @@ const TeachersConveyor = () => {
                         transition: "color 0.8s ease, font-size 0.8s ease",
                       }}
                     >
-                      {t.name}
+                      {tName}
                     </p>
                     {/* Specialty line — only center card */}
                     {isCenter && t.info && (
@@ -850,9 +920,10 @@ const TeachersConveyor = () => {
 
 // ─── Modal ────────────────────────────────────────────────────────────────────
 const TeacherModal = ({ teacher, lang, onClose }) => {
-  const theme   = THEMES[teacher.field] || THEMES.general;
-  const info    = teacher.info?.[lang];
-  const label   = lang === "ru" ? theme.labelRu : theme.labelEn;
+  const teacherName = getTeacherName(teacher, lang);
+  const theme       = THEMES[teacher.field] || THEMES.general;
+  const info        = teacher.info?.[lang];
+  const label       = lang === "ru" ? theme.labelRu : theme.labelEn;
 
   // Close on backdrop click
   const handleBackdrop = (e) => { if (e.target === e.currentTarget) onClose(); };
@@ -913,7 +984,7 @@ const TeacherModal = ({ teacher, lang, onClose }) => {
               style={{ borderColor: `${theme.accent}55`, boxShadow: `0 8px 24px rgba(0,0,0,0.4)`, background: theme.gradient }}
             >
               {teacher.img ? (
-                <img src={teacher.img} alt={teacher.name} className="w-full h-full object-cover object-top" draggable={false}/>
+                <img src={teacher.img} alt={teacherName} className="w-full h-full object-cover object-top" draggable={false}/>
               ) : (
                 <svg viewBox="0 0 60 60" fill="none" width="54" height="54">
                   <circle cx="30" cy="22" r="12" fill="rgba(255,255,255,0.4)"/>
@@ -931,7 +1002,7 @@ const TeacherModal = ({ teacher, lang, onClose }) => {
                 {theme.icon && <span className="w-4 h-4 shrink-0 flex items-center justify-center">{theme.icon}</span>}
                 <span className="break-words">{label}</span>
               </div>
-              <h3 className="text-white font-bold text-lg sm:text-xl leading-tight">{teacher.name}</h3>
+              <h3 className="text-white font-bold text-lg sm:text-xl leading-tight">{teacherName}</h3>
               {info && (
                 <p className="text-xs sm:text-sm mt-0.5" style={{ color: `${theme.accent}cc` }}>{info.position}</p>
               )}
