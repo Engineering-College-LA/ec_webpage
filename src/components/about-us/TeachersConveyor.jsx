@@ -227,6 +227,30 @@ const THEMES = {
       </svg>
     ),
   },
+  design: {
+    gradient: "linear-gradient(135deg,#31103f 0%,#701a75 55%,#86198f 100%)",
+    accent: "#e879f9",
+    soft: "#fdf4ff",
+    labelRu: "Графический дизайн",
+    labelEn: "Graphic Design",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+        <path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm-1 16.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm-3.5-5a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm4.5-5.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm4.5 5.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
+  },
+  marketing: {
+    gradient: "linear-gradient(135deg,#701a75 0%,#a21caf 55%,#c026d3 100%)",
+    accent: "#e879f9",
+    soft: "#fdf4ff",
+    labelRu: "Маркетинг и коммуникации",
+    labelEn: "Marketing & Communications",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+        <path d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 5l-7 3.882M18 5a2 2 0 012 2v7a2 2 0 01-2 2M18 5l-7 11" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
+  },
   general: {
     gradient: "linear-gradient(135deg,#1e293b 0%,#334155 55%,#475569 100%)",
     accent: "#94a3b8",
@@ -454,12 +478,21 @@ const teachers = [
   },
   {
     name: {
-      ru: "Эрбол",
-      en: "Erbol",
+      ru: "Эрбол Советалы уулу",
+      en: "Erbol Sovetaly uulu",
     },
     img: img_Erbol,
-    field: "general",
-    info: null,
+    field: "marketing",
+    info: {
+      ru: {
+        position: "Менеджер по маркетингу и коммуникациям",
+        bio: "Специалист в области маркетинга, медиа и стратегических коммуникаций с опытом продвижения образовательных проектов, организации мероприятий и взаимодействия с разными аудиториями. В своей работе сочетает креативный подход, публичные коммуникации и понимание потребностей целевой аудитории, формируя узнаваемый образ колледжа и выстраивая доверительные отношения с абитуриентами, студентами, родителями и партнерами.\n\nОкончил Университет Центральной Азии по направлению «Коммуникации и медиа». Имеет опыт представления образовательных программ в школах Кыргызстана и Казахстана, организации дней открытых дверей и проведения крупных официальных, образовательных и культурных мероприятий. Работал в телевизионном производстве, создавая и ведя собственный проект, а также выступал ведущим форумов, университетских церемоний, TEDx и международных мероприятий. Опыт в медиа, публичных выступлениях и работе с молодежью помогает ему создавать содержательные коммуникационные кампании и эффективно представлять ценности Инженерного Колледжа.",
+      },
+      en: {
+        position: "Marketing and Communications Manager",
+        bio: "Specialist in marketing, media, and strategic communications with experience in promoting educational projects, organizing events, and engaging diverse audiences. Combines a creative approach, public communications, and a deep understanding of audience needs to build a recognizable college brand and foster trust with applicants, students, parents, and partners.\n\nGraduated from the University of Central Asia with a degree in Communications and Media. Experienced in presenting educational programs at schools across Kyrgyzstan and Kazakhstan, hosting Open House days, and managing major official, educational, and cultural events. Worked in television production creating and hosting his own program, and served as a master of ceremonies for forums, university commencements, TEDx, and international events. His expertise in media, public speaking, and youth engagement enables him to craft impactful communication campaigns and effectively represent the values of the Engineering College.",
+      },
+    },
   },
   {
     name: {
@@ -584,6 +617,25 @@ const teachers = [
       en: {
         position: "Management and Economics Lecturer",
         bio: "An expert in management, economics, and educational administration. Combines modern international educational practices with real-world business cases.\n\nHolds an engineering degree from KSUCA, an MBA from Eastern Mediterranean University (Northern Cyprus), and a PhD in Economics. Author of research on economics, management, and higher education development.\n\nHis international academic background enables him to implement modern teaching approaches and prepare students for successful careers.",
+      },
+    },
+  },
+
+  {
+    name: {
+      ru: "Айзада Шаршенова",
+      en: "Aizada Sharshenova",
+    },
+    img: null,
+    field: "design",
+    info: {
+      ru: {
+        position: "Преподаватель графического дизайна",
+        bio: "Графический дизайнер с более чем восьмилетним профессиональным опытом в сфере визуальных коммуникаций, брендинга и цифрового дизайна. Специализируется на разработке фирменного стиля, маркетинговых материалов, веб-дизайне, UX/UI, полиграфии и создании образовательного контента. В своей работе сочетает креативный подход, понимание современных трендов и практический опыт реализации коммерческих проектов для компаний Кыргызстана и международных заказчиков.\n\nСвою профессиональную карьеру начала в 2017 году и за это время работала в дизайн-студиях, образовательных проектах, стартапах и коммерческих организациях. С июля 2025 по май 2026 года занимала должность графического дизайнера в ЗАО «Азия Клир». В настоящее время работает full-time графическим дизайнером в международной дизайн-студии, создающей проекты для зарубежного рынка, а также является part-time дизайнером в STEM-стартапе Supernova. За годы работы реализовала десятки проектов в области брендинга, веб-дизайна, печатной продукции, презентаций и цифровых продуктов, сотрудничая как с государственными, так и с международными организациями. Опыт преподавания позволяет ей передавать студентам не только фундаментальные знания дизайна, но и навыки, востребованные современной индустрией.",
+      },
+      en: {
+        position: "Graphic Design Lecturer",
+        bio: "Graphic designer with over eight years of professional experience in visual communications, branding, and digital design. Specializes in corporate identity development, marketing materials, web design, UX/UI, print, and educational content creation. Combines a creative approach, an understanding of modern industry trends, and practical experience delivering commercial projects for Kyrgyz and international clients.\n\nStarted her professional career in 2017, working across design studios, educational projects, startups, and commercial companies. Served as Graphic Designer at Asia Clear CJSC from July 2025 to May 2026. Currently works full-time as a Graphic Designer at an international design studio serving overseas markets, while also working part-time as a Designer at the STEM startup Supernova. Over the years, she has delivered dozens of projects in branding, web design, print media, presentations, and digital products in collaboration with public and international organizations. Her teaching experience enables her to provide students with both fundamental design knowledge and industry-demanded practical skills.",
       },
     },
   },
