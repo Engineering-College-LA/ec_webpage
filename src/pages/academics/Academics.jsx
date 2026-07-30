@@ -883,21 +883,7 @@ export default function Academics() {
                     </div>
                   </div>
 
-                  {/* Individual Program Apply CTA */}
-                  <div className="pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div className="text-xs sm:text-sm text-slate-500 font-medium">
-                      {lang === "ru"
-                        ? "Инженерный Колледж E|C — Подготовка специалистов мирового уровня"
-                        : "E|C Engineering College — World-class education in Kyrgyzstan"}
-                    </div>
-                    <button
-                      onClick={handleApplyClick}
-                      className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#1C3C71] text-white hover:bg-[#152e58] font-bold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-md"
-                    >
-                      <span>{ctaBtn}</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
-                  </div>
+
                 </div>
               </div>
             );

@@ -708,21 +708,7 @@ export default function StudentLife() {
                     </div>
                   )}
 
-                  {/* Individual Section Join Block */}
-                  <div className="pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div className="text-xs sm:text-sm text-slate-500 font-medium">
-                      {lang === "ru"
-                        ? "Открыто для всех зарегистрированных студентов Engineering College Light Academy"
-                        : "Open to all registered E|C Engineering College students"}
-                    </div>
-                    <button
-                      onClick={() => handleJoinClick(club)}
-                      className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#1C3C71] text-white hover:bg-[#152e58] font-bold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-md"
-                    >
-                      <span>{ctaBtn}</span>
-                      {club.joinUrl ? <ExternalLink className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
-                    </button>
-                  </div>
+
                 </div>
               </div>
             );
