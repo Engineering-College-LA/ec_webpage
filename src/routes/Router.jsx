@@ -202,8 +202,7 @@ const router = createBrowserRouter(
         },
       ],
     },
-  ],
-  { basename: "/ec_webpage" }
+  ]
 );
 
 function Router() {

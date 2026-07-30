@@ -33,32 +33,6 @@
       gtag("js", new Date());
       gtag("config", "G-2M2GPPXSPW");
     </script>
-    <!-- GitHub Pages SPA redirect: restore path from query string set by 404.html -->
-    <script>
-      (function () {
-        var redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (redirect && redirect !== location.href) {
-          history.replaceState(null, null, redirect);
-        }
-        // Also handle the ?p= query param set by 404.html
-        var search = window.location.search;
-        if (search.startsWith('?p=/')) {
-          var path = search.slice(3).replace(/~and~/g, '&');
-          var query = '';
-          var qi = path.indexOf('&q=');
-          if (qi !== -1) {
-            query = '?' + path.slice(qi + 3).replace(/~and~/g, '&');
-            path = path.slice(0, qi);
-          }
-          window.history.replaceState(
-            null,
-            null,
-            window.location.pathname.split('/').slice(0, 2).join('/') + path + query + window.location.hash
-          );
-        }
-      })();
-    </script>
   </head>
   <body>
     <div id="root"></div>
