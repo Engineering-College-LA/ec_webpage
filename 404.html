@@ -1,36 +1,42 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Engineering College LA</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E|C Engineering College</title>
+    <meta
+      name="description"
+      content="E|C Engineering College is a modern engineering college offering hands-on education, cutting-edge facilities, and industry-focused programs in technology and design."
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta property="og:title" content="E|C Engineering College" />
+    <meta
+      property="og:description"
+      content="A modern engineering college focused on hands-on learning, innovation, and industry-ready education in engineering and technology."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="E|C Engineering College" />
+    <meta
+      name="twitter:description"
+      content="Hands-on engineering education with modern facilities, real-world projects, and industry-driven programs at E|C Engineering College."
+    />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-2M2GPPXSPW"
+    ></script>
     <script>
-      // GitHub Pages SPA redirect trick.
-      // When a user navigates directly to a sub-path (e.g. /ec_webpage/about),
-      // GitHub Pages returns a 404. This page catches that 404 and redirects
-      // to the root index.html while preserving the original path in the query
-      // string, which the app then reads to restore the correct route.
-      var segmentCount = 1; // number of path segments in the repo name (/ec_webpage)
-      var l = window.location;
-      l.replace(
-        l.protocol +
-          "//" +
-          l.hostname +
-          (l.port ? ":" + l.port : "") +
-          l.pathname
-            .split("/")
-            .slice(0, 1 + segmentCount)
-            .join("/") +
-          "/?p=/" +
-          l.pathname
-            .slice(1)
-            .split("/")
-            .slice(segmentCount)
-            .join("/")
-            .replace(/&/g, "~and~") +
-          (l.search ? "&q=" + l.search.slice(1).replace(/&/g, "~and~") : "") +
-          l.hash
-      );
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-2M2GPPXSPW");
     </script>
+    <script type="module" crossorigin src="/ec_webpage/assets/index-C5Km0_rX.js"></script>
+    <link rel="stylesheet" crossorigin href="/ec_webpage/assets/index-DtCbm-Hu.css">
   </head>
-  <body></body>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
