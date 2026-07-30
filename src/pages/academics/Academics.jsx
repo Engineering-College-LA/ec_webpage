@@ -729,14 +729,6 @@ export default function Academics() {
                         <Info className="w-4.5 h-4.5 text-amber-300" />
                         <span>{lang === "ru" ? "Подробнее о программе" : "Program Details"}</span>
                       </button>
-
-                      <button
-                        onClick={handleApplyClick}
-                        className="shrink-0 bg-white text-slate-900 font-bold px-6 py-3 rounded-2xl hover:bg-slate-100 transition-transform active:scale-95 shadow-lg text-sm sm:text-base flex items-center justify-center gap-2 cursor-pointer"
-                      >
-                        <span>{ctaBtn}</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </button>
                     </div>
                   </div>
                 </div>
