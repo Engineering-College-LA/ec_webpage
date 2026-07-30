@@ -439,12 +439,7 @@ export default function StudentLife() {
     if (club.joinUrl && club.joinUrl.trim() !== "" && club.joinUrl !== "#") {
       window.open(club.joinUrl, "_blank", "noopener,noreferrer");
     } else {
-      const joinSection = document.getElementById("join-block");
-      if (joinSection) {
-        const yOffset = -130;
-        const y = joinSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: y, behavior: "smooth" });
-      }
+      navigate("/#contact");
     }
   };
 
@@ -513,6 +508,14 @@ export default function StudentLife() {
                         {subtitle}
                       </p>
                     </div>
+
+                    <button
+                      onClick={() => handleJoinClick(club)}
+                      className="shrink-0 bg-white text-slate-900 font-bold px-6 py-3 rounded-2xl hover:bg-slate-100 transition-transform active:scale-95 shadow-lg text-sm sm:text-base flex items-center justify-center gap-2 cursor-pointer"
+                    >
+                      <span>{ctaBtn}</span>
+                      {club.joinUrl ? <ExternalLink className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
+                    </button>
                   </div>
                 </div>
 
