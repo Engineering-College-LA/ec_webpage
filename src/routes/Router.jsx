@@ -202,7 +202,13 @@ const router = createBrowserRouter(
         },
       ],
     },
-  ]
+  ],
+  {
+    basename:
+      typeof window !== "undefined" && window.location.pathname.startsWith("/ec_webpage")
+        ? "/ec_webpage"
+        : "/",
+  }
 );
 
 function Router() {
