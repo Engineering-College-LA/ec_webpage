@@ -1,5 +1,5 @@
 import Academics from "./Academics";
 
 export default function ManagementInIT() {
-  return <Academics />;
+  return <Academics initialProgram="management-in-it" />;
 }

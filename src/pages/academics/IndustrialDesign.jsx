@@ -1,5 +1,5 @@
 import Academics from "./Academics";
 
 export default function IndustrialDesign() {
-  return <Academics />;
+  return <Academics initialProgram="industrial-design" />;
 }

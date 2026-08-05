@@ -1,5 +1,5 @@
 import Academics from "./Academics";
 
 export default function CyberSecurity() {
-  return <Academics />;
+  return <Academics initialProgram="cyber-security" />;
 }

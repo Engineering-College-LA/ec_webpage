@@ -66,7 +66,7 @@ const THEMES = {
     gradient: "linear-gradient(135deg,#451a03 0%,#92400e 55%,#b45309 100%)",
     accent: "#f59e0b",
     soft: "#fffbeb",
-    labelRu: "IT Management",
+    labelRu: "Менеджмент",
     labelEn: "IT Management",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
@@ -290,8 +290,8 @@ const teachers = [
   // 2. Доолос
   {
     name: {
-      ru: "Айбек Доолос",
-      en: "Aibek Doolos",
+      ru: "Доолос Айбек уулу",
+      en: "Doolos Aibek uulu",
     },
     img: img_Aibek,
     field: "cybersecurity",
@@ -335,8 +335,8 @@ const teachers = [
     field: "management",
     info: {
       ru: {
-        position: "Руководитель программы «IT Management», старший преподаватель",
-        bio: "Степень магистра по направлению «Менеджмент».\n\nБолее 16 лет опыта в образовании и управлении. Руководит программой «IT Management» в Инженерном колледже, ведёт преподавательскую, методическую и административную работу.\n\nФокусируется на развитии образовательных программ и внедрении современных технологий обучения. Сильные лидерские и организационные качества.",
+        position: "Руководитель программы «Менеджмент», старший преподаватель",
+        bio: "Степень магистра по направлению «Менеджмент».\n\nБолее 16 лет опыта в образовании и управлении. Руководит программой «Менеджмент» в Инженерном колледже, ведёт преподавательскую, методическую и административную работу.\n\nФокусируется на развитии образовательных программ и внедрении современных технологий обучения. Сильные лидерские и организационные качества.",
       },
       en: {
         position: "Head of IT Management Program, Senior Lecturer",
@@ -460,7 +460,7 @@ const teachers = [
   },
   {
     name: {
-      ru: "Эльназар Уланбек",
+      ru: "Эльназар Уланбек уулу",
       en: "Elnazar Ulanbek",
     },
     img: img_Elnazar,
@@ -496,7 +496,7 @@ const teachers = [
   },
   {
     name: {
-      ru: "Асанова Бактыгуль",
+      ru: "Бактыгуль Асанова",
       en: "Baktygul Asanova",
     },
     img: null,
@@ -514,7 +514,7 @@ const teachers = [
   },
   {
     name: {
-      ru: "Адил Самара",
+      ru: "Самара Адил",
       en: "Samara Adil",
     },
     img: null,
@@ -532,7 +532,7 @@ const teachers = [
   },
   {
     name: {
-      ru: "Осмонова Наргул",
+      ru: "Наргул Осмонова",
       en: "Nargul Osmonova",
     },
     img: null,
@@ -550,7 +550,7 @@ const teachers = [
   },
   {
     name: {
-      ru: "Молдокулов Бакыт",
+      ru: "Бакыт Молдокулов",
       en: "Bakyt Moldokulov",
     },
     img: null,
@@ -568,7 +568,7 @@ const teachers = [
   },
   {
     name: {
-      ru: "Орозалиева Журсун",
+      ru: "Журсун Орозалиева",
       en: "Zhursun Orozalieva",
     },
     img: null,

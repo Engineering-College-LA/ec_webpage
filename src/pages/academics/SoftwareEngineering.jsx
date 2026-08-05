@@ -1,5 +1,5 @@
 import Academics from "./Academics";
 
 export default function SoftwareEngineering() {
-  return <Academics />;
+  return <Academics initialProgram="software-engineering" />;
 }
