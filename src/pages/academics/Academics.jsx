@@ -44,7 +44,7 @@ const PROGRAMS_DATA = [
     subtitleRu: "Проектирование, разработка, тестирование и интеграция искусственного интеллекта",
     subtitleEn: "Design, development, testing, and AI integration for modern digital products",
     introRu: "Программа «Программная инженерия» готовит специалистов, способных проектировать, разрабатывать, тестировать и сопровождать современные программные продукты. Студенты изучают не только языки программирования, но и полный процесс создания программного обеспечения — от анализа задачи и проектирования системы до запуска готового решения.\n\nОбучение начинается с фундаментальных основ и постепенно переходит к разработке более сложных приложений. Такой подход позволяет студентам понимать внутреннюю логику программных систем, самостоятельно находить решения и адаптироваться к новым технологиям.",
-    introEn: "The Software Engineering program trains specialists capable of designing, developing, testing, and supporting modern software products. Students master programming languages as well as the complete software engineering process — from system design to full-scale deployment.",
+    introEn: "The Software Engineering program trains specialists capable of designing, developing, testing, and maintaining modern software products. Students study not only programming languages but also the complete software creation lifecycle—from problem analysis and system design to deploying the finished solution.\n\nTraining begins with fundamental principles and gradually progresses to the development of more complex applications. This approach enables students to understand the internal logic of software systems, independently find solutions, and adapt to emerging technologies.",
 
     modulesRu: [
       {
@@ -70,24 +70,24 @@ const PROGRAMS_DATA = [
     ],
     modulesEn: [
       {
-        title: "Programming Fundamentals",
-        desc: "Algorithms, data structures, logic, and Object-Oriented Programming (OOP) fundamentals.",
+        title: "Foundations of Programming",
+        desc: "Students study algorithms, data structures, programming logic, and object-oriented development principles. This knowledge forms the foundation necessary for mastering different programming languages and technology domains.",
       },
       {
         title: "Digital Product Development",
-        desc: "Web development, Frontend & Backend architecture, databases, and REST APIs.",
+        desc: "The program covers web development, building client and server sides of applications, working with databases and APIs. Students learn to connect various system components and create products capable of processing, storing, and transmitting information.",
       },
       {
-        title: "Quality & Reliability",
-        desc: "Testing (QA), security fundamentals, Git version control, deployment, and DevOps basics.",
+        title: "Quality and Reliability",
+        desc: "Special attention is given to testing, debugging, information security fundamentals, and software maintenance. Students become familiar with version control systems, deployment principles, and DevOps basics.",
       },
       {
-        title: "Team Engineering",
-        desc: "Requirements analysis, Agile task assignment, technical documentation, and project defense.",
+        title: "Team Development",
+        desc: "Creating a software product is rarely an individual effort. Therefore, students learn to analyze requirements, distribute tasks, document decisions, manage changes, and present their work. This helps them understand the processes within a professional development team.",
       },
       {
-        title: "AI Integration in Development",
-        desc: "AI-assisted coding, automated testing, API AI integration, machine learning principles, and intelligent software creation.",
+        title: "Artificial Intelligence in Development",
+        desc: "Artificial intelligence is an important part of the program. Students study it not only as an auxiliary tool but also as a technology they can integrate into their own digital products.\nInitially, they learn to use AI effectively for task analysis, code writing and review, testing, bug detection, and technical documentation preparation. Then they move on to integrating ready-made AI services into websites and applications—for information processing, process automation, and creating intelligent features.\nAt a more advanced level, students explore machine learning principles, data preparation, model training, and evaluation. The knowledge gained allows them to develop their own AI-based solutions and understand how intelligent systems are built, operate, and are deployed in real products.\nThus, students progress from confident users of AI tools to developers capable of designing and creating intelligent software solutions.",
       },
     ],
 
@@ -102,29 +102,30 @@ const PROGRAMS_DATA = [
       "Доводить проект от первоначальной идеи до работающего прототипа",
     ],
     skillsEn: [
-      "Analyze business requirements and architect technical solutions",
-      "Build web applications, services, and digital products",
-      "Manage databases and backend server infrastructure",
-      "Test software, debug errors, and refactor code",
-      "Utilize professional team collaboration tools (Git, Jira)",
-      "Leverage AI during coding and integrate AI models into apps",
-      "Develop custom intelligent software applications",
-      "Take projects from initial concept to working commercial prototypes",
+      "Analyze a problem and design a technical solution",
+      "Create web applications and other digital products",
+      "Work with databases and server-side components",
+      "Test programs, find bugs, and improve code",
+      "Use professional collaborative development tools",
+      "Apply AI in the development process and integrate it into applications",
+      "Build their own intelligent software solutions",
+      "Take a project from initial idea to a working prototype",
     ],
 
     howItWorksRu: "Теоретические знания сразу закрепляются практическими заданиями. Сначала студенты создают небольшие программы и отдельные элементы приложений, а затем переходят к более комплексным индивидуальным и командным проектам.\n\nЭто веб-сервисы, мобильные приложения, образовательные платформы, системы учёта, решения для автоматизации бизнес-процессов и продукты с элементами искусственного интеллекта. Во время работы над проектами студенты проходят основные этапы разработки: изучают задачу, определяют требования, проектируют систему, пишут код, проводят тестирование и представляют готовый результат.\n\nКаждый студент получает индивидуальный ноутбук, который используется во время занятий и для самостоятельной работы над проектами.",
-    howItWorksEn: "Theory is immediately reinforced through practice. Students build real-world web apps, mobile services, and AI solutions. Every student receives a dedicated personal laptop.",
+    howItWorksEn: "Theoretical knowledge is immediately reinforced with practical assignments. Students first create small programs and individual application components, then move on to more comprehensive individual and team projects.\n\nThese include web services, mobile applications, educational platforms, inventory systems, business process automation solutions, and products with AI elements. During project work, students go through the main development stages: studying the problem, defining requirements, designing the system, writing code, testing, and presenting the final result.\n\nEach student receives a personal laptop, used during classes and for independent project work.",
 
     practiceRu: "Полученные знания можно развивать в DevClub, где студенты работают над задачами, приближенными к коммерческой разработке. Участники получают технические задания, распределяют роли в команде, соблюдают сроки и доводят проекты до рабочего состояния.\n\nDevClub действует при поддержке APRD. Сотрудничество помогает студентам познакомиться с требованиями индустрии, получать обратную связь от специалистов и готовиться к первой профессиональной стажировке.\n\nСтуденты, которым интересны алгоритмы и решение сложных задач, также могут участвовать в подготовке к ICPC и другим соревнованиям по программированию. Такая подготовка развивает аналитическое мышление, скорость принятия решений и навыки командной работы.",
-    practiceEn: "Hands-on projects at DevClub powered by APRD IT company. Preparation for ICPC competitive programming for algorithm enthusiasts.",
+    practiceEn: "Students can further develop their skills in DevClub, where they work on tasks close to commercial development. Participants receive technical assignments, divide roles within the team, meet deadlines, and bring projects to a working state.\n\nDevClub operates with the support of APRD. This collaboration helps students become familiar with industry requirements, receive feedback from professionals, and prepare for their first professional internship.\n\nStudents interested in algorithms and solving complex problems can also participate in preparation for ICPC and other programming competitions. Such training develops analytical thinking, decision‑making speed, and teamwork skills.",
 
     resultRu: "За время обучения студент формирует портфолио из индивидуальных и командных проектов, получает опыт работы с профессиональными инструментами и понимает полный цикл создания программного продукта.\n\nВыпускник способен не только написать отдельный фрагмент кода, но и разобраться в задаче, предложить техническое решение, реализовать его и проверить качество готового продукта. Он также понимает возможности искусственного интеллекта и умеет применять его при создании современных цифровых решений.\n\nПолученная база позволяет начать профессиональное развитие в IT, работать над собственными проектами или продолжить образование в области программной инженерии, компьютерных наук и искусственного интеллекта.",
+    resultEn: "During their studies, students build a portfolio of individual and team projects, gain experience with professional tools, and understand the complete software product lifecycle.\n\nGraduates are able not only to write a piece of code but also to understand a problem, propose a technical solution, implement it, and verify the quality of the finished product. They also grasp AI capabilities and know how to apply them in creating modern digital solutions.\n\nThe acquired foundation allows them to start a professional career in IT, work on their own projects, or continue their education in software engineering, computer science, or artificial intelligence.",
 
     careerRu: ["Программист", "Junior-разработчик", "Front-end разработчик", "Back-end разработчик", "Разработчик мобильных приложений", "QA-инженер", "AI-разработчик", "Full-stack разработчик", "DevOps-инженер"],
-    careerEn: ["Junior Software Developer", "Frontend / Backend Developer", "Full-stack Engineer", "AI / ML Integration Specialist", "QA Automation Engineer", "DevOps Engineer"],
+    careerEn: ["Programmer", "Junior Developer", "Front-end Developer", "Back-end Developer", "Mobile Application Developer", "QA Engineer", "AI Developer", "Full-stack Developer", "DevOps Engineer"],
 
     targetAudienceRu: "Программная инженерия подойдёт тем, кто интересуется технологиями, любит решать логические задачи и хочет создавать собственные цифровые продукты. Предварительный опыт в программировании не обязателен: программа начинается с базовых принципов и постепенно подводит студентов к самостоятельной разработке.",
-    targetAudienceEn: "Ideal for technology enthusiasts who enjoy solving logical puzzles and building products. Prior programming experience is not required.",
+    targetAudienceEn: "Software Engineering is suitable for those interested in technology, who enjoy solving logic problems, and want to create their own digital products. Prior programming experience is not required: the program begins with basic principles and gradually leads students to independent development.",
 
     ctaBtnRu: "Подать заявку на программу",
     ctaBtnEn: "Apply for Software Engineering",
@@ -146,7 +147,7 @@ const PROGRAMS_DATA = [
     subtitleRu: "Защита компьютерных систем, сетей и данных от современных цифровых угроз",
     subtitleEn: "Protecting computer systems, networks, and data from digital threats",
     introRu: "Программа «Кибербезопасность» готовит специалистов, способных защищать компьютерные системы, сети и данные от современных цифровых угроз. Студенты изучают, как возникают уязвимости, какими методами проводятся кибератаки и какие технологии используются для их обнаружения и предотвращения.\n\nОбучение начинается с устройства компьютерных систем, операционных систем и сетей, а затем переходит к практическим направлениям информационной безопасности. Студенты учатся оценивать защищённость цифровой инфраструктуры, анализировать подозрительную активность и принимать меры для снижения рисков.",
-    introEn: "The Cybersecurity program prepares specialists capable of protecting computer systems, networks, and confidential data against cyber threats, vulnerabilities, and unauthorized access.",
+    introEn: "The Cybersecurity program trains specialists capable of protecting computer systems, networks, and data from modern digital threats. Students study how vulnerabilities arise, the methods used in cyberattacks, and the technologies employed to detect and prevent them.\n\nTraining begins with the architecture of computer systems, operating systems, and networks, then moves to practical areas of information security. Students learn to assess the security of digital infrastructure, analyse suspicious activity, and take measures to reduce risks.",
 
     modulesRu: [
       {
@@ -172,24 +173,24 @@ const PROGRAMS_DATA = [
     ],
     modulesEn: [
       {
-        title: "Computer Systems & Networks",
-        desc: "Operating systems, TCP/IP network protocols, system administration, and infrastructure architecture.",
+        title: "Computer Systems and Networks",
+        desc: "To effectively protect digital infrastructure, one must understand how it works. Students study operating systems, computer networks, network protocols, programming basics, and system administration. This knowledge helps identify where vulnerabilities may arise and how to eliminate them.",
       },
       {
-        title: "Systems & Data Protection",
-        desc: "Access control, endpoint protection, firewalls, cryptography principles, and secure system configuration.",
+        title: "System and Data Protection",
+        desc: "The program covers access control, network and device protection, secure system configuration, cryptography fundamentals, and methods for safeguarding confidential information. Students learn to build multi‑layer security and reduce the risk of unauthorised access.",
       },
       {
         title: "Ethical Hacking",
-        desc: "Understanding hacker techniques, vulnerability assessments, and penetration testing in safe sandbox environments.",
+        desc: "To build robust protection, it is essential to understand the methods used by attackers. Students become familiar with ethical hacking principles, vulnerability analysis, and penetration testing.\nAll practical exercises are conducted exclusively in controlled educational environments and within professional and legal frameworks. The goal is to learn how to find weaknesses before attackers do and to propose ways to fix them.",
       },
       {
-        title: "Incident Monitoring & Response",
-        desc: "Log and traffic analysis, anomaly detection, threat containment, digital forensics, and system recovery.",
+        title: "Monitoring and Incident Response",
+        desc: "Students learn to analyse event logs, detect suspicious activity, and identify signs of potential attacks. They study the basics of security monitoring, incident investigation, threat containment, and system recovery.",
       },
       {
-        title: "Risk Governance & Compliance",
-        desc: "Security risk analysis, policy formulation, human factor evaluation, and organizational security audits.",
+        title: "Risk Management",
+        desc: "Cybersecurity involves not only technical protection but also organisational processes. Students learn to assess risks, develop secure working policies, analyse human factors, and formulate recommendations for information protection within an organisation.",
       },
     ],
 
@@ -204,29 +205,30 @@ const PROGRAMS_DATA = [
       "Составлять технические отчёты и рекомендации по безопасности",
     ],
     skillsEn: [
-      "Understand deep computer architecture and networking fundamentals",
-      "Identify and analyze security vulnerabilities in software and networks",
-      "Configure multi-layer defense for enterprise systems and databases",
-      "Conduct authorized penetration testing in controlled laboratory environments",
-      "Analyze network traffic and security event logs",
-      "Detect cyberattacks promptly and execute incident response plans",
-      "Assess cybersecurity risks and recommend mitigation measures",
-      "Draft comprehensive security audit reports and compliance documentation",
+      "Understand the structure of computer networks and operating systems",
+      "Identify and analyse vulnerabilities",
+      "Configure basic protection for systems, networks, and data",
+      "Conduct security testing in a controlled environment",
+      "Analyse network traffic and event logs",
+      "Recognise signs of cyberattacks and incidents",
+      "Assess risks and propose mitigation measures",
+      "Write technical reports and security recommendations",
     ],
 
     howItWorksRu: "Теоретические знания закрепляются лабораторными работами, практическими заданиями и разбором реальных сценариев. Студенты работают в специально подготовленной цифровой среде, где могут безопасно изучать поведение сетей, моделировать угрозы и проверять эффективность различных способов защиты.\n\nПрактические задания могут включать поиск уязвимостей в учебной системе, настройку прав доступа, анализ подозрительного сетевого трафика, расследование смоделированного инцидента и разработку плана защиты организации.\n\nКаждый студент получает индивидуальный ноутбук, который используется для обучения, работы с виртуальными средами и выполнения практических проектов.",
-    howItWorksEn: "Hands-on labs in isolated virtual environments, network traffic analysis, and simulated attacks. Every student receives a dedicated personal laptop.",
+    howItWorksEn: "Theoretical knowledge is reinforced through lab work, practical assignments, and real‑world scenario analysis. Students work in a specially prepared digital environment where they can safely study network behaviour, model threats, and test the effectiveness of various protection methods.\n\nPractical tasks may include finding vulnerabilities in a training system, configuring access rights, analysing suspicious network traffic, investigating a simulated incident, and developing an organisational protection plan.\n\nEach student receives a personal laptop, used for learning, working with virtual environments, and completing practical projects.",
 
     practiceRu: "По мере обучения студенты переходят от отдельных лабораторных заданий к комплексным проектам. Они могут проводить аудит защищённости учебной сети, разрабатывать политику информационной безопасности, настраивать систему мониторинга или создавать план реагирования на киберинциденты.\n\nРабота над такими проектами помогает научиться не только пользоваться инструментами, но и профессионально представлять результаты: описывать обнаруженные риски, определять их критичность и предлагать обоснованные меры защиты.\n\nСпециалист по кибербезопасности работает с конфиденциальной информацией и получает доступ к критически важным системам. Поэтому в программе особое внимание уделяется ответственности, профессиональной этике и законному использованию полученных знаний. Студенты учатся действовать по установленным процедурам, документировать свои действия и понимать возможные последствия технических решений.",
-    practiceEn: "Network security auditing, drafting security policies, simulated incident response, and ethical penetration testing.",
+    practiceEn: "As they progress, students move from individual lab assignments to comprehensive projects. They may conduct a security audit of a training network, develop an information security policy, set up a monitoring system, or create an incident response plan.\n\nWorking on such projects helps them learn not only to use tools but also to present results professionally: describe identified risks, determine their criticality, and propose justified protection measures.\n\nA cybersecurity specialist works with confidential information and gains access to critical systems. Therefore, the program places special emphasis on responsibility, professional ethics, and the lawful use of acquired knowledge. Students learn to follow established procedures, document their actions, and understand the potential consequences of technical decisions.",
 
     resultRu: "За время обучения студент формирует практическое портфолио, в которое могут входить результаты лабораторных работ, отчёты по анализу уязвимостей, проекты по защите сетей и планы реагирования на инциденты.\n\nВыпускник понимает принципы построения защищённых систем, способен выявлять базовые угрозы, оценивать риски и принимать обоснованные меры для защиты информации. Полученная база позволяет начать профессиональное развитие в сфере кибербезопасности или продолжить образование в области информационной безопасности, компьютерных сетей и IT.",
+    resultEn: "During their studies, students build a practical portfolio that may include lab results, vulnerability analysis reports, network security projects, and incident response plans.\n\nGraduates understand the principles of building secure systems, can identify basic threats, assess risks, and take informed measures to protect information. The foundation they gain allows them to begin a professional career in cybersecurity or continue their education in information security, computer networks, or IT.",
 
     careerRu: ["Специалист по кибербезопасности", "Junior SOC-аналитик", "Аналитик информационной безопасности", "Инженер по сетевой безопасности", "Специалист по защите сетей и систем", "Специалист по тестированию на проникновение", "Специалист по реагированию на инциденты", "Консультант по безопасности"],
-    careerEn: ["Cybersecurity Specialist", "SOC Analyst", "Network Security Engineer", "Penetration Tester", "Information Security Analyst"],
+    careerEn: ["Cybersecurity Specialist", "Junior SOC Analyst", "Information Security Analyst", "Network Security Engineer", "Penetration Testing Specialist", "Incident Response Specialist", "Security Consultant"],
 
     targetAudienceRu: "Кибербезопасность подойдёт тем, кто интересуется технологиями, внимательно относится к деталям и любит разбираться в сложных системах. В этой сфере особенно важны аналитическое мышление, ответственность, любознательность и готовность постоянно изучать новые типы угроз.\n\nПредварительный опыт в кибербезопасности не обязателен: обучение начинается с основ компьютерных систем и сетей, после чего студенты постепенно переходят к профессиональным методам защиты.",
-    targetAudienceEn: "For detail-oriented individuals interested in technologies, complex systems, and protecting critical data infrastructure.",
+    targetAudienceEn: "Cybersecurity is suitable for those interested in technology, who pay close attention to details and enjoy analysing complex systems. In this field, analytical thinking, responsibility, curiosity, and a willingness to constantly learn about new types of threats are especially important.\n\nPrior experience in cybersecurity is not required: training starts with the basics of computer systems and networks, then gradually moves to professional protection methods.",
 
     ctaBtnRu: "Подать заявку на Кибербезопасность",
     ctaBtnEn: "Apply for Cybersecurity",
@@ -248,7 +250,7 @@ const PROGRAMS_DATA = [
     subtitleRu: "Управление проектами, командами и бизнес-процессами в цифровой эре",
     subtitleEn: "Managing projects, teams, and business processes in the digital era",
     introRu: "Программа «Менеджмент» готовит специалистов, способных организовывать работу команд, управлять проектами и совершенствовать бизнес-процессы. Студенты учатся ставить цели, планировать ресурсы, распределять задачи, контролировать результаты и принимать решения на основе данных.\n\nОбучение сочетает знания в области бизнеса, экономики и управления с развитием лидерских, аналитических и коммуникативных навыков. Особое внимание уделяется практическим ситуациям: студенты работают с бизнес-кейсами, разрабатывают проекты и учатся решать задачи, с которыми менеджеры сталкиваются в реальных организациях.",
-    introEn: "The Management program trains leaders and project managers capable of coordinating teams, organizing business processes, and making data-driven strategic decisions.",
+    introEn: "The Management program trains specialists capable of organising team work, managing projects, and improving business processes. Students learn to set goals, plan resources, allocate tasks, monitor results, and make data‑driven decisions.\n\nThe training combines knowledge in business, economics, and management with the development of leadership, analytical, and communication skills. Special attention is given to practical scenarios: students work with business cases, develop projects, and learn to solve problems that managers face in real organisations.",
 
     modulesRu: [
       {
@@ -282,32 +284,32 @@ const PROGRAMS_DATA = [
     ],
     modulesEn: [
       {
-        title: "Management Fundamentals",
-        desc: "Organizational structures, strategic and operational management, goal setting, and KPI tracking.",
+        title: "Foundations of Management",
+        desc: "Students study how organisations are structured, what functions managers perform, and how management decisions are made. They learn about strategic and operational management, goal setting, responsibility allocation, and performance evaluation.",
       },
       {
         title: "Project Management",
-        desc: "Project scope, budgeting, timeline estimation, Agile/Scrum methodologies, and risk mitigation.",
+        desc: "The program covers the main stages of a project: from defining goals and requirements to planning timelines, budgets, team composition, and execution monitoring. Students learn to break down complex tasks into phases, set priorities, manage risks, and present results to stakeholders.",
       },
       {
-        title: "Business Process Optimization",
-        desc: "Mapping workflows, identifying operational bottlenecks, and streamlining business operations.",
+        title: "Business Processes and Operations",
+        desc: "Students analyse how information, resources, and tasks flow within an organisation. They learn to identify problems and inefficiencies, determine root causes, and propose improvements that help the company work faster and with higher quality.",
       },
       {
-        title: "Finance & Data Analytics",
-        desc: "Financial management basics, budgeting, managerial metrics, and ROI calculations.",
+        title: "Finance and Analytics",
+        desc: "A future manager must understand the economic consequences of their decisions. Therefore, students study the basics of finance, budgeting, and management analysis, learn to work with metrics, compare options, and evaluate the outcomes of a project or department.",
       },
       {
-        title: "Team Leadership",
-        desc: "Business communications, negotiation tactics, conflict resolution, motivation, and soft skills.",
+        title: "Team Management",
+        desc: "The program develops skills in business communication, negotiation, conflict resolution, and team organisation. Students learn to give feedback, motivate team members, and create conditions in which the team can effectively achieve a common goal.",
       },
       {
-        title: "Entrepreneurship & Business Development",
-        desc: "Business model generation (Lean Canvas), customer development (CustDev), and startup pitch preparation.",
+        title: "Entrepreneurship and Business Development",
+        desc: "Students become familiar with entrepreneurship basics, business model development, and idea validation. They learn to study customer needs, analyse markets, estimate required resources, and turn an idea into a structured project.",
       },
       {
         title: "Digital Management Tools",
-        desc: "Project tracking in Jira/Trello/Notion, spreadsheet modeling, data visualization, and Data-Driven decisions.",
+        desc: "Modern managers work with large amounts of information and must use digital tools for planning, coordination, and analysis.\nStudents learn to organise tasks, track deadlines, work with spreadsheets and reports, visualise metrics, and prepare data‑driven management decisions. This helps them manage projects effectively in both traditional business and technology companies.",
       },
     ],
 
@@ -322,29 +324,30 @@ const PROGRAMS_DATA = [
       "Разрабатывать и презентовать бизнес-идеи",
     ],
     skillsEn: [
-      "Plan, initiate, and coordinate complex multi-disciplinary projects",
-      "Allocate tasks, timelines, budgets, and human resources effectively",
-      "Analyze business processes and implement efficiency improvements",
-      "Manage key financial metrics and operational performance indicators",
-      "Prepare clear management reports, presentations, and strategic recommendations",
-      "Foster team collaboration, handle negotiations, and lead people",
-      "Evaluate business risks and make data-informed managerial decisions",
-      "Develop business models and pitch startup ideas to stakeholders",
+      "Plan and coordinate projects",
+      "Allocate tasks, timelines, and resources",
+      "Analyse business processes and identify improvement opportunities",
+      "Work with key financial and operational metrics",
+      "Prepare reports, presentations, and management recommendations",
+      "Organise teamwork and business communication",
+      "Assess risks and make informed decisions",
+      "Develop and present business ideas",
     ],
 
     howItWorksRu: "Теоретические знания закрепляются практическими заданиями, бизнес-кейсами, командными проектами и презентациями. Студенты получают задачу, анализируют ситуацию, распределяют роли, составляют план действий и защищают предложенное решение.\n\nПроекты могут включать разработку бизнес-плана, организацию мероприятия, запуск нового продукта, анализ работы компании, улучшение бизнес-процесса или создание концепции собственного стартапа.\n\nКаждый студент получает индивидуальный ноутбук, который используется для анализа данных, подготовки проектов, совместной работы и создания презентаций.",
-    howItWorksEn: "Case study analysis, team presentations, project work, and defense of solutions. Every student receives a dedicated personal laptop.",
+    howItWorksEn: "Theoretical knowledge is reinforced with practical assignments, business cases, team projects, and presentations. Students receive a task, analyse the situation, allocate roles, devise an action plan, and defend their proposed solution.\n\nProjects may include developing a business plan, organising an event, launching a new product, analysing a company’s operations, improving a business process, or creating a startup concept.\n\nEach student receives a personal laptop, used for data analysis, project preparation, collaborative work, and creating presentations.",
 
     practiceRu: "Студенты применяют управленческие знания не только на занятиях, но и в реальных проектах, студенческих организациях и бизнес-соревнованиях.\n\nРабота в Студенческом парламенте позволяет участвовать в организации мероприятий, координировать команды, представлять интересы студентов и реализовывать собственные инициативы. Такой опыт развивает ответственность, лидерские качества, навыки переговоров и принятия решений.\n\nВ проектах Enactus студенты работают над предпринимательскими и социальными инициативами: исследуют проблему, разрабатывают решение, формируют бизнес-модель, распределяют роли и представляют проект экспертам.\n\nСтуденты также могут участвовать в бизнес-олимпиадах, конкурсах стартапов и других проектных соревнованиях, где необходимо анализировать кейсы, предлагать стратегии и защищать свои решения.\n\nБлагодаря этому они получают опыт управления проектами в разных условиях — от внутренней жизни колледжа до командных соревнований и предпринимательских инициатив.",
-    practiceEn: "Managing real student and commercial initiatives, Student Parliament, Enactus projects, launching social startups, and participating in case competitions.",
+    practiceEn: "Students apply their management knowledge not only in class but also in real projects, student organisations, and business competitions.\n\nWorking in the Student Parliament allows them to participate in event organisation, coordinate teams, represent student interests, and implement their own initiatives. This experience builds responsibility, leadership, negotiation skills, and decision‑making abilities.\n\nIn Enactus projects, students work on entrepreneurial and social initiatives: they research a problem, develop a solution, build a business model, assign roles, and present the project to experts.\n\nStudents can also participate in business Olympiads, startup competitions, and other project‑based contests where they must analyse cases, propose strategies, and defend their solutions.\n\nThrough these activities, they gain experience in managing projects in various settings—from college life to team competitions and entrepreneurial ventures.",
 
     resultRu: "За время обучения студент формирует портфолио, в которое могут входить бизнес-планы, проектная документация, аналитические отчёты, модели бизнес-процессов и командные проекты.\n\nВыпускник понимает, как устроена работа организации, умеет планировать деятельность, взаимодействовать с командой и принимать решения на основе информации. Он готов начать профессиональное развитие в бизнесе, технологической компании, общественной организации или работать над собственным предпринимательским проектом.",
+    resultEn: "During their studies, students build a portfolio that may include business plans, project documentation, analytical reports, business process models, and team projects.\n\nGraduates understand how an organisation operates, can plan activities, interact with teams, and make informed decisions. They are ready to start a professional career in business, technology companies, non‑profit organisations, or work on their own entrepreneurial projects.",
 
     careerRu: ["Координатор проектов", "Ассистент менеджера", "Специалист по работе с клиентами", "Операционный специалист", "Сотрудник отдела развития бизнеса", "Младший бизнес-аналитик", "Менеджер проектов", "Руководитель команды"],
-    careerEn: ["Project Coordinator", "Manager Assistant", "Operations Specialist", "Business Development Specialist", "Junior Business Analyst", "Project Manager", "Team Lead"],
+    careerEn: ["Project Coordinator", "Manager Assistant", "Client Relations Specialist", "Operations Specialist", "Business Development Associate", "Junior Business Analyst", "Project Manager", "Team Leader"],
 
     targetAudienceRu: "Менеджмент подойдёт тем, кто любит организовывать процессы, работать с людьми, брать ответственность и превращать идеи в конкретный план действий. В этой сфере особенно важны инициативность, коммуникабельность, аналитическое мышление и способность видеть общую картину.\n\nПредварительный опыт управления не обязателен: обучение начинается с базовых принципов бизнеса и постепенно переходит к самостоятельной работе над проектами.",
-    targetAudienceEn: "Management is ideal for individuals who enjoy organizing workflows, leading people, taking initiative, and translating ideas into actionable plans. Prior experience is not required.",
+    targetAudienceEn: "Management is suitable for those who enjoy organising processes, working with people, taking responsibility, and turning ideas into concrete action plans. In this field, initiative, communication skills, analytical thinking, and the ability to see the big picture are especially important.\n\nPrior management experience is not required: training starts with basic business principles and gradually moves to independent project work.",
 
     ctaBtnRu: "Подать заявку на Менеджмент",
     ctaBtnEn: "Apply for Management",
@@ -366,7 +369,7 @@ const PROGRAMS_DATA = [
     subtitleRu: "Исследование рынка, брендинг, Digital-продвижение и применение ИИ",
     subtitleEn: "Market analytics, branding, digital promotion, and AI integration",
     introRu: "Программа «Маркетинг» готовит специалистов, способных изучать рынок, понимать потребности аудитории и разрабатывать стратегии продвижения продуктов, услуг и брендов.\n\nСтуденты осваивают полный маркетинговый цикл: от исследования потребителей и определения целевой аудитории до создания рекламной кампании, запуска продвижения и анализа полученных результатов. Обучение сочетает стратегическое мышление, творчество, работу с данными и современные цифровые инструменты.",
-    introEn: "The Marketing program trains experts in consumer research, brand positioning, digital advertising, content creation, and data analytics.",
+    introEn: "The Marketing program trains specialists capable of researching markets, understanding audience needs, and developing strategies to promote products, services, and brands.\n\nStudents master the complete marketing cycle: from consumer research and target audience definition to creating advertising campaigns, launching promotions, and analysing results. The training combines strategic thinking, creativity, data work, and modern digital tools.",
 
     modulesRu: [
       {
@@ -400,32 +403,32 @@ const PROGRAMS_DATA = [
     ],
     modulesEn: [
       {
-        title: "Marketing Fundamentals",
-        desc: "Market dynamics, consumer psychology, target audience profiling, and value propositions.",
+        title: "Foundations of Marketing",
+        desc: "Students study market principles, consumer behaviour, and factors influencing product choice. They learn to define target audiences, understand their needs, and formulate offerings that provide real value.",
       },
       {
-        title: "Market Research & Insights",
-        desc: "Competitor intelligence, user surveys, feedback gathering, qualitative & quantitative analytics.",
+        title: "Market Research",
+        desc: "Effective marketing starts with information. Students learn to analyse markets and competitors, conduct surveys, gather feedback, and work with quantitative and qualitative data. Based on research, they identify opportunities for product development and make more informed marketing decisions.",
       },
       {
-        title: "Branding & Positioning",
-        desc: "Brand creation, identity design, core messaging, Tone of Voice, and position mapping.",
+        title: "Branding and Positioning",
+        desc: "The program covers the basics of brand creation and development. Students learn to articulate brand values, personality, and key messages, define its market position, and maintain a consistent communication style with the audience.",
       },
       {
-        title: "Digital Marketing Channels",
-        desc: "SMM, targeted Ads, Google Search Ads, SEO, Email campaigns, and media planning.",
+        title: "Digital Marketing",
+        desc: "Students become familiar with major promotion channels in the digital environment: social media, online advertising, search engines, websites, email, and other online platforms. They learn to choose appropriate channels, plan advertising campaigns, allocate budgets, and evaluate promotion effectiveness.",
       },
       {
-        title: "Content Strategy & Copywriting",
-        desc: "Crafting content strategies, persuasive copywriting, viral campaigns, and multi-channel adaptation.",
+        title: "Content and Communications",
+        desc: "Content helps a brand attract attention, explain product value, and build relationships with the audience. Students learn to develop content strategies, create publication plans, craft advertising messages, and adapt communication for different platforms.",
       },
       {
         title: "Marketing Analytics",
-        desc: "End-to-end analytics, tracking ROI, CAC, LTV, conversion funnels, and revenue attribution.",
+        desc: "Students learn to work with metrics, compare campaign results, and determine which actions truly help the business grow. Analytics allows them not just to run ads but to understand their impact on brand awareness, audience interest, and sales.",
       },
       {
-        title: "AI Tools for Marketers",
-        desc: "Leveraging AI for customer research, copy generation, creative testing, and automation.",
+        title: "Artificial Intelligence and Digital Tools",
+        desc: "Modern marketers must be able to work with technologies that help analyse information faster, create materials, and personalise communication.\nStudents learn to use AI for audience research, idea generation and validation, drafting content, data analysis, and automating certain marketing tasks.\nAt the same time, special attention is paid to information quality, authorial control, and responsible use of technology. AI is viewed as a professional tool that enhances the marketer’s work but does not replace strategic thinking and audience understanding.",
       },
     ],
 
@@ -441,29 +444,31 @@ const PROGRAMS_DATA = [
       "Презентовать и аргументированно защищать свои решения",
     ],
     skillsEn: [
-      "Conduct thorough market, trend, and competitor research",
-      "Identify and segment target consumer groups",
-      "Formulate comprehensive marketing and growth strategies",
-      "Build brand positioning and visual communications",
-      "Draft content calendars and high-converting ad copy",
-      "Plan and execute campaigns across social media and search engines",
-      "Analyze advertising metrics, conversion rates, and ROI",
-      "Utilize AI tools to optimize research, creation, and workflow",
+      "Conduct market and competitor research",
+      "Define and segment target audiences",
+      "Develop a marketing strategy",
+      "Shape brand positioning and communication",
+      "Create content plans and advertising messages",
+      "Plan promotion across digital channels",
+      "Work with marketing metrics and analyse results",
+      "Use AI and digital tools in marketing tasks",
+      "Present and convincingly defend their decisions",
     ],
 
     howItWorksRu: "Теоретические знания закрепляются практическими заданиями, анализом реальных брендов, бизнес-кейсами и командными проектами. Студенты учатся работать с конкретной задачей: исследуют аудиторию, анализируют конкурентов, разрабатывают стратегию, создают контент и определяют показатели эффективности.\n\nУчебные проекты включают в себя разработку рекламных кампаний, создание концепции бренда, подготовку стратегии продвижения в социальных сетях, исследование потребителей или маркетинговый план запуска нового продукта.\n\nКаждый студент получает индивидуальный ноутбук, который используется для исследований, подготовки контента, анализа данных, командной работы и презентации проектов.",
-    howItWorksEn: "Creating real campaign concepts, brand books, marketing support for Enactus and college events. Every student receives a personal laptop.",
+    howItWorksEn: "Theoretical knowledge is reinforced with practical assignments, real‑brand analysis, business cases, and team projects. Students work on a specific task: researching the audience, analysing competitors, developing a strategy, creating content, and defining performance indicators.\n\nTraining projects include developing advertising campaigns, creating a brand concept, preparing a social media promotion strategy, conducting consumer research, or drafting a marketing plan for a new product launch.\n\nEach student receives a personal laptop, used for research, content creation, data analysis, team collaboration, and project presentations.",
 
     practiceRu: "Студенты могут применять знания в проектах Enactus, бизнес-олимпиадах, конкурсах стартапов и других проектных соревнованиях. В таких командах маркетолог отвечает за исследование аудитории, позиционирование продукта, коммуникационную стратегию и подготовку презентации проекта.\n\nУчастие в реальных инициативах колледжа также позволяет получить опыт продвижения мероприятий, разработки информационных кампаний и работы с различными группами аудитории.\n\nСовместные проекты со студентами направлений «Менеджмент», «Дизайн» и «Программная инженерия» помогают понять, как маркетолог взаимодействует с другими специалистами при создании и запуске продукта.",
-    practiceEn: "Running live ad campaigns, cross-functional projects with Developers and Designers, competing in marketing hackathons.",
+    practiceEn: "Students can apply their knowledge in Enactus projects, business Olympiads, startup competitions, and other project‑based contests. In such teams, the marketer is responsible for audience research, product positioning, communication strategy, and project presentation.\n\nParticipation in college initiatives also provides experience in promoting events, developing information campaigns, and working with diverse audience groups.\n\nJoint projects with students from Management, Design, and Software Engineering help them understand how a marketer interacts with other specialists when creating and launching a product.",
 
     resultRu: "За время обучения студент формирует портфолио, в которое могут входить маркетинговые исследования, стратегии продвижения, контент-планы, концепции брендов, рекламные материалы и аналитические отчёты.\n\nВыпускник понимает, как исследовать рынок, находить целевую аудиторию, формировать ценность продукта и выбирать подходящие каналы продвижения. Он умеет сочетать творческие решения с аналитикой и оценивать маркетинг по конкретным результатам.\n\nПолученная база позволяет начать профессиональное развитие в компании, рекламном агентстве, стартапе, общественной организации или продвигать собственный проект.",
+    resultEn: "During their studies, students build a portfolio that may include marketing research, promotion strategies, content plans, brand concepts, advertising materials, and analytical reports.\n\nGraduates understand how to research markets, find target audiences, formulate product value, and choose appropriate promotion channels. They can combine creative solutions with analytics and evaluate marketing by tangible results.\n\nThe foundation gained allows them to start a professional career in a company, advertising agency, startup, non‑profit organisation, or to promote their own project.",
 
     careerRu: ["Ассистент маркетолога", "Junior-маркетолог", "SMM-специалист", "Контент-менеджер", "Специалист по цифровому продвижению", "Младший маркетинговый аналитик", "Бренд-менеджер", "Продуктовый маркетолог"],
-    careerEn: ["SMM Specialist / Content Manager", "Digital Marketer", "Assistant Brand Manager", "Junior Marketing Analyst", "Targeted / Search Ad Specialist"],
+    careerEn: ["Marketing Assistant", "Junior Marketer", "SMM Specialist", "Content Manager", "Digital Promotion Specialist", "Junior Marketing Analyst", "Brand Manager", "Product Marketer"],
 
     targetAudienceRu: "Маркетинг подойдёт тем, кто интересуется психологией людей, трендами, коммуникациями и медиа. В этой профессии важны любознательность, креативность, аналитический склад ума и желание понимать, почему люди делают свой выбор.\n\nПредварительный опыт в маркетинге не обязателен: обучение начинается с фундаментальных понятий и постепенно переходит к реальным практическим проектам.",
-    targetAudienceEn: "For creative and curious individuals who like combining consumer psychology, analytics, and compelling messaging.",
+    targetAudienceEn: "Marketing is suitable for those interested in human behaviour, modern brands, advertising, and digital technologies. In this field, curiosity, communication skills, creative thinking, and a willingness to work with data are important.\n\nPrior experience is not required: training starts with basic marketing principles and gradually moves to independent strategy and campaign development.",
 
     ctaBtnRu: "Подать заявку на Маркетинг",
     ctaBtnEn: "Apply for Marketing",
@@ -485,7 +490,7 @@ const PROGRAMS_DATA = [
     subtitleRu: "Создание визуальных решений для брендов, цифровых продуктов и коммуникаций",
     subtitleEn: "Creating visual solutions for brands, digital products, and communications",
     introRu: "Программа «Дизайн» готовит специалистов, способных создавать визуальные решения для брендов, цифровых продуктов и коммуникаций. Студенты учатся не только работать с графическими инструментами, но и понимать задачу, исследовать аудиторию, формировать концепцию и превращать её в функциональный дизайн.\n\nОбучение сочетает творческий подход, визуальную культуру и современные технологии. Студенты проходят полный процесс работы дизайнера: от анализа задачи и поиска идеи до создания макета, прототипирования, тестирования и презентации готового решения.",
-    introEn: "The Design program equips students with skills in visual communication, branding, UI/UX, motion design, and AI tools to create functional, aesthetic digital and physical products.",
+    introEn: "The Design program trains specialists capable of creating visual solutions for brands, digital products, and communications. Students learn not only to use graphic tools but also to understand the task, research the audience, form a concept, and turn it into functional design.\n\nThe training combines creative approach, visual culture, and modern technology. Students go through the full designer workflow: from task analysis and idea exploration to creating layouts, prototyping, testing, and presenting the final solution.",
 
     modulesRu: [
       {
@@ -515,28 +520,28 @@ const PROGRAMS_DATA = [
     ],
     modulesEn: [
       {
-        title: "Visual Design Fundamentals",
-        desc: "Composition, color theory, typography, grid systems, and visual hierarchy.",
+        title: "Foundations of Visual Design",
+        desc: "Students study composition, colour, form, typography, and visual hierarchy. They learn to direct the viewer’s attention, build clear structure, and create visual solutions where aesthetics support content.",
       },
       {
         title: "Graphic Design",
-        desc: "Vector and raster graphics, layouts for digital and print media, marketing assets, and social media branding.",
+        desc: "The program covers raster and vector graphics, layout creation for digital and print media, social media design, advertising materials, presentations, and informational media. Students choose the format and visual language based on the task, audience, and communication channel.",
       },
       {
-        title: "Branding & Visual Identity",
-        desc: "Brand strategy, logo design, color palettes, brand guidelines, and corporate identity design.",
+        title: "Branding and Visual Identity",
+        desc: "Students learn the process of brand creation: researching the audience and competitors, forming a visual concept, designing logos, colour palettes, typography, and guidelines for using the corporate style. The result is a cohesive visual system that conveys the brand’s character and maintains recognisability across different formats.",
       },
       {
         title: "UI/UX Design",
-        desc: "User research, wireframing, interactive prototyping, web/mobile interface design, and usability testing.",
+        desc: "Within digital design, students create interfaces for websites and mobile applications. They study user needs, develop product structure, create user scenarios, prototypes, and visual mockups. Special emphasis is placed on usability, logic, and accessibility. Design decisions are based on user goals, not just personal visual preferences.",
       },
       {
         title: "Motion Design",
-        desc: "Animation fundamentals, video graphics, dynamic micro-interactions, and visual storytelling.",
+        desc: "Students learn the basics of animation and dynamic content creation. They use motion to explain information, attract attention, and enhance visual communication. These skills are applied in creating promotional videos, social media content, presentations, interfaces, and other digital products.",
       },
       {
-        title: "AI & Modern Designer Tools",
-        desc: "Integrating generative AI for ideation, moodboarding, asset generation, and ethical AI-assisted design workflow.",
+        title: "Artificial Intelligence and Designer Tools",
+        desc: "Artificial intelligence is used as an additional tool for idea generation, exploring visual directions, preparing drafts, and accelerating certain stages of work. Students learn to formulate prompts correctly, evaluate the quality of generated results, and refine materials according to the task, brand style, and audience needs. Particular attention is given to authorial control, originality, and ethical use of technology. AI does not replace the designer: the final decision requires professional selection, compositional thinking, and conscious work with the visual system.",
       },
     ],
 
@@ -551,29 +556,30 @@ const PROGRAMS_DATA = [
       "Презентовать и аргументированно защищать дизайнерские решения",
     ],
     skillsEn: [
-      "Master composition, color theory, shape, and typography",
+      "Work with composition, colour, form, and typography",
       "Create graphic materials for digital and print media",
-      "Design logos and comprehensive brand identity systems",
-      "Design web and mobile UI/UX user interfaces",
-      "Conduct user research and build interactive prototypes",
-      "Develop motion graphics and animated visual content",
-      "Leverage professional digital tools and AI-assisted workflows",
-      "Present and advocate design solutions to stakeholders",
+      "Design logos and visual identity systems",
+      "Design interfaces for websites and mobile applications",
+      "Research user needs and create prototypes",
+      "Develop animation and dynamic content",
+      "Use professional digital and AI tools",
+      "Present and convincingly defend design solutions",
     ],
 
     howItWorksRu: "Теоретические знания закрепляются практическими заданиями и проектами. Сначала студенты осваивают визуальные основы и профессиональные инструменты, а затем переходят к работе над комплексными задачами.\n\nУчебные проекты включают разработку фирменного стиля, проектирование интерфейса мобильного приложения, оформление рекламной кампании, создание серии публикаций для социальных сетей, дизайн сайта и подготовку анимационного ролика.\n\nСтуденты получают обратную связь, анализируют свои решения и дорабатывают проекты. Такой процесс формирует профессиональный подход, при котором дизайн оценивается не только по внешнему виду, но и по тому, насколько эффективно он решает поставленную задачу.\n\nКаждый студент получает индивидуальный ноутбук, который используется для работы с графикой, интерфейсами, анимацией и формирования собственного портфолио.",
-    howItWorksEn: "Practical coursework, project feedback sessions, design sprints, and real portfolio building. Every student receives a dedicated personal laptop.",
+    howItWorksEn: "Theoretical knowledge is reinforced with practical assignments and projects. Students first master visual fundamentals and professional tools, then move on to complex tasks.\n\nTraining projects include developing a corporate identity, designing a mobile app interface, creating an advertising campaign layout, producing a series of social media posts, designing a website, and preparing an animated video.\n\nStudents receive feedback, analyse their decisions, and refine their projects. This process fosters a professional approach where design is evaluated not only by appearance but also by how effectively it solves the given task.\n\nEach student receives a personal laptop, used for graphic work, interfaces, animation, and building their own portfolio.",
 
     practiceRu: "Дополнительную практику студенты получают через участие в проектах Enactus, конкурсах стартапов, бизнес-олимпиадах и других проектных соревнованиях. В таких командах дизайнер отвечает за визуальную концепцию, презентацию продукта, интерфейс и коммуникационные материалы.\n\nСовместная работа со студентами направлений «Программная инженерия», «Маркетинг» и «Менеджмент» показывает, как создаётся реальный продукт. Дизайнер учится учитывать требования разработчиков, задачи маркетинга и цели бизнеса.\n\nРабота над инициативами колледжа также даёт опыт выполнения конкретного задания, соблюдения сроков, взаимодействия с заказчиком и ответственности за итоговый результат.",
-    practiceEn: "Interdisciplinary projects with Software Engineering, Marketing, and Management students, Enactus design leadership, branding for startup competitions.",
+    practiceEn: "Students gain additional practice by participating in Enactus projects, startup competitions, business Olympiads, and other project‑based contests. In such teams, the designer is responsible for the visual concept, product presentation, interface, and communication materials.\n\nCollaboration with students from Software Engineering, Marketing, and Management shows how a real product is created. The designer learns to consider developer requirements, marketing objectives, and business goals.\n\nWorking on college initiatives also provides experience in fulfilling specific assignments, meeting deadlines, interacting with clients, and taking responsibility for the final result.",
 
     resultRu: "За время обучения студент формирует профессиональное портфолио. В него входят проекты по графическому дизайну, брендингу, UI/UX, рекламе и анимации.\n\nВыпускник умеет анализировать задачу, разрабатывать визуальную концепцию, создавать макеты и представлять готовое решение. Он понимает весь процесс работы дизайнера — от первоначальной идеи до подготовки продукта к публикации или передаче в разработку.\n\nПортфолио и полученные навыки создают основу для работы в дизайн-студии, рекламном агентстве, технологической компании, стартапе или над собственными проектами.",
+    resultEn: "During their studies, students build a professional portfolio containing graphic design, branding, UI/UX, advertising, and animation projects.\n\nGraduates can analyse a task, develop a visual concept, create layouts, and present the final solution. They understand the entire designer workflow—from initial idea to preparing the product for publication or handover to development.\n\nThe portfolio and acquired skills provide a foundation for working in a design studio, advertising agency, technology company, startup, or on their own projects.",
 
     careerRu: ["Графический дизайнер", "Junior UI/UX-дизайнер", "Визуальный дизайнер", "Контент-дизайнер", "Специалист по оформлению цифровых материалов", "Продуктовый дизайнер", "Бренд-дизайнер", "Моушн-дизайнер"],
-    careerEn: ["Graphic Designer", "Junior UI/UX Designer", "Visual Designer", "Content Designer", "Product Designer", "Brand Designer", "Motion Designer"],
+    careerEn: ["Graphic Designer", "Junior UI/UX Designer", "Visual Designer", "Content Designer", "Digital Media Specialist", "Product Designer", "Brand Designer", "Motion Designer"],
 
     targetAudienceRu: "Дизайн подойдёт тем, кто интересуется визуальной культурой, технологиями и созданием новых идей. В этой профессии важны наблюдательность, внимание к деталям, готовность принимать обратную связь и умение смотреть на задачу с позиции пользователя.\n\nПрофессионально рисовать до поступления не обязательно. Обучение начинается с основ визуального языка и постепенно переходит к работе над полноценными дизайнерскими проектами.",
-    targetAudienceEn: "Design is for students interested in visual culture, technology, and creative ideas. Prior drawing skills are not required.",
+    targetAudienceEn: "Design is suitable for those interested in visual culture, technology, and creating new ideas. In this profession, observation, attention to detail, openness to feedback, and the ability to view tasks from the user’s perspective are important.\n\nProfessional drawing skills are not required prior to admission. Training starts with the basics of visual language and gradually moves to full‑scale design projects.",
 
     ctaBtnRu: "Подать заявку на Дизайн",
     ctaBtnEn: "Apply for Design",
@@ -909,9 +915,11 @@ export default function Academics({ initialProgram }) {
                   <BookOpen className="w-5 h-5 text-n-blue" />
                   <span>{lang === "ru" ? "Подробное описание программы" : "Detailed Program Overview"}</span>
                 </h3>
-                <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
-                  {lang === "ru" ? selectedProgramModal.introRu : selectedProgramModal.introEn}
-                </p>
+                {(lang === "ru" ? selectedProgramModal.introRu : selectedProgramModal.introEn).split("\n\n").map((par, idx) => (
+                  <p key={idx} className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+                    {par}
+                  </p>
+                ))}
               </div>
 
               {/* Modules Breakdown */}
@@ -927,7 +935,9 @@ export default function Academics({ initialProgram }) {
                         {lang === "ru" ? `Модуль 0${idx + 1}` : `Module 0${idx + 1}`}
                       </span>
                       <h4 className="font-bold text-sm text-slate-900">{mod.title}</h4>
-                      <p className="text-xs text-slate-600 leading-relaxed">{mod.desc}</p>
+                      {mod.desc.split("\n\n").map((dPar, dIdx) => (
+                        <p key={dIdx} className="text-xs text-slate-600 leading-relaxed">{dPar}</p>
+                      ))}
                     </div>
                   ))}
                 </div>
@@ -937,7 +947,7 @@ export default function Academics({ initialProgram }) {
               <div className="space-y-3">
                 <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-emerald-600" />
-                  <span>{lang === "ru" ? "Чему научится студент" : "Learning Outcomes"}</span>
+                  <span>{lang === "ru" ? "Чему научится студент" : "What the Student Will Learn"}</span>
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {(lang === "ru" ? selectedProgramModal.skillsRu : selectedProgramModal.skillsEn).map((skill, idx) => (
@@ -953,7 +963,7 @@ export default function Academics({ initialProgram }) {
               <div className="p-5 rounded-2xl bg-indigo-50/70 border border-indigo-100 space-y-3">
                 <div className="flex items-center gap-2 text-n-blue font-bold text-sm sm:text-base">
                   <Laptop className="w-5 h-5" />
-                  <span>{lang === "ru" ? "Выдача оборудования & Процесс обучения" : "Laptops & Industry Practice"}</span>
+                  <span>{lang === "ru" ? "Выдача оборудования & Процесс обучения" : "Laptops, Practice & Professional Development"}</span>
                 </div>
                 {(lang === "ru" ? selectedProgramModal.howItWorksRu : selectedProgramModal.howItWorksEn).split("\n\n").map((par, idx) => (
                   <p key={idx} className="text-xs sm:text-sm text-slate-700 leading-relaxed">
@@ -971,13 +981,28 @@ export default function Academics({ initialProgram }) {
               </div>
 
               {/* Result & Portfolio */}
-              {selectedProgramModal.resultRu && lang === "ru" && (
+              {((lang === "ru" && selectedProgramModal.resultRu) || (lang !== "ru" && selectedProgramModal.resultEn)) && (
                 <div className="p-5 rounded-2xl bg-amber-50/70 border border-amber-200/70 space-y-2">
                   <div className="flex items-center gap-2 text-amber-900 font-bold text-sm sm:text-base">
                     <Award className="w-5 h-5 text-amber-600" />
-                    <span>Результат обучения и портфолио</span>
+                    <span>{lang === "ru" ? "Результат обучения и портфолио" : "Learning Outcomes & Portfolio"}</span>
                   </div>
-                  {selectedProgramModal.resultRu.split("\n\n").map((par, pIdx) => (
+                  {(lang === "ru" ? selectedProgramModal.resultRu : selectedProgramModal.resultEn).split("\n\n").map((par, pIdx) => (
+                    <p key={pIdx} className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                      {par}
+                    </p>
+                  ))}
+                </div>
+              )}
+
+              {/* Target Audience / Who the Program Suits */}
+              {((lang === "ru" && selectedProgramModal.targetAudienceRu) || (lang !== "ru" && selectedProgramModal.targetAudienceEn)) && (
+                <div className="p-5 rounded-2xl bg-sky-50/70 border border-sky-200/70 space-y-2">
+                  <div className="flex items-center gap-2 text-sky-900 font-bold text-sm sm:text-base">
+                    <Target className="w-5 h-5 text-sky-600" />
+                    <span>{lang === "ru" ? "Кому подойдёт направление" : "Who the Program Suits"}</span>
+                  </div>
+                  {(lang === "ru" ? selectedProgramModal.targetAudienceRu : selectedProgramModal.targetAudienceEn).split("\n\n").map((par, pIdx) => (
                     <p key={pIdx} className="text-xs sm:text-sm text-slate-700 leading-relaxed">
                       {par}
                     </p>
