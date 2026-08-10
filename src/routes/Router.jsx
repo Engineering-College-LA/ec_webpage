@@ -17,16 +17,18 @@ import Affiliations from "../pages/affiliations/Affiliations";
 // Helper for lazy imports to auto-reload if an outdated deployment chunk error occurs
 const safeLazy = (importFn) =>
   lazy(async () => {
-    const isRefreshed = sessionStorage.getItem("chunk_reload_done");
     try {
       const component = await importFn();
       sessionStorage.removeItem("chunk_reload_done");
       return component;
     } catch (error) {
+      console.error("Chunk import failed:", error);
+      const isRefreshed = sessionStorage.getItem("chunk_reload_done");
       if (!isRefreshed) {
         sessionStorage.setItem("chunk_reload_done", "true");
         window.location.reload();
-        return new Promise(() => {});
+      } else {
+        sessionStorage.removeItem("chunk_reload_done");
       }
       throw error;
     }
@@ -205,7 +207,8 @@ const router = createBrowserRouter(
   ],
   {
     basename:
-      typeof window !== "undefined" && window.location.pathname.startsWith("/ec_webpage")
+      typeof window !== "undefined" &&
+      (window.location.pathname === "/ec_webpage" || window.location.pathname.startsWith("/ec_webpage/"))
         ? "/ec_webpage"
         : "/",
   }
