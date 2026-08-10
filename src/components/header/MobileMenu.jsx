@@ -34,7 +34,7 @@ function MobileMenu() {
         {/* Compact Floating Mobile Menu Window */}
         <div
           ref={mobileMenuRef}
-          className="fixed top-16 right-3 left-3 sm:left-auto sm:right-6 sm:w-80 z-50 rounded-2xl bg-white p-4 shadow-2xl border border-slate-100 lg:hidden overflow-hidden transition-all"
+          className="fixed top-[56px] sm:top-16 right-3 left-3 sm:left-auto sm:right-6 sm:w-80 z-50 rounded-2xl bg-white p-4 shadow-2xl border border-slate-100 lg:hidden overflow-hidden transition-all"
         >
           {/* Header row: AppButton + Close button */}
           <div className="flex items-center justify-between pb-3 border-b border-slate-100">

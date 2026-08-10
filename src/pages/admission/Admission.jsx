@@ -63,7 +63,7 @@ const Admission = () => {
   const scrollTo = (id) => {
     const el = document.getElementById(id);
     if (el) {
-      const yOffset = -130;
+      const yOffset = window.innerWidth < 640 ? -96 : -130;
       const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
     }
@@ -72,9 +72,9 @@ const Admission = () => {
   const sch = (key, opts) => t(`admission.scholarship.${key}`, opts);
 
   return (
-    <div className="page pt-[124px] text-slate-900">
+    <div className="page pt-[96px] sm:pt-[124px] text-slate-900">
       {/* ── Fixed Sub-Navigation Bar at TOP of Screen ── */}
-      <nav className="fixed top-[64px] left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200/80">
+      <nav className="fixed top-[56px] sm:top-[64px] left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200/80">
         <div className="mx-auto flex max-w-[860px] gap-2 overflow-x-auto px-4 py-2.5 no-scrollbar">
           <style>{`.no-scrollbar::-webkit-scrollbar{display:none;}`}</style>
           {SECTIONS.map(({ id, label }) => (

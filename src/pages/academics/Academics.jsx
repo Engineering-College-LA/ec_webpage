@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import ContactTelegram from "../../components/contact/ContactTelegram";
 import {
   Code2,
   ShieldCheck,
@@ -128,7 +129,7 @@ const PROGRAMS_DATA = [
     targetAudienceEn: "Software Engineering is suitable for those interested in technology, who enjoy solving logic problems, and want to create their own digital products. Prior programming experience is not required: the program begins with basic principles and gradually leads students to independent development.",
 
     ctaBtnRu: "Подать заявку на программу",
-    ctaBtnEn: "Apply for Software Engineering",
+    ctaBtnEn: "Apply for Program",
   },
   {
     id: "cyber-security",
@@ -230,8 +231,8 @@ const PROGRAMS_DATA = [
     targetAudienceRu: "Кибербезопасность подойдёт тем, кто интересуется технологиями, внимательно относится к деталям и любит разбираться в сложных системах. В этой сфере особенно важны аналитическое мышление, ответственность, любознательность и готовность постоянно изучать новые типы угроз.\n\nПредварительный опыт в кибербезопасности не обязателен: обучение начинается с основ компьютерных систем и сетей, после чего студенты постепенно переходят к профессиональным методам защиты.",
     targetAudienceEn: "Cybersecurity is suitable for those interested in technology, who pay close attention to details and enjoy analysing complex systems. In this field, analytical thinking, responsibility, curiosity, and a willingness to constantly learn about new types of threats are especially important.\n\nPrior experience in cybersecurity is not required: training starts with the basics of computer systems and networks, then gradually moves to professional protection methods.",
 
-    ctaBtnRu: "Подать заявку на Кибербезопасность",
-    ctaBtnEn: "Apply for Cybersecurity",
+    ctaBtnRu: "Подать заявку на программу",
+    ctaBtnEn: "Apply for Program",
   },
   {
     id: "management-in-it",
@@ -349,8 +350,8 @@ const PROGRAMS_DATA = [
     targetAudienceRu: "Менеджмент подойдёт тем, кто любит организовывать процессы, работать с людьми, брать ответственность и превращать идеи в конкретный план действий. В этой сфере особенно важны инициативность, коммуникабельность, аналитическое мышление и способность видеть общую картину.\n\nПредварительный опыт управления не обязателен: обучение начинается с базовых принципов бизнеса и постепенно переходит к самостоятельной работе над проектами.",
     targetAudienceEn: "Management is suitable for those who enjoy organising processes, working with people, taking responsibility, and turning ideas into concrete action plans. In this field, initiative, communication skills, analytical thinking, and the ability to see the big picture are especially important.\n\nPrior management experience is not required: training starts with basic business principles and gradually moves to independent project work.",
 
-    ctaBtnRu: "Подать заявку на Менеджмент",
-    ctaBtnEn: "Apply for Management",
+    ctaBtnRu: "Подать заявку на программу",
+    ctaBtnEn: "Apply for Program",
   },
   {
     id: "marketing",
@@ -470,8 +471,8 @@ const PROGRAMS_DATA = [
     targetAudienceRu: "Маркетинг подойдёт тем, кто интересуется психологией людей, трендами, коммуникациями и медиа. В этой профессии важны любознательность, креативность, аналитический склад ума и желание понимать, почему люди делают свой выбор.\n\nПредварительный опыт в маркетинге не обязателен: обучение начинается с фундаментальных понятий и постепенно переходит к реальным практическим проектам.",
     targetAudienceEn: "Marketing is suitable for those interested in human behaviour, modern brands, advertising, and digital technologies. In this field, curiosity, communication skills, creative thinking, and a willingness to work with data are important.\n\nPrior experience is not required: training starts with basic marketing principles and gradually moves to independent strategy and campaign development.",
 
-    ctaBtnRu: "Подать заявку на Маркетинг",
-    ctaBtnEn: "Apply for Marketing",
+    ctaBtnRu: "Подать заявку на программу",
+    ctaBtnEn: "Apply for Program",
   },
   {
     id: "industrial-design",
@@ -581,8 +582,8 @@ const PROGRAMS_DATA = [
     targetAudienceRu: "Дизайн подойдёт тем, кто интересуется визуальной культурой, технологиями и созданием новых идей. В этой профессии важны наблюдательность, внимание к деталям, готовность принимать обратную связь и умение смотреть на задачу с позиции пользователя.\n\nПрофессионально рисовать до поступления не обязательно. Обучение начинается с основ визуального языка и постепенно переходит к работе над полноценными дизайнерскими проектами.",
     targetAudienceEn: "Design is suitable for those interested in visual culture, technology, and creating new ideas. In this profession, observation, attention to detail, openness to feedback, and the ability to view tasks from the user’s perspective are important.\n\nProfessional drawing skills are not required prior to admission. Training starts with the basics of visual language and gradually moves to full‑scale design projects.",
 
-    ctaBtnRu: "Подать заявку на Дизайн",
-    ctaBtnEn: "Apply for Design",
+    ctaBtnRu: "Подать заявку на программу",
+    ctaBtnEn: "Apply for Program",
   },
 ];
 
@@ -605,7 +606,7 @@ export default function Academics({ initialProgram }) {
       const timer = setTimeout(() => {
         const element = document.getElementById(target);
         if (element) {
-          const yOffset = -130;
+          const yOffset = window.innerWidth < 640 ? -96 : -130;
           const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({ top: y, behavior: "smooth" });
         }
@@ -656,7 +657,7 @@ export default function Academics({ initialProgram }) {
 
     const element = document.getElementById(tabId);
     if (element) {
-      const yOffset = -130;
+      const yOffset = window.innerWidth < 640 ? -96 : -130;
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
     }
@@ -667,13 +668,20 @@ export default function Academics({ initialProgram }) {
   };
 
   const handleApplyClick = () => {
-    navigate("/admissions");
+    const el = document.getElementById("contact");
+    if (el) {
+      const yOffset = window.innerWidth < 640 ? -96 : -130;
+      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    } else {
+      navigate("/admission#how-to-apply");
+    }
   };
 
   return (
-    <div className="page pt-[124px] pb-16 text-slate-900">
+    <div className="page pt-[96px] sm:pt-[124px] pb-16 text-slate-900">
       {/* ── Fixed Sub-Navigation Bar at TOP of Screen ── */}
-      <nav className="fixed top-[64px] left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200/80">
+      <nav className="fixed top-[56px] sm:top-[64px] left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200/80">
         <div ref={navContainerRef} className="max-w-5xl mx-auto flex items-center gap-2 overflow-x-auto px-4 sm:px-6 lg:px-8 py-2.5 no-scrollbar">
           <style>{`.no-scrollbar::-webkit-scrollbar{display:none;}`}</style>
           {PROGRAMS_DATA.map((prog) => {
@@ -739,14 +747,13 @@ export default function Academics({ initialProgram }) {
                 {/* Header Banner */}
                 <div className={`bg-gradient-to-r ${prog.accentColor} p-6 sm:p-10 text-white relative overflow-hidden`}>
                   <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
-                    <div className="space-y-3 max-w-3xl cursor-pointer" onClick={() => setSelectedProgramModal(prog)}>
-                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-xs font-semibold uppercase tracking-wider text-white border border-white/20 hover:bg-white/25 transition-colors">
+                    <div className="space-y-3 max-w-3xl">
+                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-xs font-semibold uppercase tracking-wider text-white border border-white/20">
                         <IconComp className="w-4 h-4" />
                         <span>{tag}</span>
                       </div>
-                      <h2 className="text-2xl sm:text-4xl font-extrabold leading-tight hover:text-amber-300 transition-colors flex items-center gap-3">
-                        <span>{title}</span>
-                        <Info className="w-6 h-6 text-amber-300 shrink-0 opacity-80" />
+                      <h2 className="text-2xl sm:text-4xl font-extrabold leading-tight">
+                        {title}
                       </h2>
                       <p className="text-sm sm:text-base text-slate-200 font-medium">
                         {subtitle}
@@ -763,7 +770,7 @@ export default function Academics({ initialProgram }) {
                       </button>
 
                       <button
-                        onClick={() => navigate("/#contact")}
+                        onClick={handleApplyClick}
                         className="shrink-0 bg-white text-slate-900 font-bold px-6 py-3 rounded-2xl hover:bg-slate-100 transition-transform active:scale-95 shadow-lg text-sm sm:text-base flex items-center justify-center gap-2 cursor-pointer"
                       >
                         <span>{ctaBtn}</span>
@@ -864,6 +871,9 @@ export default function Academics({ initialProgram }) {
           })}
         </div>
       </div>
+
+      {/* ── CRM APPLICATION BLOCK ── */}
+      <ContactTelegram />
 
       {/* ── PROGRAM DETAIL MODAL ── */}
       {selectedProgramModal && (

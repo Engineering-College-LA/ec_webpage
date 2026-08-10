@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import ContactTelegram from "../../components/contact/ContactTelegram";
 import {
   Users,
   Code2,
@@ -371,7 +372,7 @@ export default function StudentLife() {
       setActiveTab(clubId);
       const element = document.getElementById(clubId);
       if (element) {
-        const yOffset = -130;
+        const yOffset = window.innerWidth < 640 ? -96 : -130;
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: "smooth" });
       }
@@ -423,7 +424,7 @@ export default function StudentLife() {
     } else {
       const element = document.getElementById(tabId);
       if (element) {
-        const yOffset = -130;
+        const yOffset = window.innerWidth < 640 ? -96 : -130;
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: "smooth" });
       }
@@ -444,9 +445,9 @@ export default function StudentLife() {
   };
 
   return (
-    <div className="page pt-[124px] pb-16 text-slate-900">
+    <div className="page pt-[96px] sm:pt-[124px] pb-16 text-slate-900">
       {/* ── Fixed Sub-Navigation Bar at TOP of Screen ── */}
-      <nav className="fixed top-[64px] left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200/80">
+      <nav className="fixed top-[56px] sm:top-[64px] left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200/80">
         <div ref={navContainerRef} className="max-w-5xl mx-auto flex items-center gap-2 overflow-x-auto px-4 sm:px-6 lg:px-8 py-2.5 no-scrollbar">
           <style>{`.no-scrollbar::-webkit-scrollbar{display:none;}`}</style>
           {CLUBS_DATA.map((c) => (
@@ -702,6 +703,9 @@ export default function StudentLife() {
           })}
         </div>
       </div>
+
+      {/* ── CRM APPLICATION BLOCK ── */}
+      <ContactTelegram />
     </div>
   );
 }
