@@ -42,6 +42,14 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
 
+      - name: Deploy compiled dist to main branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: main
+          keep_files: true
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
