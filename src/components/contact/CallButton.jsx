@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Phone } from "lucide-react";
+import ReactGA from "react-ga4";
 import { socialMediaIcons } from "../../config/icons";
 
 const socialIcons = [
   {
     href: "tel:+996226142222",
     icon: socialMediaIcons.phone,
-    label: "telegram",
+    label: "Phone Call",
   },
   {
     href: "https://api.whatsapp.com/send?phone=996226142222",
@@ -25,6 +26,18 @@ const CallButton = () => {
 
   const toggleOpen = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleContactClick = (label) => {
+    try {
+      ReactGA.event({
+        category: "Contact",
+        action: "click_floating_contact",
+        label: label,
+      });
+    } catch (err) {
+      console.warn("Analytics event failed:", err);
+    }
   };
 
   return (
@@ -46,6 +59,7 @@ const CallButton = () => {
         <a
           href={socialIcons[1].href}
           aria-label={socialIcons[1].label}
+          onClick={() => handleContactClick(socialIcons[1].label)}
           className="block"
         >
           {socialIcons[1].icon}
@@ -60,6 +74,7 @@ const CallButton = () => {
         <a
           href={socialIcons[2].href}
           aria-label={socialIcons[2].label}
+          onClick={() => handleContactClick(socialIcons[2].label)}
           className="block"
         >
           {socialIcons[2].icon}
@@ -76,6 +91,7 @@ const CallButton = () => {
         <a
           href={socialIcons[0].href}
           aria-label={socialIcons[0].label}
+          onClick={() => handleContactClick(socialIcons[0].label)}
           className="block"
         >
           {socialIcons[0].icon}

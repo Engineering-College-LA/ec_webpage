@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ReactGA from "react-ga4";
 import { ContactLinkButton } from "../../components/reasons/ReasonsToStudy";
 
 const CareerTestPage = () => {
@@ -39,6 +40,18 @@ const CareerTestPage = () => {
     }
 
     setResult(resultText);
+
+    if (resultText !== "Пожалуйста, ответьте на все вопросы.") {
+      try {
+        ReactGA.event({
+          category: "CareerTest",
+          action: "complete_career_test",
+          label: resultText,
+        });
+      } catch (err) {
+        console.warn("Analytics event failed:", err);
+      }
+    }
   };
 
   return (

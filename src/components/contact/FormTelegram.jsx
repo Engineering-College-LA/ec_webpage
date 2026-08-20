@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
+import ReactGA from "react-ga4";
 import Button from "../button/Button";
 import { useTranslation } from "react-i18next";
 
@@ -73,6 +74,17 @@ export function FormTelegram() {
 
       if (!sheetResponse.ok)
         throw new Error("Failed to send data to Google Sheets.");
+
+      // Send event to Google Analytics
+      try {
+        ReactGA.event({
+          category: "Form",
+          action: "generate_lead",
+          label: "Telegram Contact Form",
+        });
+      } catch (gaError) {
+        console.warn("Analytics event failed:", gaError);
+      }
 
       window.sessionStorage.setItem("formSubmitted", true);
       reset();
