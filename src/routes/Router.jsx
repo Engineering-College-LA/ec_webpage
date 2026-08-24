@@ -55,7 +55,7 @@ const Marketing = safeLazy(() => import("../pages/academics/Marketing"));
 const StudentLife = safeLazy(() => import("../pages/student-life/StudentLife"));
 
 // Initialize Google Analytics
-ReactGA.initialize("G-2M2GPPXSPW");
+ReactGA.initialize("G-XBC32C549F");
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
