@@ -8,7 +8,7 @@ const isGHPages =
   process.env.BUILD_TARGET === "ghpages";
 
 export default defineConfig({
-  base: "/ec_webpage/",
+  base: isGHPages ? "/ec_webpage/" : "/",
   plugins: [react()],
   server: {
     watch: {
