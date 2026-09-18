@@ -123,10 +123,10 @@ const CLUBS_DATA = [
     badgeBg: "bg-amber-50 text-amber-700 border-amber-200",
     // EDIT THIS PROPERTY TO CHANGE REAL REGISTRATION LINK:
     joinUrl: "", // e.g. "https://enactus.kg" or "https://forms.gle/..." (leave empty to open pop-up modal)
-    coverImage: enactusPresentation,
+    coverImage: enactusLogo,
     photos: [
       enactusCelebration,
-      enactusLogo,
+      enactusPresentation,
     ],
     subtitleRu: "Путь к лидерству, социальному предпринимательству и реальным проектам",
     subtitleEn: "Path to leadership, social entrepreneurship, and real-world projects",
@@ -537,11 +537,11 @@ export default function StudentLife() {
                     </div>
                     
                     {/* Organization Main Image Thumbnail */}
-                    <div className="md:col-span-4 overflow-hidden rounded-2xl border border-slate-200 shadow-sm relative group">
+                    <div className={`md:col-span-4 overflow-hidden rounded-2xl border border-slate-200 shadow-sm relative group ${club.coverImage === enactusLogo ? "bg-[#333d4b] flex items-center justify-center p-3" : "bg-slate-900"}`}>
                       <img
                         src={club.coverImage}
                         alt={title}
-                        className="w-full h-48 sm:h-52 object-cover transition-transform duration-500 group-hover:scale-105"
+                        className={`w-full h-48 sm:h-52 ${club.coverImage === enactusLogo ? "object-contain" : "object-cover"} transition-transform duration-500 group-hover:scale-105`}
                         onError={(e) => {
                           e.target.src = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=500&q=80";
                         }}
@@ -556,7 +556,7 @@ export default function StudentLife() {
                         <img
                           src={imgUrl}
                           alt={`${title} photo ${imgIdx + 1}`}
-                          className={`w-full h-full ${imgUrl === enactusLogo ? "object-contain p-4 bg-[#333d4b]" : "object-cover"} transition-transform duration-500 group-hover:scale-105`}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                           onError={(e) => {
                             e.target.src = "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=500&q=80";
                           }}
