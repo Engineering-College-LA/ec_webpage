@@ -2,6 +2,9 @@ import { useState, useEffect, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import ContactTelegram from "../../components/contact/ContactTelegram";
+import enactusLogo from "../../assets/enactus/enactus-logo.jpg";
+import enactusCelebration from "../../assets/enactus/enactus-celebration.jpg";
+import enactusPresentation from "../../assets/enactus/enactus-presentation.jpg";
 import {
   Users,
   Code2,
@@ -115,14 +118,15 @@ const CLUBS_DATA = [
     tagRu: "Лидерство & Соцпредпринимательство",
     tagEn: "Leadership & Social Entrepreneurship",
     icon: Sparkles,
+    logo: enactusLogo,
     accentColor: "from-amber-600 via-orange-600 to-amber-700",
     badgeBg: "bg-amber-50 text-amber-700 border-amber-200",
     // EDIT THIS PROPERTY TO CHANGE REAL REGISTRATION LINK:
     joinUrl: "", // e.g. "https://enactus.kg" or "https://forms.gle/..." (leave empty to open pop-up modal)
-    coverImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
+    coverImage: enactusPresentation,
     photos: [
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=500&q=80",
-      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=500&q=80",
+      enactusCelebration,
+      enactusLogo,
     ],
     subtitleRu: "Путь к лидерству, социальному предпринимательству и реальным проектам",
     subtitleEn: "Path to leadership, social entrepreneurship, and real-world projects",
@@ -509,6 +513,16 @@ export default function StudentLife() {
                         {subtitle}
                       </p>
                     </div>
+
+                    {club.logo && (
+                      <div className="shrink-0 hidden sm:flex items-center justify-center">
+                        <img
+                          src={club.logo}
+                          alt={title}
+                          className="w-20 h-20 md:w-24 md:h-24 rounded-2xl object-contain shadow-2xl border-2 border-white/30 bg-[#2f3743]"
+                        />
+                      </div>
+                    )}
                   </div>
                 </div>
 
@@ -536,13 +550,13 @@ export default function StudentLife() {
                   </div>
 
                   {/* Photo Gallery Grid */}
-                  <div className="grid grid-cols-2 gap-4 pt-2">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                     {club.photos.map((imgUrl, imgIdx) => (
-                      <div key={imgIdx} className="overflow-hidden rounded-2xl border border-slate-200 h-36 sm:h-44 relative group">
+                      <div key={imgIdx} className="overflow-hidden rounded-2xl border border-slate-200 h-44 sm:h-56 relative group bg-slate-900">
                         <img
                           src={imgUrl}
                           alt={`${title} photo ${imgIdx + 1}`}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          className={`w-full h-full ${imgUrl === enactusLogo ? "object-contain p-4 bg-[#333d4b]" : "object-cover"} transition-transform duration-500 group-hover:scale-105`}
                           onError={(e) => {
                             e.target.src = "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=500&q=80";
                           }}

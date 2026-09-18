@@ -2,6 +2,11 @@ import { useState, useEffect, useRef } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import ContactTelegram from "../../components/contact/ContactTelegram";
+import gerbSoftwareEngineering from "../../assets/gerbs/software-engineering.png";
+import gerbCyberSecurity from "../../assets/gerbs/cyber-security.png";
+import gerbManagement from "../../assets/gerbs/management.png";
+import gerbMarketing from "../../assets/gerbs/marketing.png";
+import gerbDesign from "../../assets/gerbs/industrial-design.png";
 import {
   Code2,
   ShieldCheck,
@@ -37,7 +42,8 @@ const PROGRAMS_DATA = [
     icon: Code2,
     accentColor: "from-[#1e1b4b] via-indigo-900 to-slate-900",
     badgeBg: "bg-indigo-50 text-indigo-700 border-indigo-200",
-    coverImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
+    coverImage: gerbSoftwareEngineering,
+    gerb: gerbSoftwareEngineering,
     photos: [
       "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=500&q=80",
       "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=500&q=80",
@@ -138,9 +144,10 @@ const PROGRAMS_DATA = [
     tagRu: "Защита систем & Этичный хакинг",
     tagEn: "System Defense & Ethical Hacking",
     icon: ShieldCheck,
-    accentColor: "from-[#0a1628] via-sky-900 to-slate-950",
-    badgeBg: "bg-sky-50 text-sky-700 border-sky-200",
-    coverImage: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+    accentColor: "from-[#062c1e] via-emerald-900 to-slate-950",
+    badgeBg: "bg-emerald-50 text-emerald-700 border-emerald-200",
+    coverImage: gerbCyberSecurity,
+    gerb: gerbCyberSecurity,
     photos: [
       "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=500&q=80",
       "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=500&q=80",
@@ -243,7 +250,8 @@ const PROGRAMS_DATA = [
     icon: Briefcase,
     accentColor: "from-[#451a03] via-amber-900 to-amber-950",
     badgeBg: "bg-amber-50 text-amber-700 border-amber-200",
-    coverImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
+    coverImage: gerbManagement,
+    gerb: gerbManagement,
     photos: [
       "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=500&q=80",
       "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=500&q=80",
@@ -362,7 +370,8 @@ const PROGRAMS_DATA = [
     icon: Sparkles,
     accentColor: "from-[#4a0c2a] via-rose-900 to-slate-900",
     badgeBg: "bg-rose-50 text-rose-700 border-rose-200",
-    coverImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+    coverImage: gerbMarketing,
+    gerb: gerbMarketing,
     photos: [
       "https://images.unsplash.com/photo-1533750516457-a7f992034fec?auto=format&fit=crop&w=500&q=80",
       "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=500&q=80",
@@ -481,9 +490,10 @@ const PROGRAMS_DATA = [
     tagRu: "Графический дизайн, UI/UX & Брендинг",
     tagEn: "Graphic Design, UI/UX & Branding",
     icon: Palette,
-    accentColor: "from-[#042f2e] via-teal-900 to-slate-900",
-    badgeBg: "bg-teal-50 text-teal-700 border-teal-200",
-    coverImage: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=800&q=80",
+    accentColor: "from-[#2e0854] via-purple-900 to-slate-900",
+    badgeBg: "bg-purple-50 text-purple-700 border-purple-200",
+    coverImage: gerbDesign,
+    gerb: gerbDesign,
     photos: [
       "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=500&q=80",
       "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=500&q=80",
@@ -783,23 +793,27 @@ export default function Academics({ initialProgram }) {
                 {/* Body Content (Shortened Summary View) */}
                 <div className="p-6 sm:p-8 space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
-                    {/* Left Column: Image + Specs + Short Description */}
+                    {/* Left Column: Shield Crest Showcase + Specs + Short Description */}
                     <div className="md:col-span-6 space-y-4">
-                      <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-sm relative group">
+                      <div className="relative overflow-hidden rounded-2xl border border-slate-200 shadow-sm group bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 flex items-center justify-center min-h-[220px] sm:min-h-[240px] p-6">
+                        {/* Ambient themed glow */}
+                        <div className={`absolute w-44 h-44 rounded-full blur-3xl opacity-35 group-hover:opacity-60 transition-opacity duration-500 bg-gradient-to-tr ${prog.accentColor}`} />
+                        
+                        {/* Subtle decorative dot pattern */}
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.07)_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none" />
+
                         <img
                           src={prog.coverImage}
                           alt={title}
-                          className="w-full h-48 sm:h-52 object-cover transition-transform duration-500 group-hover:scale-105"
-                          onError={(e) => {
-                            e.target.src = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=500&q=80";
-                          }}
+                          className="relative z-10 h-44 sm:h-48 w-auto max-w-[85%] object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.6)] transition-transform duration-500 group-hover:scale-105"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+
+                        <div className="absolute inset-0 z-20 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
                           <button
                             onClick={() => setSelectedProgramModal(prog)}
-                            className="text-xs font-bold text-white bg-white/20 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/30"
+                            className="text-xs font-bold text-white bg-white/20 hover:bg-white/30 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-white/30 transition-colors cursor-pointer"
                           >
-                            {lang === "ru" ? "Смотреть галерею и детали" : "View gallery & details"}
+                            {lang === "ru" ? "Смотреть детали" : "View details"}
                           </button>
                         </div>
                       </div>
@@ -890,21 +904,33 @@ export default function Academics({ initialProgram }) {
 
             {/* Modal Banner */}
             <div className={`bg-gradient-to-r ${selectedProgramModal.accentColor} p-6 sm:p-10 text-white relative overflow-hidden`}>
-              <div className="space-y-3 max-w-2xl">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-xs font-semibold uppercase tracking-wider text-amber-300 border border-white/20">
-                  <selectedProgramModal.icon className="w-4 h-4" />
-                  <span>{lang === "ru" ? selectedProgramModal.tagRu : selectedProgramModal.tagEn}</span>
+              <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div className="space-y-3 max-w-2xl">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-xs font-semibold uppercase tracking-wider text-amber-300 border border-white/20">
+                    <selectedProgramModal.icon className="w-4 h-4" />
+                    <span>{lang === "ru" ? selectedProgramModal.tagRu : selectedProgramModal.tagEn}</span>
+                  </div>
+                  <h2 className="text-2xl sm:text-4xl font-extrabold leading-tight">
+                    {lang === "ru" ? selectedProgramModal.titleRu : selectedProgramModal.titleEn}
+                  </h2>
+                  <p className="text-sm sm:text-base text-slate-200 font-medium">
+                    {lang === "ru" ? selectedProgramModal.subtitleRu : selectedProgramModal.subtitleEn}
+                  </p>
                 </div>
-                <h2 className="text-2xl sm:text-4xl font-extrabold leading-tight">
-                  {lang === "ru" ? selectedProgramModal.titleRu : selectedProgramModal.titleEn}
-                </h2>
-                <p className="text-sm sm:text-base text-slate-200 font-medium">
-                  {lang === "ru" ? selectedProgramModal.subtitleRu : selectedProgramModal.subtitleEn}
-                </p>
+
+                {selectedProgramModal.coverImage && (
+                  <div className="shrink-0 hidden sm:flex items-center justify-center">
+                    <img
+                      src={selectedProgramModal.coverImage}
+                      alt={lang === "ru" ? selectedProgramModal.titleRu : selectedProgramModal.titleEn}
+                      className="w-24 h-24 md:w-32 md:h-32 object-contain drop-shadow-2xl"
+                    />
+                  </div>
+                )}
               </div>
 
               {/* Quick Facts Badges */}
-              <div className="mt-6 flex flex-wrap gap-2.5 text-xs sm:text-sm font-semibold">
+              <div className="relative z-10 mt-6 flex flex-wrap gap-2.5 text-xs sm:text-sm font-semibold">
                 <span className="px-3.5 py-1.5 rounded-xl bg-white/15 backdrop-blur-md border border-white/20">
                   ⏱️ {lang === "ru" ? "Срок обучения: 4 года" : "Duration: 4 Years"}
                 </span>
