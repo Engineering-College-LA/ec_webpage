@@ -1,9 +1,40 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src-v2/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
+        // v3 — Alpine redesign tokens (src-v2 only). Prefixed to avoid
+        // colliding with the live-site tokens below (e.g. "slate" is a
+        // builtin Tailwind palette — "v2-slate" can't shadow it).
+        "v2-paper": "var(--v2-color-paper)",
+        "v2-ink": "var(--v2-color-ink)",
+        "v2-pencil": "var(--v2-color-pencil)",
+        "v2-line": "var(--v2-color-line)",
+        "v2-cobalt": "var(--v2-color-cobalt)",
+        "v2-cobalt-wash": "var(--v2-color-cobalt-wash)",
+        "v2-tape": "var(--v2-color-tape)",
+        "v2-mist": "var(--v2-color-mist)",
+        "v2-slate": "var(--v2-color-slate)",
+        "v2-hairline": "var(--v2-color-hairline)",
+        "v2-navy": "var(--v2-color-navy)",
+        "v2-navy-2": "var(--v2-color-navy-2)",
+        "v2-crimson": "var(--v2-color-crimson)",
+        "v2-sky": "var(--v2-color-sky)",
+        "v2-ink-deep": "var(--v2-color-ink-deep)",
+        "v2-step-2": "var(--v2-color-step-2)",
+        "v2-step-3": "var(--v2-color-step-3)",
+        "v2-step-4": "var(--v2-color-step-4)",
+        "v2-dusk": "var(--v2-color-dusk)",
+        "v2-ink-nav": "var(--v2-color-ink-nav)",
+        "v2-blush": "var(--v2-color-blush)",
+        "v2-footer-muted": "var(--v2-color-footer-muted)",
+        "v2-footer-link": "var(--v2-color-footer-link)",
+
         "n-gray": "#62656F",
         "n-bluish": "#A0BAD7",
         "n-bluish-90": "#aac1db",
@@ -62,6 +93,31 @@ export default {
       boxShadow: {
         custom: "rgba(7, 65, 210, 0.1) 0px 9px 30px",
         custom2: "rgba(0, 0, 0, 0.08) 0px 4px 12px",
+      },
+
+      // v3 — Alpine redesign tokens (src-v2 only), see colors comment above.
+      fontFamily: {
+        "v2-display": "var(--v2-font-display)",
+        "v2-heading": "var(--v2-font-heading)",
+        "v2-body": "var(--v2-font-body)",
+        "v2-mono": "var(--v2-font-mono)",
+        "v2-accent-display": "var(--v2-font-accent-display)",
+        "v2-accent-script": "var(--v2-font-accent-script)",
+        "v2-accent-alt": "var(--v2-font-accent-alt)",
+      },
+      fontSize: {
+        "v2-label": "var(--v2-text-label)",
+        "v2-body": "var(--v2-text-body)",
+        "v2-h3": "var(--v2-text-h3)",
+        "v2-h2": "var(--v2-text-h2)",
+        "v2-display": "var(--v2-text-display)",
+      },
+      spacing: {
+        "v2-gutter": "var(--v2-spacing-gutter)",
+      },
+      borderRadius: {
+        "v2-sm": "var(--v2-radius-sm)",
+        "v2-pill": "var(--v2-radius-pill)",
       },
     },
   },

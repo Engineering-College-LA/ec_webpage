@@ -536,27 +536,21 @@
         "Participation is individual. This means each participant develops their own idea, prepares a presentation, and pitches it to the jury."
       ]
     },
-    “theme”: {
-      “title”: “Main theme”,
-      “name”: “”Ideas that improve our community””,
-      “intro”: “Start with something simple — find a problem you notice yourself every day. It could be anything: inconveniences at school, environmental pollution, transport issues, learning challenges, or everyday life in your city.”,
-      “findText”: “Don't try to come up with the «perfect startup». It's better to pick a real problem and propose a clear solution.”,
-      “inspirationLabel”: “Where to find inspiration”,
-      “directions”: [
-        “Education”,
-        “Ecology”,
-        “Health”,
-        “Transport”,
-        “Safety”,
-        “Technology”,
-        “Tourism”,
-        “Social projects”,
-        “City or regional development”
-      ],
-      “note”: “Remember: a good idea isn't the most complex one — it's the one that can truly help people.”,
-      “questions”: [
-        “What would you change in your city if you had the chance?”,
-        “What problem around you is most frustrating? Maybe that's exactly your project.”
+    "theme": {
+      "title": "Choose an idea",
+      "name": "\"Ideas that improve our community\"",
+      "intro": "Find a real problem around you and propose a clear solution.",
+      "inspirationLabel": "Directions",
+      "directions": [
+        "Education",
+        "Ecology",
+        "Health",
+        "Transport",
+        "Safety",
+        "Technology",
+        "Tourism",
+        "Social projects",
+        "City or regional development"
       ]
     },
     "process": {
@@ -564,29 +558,24 @@
       "stepLabel": "STEP",
       "steps": {
         "registration": {
-          "title": "1. Online registration",
-          "text": "Participants fill out an online form and upload a pitch deck — a short presentation of their idea. The application must include:",
-          "fields": [
-            "first and last name",
-            "school",
-            "city or region",
-            "contact details",
-            "project name",
-            "problem description",
-            "solution description",
-            "project presentation"
-          ]
+          "title": "Submit your presentation",
+          "text": "Fill out the form and attach your finished presentation.",
+          "submitLabel": "Submit application",
+          "warning": "Be careful when submitting: double-check all fields and make sure you've attached the correct presentation. It will be difficult to edit your application after submission."
         },
         "selection": {
-          "title": "2. Selection stage",
+          "title": "Await selection results",
           "text": [
-            "After registration closes, the organizers review all applications and presentations.",
-            "Only selected participants advance to the final, so that everyone has a chance to present well and the jury can carefully evaluate the projects."
-          ]
+            "Organizers will review all applications and presentations. Selection results will be announced on July 17.",
+            "If you're confident you'll make it through — start preparing your pitch now."
+          ],
+          "videoLabel": "How to prepare for your pitch"
         },
         "workshops": {
           "title": "Free workshops",
           "text": "Finalists get access to free educational workshops. Workshop topics:",
+          "workshopLabel": "Workshop {{number}}",
+          "registerLabel": "Register",
           "items": [
             {
               "name": "How to find a good idea",
@@ -603,19 +592,27 @@
           ]
         },
         "finalPitch": {
-          "title": "4. Final pitch",
+          "title": "Time to shine",
           "text": "The final will take place on July 29.",
-          "formatIntro": "Each finalist pitches to the jury in a pitch presentation format:",
+          "formatIntro": "Pitch format before the jury:",
           "format": [
-            "4 minutes for the presentation",
-            "3 minutes for jury questions"
+            "5 minutes for the presentation",
+            "2 minutes for jury questions"
+          ],
+          "mentalIntro": "How to get mentally ready:",
+          "mentalTips": [
+            "Rehearse your pitch out loud several times — ideally in front of a live audience",
+            "Learn your key phrases, but don't memorize the script word for word",
+            "Prepare answers to possible jury questions",
+            "Get a good night's sleep and arrive early — calm matters more than a perfect script"
           ]
         }
       }
     },
     "prepare": {
-      "title": "What do you need to prepare?",
-      "text": "Participants need to prepare a 5–7 slide presentation. Presentation structure:",
+      "title": "Prepare a presentation",
+      "text": "Participants need to prepare a 5–7 slide presentation. Use the template and follow this structure:",
+      "templateLabel": "Presentation template",
       "structure": [
         "Project name",
         "What problem is being solved",
@@ -625,16 +622,15 @@
         "Prototype, mockup, poster, or visual idea",
         "Why the participant chose this topic"
       ],
-      "prototypeText": "The prototype can be simple:",
+      "prototypeText": "You can build a prototype with AI tools:",
+      "feedbackText": "Show your presentation and demo to friends, family, or classmates — gather feedback and improve your project before submitting.",
       "prototypeList": [
-        "a drawing",
-        "a poster",
-        "a Canva design",
-        "a Figma mockup",
-        "a website mockup",
-        "a video",
-        "a physical model",
-        "a presentation demo"
+        { "name": "Lovable", "url": "https://lovable.dev" },
+        { "name": "Google AI Studio", "url": "https://aistudio.google.com" },
+        { "name": "Bolt", "url": "https://bolt.new" },
+        { "name": "Rork", "url": "https://rork.com" },
+        { "name": "v0", "url": "https://v0.dev" },
+        { "name": "Replit", "url": "https://replit.com" }
       ]
     },
     "criteria": {
@@ -683,10 +679,9 @@
     },
     "organizer": {
       "title": "Who organizes it?",
-      "text": [
-        "The olympiad is organized by Engineering College in cooperation with APRD.",
-        "The project aims to develop young talent, support students, and promote innovative thinking among 9th-grade students."
-      ]
+      "collaboration": "The olympiad is organized by Engineering College in cooperation with",
+      "partner": "APRD",
+      "description": "The project aims to develop young talent, support students, and promote innovative thinking among 9th-grade students."
     },
     "banner": {
       "tag": "New",
@@ -705,6 +700,683 @@
         "hours": "Hours",
         "minutes": "Minutes",
         "seconds": "Seconds"
+      }
+    }
+  },
+  "v2": {
+    "nav": {
+      "programs": "Programs",
+      "admissions": "Admissions",
+      "studentLife": "Student Life",
+      "career": "Careers",
+      "about": "About",
+      "contacts": "Contacts",
+      "applyButton": "Apply Now",
+      "dropdown": {
+        "academicHeading": "ACADEMIC LIFE",
+        "extracurricularHeading": "EXTRACURRICULAR LIFE"
+      }
+    },
+    "footer": {
+      "copyright": "© 2026 E|C Engineering College · 553 Frunze St, Bishkek · +996 (312) 88-24-24",
+      "tagline": "High goals. A bright tomorrow for Kyrgyzstan."
+    },
+    "academics": {
+      "index": {
+        "readMore": "Learn more"
+      },
+      "index": {
+        "breadcrumb": "PROGRAMS",
+        "eyebrow": "HOME / PROGRAMS",
+        "titleLine1": "Five programs,",
+        "titleLine2": "one goal — real work.",
+        "description": "Pick a program that matches your interest. Each is two years of practice, projects for partner companies, and a state-accredited diploma.",
+        "factDuration": "2-year program",
+        "factPractice": "70% hands-on practice",
+        "factEntry": "After grade 9 or 11",
+        "filters": { "all": "All · 5", "itSecurity": "IT & Security", "business": "Business", "creative": "Creative" },
+        "careerTestLink": "Not sure what to pick? Take the test",
+        "detailsLink": "More about the program",
+        "curriculumLink": "Curriculum",
+        "careerTest": {
+          "title": "Not sure what to pick?",
+          "description": "Take our career-guidance test: 20 questions, 5 minutes — and we'll suggest a program.",
+          "cta": "Take the test"
+        }
+      },
+      "facts": {
+        "duration": { "label": "PROGRAM LENGTH", "value": "2 years" },
+        "practice": { "label": "HANDS-ON PRACTICE", "value": "70%" },
+        "format": { "label": "FORMAT", "value": "On campus, Bishkek" },
+        "diploma": { "label": "DIPLOMA", "value": "State-accredited" }
+      },
+      "programs": {
+        "aboutEyebrow": "ABOUT THE PROGRAM",
+        "curriculumEyebrow": "CURRICULUM",
+        "curriculumTitleLine1": "Four semesters",
+        "curriculumTitleLine2": "of growth",
+        "curriculumDownload": "Download the full curriculum",
+        "careersEyebrow": "CAREERS",
+        "careersTitleLine1": "What you'll",
+        "careersTitleLine2": "become",
+        "softwareEngineering": {
+          "title": "Software Engineering",
+          "teaser": "Design and build systems people actually use.",
+          "indexDescription": "Designing, building, testing, and maintaining scalable systems. Git, code review, teamwork, and project management.",
+          "tags": ["Front-end", "Back-end", "Full-stack", "DevOps", "QA"],
+          "heroTitleLine1": "Software",
+          "heroTitleLine2": "Engineering",
+          "heroDescription": "Design, build, test, and maintain real software systems — with a team, under review from practitioners.",
+          "aboutTitleLine1": "Knowledge and practice —",
+          "aboutTitleLine2": "in one program",
+          "aboutDescription": "Students learn to design, build, test, and maintain scalable systems using modern languages and tools.",
+          "aboutBullets": [
+            { "title": "Systems thinking", "description": "Break a hard problem into parts and ship a working solution." },
+            { "title": "Team development", "description": "Git, code review, methodologies, and project management — like in industry." },
+            { "title": "Real products", "description": "Graduates are ready to build digital solutions in a fast-moving environment." }
+          ],
+          "semesters": [
+            { "label": "SEMESTER 01", "title": "Foundations", "topics": ["Algorithms & Python", "Git & teamwork", "HTML, CSS, JavaScript", "English for IT"] },
+            { "label": "SEMESTER 02", "title": "Web & data", "topics": ["React & front-end", "Databases & SQL", "OOP & design patterns", "Project: school LMS"] },
+            { "label": "SEMESTER 03", "title": "Back-end & quality", "topics": ["APIs & microservices", "Testing & QA", "DevOps, Docker, CI/CD", "Mobile development"] },
+            { "label": "SEMESTER 04", "title": "Industry", "topics": ["Partner internship", "Capstone project", "Portfolio & interviews", "Demo Day"] }
+          ],
+          "careers": ["Front-end developer", "Back-end developer", "Full-stack developer", "DevOps engineer", "QA engineer", "Mobile developer", "UI/UX designer", "Software engineer"]
+        },
+        "cyberSecurity": {
+          "title": "Cybersecurity",
+          "teaser": "Protect what matters in a world that's all connected.",
+          "indexDescription": "Ethical hacking, network security, cryptography, and risk management — on real cases and in lab conditions.",
+          "tags": ["Pentester", "SOC Analyst", "Network Security", "InfoSec Consultant"],
+          "heroTitleLine1": "Cyber-",
+          "heroTitleLine2": "security",
+          "heroDescription": "Protect systems and data: ethical hacking, network security, cryptography, and risk management on real cases.",
+          "aboutTitleLine1": "Defense in theory —",
+          "aboutTitleLine2": "and in practice",
+          "aboutDescription": "Students learn network security, penetration testing, and incident response in the college's own lab.",
+          "aboutBullets": [
+            { "title": "An attacker's mindset", "description": "Learn to find vulnerabilities before someone else does." },
+            { "title": "Hands-on labs", "description": "Pentesting, SOC monitoring, and incident response in a safe environment." },
+            { "title": "Industry standards", "description": "Work with the same protocols and checklists used in the field." }
+          ],
+          "semesters": [
+            { "label": "SEMESTER 01", "title": "Foundations", "topics": ["Networks & protocols", "Linux & the command line", "Cryptography basics", "English for IT"] },
+            { "label": "SEMESTER 02", "title": "Defending systems", "topics": ["Network security", "Web application security", "Risk management", "Project: network audit"] },
+            { "label": "SEMESTER 03", "title": "Attack & defense", "topics": ["Ethical hacking", "SOC & monitoring", "Incident response", "Digital forensics"] },
+            { "label": "SEMESTER 04", "title": "Industry", "topics": ["Partner internship", "Capstone project", "Certification prep", "Demo Day"] }
+          ],
+          "careers": ["Pentester", "SOC analyst", "Network security engineer", "InfoSec consultant", "Forensics specialist", "DevSecOps engineer"]
+        },
+        "managementInIt": {
+          "title": "Management in IT",
+          "teaser": "Lead teams and projects in the digital economy.",
+          "indexDescription": "Managing teams, projects, and business processes. Leadership, communication, and results analysis.",
+          "tags": ["Project Manager", "Operations", "Team Lead", "Business Dev", "Entrepreneur"],
+          "heroTitleLine1": "Management",
+          "heroTitleLine2": "in the digital economy",
+          "heroDescription": "Lead teams, projects, and business processes — leadership, communication, and results analysis in practice.",
+          "aboutTitleLine1": "Managing people —",
+          "aboutTitleLine2": "and results",
+          "aboutDescription": "Students learn project management, operations, and working with data to make decisions.",
+          "aboutBullets": [
+            { "title": "Leadership", "description": "Take a team from a task to a finished result." },
+            { "title": "Project work", "description": "Agile, Scrum, and real projects with deadlines and budgets." },
+            { "title": "Business communication", "description": "Negotiation, presentations, and stakeholder management." }
+          ],
+          "semesters": [
+            { "label": "SEMESTER 01", "title": "Foundations", "topics": ["Management basics", "Financial literacy", "Business communication", "English for business"] },
+            { "label": "SEMESTER 02", "title": "Projects", "topics": ["Project management", "Agile & Scrum", "Data analytics", "Project: product launch"] },
+            { "label": "SEMESTER 03", "title": "Operations", "topics": ["Operations management", "HR & team-building", "Marketing for managers", "Negotiation"] },
+            { "label": "SEMESTER 04", "title": "Industry", "topics": ["Partner internship", "Capstone project", "Portfolio & interviews", "Demo Day"] }
+          ],
+          "careers": ["Project manager", "Operations manager", "Team lead", "Business development", "Entrepreneur", "Product manager"]
+        },
+        "industrialDesign": {
+          "title": "Design",
+          "teaser": "Build products around people: UX/UI and brand.",
+          "indexDescription": "Graphic and digital design, branding, and UX/UI. Solutions built around people.",
+          "tags": ["UI/UX", "Product Design", "Brand Design", "Motion"],
+          "heroTitleLine1": "Design",
+          "heroTitleLine2": "around people",
+          "heroDescription": "Graphic and digital design, branding, and UX/UI — build products centered on people.",
+          "aboutTitleLine1": "From idea —",
+          "aboutTitleLine2": "to finished product",
+          "aboutDescription": "Students go through the whole process, from user research to finished interface and brand identity.",
+          "aboutBullets": [
+            { "title": "Design thinking", "description": "Research the user before sketching the solution." },
+            { "title": "UX/UI practice", "description": "Prototyping, testing, and Figma work like a product team." },
+            { "title": "A portfolio from day one", "description": "Every project adds to a portfolio for employers." }
+          ],
+          "semesters": [
+            { "label": "SEMESTER 01", "title": "Foundations", "topics": ["Composition & color", "Typography", "Figma", "English for design"] },
+            { "label": "SEMESTER 02", "title": "UX/UI", "topics": ["User research", "Prototyping", "UI systems", "Project: mobile app"] },
+            { "label": "SEMESTER 03", "title": "Brand & motion", "topics": ["Branding & identity", "Motion design", "Design systems", "Web design"] },
+            { "label": "SEMESTER 04", "title": "Industry", "topics": ["Partner internship", "Capstone project", "Portfolio review", "Demo Day"] }
+          ],
+          "careers": ["UI/UX designer", "Product designer", "Brand designer", "Motion designer", "Art director"]
+        },
+        "marketing": {
+          "title": "Marketing",
+          "teaser": "Turn ideas into results through digital and storytelling.",
+          "indexDescription": "Digital marketing, social media, brand building, and consumer behavior.",
+          "tags": ["SMM", "Performance", "Brand Manager", "Content", "Analytics"],
+          "heroTitleLine1": "Marketing",
+          "heroTitleLine2": "for a new generation",
+          "heroDescription": "Digital marketing, social media, brand building, and consumer behavior — turn ideas into results.",
+          "aboutTitleLine1": "From content —",
+          "aboutTitleLine2": "to analytics",
+          "aboutDescription": "Students learn to build a brand, run campaigns, and read data to make decisions.",
+          "aboutBullets": [
+            { "title": "Storytelling", "description": "Turn a brand idea into content that works." },
+            { "title": "Performance mindset", "description": "Run campaigns and measure results in numbers." },
+            { "title": "Real brands", "description": "Work on campaigns for the college's partner companies." }
+          ],
+          "semesters": [
+            { "label": "SEMESTER 01", "title": "Foundations", "topics": ["Marketing basics", "Copywriting", "SMM", "English for marketing"] },
+            { "label": "SEMESTER 02", "title": "Digital marketing", "topics": ["Performance advertising", "SEO & content marketing", "Data analytics", "Project: brand campaign"] },
+            { "label": "SEMESTER 03", "title": "Brand", "topics": ["Branding & positioning", "Consumer behavior", "Media planning", "Email marketing"] },
+            { "label": "SEMESTER 04", "title": "Industry", "topics": ["Partner internship", "Capstone project", "Campaign portfolio", "Demo Day"] }
+          ],
+          "careers": ["SMM manager", "Performance marketer", "Brand manager", "Content marketer", "Marketing analyst"]
+        }
+      }
+    },
+    "about": {
+      "hero": {
+        "eyebrow": "HOME / ABOUT",
+        "titleLine1": "Building the people",
+        "titleLine2": "who build.",
+        "description": "E|C is an engineering college in Bishkek for future engineers, designers, and tech leaders. Part of the Light Academy education network.",
+        "badgeLine1": "HIGH GOALS.",
+        "badgeLine2": "A BRIGHT TOMORROW FOR KYRGYZSTAN."
+      },
+      "story": {
+        "eyebrow": "OUR STORY",
+        "titleLine1": "Part of the bigger",
+        "titleLine2": "Light Academy",
+        "paragraph1": "Light Academy is an education brand that has run five international schools across Kyrgyzstan since 2018.",
+        "paragraph2": "This year, Light Academy is opening E|C, an engineering college in Bishkek. We pair a strong academic foundation with practice, modern infrastructure, and digital tools, helping students turn ideas into real solutions.",
+        "milestones": {
+          "founded": { "badge": "2018", "title": "Light Academy founded", "description": "The network's first international school." },
+          "schools": { "badge": "5", "title": "Five international schools", "description": "Across different regions of Kyrgyzstan." },
+          "opening": { "badge": "2026", "title": "E|C opens in Bishkek", "description": "A new-generation engineering college." }
+        }
+      },
+      "mission": {
+        "eyebrow": "MISSION",
+        "title": "To teach, support, and inspire a new generation of engineers.",
+        "description": "Through hands-on learning, mentorship, and a values-driven approach, we prepare graduates who can build innovative, socially meaningful solutions."
+      },
+      "vision": {
+        "eyebrow": "VISION",
+        "title": "A college known for the quality of its engineering education.",
+        "description": "An open, inclusive community that values creativity, diversity, and collaboration — the foundation of innovation and lifelong learning."
+      },
+      "partners": {
+        "eyebrow": "COLLEGE PARTNERS",
+        "titleLine1": "Learning from those",
+        "titleLine2": "who build the industry.",
+        "description": "Partner companies give students real problems, mentors, and internships — and give top graduates their first job.",
+        "becomePartnerTitle": "Become a partner",
+        "becomePartnerSubtitle": "Student projects, internships, hiring"
+      }
+    },
+    "admission": {
+      "hero": {
+        "eyebrow": "HOME / ADMISSIONS",
+        "titleLine1": "Something big starts",
+        "titleLine2": "with \"I'll try.\"",
+        "description": "You don't have to know everything about your future career. Apply online, interview, and get an answer in 7 days.",
+        "secondaryCta": "Documents & deadlines",
+        "entryCard": { "eyebrow": "YOUR ENTRY POINT", "title": "Interest is enough — we'll find the route together.", "cta": "Get a consultation" },
+        "facts": {
+          "deadline": { "value": "July 15", "label": "application deadline" },
+          "seats": { "value": "120 seats", "label": "in the 2026 intake" },
+          "start": { "value": "September 1", "label": "classes begin" }
+        }
+      },
+      "route": {
+        "eyebrow": "THE ADMISSION ROUTE",
+        "titleLine1": "Four steps.",
+        "titleLine2": "A decision in 7 days.",
+        "youAreHere": "YOU ARE HERE",
+        "finishEyebrow": "FINISH",
+        "finishTitle": "You're an E|C student",
+        "steps": {
+          "meet": { "title": "Let's meet", "description": "Leave your contact info and tell us which program interests you." },
+          "exams": { "title": "Entrance exams", "description": "Math, English, and an essay in Kyrgyz or Russian." },
+          "documents": { "title": "Prepare your documents", "description": "Certificate, passport, photos, and forms — list below." },
+          "enrollment": { "title": "Enrollment", "description": "Contract, payment, and meeting your group." }
+        }
+      },
+      "requirements": {
+        "eyebrow": "REQUIREMENTS & DOCUMENTS",
+        "titleLine1": "Who can apply.",
+        "titleLine2": "What to prepare.",
+        "requirementsTitle": "Requirements",
+        "requirementsList": [
+          "Graduates of grade 9 or 11",
+          "Exams: math, English, essay (Kyrgyz/Russian)",
+          "A prepared document package"
+        ],
+        "documentsTitle": "Required documents",
+        "documentsList": [
+          "Passport copy (or birth certificate)",
+          "Original certificate of grade 9 or 11 completion",
+          "Four 3×4 photos",
+          "Copies of parents' passports",
+          "Medical certificate (form 086/U)",
+          "Military registration card (for males 18+)"
+        ]
+      },
+      "cost": {
+        "eyebrow": "TUITION COST",
+        "amount": "$1,200",
+        "description": "Initial deposit. Full cost and payment options — through the admissions office.",
+        "phone1": "0501 990 550",
+        "phone2": "0755 990 550",
+        "supportEyebrow": "DISCOUNTS & SUPPORT",
+        "titleLine1": "Education is accessible",
+        "titleLine2": "to the talented and motivated",
+        "tags": [
+          "High academic results",
+          "Olympiad and hackathon winners",
+          "Large families",
+          "Applicants from KR regions",
+          "Early application",
+          "Paying a year in advance",
+          "Graduates of partner schools"
+        ],
+        "note": "Every application is reviewed individually. The admissions office will help determine which support programs you may qualify for.",
+        "allDiscountsLink": "All discount categories"
+      },
+      "contact": {
+        "eyebrow": "LET'S GET ACQUAINTED",
+        "titleLine1": "Got questions?",
+        "titleLine2": "We've got answers.",
+        "description": "Leave your contact info — the admissions office will reach out and help you choose a program.",
+        "form": {
+          "nameLabel": "Full name *",
+          "namePlaceholder": "Aibek Asanov",
+          "phoneLabel": "Phone *",
+          "phonePlaceholder": "+996 ___ ___ ___",
+          "programLabel": "Program",
+          "programUndecided": "Still deciding",
+          "consent": "I consent to the processing of my personal data",
+          "submit": "Get a consultation",
+          "submitting": "Sending...",
+          "success": "Application sent! We'll be in touch soon.",
+          "error": "Couldn't send the application. Please try again."
+        }
+      }
+    },
+    "studentLifeIndex": {
+      "hero": {
+        "eyebrow": "HOME / STUDENT LIFE",
+        "titleLine1": "Your people.",
+        "titleLine2": "Your time.",
+        "description": "A team for a crazy idea. A conversation after class. A place to become yourself.",
+        "primaryCta": "Watch the video",
+        "secondaryCta": "Book a campus visit"
+      },
+      "academicEyebrow": "01 · ACADEMIC LIFE",
+      "academicTitleLine1": "Learning that",
+      "academicTitleLine2": "works toward a result",
+      "academicDescription": "70% hands-on practice, mentors from industry, and an environment where questions are encouraged, not saved for after class.",
+      "extracurricularEyebrow": "02 · EXTRACURRICULAR LIFE",
+      "extracurricularTitleLine1": "After class —",
+      "extracurricularTitleLine2": "the fun part",
+      "extracurricularDescription": "Teams, competitions, and first work experience — where friendships and portfolios are born.",
+      "detailsLink": "Learn more"
+    },
+    "studentLife": {
+      "breadcrumb": "STUDENT LIFE",
+      "academicBreadcrumb": "ACADEMIC",
+      "extracurricularBreadcrumb": "EXTRACURRICULAR",
+      "applyLabel": "Apply Now",
+      "activities": {
+        "projectBasedLearning": {
+          "navLabel": "Project-Based Learning",
+          "navDescription": "Real problems instead of lectures",
+          "categoryLabel": "ACADEMIC LIFE",
+          "heroTitleLine1": "Project-Based Learning",
+          "heroTitleLine2": "Learning by doing real work.",
+          "heroDescription": "Every semester is a team project with a task from a partner company. By graduation you'll have 4 projects in your portfolio.",
+          "secondaryCta": "Student projects",
+          "statValue": "70%",
+          "statLabel": "of class time is hands-on practice",
+          "cycleEyebrow": "HOW IT WORKS",
+          "cycleTitleLine1": "One semester —",
+          "cycleTitleLine2": "one project",
+          "cycleDescription": "The cycle repeats 4 times over the program, with harder problems each time.",
+          "cycleSteps": [
+            { "title": "A problem from a partner", "description": "A company brings a real problem, not a textbook exercise." },
+            { "title": "The team", "description": "4-5 students in different roles: development, design, management." },
+            { "title": "Sprints with a mentor", "description": "Iterative work with a weekly review from a mentor." },
+            { "title": "Demo Day", "description": "Present to the partner. The best solutions get adopted." }
+          ],
+          "projectsEyebrow": "EXAMPLE PROJECTS",
+          "projectsTitleLine1": "Real projects,",
+          "projectsTitleLine2": "not coursework",
+          "projectsLink": "All projects",
+          "projects": [
+            { "tag": "Mobile · Backend", "title": "KidzGo", "description": "An app for finding daycares · 1.2k users" },
+            { "tag": "Mobile · Backend", "title": "JumushTap", "description": "Part-time jobs for students · 1k users" },
+            { "tag": "Cybersecurity", "title": "SafeNet", "description": "A school network audit · 12 vulnerabilities fixed" }
+          ]
+        },
+        "mentorship": {
+          "navLabel": "Mentorship & Tutoring",
+          "navDescription": "An industry mentor for every student",
+          "categoryLabel": "ACADEMIC LIFE",
+          "heroTitleLine1": "Mentorship & Tutoring",
+          "heroTitleLine2": "Support at every step.",
+          "heroDescription": "Every student gets an industry mentor and a college tutor to help keep them on track.",
+          "secondaryCta": "Our mentors",
+          "statValue": "1:8",
+          "statLabel": "tutor per student group",
+          "cycleEyebrow": "HOW IT WORKS",
+          "cycleTitleLine1": "Support —",
+          "cycleTitleLine2": "at every stage",
+          "cycleDescription": "The mentorship program follows a student through both years of the program.",
+          "cycleSteps": [
+            { "title": "Meet your mentor", "description": "We match you with an industry mentor based on your interests." },
+            { "title": "Regular check-ins", "description": "Every two weeks, on goals, progress, and challenges." },
+            { "title": "Tutoring support", "description": "Academic and adjustment help from your group's tutor." },
+            { "title": "A career track", "description": "By graduation, a recommendation and industry contacts." }
+          ],
+          "projectsEyebrow": "SUCCESS STORIES",
+          "projectsTitleLine1": "With a mentor —",
+          "projectsTitleLine2": "further",
+          "projectsLink": "All stories",
+          "projects": [
+            { "tag": "Software Engineering", "title": "From beginner to intern", "description": "A mentor helped build a first portfolio in one semester" },
+            { "tag": "Design", "title": "First client", "description": "A tutor supported the start of freelance work" },
+            { "tag": "Marketing", "title": "A confident start", "description": "Regular check-ins helped choose a specialization" }
+          ]
+        },
+        "olympiads": {
+          "navLabel": "Olympiads & Competitions",
+          "navDescription": "Young Innovators Olympiad and more",
+          "categoryLabel": "ACADEMIC LIFE",
+          "heroTitleLine1": "Olympiads & Competitions",
+          "heroTitleLine2": "Test yourself against the best.",
+          "heroDescription": "The Young Innovators Olympiad and subject olympiads — a chance to prove yourself and earn admission benefits.",
+          "secondaryCta": "Past winners",
+          "statValue": "12+",
+          "statLabel": "olympiads & competitions a year",
+          "cycleEyebrow": "HOW IT WORKS",
+          "cycleTitleLine1": "From prep —",
+          "cycleTitleLine2": "to winning",
+          "cycleDescription": "The college coaches teams and supports them through every round.",
+          "cycleSteps": [
+            { "title": "Selection", "description": "Registration and a qualifying round in your field." },
+            { "title": "Training", "description": "Training camps with practicing faculty." },
+            { "title": "The final", "description": "An in-person round with real problems and an industry jury." },
+            { "title": "Recognition", "description": "Winners get admission benefits and internships." }
+          ],
+          "projectsEyebrow": "ACHIEVEMENTS",
+          "projectsTitleLine1": "Our",
+          "projectsTitleLine2": "winners",
+          "projectsLink": "All results",
+          "projects": [
+            { "tag": "Young Innovators", "title": "1st place, 2025", "description": "A team project in the IT solutions category" },
+            { "tag": "KR Hackathon", "title": "Top finishers", "description": "Top 3 among colleges nationwide" },
+            { "tag": "Math Olympiad", "title": "First-degree diploma", "description": "National round" }
+          ]
+        },
+        "labs": {
+          "navLabel": "Labs & Library",
+          "navDescription": "Equipment and resources for study",
+          "categoryLabel": "ACADEMIC LIFE",
+          "heroTitleLine1": "Labs & Library",
+          "heroTitleLine2": "Everything for independent work.",
+          "heroDescription": "Computer labs, project equipment, and a library — open to students every day.",
+          "secondaryCta": "Access schedule",
+          "statValue": "7",
+          "statLabel": "days a week open access",
+          "cycleEyebrow": "WHAT'S INSIDE",
+          "cycleTitleLine1": "Resources —",
+          "cycleTitleLine2": "within reach",
+          "cycleDescription": "Everything you need for projects, coursework, and class prep.",
+          "cycleSteps": [
+            { "title": "Computer labs", "description": "Modern machines for development and design." },
+            { "title": "Cybersecurity lab", "description": "An isolated network for practice and testing." },
+            { "title": "Library", "description": "Technical literature and access to online courses." },
+            { "title": "Coworking space", "description": "A space for team project work." }
+          ],
+          "projectsEyebrow": "EQUIPMENT",
+          "projectsTitleLine1": "What you can",
+          "projectsTitleLine2": "use",
+          "projectsLink": "Full list",
+          "projects": [
+            { "tag": "Hardware", "title": "Laptops & monitors", "description": "For projects that need extra power" },
+            { "tag": "Network Lab", "title": "Network test bench", "description": "For cybersecurity practice" },
+            { "tag": "Print & Scan", "title": "Print zone", "description": "Free printing for coursework and materials" }
+          ]
+        },
+        "enactus": {
+          "navLabel": "Enactus",
+          "navDescription": "Social entrepreneurship",
+          "categoryLabel": "TEAM",
+          "heroTitleLine1": "Enactus",
+          "heroTitleLine2": "Business that helps people.",
+          "heroDescription": "Social entrepreneurship projects and participation in the international Enactus championships.",
+          "secondaryCta": "Telegram chat",
+          "facts": [
+            { "label": "MEETINGS", "value": "Twice a week" },
+            { "label": "FORMAT", "value": "Projects & pitches" },
+            { "label": "WHO", "value": "All years" },
+            { "label": "COST", "value": "Free" }
+          ],
+          "whatWeDoEyebrow": "WHAT WE DO",
+          "whatWeDoTitleLine1": "Three formats,",
+          "whatWeDoTitleLine2": "one goal",
+          "whatWeDo": [
+            { "title": "Social projects", "description": "We launch projects that solve real community problems." },
+            { "title": "Pitch sessions", "description": "We practice presenting ideas to judges and investors." },
+            { "title": "Championships", "description": "We represent the college at national and global Enactus." }
+          ],
+          "eventsEyebrow": "UPCOMING EVENTS",
+          "eventsTitleLine1": "Come to",
+          "eventsTitleLine2": "your first meeting",
+          "eventsDescription": "Open to all E|C students. No experience required.",
+          "events": [
+            { "day": "10", "month": "OCT", "title": "New ideas pitch session", "meta": "6:00 PM · Room 204", "tag": "Pitch" },
+            { "day": "17", "month": "OCT", "title": "Mentor meetup", "meta": "6:00 PM · Atrium", "tag": "Mentorship" },
+            { "day": "24", "month": "OCT", "title": "National final selection", "meta": "5:00 PM · Atrium", "tag": "Competition" }
+          ],
+          "joinEyebrow": "HOW TO JOIN",
+          "joinTitleLine1": "Three steps",
+          "joinTitleLine2": "to the team",
+          "joinSteps": [
+            { "title": "Apply", "description": "A short form: name, year, and interests." },
+            { "title": "Come to a meeting", "description": "Meet the team and current projects." },
+            { "title": "Pick a project", "description": "Join a team or pitch your own idea." }
+          ]
+        },
+        "devclub": {
+          "navLabel": "DevClub",
+          "navDescription": "The college's developer community",
+          "categoryLabel": "CLUB · ALL PROGRAMS WELCOME",
+          "heroTitleLine1": "DevClub",
+          "heroTitleLine2": "Code, written together.",
+          "heroDescription": "The college's developer community: meetups, code review, and pet projects that end up in your portfolio.",
+          "secondaryCta": "Telegram chat",
+          "facts": [
+            { "label": "MEETINGS", "value": "Every week" },
+            { "label": "FORMAT", "value": "Meetups & projects" },
+            { "label": "WHO", "value": "All years" },
+            { "label": "COST", "value": "Free" }
+          ],
+          "whatWeDoEyebrow": "WHAT WE DO",
+          "whatWeDoTitleLine1": "Three formats,",
+          "whatWeDoTitleLine2": "one goal",
+          "whatWeDo": [
+            { "title": "Meetups", "description": "Talks from students and guests from Bishkek IT companies: tech, careers, real cases." },
+            { "title": "Code review", "description": "We review each other's code — the way development teams do." },
+            { "title": "Pet projects", "description": "We build a team around an idea and ship it — with a mentor from the club." }
+          ],
+          "eventsEyebrow": "UPCOMING EVENTS",
+          "eventsTitleLine1": "Come to",
+          "eventsTitleLine2": "your first meeting",
+          "eventsDescription": "Open to all E|C students. No experience required — just bring a laptop.",
+          "events": [
+            { "day": "08", "month": "OCT", "title": "Meetup: Git for teamwork", "meta": "6:00 PM · Room 204 · E|C Campus", "tag": "Meetup" },
+            { "day": "15", "month": "OCT", "title": "Code review evening", "meta": "6:00 PM · Lab · Bring your project", "tag": "Practice" },
+            { "day": "25", "month": "OCT", "title": "Demo Night: pet projects", "meta": "5:00 PM · Atrium · Guests from partner companies", "tag": "Demo" }
+          ],
+          "joinEyebrow": "HOW TO JOIN",
+          "joinTitleLine1": "Three steps",
+          "joinTitleLine2": "to the team",
+          "joinSteps": [
+            { "title": "Apply", "description": "A short form: name, year, and what you want to do in the club." },
+            { "title": "Come to a meetup", "description": "Meet the team and see how the club works." },
+            { "title": "Pick a project", "description": "Join a team or pitch your own idea." }
+          ]
+        },
+        "hackathons": {
+          "navLabel": "Hackathons",
+          "navDescription": "From idea to prototype in a weekend",
+          "categoryLabel": "EVENTS",
+          "heroTitleLine1": "Hackathons",
+          "heroTitleLine2": "48 hours for an idea.",
+          "heroDescription": "From idea to prototype in a weekend — on a team, mentored by industry specialists.",
+          "secondaryCta": "Past hackathons",
+          "facts": [
+            { "label": "FREQUENCY", "value": "Once a semester" },
+            { "label": "FORMAT", "value": "48 hours" },
+            { "label": "WHO", "value": "All years" },
+            { "label": "COST", "value": "Free" }
+          ],
+          "whatWeDoEyebrow": "HOW IT WORKS",
+          "whatWeDoTitleLine1": "Three stages,",
+          "whatWeDoTitleLine2": "one sleepless night",
+          "whatWeDo": [
+            { "title": "Partner cases", "description": "Companies bring real problems to solve over the weekend." },
+            { "title": "Team sprint", "description": "Form a team and build a working prototype." },
+            { "title": "Pitch to the jury", "description": "Present your solution to an industry jury." }
+          ],
+          "eventsEyebrow": "UPCOMING EVENTS",
+          "eventsTitleLine1": "Get ready",
+          "eventsTitleLine2": "for the next hackathon",
+          "eventsDescription": "Open to all E|C students, solo or as a team.",
+          "events": [
+            { "day": "12", "month": "NOV", "title": "Hackathon: FinTech", "meta": "Friday 6:00 PM · E|C Campus", "tag": "Hackathon" },
+            { "day": "13", "month": "NOV", "title": "Overnight build session", "meta": "All night · E|C Campus", "tag": "Practice" },
+            { "day": "14", "month": "NOV", "title": "Demos & awards", "meta": "5:00 PM · Atrium", "tag": "Demo" }
+          ],
+          "joinEyebrow": "HOW TO PARTICIPATE",
+          "joinTitleLine1": "Three steps",
+          "joinTitleLine2": "to join",
+          "joinSteps": [
+            { "title": "Register", "description": "Fill out the form ahead of time — solo or as a team." },
+            { "title": "Form a team", "description": "Find teammates at the kickoff mixer." },
+            { "title": "48 hours of building", "description": "Build your prototype and prep your pitch for the final." }
+          ]
+        },
+        "internships": {
+          "navLabel": "Internships",
+          "navDescription": "Hands-on practice at partner companies",
+          "categoryLabel": "CAREER",
+          "heroTitleLine1": "Internships",
+          "heroTitleLine2": "The first line on your resume.",
+          "heroDescription": "Hands-on practice at partner companies — real work experience before you even graduate.",
+          "secondaryCta": "Partner companies",
+          "facts": [
+            { "label": "DURATION", "value": "8-12 weeks" },
+            { "label": "FORMAT", "value": "On-site / hybrid" },
+            { "label": "WHO", "value": "Semesters 3-4" },
+            { "label": "PAY", "value": "Partially paid" }
+          ],
+          "whatWeDoEyebrow": "HOW IT WORKS",
+          "whatWeDoTitleLine1": "From selection —",
+          "whatWeDoTitleLine2": "to an offer",
+          "whatWeDo": [
+            { "title": "Company matching", "description": "The admissions office helps find an internship matching your program." },
+            { "title": "Real work", "description": "Work on a partner company's team on real projects." },
+            { "title": "Review & offer", "description": "Top interns receive a job offer." }
+          ],
+          "eventsEyebrow": "UPCOMING EVENTS",
+          "eventsTitleLine1": "Get ready",
+          "eventsTitleLine2": "for intern recruiting",
+          "eventsDescription": "Open to students in semesters 3-4, all programs.",
+          "events": [
+            { "day": "01", "month": "NOV", "title": "Career day with partners", "meta": "12:00 PM · Atrium", "tag": "Career" },
+            { "day": "08", "month": "NOV", "title": "Resume workshop", "meta": "6:00 PM · Room 204", "tag": "Practice" },
+            { "day": "15", "month": "NOV", "title": "Partner interviews", "meta": "By appointment · E|C Campus", "tag": "Selection" }
+          ],
+          "joinEyebrow": "HOW TO GET AN INTERNSHIP",
+          "joinTitleLine1": "Three steps",
+          "joinTitleLine2": "to an offer",
+          "joinSteps": [
+            { "title": "Submit your resume", "description": "The admissions office helps build your portfolio and resume." },
+            { "title": "Interview", "description": "Meet directly with the partner company." },
+            { "title": "Start your internship", "description": "8-12 weeks of real hands-on experience on a team." }
+          ]
+        }
+      }
+    },
+    "home": {
+      "hero": {
+        "eyebrow": "ENGINEERING COLLEGE · BISHKEK",
+        "titleLine1": "Engineers who build,",
+        "titleLine2": "not just study.",
+        "description": "E|C is a next-generation college in the heart of Kyrgyzstan. Two years of practice, real projects for partner companies, and your first job before you even graduate.",
+        "secondaryCta": "View programs",
+        "badgeLine1": "BORN IN KYRGYZSTAN.",
+        "badgeLine2": "BUILDING A BRIGHT TOMORROW.",
+        "videoChipTitle": "Life at E|C",
+        "videoChipSubtitle": "60 seconds, unscripted"
+      },
+      "stats": {
+        "placements": { "value": "87%", "label": "of graduates are working\nwithin 6 months" },
+        "programs": { "value": "5", "label": "programs with\n70% hands-on practice" },
+        "partners": { "value": "62", "label": "partner companies\nhire our graduates" },
+        "seats": { "value": "120", "label": "seats in the\n2026 intake" }
+      },
+      "programs": {
+        "eyebrow": "FIND YOUR PATH",
+        "titleStart": "Our",
+        "titleEnd": "programs",
+        "description": "Programs built for real problems: hands-on practice from semester one, projects for partner companies, and mentors from industry.",
+        "allLink": "All programs"
+      },
+      "admissionPath": {
+        "eyebrow": "YOUR PATH STARTS HERE",
+        "titleLine1": "Four steps",
+        "titleLine2": "to your future",
+        "description": "Admission without the bureaucracy: apply online, interview, and get an answer in 7 days. Focus on what matters — your potential.",
+        "aboutLink": "About admissions",
+        "steps": {
+          "chooseProgram": { "title": "Choose a program", "description": "Explore the programs and find yours." },
+          "applyOnline": { "title": "Apply online", "description": "8 minutes: contact info, school, program." },
+          "interview": { "title": "Interview", "description": "30 minutes about your goals and interests." },
+          "getAnswer": { "title": "Get your answer", "description": "A decision in 7 days, starting September 1." }
+        }
+      },
+      "community": {
+        "eyebrow": "MORE THAN A CLASSROOM",
+        "titleLine1": "Real projects.",
+        "titleLine2": "Real people.",
+        "titleLine3": "Real results.",
+        "description": "At E|C, learning goes beyond lectures: projects for companies, student clubs, and a community that backs your ambitions.",
+        "stickyNote": "Different perspectives —\nbright solutions",
+        "campusTitle": "A campus in the\nheart of Bishkek",
+        "communityTitle": "A living community.\nFriendships that last."
+      },
+      "stories": {
+        "eyebrow": "STUDENT STORIES",
+        "title": "From here to what's next.",
+        "quote": "E|C gave me more than a diploma: confidence, a strong team, and my first real project. I'm already working as a designer, and the journey's just getting started.",
+        "author": "Aizhan Turdubaeva",
+        "authorMeta": "Design · Class of 2025"
+      },
+      "cta": {
+        "eyebrow": "HIGH GOALS · A BRIGHT TOMORROW",
+        "title": "Ready to build what's next?",
+        "description": "Join a new generation of engineers, designers, and leaders from Kyrgyzstan. Applications close July 15.",
+        "secondaryCta": "View programs"
       }
     }
   }
