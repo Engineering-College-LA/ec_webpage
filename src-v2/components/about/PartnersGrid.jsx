@@ -16,12 +16,13 @@ function PartnersGrid() {
 
   return (
     <section
-      className="relative flex flex-col gap-10 overflow-hidden px-6 py-16 lg:gap-12 lg:px-v2-gutter lg:py-28"
+      className="relative overflow-hidden"
       style={{
         backgroundImage:
           "linear-gradient(120deg, var(--v2-color-navy-2) 0%, var(--v2-color-sky) 100%)",
       }}
     >
+      <div className="relative mx-auto flex max-w-[1440px] flex-col gap-10 px-6 py-16 lg:gap-12 lg:px-v2-gutter lg:py-28">
       <svg
         viewBox="0 0 1440 180"
         aria-hidden="true"
@@ -68,6 +69,7 @@ function PartnersGrid() {
             {t("v2.about.partners.becomePartnerSubtitle")} →
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

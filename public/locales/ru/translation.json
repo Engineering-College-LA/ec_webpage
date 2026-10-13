@@ -710,9 +710,7 @@
     },
     "academics": {
       "index": {
-        "readMore": "Подробнее"
-      },
-      "index": {
+        "readMore": "Подробнее",
         "breadcrumb": "НАПРАВЛЕНИЯ",
         "eyebrow": "ГЛАВНАЯ / НАПРАВЛЕНИЯ",
         "titleLine1": "Пять направлений,",

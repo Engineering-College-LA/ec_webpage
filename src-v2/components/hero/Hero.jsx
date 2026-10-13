@@ -9,7 +9,8 @@ function Hero() {
   const { t } = useTranslation();
 
   return (
-    <section className="relative flex flex-col overflow-hidden bg-v2-paper lg:h-[660px] lg:flex-row">
+    <section className="relative overflow-hidden bg-v2-paper">
+      <div className="mx-auto flex max-w-[1440px] flex-col lg:h-[660px] lg:flex-row">
       <div className="relative order-first flex flex-col justify-center gap-6 px-6 py-10 lg:order-none lg:w-[640px] lg:shrink-0 lg:gap-[26px] lg:py-0 lg:pl-v2-gutter">
         <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-v2-slate">
           {t("v2.home.hero.eyebrow")}
@@ -76,6 +77,7 @@ function Hero() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

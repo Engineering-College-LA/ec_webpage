@@ -7,7 +7,7 @@ function Requirements() {
   const documentsList = t("v2.admission.requirements.documentsList", { returnObjects: true });
 
   return (
-    <section id="requirements" className="flex flex-col gap-10 px-6 py-14 lg:gap-12 lg:px-v2-gutter lg:py-24">
+    <section id="requirements" className="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 py-14 lg:gap-12 lg:px-v2-gutter lg:py-24">
       <div className="flex flex-col gap-4">
         <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-v2-slate">
           {t("v2.admission.requirements.eyebrow")}

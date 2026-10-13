@@ -723,9 +723,7 @@
     },
     "academics": {
       "index": {
-        "readMore": "Learn more"
-      },
-      "index": {
+        "readMore": "Learn more",
         "breadcrumb": "PROGRAMS",
         "eyebrow": "HOME / PROGRAMS",
         "titleLine1": "Five programs,",

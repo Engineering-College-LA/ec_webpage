@@ -6,7 +6,7 @@ function AboutProgram({ program }) {
   const bullets = t(`v2.academics.programs.${program.i18nKey}.aboutBullets`, { returnObjects: true });
 
   return (
-    <section className="flex flex-col gap-10 px-6 py-14 lg:flex-row lg:gap-20 lg:px-v2-gutter lg:py-24">
+    <section className="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 py-14 lg:flex-row lg:gap-20 lg:px-v2-gutter lg:py-24">
       <div className="flex flex-col gap-4 lg:w-[480px] lg:shrink-0">
         <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-v2-slate">
           {t("v2.academics.programs.aboutEyebrow")}

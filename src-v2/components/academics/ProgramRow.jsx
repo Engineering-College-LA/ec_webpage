@@ -56,9 +56,13 @@ function ProgramRow({ program, index }) {
   );
 
   return (
-    <div className={`flex flex-col gap-8 px-6 py-10 lg:flex-row lg:items-center lg:gap-v2-gutter lg:px-v2-gutter lg:py-12 ${imageFirst ? "" : "bg-v2-mist lg:flex-row-reverse"}`}>
-      {image}
-      {copy}
+    <div className={imageFirst ? "" : "bg-v2-mist"}>
+      <div
+        className={`mx-auto flex max-w-[1440px] flex-col gap-8 px-6 py-10 lg:flex-row lg:items-center lg:gap-v2-gutter lg:px-v2-gutter lg:py-12 ${imageFirst ? "" : "lg:flex-row-reverse"}`}
+      >
+        {image}
+        {copy}
+      </div>
     </div>
   );
 }

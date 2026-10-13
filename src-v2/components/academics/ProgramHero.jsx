@@ -6,7 +6,8 @@ function ProgramHero({ program }) {
   const { t } = useTranslation();
 
   return (
-    <section className="relative flex flex-col overflow-hidden lg:h-[560px] lg:flex-row">
+    <section className="relative overflow-hidden">
+      <div className="mx-auto flex max-w-[1440px] flex-col lg:h-[560px] lg:flex-row">
       <div className="relative order-2 h-[280px] shrink-0 lg:order-none lg:h-auto lg:w-[800px]">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${program.image})` }} />
         <div className="absolute inset-y-0 left-0 hidden w-[240px] bg-gradient-to-r from-white to-transparent lg:block" />
@@ -46,6 +47,7 @@ function ProgramHero({ program }) {
             {t("v2.academics.index.curriculumLink")} (PDF)
           </a>
         </div>
+      </div>
       </div>
     </section>
   );

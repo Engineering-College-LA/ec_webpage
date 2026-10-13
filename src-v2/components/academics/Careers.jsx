@@ -6,7 +6,7 @@ function Careers({ program }) {
   const careers = t(`v2.academics.programs.${program.i18nKey}.careers`, { returnObjects: true });
 
   return (
-    <section className="flex flex-col gap-8 px-6 py-14 lg:gap-10 lg:px-v2-gutter lg:py-24">
+    <section className="mx-auto flex max-w-[1440px] flex-col gap-8 px-6 py-14 lg:gap-10 lg:px-v2-gutter lg:py-24">
       <div className="flex flex-col gap-3.5">
         <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-v2-slate">
           {t("v2.academics.programs.careersEyebrow")}

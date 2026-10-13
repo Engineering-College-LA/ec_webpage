@@ -10,7 +10,8 @@ function AcademicsHero() {
   const { t } = useTranslation();
 
   return (
-    <section className="relative flex flex-col overflow-hidden bg-v2-navy lg:h-[440px] lg:flex-row">
+    <section className="relative overflow-hidden bg-v2-navy">
+      <div className="mx-auto flex max-w-[1440px] flex-col lg:h-[440px] lg:flex-row">
       <div className="relative order-2 h-[220px] shrink-0 lg:order-none lg:h-auto lg:w-[720px]">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${PHOTO})` }} />
         <div className="absolute inset-y-0 left-0 hidden w-[320px] bg-gradient-to-r from-v2-navy to-transparent lg:block" />
@@ -40,6 +41,7 @@ function AcademicsHero() {
             </div>
           ))}
         </div>
+      </div>
       </div>
     </section>
   );

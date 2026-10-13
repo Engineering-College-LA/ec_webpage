@@ -54,55 +54,59 @@ function LifeSplit() {
 
   return (
     <div id="life-split" className="flex flex-col">
-      <section className="flex flex-col gap-10 bg-v2-paper px-6 py-14 lg:gap-11 lg:px-v2-gutter lg:py-24">
-        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-          <div className="flex flex-col gap-3.5">
-            <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-v2-sky">
-              {t("v2.studentLifeIndex.academicEyebrow")}
+      <section className="bg-v2-paper">
+        <div className="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 py-14 lg:gap-11 lg:px-v2-gutter lg:py-24">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div className="flex flex-col gap-3.5">
+              <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-v2-sky">
+                {t("v2.studentLifeIndex.academicEyebrow")}
+              </div>
+              <div className="flex flex-wrap gap-3 font-v2-heading">
+                <span className="text-[28px] font-extrabold leading-[1.15] tracking-[-0.03em] text-v2-navy lg:text-[44px] lg:leading-[50px]">
+                  {t("v2.studentLifeIndex.academicTitleLine1")}
+                </span>
+                <span className="text-[28px] font-extrabold leading-[1.15] tracking-[-0.03em] text-v2-sky lg:text-[44px] lg:leading-[50px]">
+                  {t("v2.studentLifeIndex.academicTitleLine2")}
+                </span>
+              </div>
             </div>
-            <div className="flex flex-wrap gap-3 font-v2-heading">
-              <span className="text-[28px] font-extrabold leading-[1.15] tracking-[-0.03em] text-v2-navy lg:text-[44px] lg:leading-[50px]">
-                {t("v2.studentLifeIndex.academicTitleLine1")}
-              </span>
-              <span className="text-[28px] font-extrabold leading-[1.15] tracking-[-0.03em] text-v2-sky lg:text-[44px] lg:leading-[50px]">
-                {t("v2.studentLifeIndex.academicTitleLine2")}
-              </span>
-            </div>
+            <p className="font-v2-body text-[15px] leading-[25px] text-v2-slate lg:w-[420px] lg:shrink-0">
+              {t("v2.studentLifeIndex.academicDescription")}
+            </p>
           </div>
-          <p className="font-v2-body text-[15px] leading-[25px] text-v2-slate lg:w-[420px] lg:shrink-0">
-            {t("v2.studentLifeIndex.academicDescription")}
-          </p>
-        </div>
-        <div className="flex gap-5 overflow-x-auto pb-2 lg:overflow-visible">
-          {academicActivities.map((activity, i) => (
-            <AcademicCard key={activity.slug} activity={activity} t={t} borderClass={academicBorders[i]} />
-          ))}
+          <div className="flex gap-5 overflow-x-auto pb-2 lg:overflow-visible">
+            {academicActivities.map((activity, i) => (
+              <AcademicCard key={activity.slug} activity={activity} t={t} borderClass={academicBorders[i]} />
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="flex flex-col gap-10 overflow-hidden bg-v2-navy px-6 py-14 lg:gap-11 lg:px-v2-gutter lg:py-24">
-        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-          <div className="flex flex-col gap-3.5">
-            <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-[#E6A3B4]">
-              {t("v2.studentLifeIndex.extracurricularEyebrow")}
+      <section className="overflow-hidden bg-v2-navy">
+        <div className="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 py-14 lg:gap-11 lg:px-v2-gutter lg:py-24">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div className="flex flex-col gap-3.5">
+              <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-[#E6A3B4]">
+                {t("v2.studentLifeIndex.extracurricularEyebrow")}
+              </div>
+              <div className="flex flex-wrap gap-3 font-v2-heading">
+                <span className="text-[28px] font-extrabold leading-[1.15] tracking-[-0.03em] text-v2-paper lg:text-[44px] lg:leading-[50px]">
+                  {t("v2.studentLifeIndex.extracurricularTitleLine1")}
+                </span>
+                <span className="text-[28px] font-extrabold leading-[1.15] tracking-[-0.03em] text-v2-step-4 lg:text-[44px] lg:leading-[50px]">
+                  {t("v2.studentLifeIndex.extracurricularTitleLine2")}
+                </span>
+              </div>
             </div>
-            <div className="flex flex-wrap gap-3 font-v2-heading">
-              <span className="text-[28px] font-extrabold leading-[1.15] tracking-[-0.03em] text-v2-paper lg:text-[44px] lg:leading-[50px]">
-                {t("v2.studentLifeIndex.extracurricularTitleLine1")}
-              </span>
-              <span className="text-[28px] font-extrabold leading-[1.15] tracking-[-0.03em] text-v2-step-4 lg:text-[44px] lg:leading-[50px]">
-                {t("v2.studentLifeIndex.extracurricularTitleLine2")}
-              </span>
-            </div>
+            <p className="font-v2-body text-[15px] leading-[25px] text-[#C4CCDD] lg:w-[420px] lg:shrink-0">
+              {t("v2.studentLifeIndex.extracurricularDescription")}
+            </p>
           </div>
-          <p className="font-v2-body text-[15px] leading-[25px] text-[#C4CCDD] lg:w-[420px] lg:shrink-0">
-            {t("v2.studentLifeIndex.extracurricularDescription")}
-          </p>
-        </div>
-        <div className="flex gap-5 overflow-x-auto pb-2 lg:overflow-visible">
-          {extracurricularActivities.map((activity) => (
-            <ExtracurricularCard key={activity.slug} activity={activity} t={t} />
-          ))}
+          <div className="flex gap-5 overflow-x-auto pb-2 lg:overflow-visible">
+            {extracurricularActivities.map((activity) => (
+              <ExtracurricularCard key={activity.slug} activity={activity} t={t} />
+            ))}
+          </div>
         </div>
       </section>
     </div>

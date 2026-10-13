@@ -18,7 +18,8 @@ function AcademicActivityTemplate({ activity }) {
 
   return (
     <>
-      <section className="relative flex flex-col overflow-hidden lg:h-[540px] lg:flex-row">
+      <section className="relative overflow-hidden">
+        <div className="mx-auto flex max-w-[1440px] flex-col lg:h-[540px] lg:flex-row">
         <div className="relative order-2 h-[260px] shrink-0 lg:order-none lg:h-auto lg:w-[760px]">
           <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${activity.image})` }} />
           <div className="absolute inset-y-0 left-0 hidden w-[240px] bg-gradient-to-r from-white to-transparent lg:block" />
@@ -70,9 +71,11 @@ function AcademicActivityTemplate({ activity }) {
             </a>
           </div>
         </div>
+      </div>
       </section>
 
-      <section className="flex flex-col gap-10 bg-v2-navy px-6 py-14 lg:gap-11 lg:px-v2-gutter lg:py-24">
+      <section className="bg-v2-navy">
+        <div className="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 py-14 lg:gap-11 lg:px-v2-gutter lg:py-24">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div className="flex flex-col gap-3.5">
             <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-[#8FA3CC]">
@@ -103,9 +106,10 @@ function AcademicActivityTemplate({ activity }) {
             </div>
           ))}
         </div>
+        </div>
       </section>
 
-      <section id="projects" className="flex flex-col gap-10 px-6 py-14 lg:gap-11 lg:px-v2-gutter lg:py-24">
+      <section id="projects" className="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 py-14 lg:gap-11 lg:px-v2-gutter lg:py-24">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div className="flex flex-col gap-3.5">
             <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-v2-slate">
@@ -141,7 +145,8 @@ function AcademicActivityTemplate({ activity }) {
         </div>
       </section>
 
-      <section className="flex flex-col gap-7 bg-v2-mist px-6 py-14 lg:px-v2-gutter lg:py-16">
+      <section className="bg-v2-mist">
+        <div className="mx-auto flex max-w-[1440px] flex-col gap-7 px-6 py-14 lg:px-v2-gutter lg:py-16">
         <div className="flex items-center justify-between">
           <div className="font-v2-heading text-[20px] font-extrabold leading-[30px] text-v2-navy lg:text-[24px]">
             {t("v2.studentLifeIndex.academicTitleLine1")} {t("v2.studentLifeIndex.academicTitleLine2")}
@@ -174,6 +179,7 @@ function AcademicActivityTemplate({ activity }) {
               </Link>
             );
           })}
+        </div>
         </div>
       </section>
 

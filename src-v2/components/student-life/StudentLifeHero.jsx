@@ -8,9 +8,10 @@ function StudentLifeHero() {
   const { t } = useTranslation();
 
   return (
-    <section className="relative flex items-end overflow-hidden bg-v2-navy px-6 pb-10 lg:h-[600px] lg:px-v2-gutter lg:pb-[72px]">
+    <section className="relative overflow-hidden bg-v2-navy">
       <div className="absolute inset-0 bg-cover bg-[65%_40%]" style={{ backgroundImage: `url(${PHOTO})` }} />
       <div className="absolute inset-0 bg-gradient-to-r from-v2-navy via-v2-navy/70 to-transparent" />
+      <div className="relative mx-auto flex max-w-[1440px] items-end px-6 pb-10 lg:h-[600px] lg:px-v2-gutter lg:pb-[72px]">
       <div className="relative flex flex-col gap-5 pt-[200px] lg:w-[620px] lg:gap-[22px] lg:pt-0">
         <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-[#8FA3CC]">
           {t("v2.studentLifeIndex.hero.eyebrow")}
@@ -43,6 +44,7 @@ function StudentLifeHero() {
             {t("v2.studentLifeIndex.hero.secondaryCta")}
           </a>
         </div>
+      </div>
       </div>
     </section>
   );

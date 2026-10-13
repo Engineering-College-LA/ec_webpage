@@ -6,7 +6,7 @@ function CareerTestCallout() {
   const { t } = useTranslation();
 
   return (
-    <div className="px-6 py-10 lg:px-v2-gutter lg:py-12">
+    <div className="mx-auto max-w-[1440px] px-6 py-10 lg:px-v2-gutter lg:py-12">
       <div className="flex flex-col gap-6 rounded-[6px] border-l-4 border-v2-crimson bg-v2-mist px-6 py-8 lg:flex-row lg:items-center lg:justify-between lg:px-12 lg:py-10">
         <div className="flex items-center gap-5 lg:gap-7">
           <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-v2-paper">

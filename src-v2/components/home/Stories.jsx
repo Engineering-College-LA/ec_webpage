@@ -10,7 +10,8 @@ function Stories() {
   const { t } = useTranslation();
 
   return (
-    <section className="flex flex-col gap-8 bg-v2-paper px-6 py-14 lg:flex-row lg:items-center lg:gap-14 lg:px-v2-gutter lg:py-24">
+    <section className="bg-v2-paper">
+      <div className="mx-auto flex max-w-[1440px] flex-col gap-8 px-6 py-14 lg:flex-row lg:items-center lg:gap-14 lg:px-v2-gutter lg:py-24">
       <div className="flex flex-col gap-4 lg:w-[300px] lg:shrink-0 lg:gap-[18px]">
         <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-v2-slate">
           {t("v2.home.stories.eyebrow")}
@@ -59,6 +60,7 @@ function Stories() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

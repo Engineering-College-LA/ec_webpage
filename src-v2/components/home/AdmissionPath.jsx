@@ -14,7 +14,8 @@ function AdmissionPath() {
   const { t } = useTranslation();
 
   return (
-    <section className="flex flex-col items-start gap-12 bg-v2-mist px-6 py-14 lg:flex-row lg:items-center lg:gap-20 lg:px-v2-gutter lg:py-24">
+    <section className="bg-v2-mist">
+      <div className="mx-auto flex max-w-[1440px] flex-col items-start gap-12 px-6 py-14 lg:flex-row lg:items-center lg:gap-20 lg:px-v2-gutter lg:py-24">
       <div className="flex w-full flex-col gap-5 lg:w-[440px] lg:shrink-0 lg:gap-[22px]">
         <Eyebrow>{t("v2.home.admissionPath.eyebrow")}</Eyebrow>
         <div className="flex flex-col font-v2-heading">
@@ -61,6 +62,7 @@ function AdmissionPath() {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

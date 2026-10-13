@@ -20,7 +20,8 @@ function ExtracurricularActivityTemplate({ activity }) {
 
   return (
     <>
-      <section className="relative flex flex-col overflow-hidden bg-v2-navy lg:h-[560px] lg:flex-row">
+      <section className="relative overflow-hidden bg-v2-navy">
+        <div className="mx-auto flex max-w-[1440px] flex-col lg:h-[560px] lg:flex-row">
         <div className="relative order-2 h-[260px] shrink-0 lg:order-none lg:h-auto lg:w-[740px]">
           <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${activity.image})` }} />
           <div className="absolute inset-y-0 left-0 hidden w-[300px] bg-gradient-to-r from-v2-navy to-transparent lg:block" />
@@ -66,18 +67,21 @@ function ExtracurricularActivityTemplate({ activity }) {
             </a>
           </div>
         </div>
+      </div>
       </section>
 
-      <section className="flex flex-col gap-6 border-b border-v2-hairline px-6 py-7 lg:flex-row lg:items-center lg:gap-0 lg:px-v2-gutter lg:py-8">
-        {facts.map((fact, i) => (
-          <div key={fact.label} className={`flex flex-col gap-1 lg:w-[330px] lg:shrink-0 ${i > 0 ? "lg:border-l lg:border-v2-hairline lg:pl-8" : ""}`}>
-            <div className="font-v2-heading text-[10px] font-semibold leading-3 tracking-[0.22em] text-v2-slate">{fact.label}</div>
-            <div className="font-v2-heading text-[20px] font-extrabold leading-6 text-v2-navy">{fact.value}</div>
-          </div>
-        ))}
+      <section className="border-b border-v2-hairline">
+        <div className="mx-auto flex max-w-[1440px] flex-col gap-6 px-6 py-7 lg:flex-row lg:items-center lg:gap-0 lg:px-v2-gutter lg:py-8">
+          {facts.map((fact, i) => (
+            <div key={fact.label} className={`flex flex-col gap-1 lg:w-[330px] lg:shrink-0 ${i > 0 ? "lg:border-l lg:border-v2-hairline lg:pl-8" : ""}`}>
+              <div className="font-v2-heading text-[10px] font-semibold leading-3 tracking-[0.22em] text-v2-slate">{fact.label}</div>
+              <div className="font-v2-heading text-[20px] font-extrabold leading-6 text-v2-navy">{fact.value}</div>
+            </div>
+          ))}
+        </div>
       </section>
 
-      <section className="flex flex-col gap-10 px-6 py-14 lg:gap-11 lg:px-v2-gutter lg:py-24">
+      <section className="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 py-14 lg:gap-11 lg:px-v2-gutter lg:py-24">
         <div className="flex flex-col gap-3.5">
           <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-v2-slate">
             {t(`v2.studentLife.activities.${key}.whatWeDoEyebrow`)}
@@ -110,7 +114,8 @@ function ExtracurricularActivityTemplate({ activity }) {
         </div>
       </section>
 
-      <section className="flex flex-col gap-8 bg-v2-mist px-6 py-14 lg:flex-row lg:gap-v2-gutter lg:px-v2-gutter lg:py-24">
+      <section className="bg-v2-mist">
+        <div className="mx-auto flex max-w-[1440px] flex-col gap-8 px-6 py-14 lg:flex-row lg:gap-v2-gutter lg:px-v2-gutter lg:py-24">
         <div className="flex flex-col gap-4 lg:w-[380px] lg:shrink-0">
           <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-v2-slate">
             {t(`v2.studentLife.activities.${key}.eventsEyebrow`)}
@@ -142,9 +147,10 @@ function ExtracurricularActivityTemplate({ activity }) {
             </div>
           ))}
         </div>
+        </div>
       </section>
 
-      <section id="join" className="flex flex-col gap-10 px-6 py-14 lg:gap-11 lg:px-v2-gutter lg:py-24">
+      <section id="join" className="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 py-14 lg:gap-11 lg:px-v2-gutter lg:py-24">
         <div className="flex flex-col gap-3.5">
           <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-v2-slate">
             {t(`v2.studentLife.activities.${key}.joinEyebrow`)}
@@ -172,7 +178,7 @@ function ExtracurricularActivityTemplate({ activity }) {
         </div>
       </section>
 
-      <section className="flex flex-col gap-7 px-6 pb-14 lg:px-v2-gutter lg:pb-24">
+      <section className="mx-auto flex max-w-[1440px] flex-col gap-7 px-6 pb-14 lg:px-v2-gutter lg:pb-24">
         <div className="flex items-center justify-between border-t border-v2-hairline pt-10">
           <div className="font-v2-heading text-[20px] font-extrabold leading-[30px] text-v2-navy lg:text-[24px]">
             {t("v2.studentLifeIndex.extracurricularTitleLine1")} {t("v2.studentLifeIndex.extracurricularTitleLine2")}

@@ -28,7 +28,7 @@ function Community() {
   const { t } = useTranslation();
 
   return (
-    <section className="flex flex-col lg:h-[520px] lg:flex-row">
+    <section className="mx-auto flex max-w-[1440px] flex-col lg:h-[520px] lg:flex-row">
       <div className="flex flex-col justify-center gap-5 bg-v2-navy px-6 py-12 lg:w-[480px] lg:shrink-0 lg:gap-[22px] lg:px-0 lg:pl-v2-gutter lg:pr-14 lg:py-0">
         <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-[#8FA3CC]">
           {t("v2.home.community.eyebrow")}

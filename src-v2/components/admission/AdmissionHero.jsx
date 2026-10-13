@@ -11,7 +11,8 @@ function AdmissionHero() {
   const { t } = useTranslation();
 
   return (
-    <section className="relative flex flex-col overflow-hidden lg:h-[600px] lg:flex-row">
+    <section className="relative overflow-hidden">
+      <div className="mx-auto flex max-w-[1440px] flex-col lg:h-[600px] lg:flex-row">
       <div className="relative order-2 h-[280px] shrink-0 lg:order-none lg:h-auto lg:w-[800px]">
         <div className="absolute inset-0 bg-cover bg-[70%_center]" style={{ backgroundImage: `url(${PHOTO})` }} />
         <div className="absolute inset-y-0 left-0 hidden w-[180px] bg-gradient-to-r from-white to-transparent lg:block" />
@@ -72,6 +73,7 @@ function AdmissionHero() {
             </div>
           ))}
         </div>
+      </div>
       </div>
     </section>
   );

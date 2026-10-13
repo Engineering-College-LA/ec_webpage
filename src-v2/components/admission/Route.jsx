@@ -15,7 +15,8 @@ function Route() {
   const { t } = useTranslation();
 
   return (
-    <section id="route" className="flex flex-col gap-10 bg-v2-mist px-6 py-14 lg:gap-12 lg:px-v2-gutter lg:py-24">
+    <section id="route" className="bg-v2-mist">
+      <div className="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 py-14 lg:gap-12 lg:px-v2-gutter lg:py-24">
       <div className="flex flex-col gap-3.5">
         <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-v2-slate">
           {t("v2.admission.route.eyebrow")}
@@ -59,6 +60,7 @@ function Route() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

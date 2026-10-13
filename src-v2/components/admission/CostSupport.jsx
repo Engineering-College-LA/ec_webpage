@@ -6,7 +6,7 @@ function CostSupport() {
   const tags = t("v2.admission.cost.tags", { returnObjects: true });
 
   return (
-    <section id="cost" className="flex flex-col lg:flex-row">
+    <section id="cost" className="mx-auto flex max-w-[1440px] flex-col lg:flex-row">
       <div className="flex flex-col gap-4 bg-v2-navy px-6 py-14 lg:w-[520px] lg:shrink-0 lg:gap-[18px] lg:px-0 lg:py-20 lg:pl-v2-gutter lg:pr-14">
         <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-[#8FA3CC]">
           {t("v2.admission.cost.eyebrow")}

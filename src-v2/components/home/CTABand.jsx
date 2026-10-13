@@ -7,12 +7,13 @@ function CTABand() {
 
   return (
     <section
-      className="relative flex flex-col items-center gap-5 overflow-hidden px-6 pt-16 pb-20 text-center lg:gap-[22px] lg:px-v2-gutter lg:pt-24 lg:pb-[170px]"
+      className="relative overflow-hidden"
       style={{
         backgroundImage:
           "linear-gradient(180deg, #152235 0%, #223759 62%, #2E4A52 100%)",
       }}
     >
+      <div className="relative mx-auto flex max-w-[1440px] flex-col items-center gap-5 px-6 pt-16 pb-20 text-center lg:gap-[22px] lg:px-v2-gutter lg:pt-24 lg:pb-[170px]">
       <svg
         width="1440"
         height="200"
@@ -59,6 +60,7 @@ function CTABand() {
         >
           {t("v2.home.cta.secondaryCta")}
         </Link>
+      </div>
       </div>
     </section>
   );

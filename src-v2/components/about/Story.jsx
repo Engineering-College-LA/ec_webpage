@@ -11,7 +11,7 @@ function Story() {
   const { t } = useTranslation();
 
   return (
-    <section className="flex flex-col gap-14 px-6 py-14 lg:gap-v2-gutter lg:px-v2-gutter lg:py-[104px]">
+    <section className="mx-auto flex max-w-[1440px] flex-col gap-14 px-6 py-14 lg:gap-v2-gutter lg:px-v2-gutter lg:py-[104px]">
       <div className="flex flex-col gap-8 lg:flex-row lg:gap-20">
         <div className="flex flex-col gap-4 lg:w-[440px] lg:shrink-0">
           <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-v2-slate">
