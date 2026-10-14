@@ -20,9 +20,10 @@ function StatsBand() {
             d="M0 180L70 120 110 140 180 70 230 110 290 40 340 90 400 30 460 95 520 60 580 100 620 80V180Z"
             fill="#1C3154"
           />
+          {/* Snow caps on the three tallest peaks only, not every peak — reads as a real ridge, not a repeated decorative flourish. */}
           <path
-            d="M180 70l-22 22 14-4 8 8 10-12zM290 40l-24 30 16-6 10 10 14-16zM400 30l-26 32 18-8 10 12 14-18zM520 60l-18 20 12-4 8 8 10-12z"
-            fill="#FFFFFF8C"
+            d="M165 85 L172 76 L177 80 L180 70 L186 77 L195 85 ZM275 56 L282 46 L287 50 L290 40 L296 48 L305 56 ZM384 48 L392 37 L397 41 L400 30 L407 39 L416 48 Z"
+            fill="#E9EDFF"
           />
           <path
             d="M0 180L60 150 130 160 210 118 280 150 350 105 430 145 500 120 560 150 620 132V180Z"
