@@ -26,9 +26,9 @@ function CTABand() {
           d="M0 200L0 150 90 110 160 135 260 60 330 100 420 40 510 105 600 70 700 120 790 55 880 95 980 30 1080 100 1170 65 1260 110 1350 80 1440 115V200Z"
           fill="#1C3154"
         />
-        {/* Snow caps on the four tallest peaks only, not every peak — reads as a real ridge, not a repeated decorative flourish. */}
+        {/* Snow caps hugging the actual slope of the four tallest peaks, with the ridge fill itself showing through as an exposed-rock notch — not a floating shape sitting above the tip. */}
         <path
-          d="M245 76 L252 66 L257 70 L260 60 L266 68 L275 76 ZM404 58 L412 47 L417 51 L420 40 L427 49 L436 58 ZM774 73 L782 62 L787 66 L790 55 L797 64 L806 73 ZM963 50 L972 38 L977 42 L980 30 L988 40 L998 50 Z"
+          d="M260 60 L288 76 L266 73 L244 70 L232 80 L220 90 ZM420 40 L456 66 L438 58 L420 50 L402 57 L384 64 ZM790 55 L826 71 L808 68 L790 66 L772 74 L754 81 ZM980 30 L1020 58 L1000 51 L980 44 L960 50 L940 56 Z"
           fill="#E9EDFF"
         />
         <path
