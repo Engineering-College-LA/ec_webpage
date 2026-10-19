@@ -714,7 +714,8 @@
       "applyButton": "Apply Now",
       "dropdown": {
         "academicHeading": "ACADEMIC LIFE",
-        "extracurricularHeading": "EXTRACURRICULAR LIFE"
+        "extracurricularHeading": "EXTRACURRICULAR LIFE",
+        "toggleLabel": "Show sections"
       }
     },
     "footer": {
@@ -1025,7 +1026,45 @@
       "extracurricularTitleLine1": "After class —",
       "extracurricularTitleLine2": "the fun part",
       "extracurricularDescription": "Teams, competitions, and first work experience — where friendships and portfolios are born.",
-      "detailsLink": "Learn more"
+      "detailsLink": "Learn more",
+      "gallery": {
+        "eyebrow": "CAMPUS",
+        "titleLine1": "A place you'll",
+        "titleLine2": "want to stay",
+        "instagramLink": "Instagram @engineering.college.la"
+      },
+      "day": {
+        "scriptNote": "look, it worked!",
+        "eyebrow": "ONE DAY · MANY OPPORTUNITIES",
+        "title": "Between “what if” and “look, it worked”.",
+        "moments": [
+          {
+            "time": "Morning",
+            "text": "A new question in class. The first idea in a notebook."
+          },
+          {
+            "time": "Afternoon",
+            "text": "A team, a prototype, and a talk about what to improve."
+          },
+          {
+            "time": "Evening",
+            "text": "Interest clubs and conversations after the bell."
+          }
+        ]
+      },
+      "stories": {
+        "eyebrow": "STUDENT STORIES",
+        "title": "From here — to what's next.",
+        "prev": "Previous story",
+        "next": "Next story",
+        "items": [
+          {
+            "quote": "E|C gave me more than a diploma: confidence, a strong team, and my first real project. I already work as a designer, and the journey is just beginning.",
+            "name": "Aizhan Turdubaeva",
+            "meta": "Design · Class of 2025"
+          }
+        ]
+      }
     },
     "studentLife": {
       "breadcrumb": "STUDENT LIFE",

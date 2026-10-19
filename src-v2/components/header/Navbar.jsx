@@ -63,18 +63,34 @@ const NavItem = ({ link }) => {
   }
 
   return (
+    // The label navigates to the section's index page; hovering (or tabbing
+    // into it) reveals the dropdown with the individual activity pages.
     <div
       className="relative"
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
+      onFocus={() => setOpen(true)}
+      onBlur={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget)) setOpen(false);
+      }}
+      // Any link click inside (label or dropdown row) is a navigation, so
+      // close the dropdown instead of leaving it hanging over the new page.
+      onClick={(e) => {
+        if (e.target.closest("a")) setOpen(false);
+      }}
     >
-      <button
-        type="button"
-        className="whitespace-nowrap font-v2-heading text-[14px] font-semibold leading-[18px] text-v2-ink-nav"
+      <NavLink
+        to={link.to}
+        aria-haspopup="true"
         aria-expanded={open}
+        className={({ isActive }) =>
+          `whitespace-nowrap font-v2-heading text-[14px] font-semibold leading-[18px] ${
+            isActive ? "text-v2-crimson" : "text-v2-ink-nav"
+          }`
+        }
       >
         {t(link.label)} ▾
-      </button>
+      </NavLink>
       <NavDropdown open={open} />
     </div>
   );

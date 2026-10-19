@@ -13,22 +13,6 @@ function AdmissionHero() {
   return (
     <section className="relative overflow-hidden">
       <div className="mx-auto flex max-w-[1440px] flex-col lg:h-[600px] lg:flex-row">
-      <div className="relative order-2 h-[280px] shrink-0 lg:order-none lg:h-auto lg:w-[800px]">
-        <div className="absolute inset-0 bg-cover bg-[70%_center]" style={{ backgroundImage: `url(${PHOTO})` }} />
-        <div className="absolute inset-y-0 left-0 hidden w-[180px] bg-gradient-to-r from-white to-transparent lg:block" />
-        <div className="absolute bottom-6 right-6 flex w-[260px] flex-col gap-3 rounded-[6px] bg-v2-crimson px-6 py-6 shadow-[0_16px_40px_#0C183040] lg:bottom-12 lg:right-v2-gutter lg:w-[300px]">
-          <div className="font-v2-heading text-[10px] font-semibold leading-3 tracking-[0.22em] text-[#F2C9D3]">
-            {t("v2.admission.hero.entryCard.eyebrow")}
-          </div>
-          <div className="font-v2-heading text-[20px] font-extrabold leading-[27px] text-v2-paper lg:text-[22px]">
-            {t("v2.admission.hero.entryCard.title")}
-          </div>
-          <a href="/#admission-contact" className="font-v2-heading text-v2-label font-bold leading-4 text-v2-paper">
-            {t("v2.admission.hero.entryCard.cta")} →
-          </a>
-        </div>
-      </div>
-
       <div className="flex flex-col justify-center gap-5 px-6 py-10 lg:w-[680px] lg:shrink-0 lg:gap-6 lg:py-0 lg:pl-v2-gutter">
         <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-v2-slate">
           {t("v2.admission.hero.eyebrow")}
@@ -72,6 +56,22 @@ function AdmissionHero() {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div className="relative h-[280px] lg:h-auto lg:flex-1">
+        <div className="absolute inset-0 bg-cover bg-[70%_center]" style={{ backgroundImage: `url(${PHOTO})` }} />
+        <div className="absolute inset-y-0 left-0 hidden w-[180px] bg-gradient-to-r from-white to-transparent lg:block" />
+        <div className="absolute bottom-6 right-6 flex w-[260px] flex-col gap-3 rounded-[6px] bg-v2-crimson px-6 py-6 shadow-[0_16px_40px_#0C183040] lg:bottom-12 lg:right-v2-gutter lg:w-[300px]">
+          <div className="font-v2-heading text-[10px] font-semibold leading-3 tracking-[0.22em] text-[#F2C9D3]">
+            {t("v2.admission.hero.entryCard.eyebrow")}
+          </div>
+          <div className="font-v2-heading text-[20px] font-extrabold leading-[27px] text-v2-paper lg:text-[22px]">
+            {t("v2.admission.hero.entryCard.title")}
+          </div>
+          <a href="/#admission-contact" className="font-v2-heading text-v2-label font-bold leading-4 text-v2-paper">
+            {t("v2.admission.hero.entryCard.cta")} →
+          </a>
         </div>
       </div>
       </div>

@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import ContactTelegram from "../../components/contact/ContactTelegram";
 import PartnersCarousel from "../../components/partners/PartnersCarousel";
 
 const Affiliations = () => {
@@ -11,7 +10,6 @@ const Affiliations = () => {
         <p className="page-paragraph">{t("about.description")}</p>
       </div>
       <PartnersCarousel />
-      <ContactTelegram />
       {/* <ContactUsButton /> */}
     </div>
   );

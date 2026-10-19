@@ -8,10 +8,6 @@ function ProgramHero({ program }) {
   return (
     <section className="relative overflow-hidden">
       <div className="mx-auto flex max-w-[1440px] flex-col lg:h-[560px] lg:flex-row">
-      <div className="relative order-2 h-[280px] shrink-0 lg:order-none lg:h-auto lg:w-[800px]">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${program.image})` }} />
-        <div className="absolute inset-y-0 left-0 hidden w-[240px] bg-gradient-to-r from-white to-transparent lg:block" />
-      </div>
       <div className="flex flex-col justify-center gap-5 px-6 py-10 lg:w-[700px] lg:shrink-0 lg:gap-[22px] lg:py-0 lg:pl-v2-gutter">
         <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-v2-slate">
           {t("v2.academics.index.breadcrumb")} / {t(`v2.academics.programs.${program.i18nKey}.title`)}
@@ -47,6 +43,10 @@ function ProgramHero({ program }) {
             {t("v2.academics.index.curriculumLink")} (PDF)
           </a>
         </div>
+      </div>
+      <div className="relative h-[280px] lg:h-auto lg:flex-1">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${program.image})` }} />
+        <div className="absolute inset-y-0 left-0 hidden w-[240px] bg-gradient-to-r from-white to-transparent lg:block" />
       </div>
       </div>
     </section>

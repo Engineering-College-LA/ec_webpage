@@ -98,18 +98,26 @@ function MobileMenu() {
                     key={link.label}
                     className="flex flex-col gap-4 border-b border-v2-hairline py-[18px]"
                   >
-                    <button
-                      type="button"
-                      onClick={() => setStudentLifeOpen((v) => !v)}
-                      aria-expanded={studentLifeOpen}
+                    {/* Label opens the section page; the +/− button only expands the list. */}
+                    <div
                       className={twMerge(
                         "flex items-center justify-between font-v2-heading text-[17px] font-bold leading-[22px]",
                         studentLifeOpen ? "text-v2-crimson" : "text-v2-navy",
                       )}
                     >
-                      {t(link.label)}
-                      <span aria-hidden="true">{studentLifeOpen ? "−" : "+"}</span>
-                    </button>
+                      <Link to={link.to} onClick={handleCloseMenu}>
+                        {t(link.label)}
+                      </Link>
+                      <button
+                        type="button"
+                        onClick={() => setStudentLifeOpen((v) => !v)}
+                        aria-expanded={studentLifeOpen}
+                        aria-label={t("v2.nav.dropdown.toggleLabel")}
+                        className="-my-2 -mr-2 flex h-10 w-10 items-center justify-center"
+                      >
+                        <span aria-hidden="true">{studentLifeOpen ? "−" : "+"}</span>
+                      </button>
+                    </div>
                     {studentLifeOpen && (
                       <div className="flex flex-col gap-4">
                         <ActivityGroup

@@ -22,10 +22,6 @@ function ExtracurricularActivityTemplate({ activity }) {
     <>
       <section className="relative overflow-hidden bg-v2-navy">
         <div className="mx-auto flex max-w-[1440px] flex-col lg:h-[560px] lg:flex-row">
-        <div className="relative order-2 h-[260px] shrink-0 lg:order-none lg:h-auto lg:w-[740px]">
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${activity.image})` }} />
-          <div className="absolute inset-y-0 left-0 hidden w-[300px] bg-gradient-to-r from-v2-navy to-transparent lg:block" />
-        </div>
         <div className="flex flex-col justify-center gap-5 px-6 py-10 lg:w-[680px] lg:shrink-0 lg:gap-[22px] lg:py-0 lg:pl-v2-gutter">
           <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-[#8FA3CC]">
             {t("v2.studentLife.breadcrumb")} / {t("v2.studentLife.extracurricularBreadcrumb")} / {t(`v2.studentLife.activities.${key}.navLabel`).toUpperCase()}
@@ -66,6 +62,10 @@ function ExtracurricularActivityTemplate({ activity }) {
               {t(`v2.studentLife.activities.${key}.secondaryCta`)}
             </a>
           </div>
+        </div>
+        <div className="relative h-[260px] lg:h-auto lg:flex-1">
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${activity.image})` }} />
+          <div className="absolute inset-y-0 left-0 hidden w-[300px] bg-gradient-to-r from-v2-navy to-transparent lg:block" />
         </div>
       </div>
       </section>

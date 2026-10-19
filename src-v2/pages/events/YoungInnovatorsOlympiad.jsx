@@ -21,7 +21,6 @@ import {
   Presentation,
   Medal,
 } from "lucide-react";
-import ContactTelegram from "../../components/contact/ContactTelegram";
 import { Boxes } from "../../components/ui/background-boxes";
 
 const FORM_URL = "https://forms.office.com/r/eEqA9bL6Dv";
@@ -846,7 +845,6 @@ const YoungInnovatorsOlympiad = () => {
         </motion.div>
       </div>
 
-      <ContactTelegram />
     </div>
   );
 };
