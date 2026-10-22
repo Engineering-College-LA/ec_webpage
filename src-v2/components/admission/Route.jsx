@@ -1,16 +1,8 @@
 import { useTranslation } from "react-i18next";
 
-const steps = [
-  { key: "meet", dot: "bg-v2-navy-2" },
-  { key: "exams", dot: "bg-v2-step-2" },
-  { key: "documents", dot: "bg-v2-step-3" },
-  { key: "enrollment", dot: "bg-v2-step-4" },
-];
-
 // Positions/colors transcribed exactly from the Paper "EC Redesign" Admission
 // "Route" artboard (2KY-0) — a fixed 1296×470 diagram, pixel-perfect at lg+.
-// Below lg it doesn't reflow (Paper never designed a mobile version of the
-// wavy path), so mobile keeps the straight responsive stepper instead.
+// Below lg, MobileRouteDiagram follows the "Поступление — Mobile v3" map.
 const nodes = [
   { key: "meet", num: 1, dot: "bg-v2-navy-2", left: 112, top: 302, textLeft: 186, textTop: 340, textWidth: 250 },
   { key: "exams", num: 2, dot: "bg-v2-step-2", left: 452, top: 132, textLeft: 400, textTop: 28, textWidth: 270 },
@@ -93,62 +85,121 @@ function RouteDiagram({ t }) {
   );
 }
 
+// Mobile route map, transcribed from "Поступление — Mobile v3" (350×600).
+// Left-side nodes are pinned with `left`, right-side ones with `right`, so the
+// card can shrink on phones narrower than 390px without overlaps.
+const mobileNodes = [
+  { key: "meet", num: 1, dot: "bg-v2-navy-2", side: "left", top: 78 },
+  { key: "exams", num: 2, dot: "bg-v2-step-2", side: "right", top: 198 },
+  { key: "documents", num: 3, dot: "bg-v2-step-3", side: "left", top: 318 },
+  { key: "enrollment", num: 4, dot: "bg-v2-step-4", side: "right", top: 438 },
+];
+
+function MobileRouteDiagram({ t }) {
+  return (
+    <div className="relative mx-auto h-[600px] w-full max-w-[350px] shrink-0 overflow-clip rounded-[14px] border border-v2-hairline bg-v2-paper lg:hidden">
+      <svg viewBox="0 0 350 600" preserveAspectRatio="none" className="absolute inset-0 h-full w-full" aria-hidden="true">
+        <path d="M-20 160 C 80 120 200 200 370 140" fill="none" stroke="var(--v2-color-hairline)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
+        <path d="M-20 300 C 100 260 220 340 370 280" fill="none" stroke="var(--v2-color-hairline)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
+        <path d="M-20 430 C 90 400 230 470 370 410" fill="none" stroke="var(--v2-color-hairline)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
+        <ellipse cx="175" cy="280" rx="60" ry="22" fill="none" stroke="var(--v2-color-hairline)" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
+        <path
+          d="M40 30 L40 100 C40 170 310 150 310 220 C310 290 40 270 40 340 C40 410 310 390 310 460 C310 520 175 510 175 556"
+          fill="none"
+          stroke="var(--v2-color-navy-2)"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeDasharray="2 8"
+          vectorEffect="non-scaling-stroke"
+        />
+      </svg>
+
+      <div className="absolute left-6 top-3.5 flex items-center gap-2">
+        <div
+          className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full"
+          style={{ backgroundColor: "color-mix(in srgb, var(--v2-color-crimson) 18%, transparent)" }}
+        >
+          <div className="h-3.5 w-3.5 rounded-full border-[3px] border-v2-paper bg-v2-crimson" />
+        </div>
+        <div className="rounded-full bg-v2-crimson px-2.5 py-[5px]">
+          <div className="font-v2-heading text-[11px] font-bold leading-[14px] tracking-[0.08em] text-v2-paper">
+            {t("v2.admission.route.youAreHere")}
+          </div>
+        </div>
+      </div>
+
+      {mobileNodes.map((node) => {
+        const left = node.side === "left";
+        return (
+          <div key={node.key}>
+            <div
+              className={`absolute flex h-11 w-11 items-center justify-center rounded-full border-4 border-v2-paper font-v2-heading text-[16px] font-extrabold leading-5 text-v2-paper shadow-[0_4px_12px_#0C183038] ${node.dot} ${left ? "left-[18px]" : "right-[18px]"}`}
+              style={{ top: node.top }}
+            >
+              {node.num}
+            </div>
+            <div
+              className={`absolute flex flex-col gap-1 ${left ? "left-[76px] right-3" : "left-6 right-[76px] items-end text-right"}`}
+              style={{ top: node.top + 2 }}
+            >
+              <div className="font-v2-heading text-[16px] font-bold leading-5 text-v2-navy">
+                {t(`v2.admission.route.steps.${node.key}.titleShort`, {
+                  defaultValue: t(`v2.admission.route.steps.${node.key}.title`),
+                })}
+              </div>
+              <div className="font-v2-body text-v2-label leading-[19px] text-v2-slate">
+                {t(`v2.admission.route.steps.${node.key}.descriptionShort`)}
+              </div>
+            </div>
+          </div>
+        );
+      })}
+
+      <svg width="28" height="44" viewBox="0 0 28 44" className="absolute left-1/2 top-[516px] -ml-1.5" aria-hidden="true">
+        <path d="M6 42 V4" fill="none" stroke="var(--v2-color-navy)" strokeWidth="2.5" strokeLinecap="round" />
+        <path d="M7 5 H25 L20 12 L25 19 H7 Z" fill="var(--v2-color-crimson)" />
+        <circle cx="6" cy="40" r="3.5" fill="var(--v2-color-navy)" />
+      </svg>
+      <div className="absolute left-[calc(50%+29px)] top-[530px] flex flex-col gap-0.5">
+        <div className="font-v2-heading text-[10px] font-semibold leading-3 tracking-[0.24em] text-v2-crimson">
+          {t("v2.admission.route.finishEyebrow")}
+        </div>
+        <div className="w-max font-v2-heading text-[14px] font-extrabold leading-[18px] text-v2-navy">
+          {t("v2.admission.route.finishTitle")}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // Transcribed from the Paper "EC Redesign" Admission "Route" artboard (2KY-0).
 function Route() {
   const { t } = useTranslation();
 
   return (
     <section id="route" className="bg-v2-mist">
-      <div className="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 py-14 lg:gap-12 lg:px-v2-gutter lg:py-24">
-        <div className="flex flex-col gap-3.5">
-          <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-v2-slate">
+      <div className="mx-auto flex max-w-[1440px] flex-col gap-[22px] px-5 py-11 lg:gap-12 lg:px-v2-gutter lg:py-24">
+        <div className="flex flex-col gap-[22px] lg:gap-3.5">
+          <div className="font-v2-heading text-[10px] font-semibold leading-3 tracking-[0.24em] text-v2-slate lg:text-[11px] lg:leading-[14px]">
             {t("v2.admission.route.eyebrow")}
           </div>
-          <div className="flex flex-wrap gap-3 font-v2-heading">
-            <span className="text-[28px] font-extrabold leading-[1.15] tracking-[-0.03em] text-v2-navy lg:text-[40px] lg:leading-[48px]">
+          <div className="flex flex-col font-v2-heading lg:flex-row lg:flex-wrap lg:gap-3">
+            <span className="text-[26px] font-extrabold leading-[31px] tracking-[-0.03em] text-v2-navy lg:text-[40px] lg:leading-[48px]">
               {t("v2.admission.route.titleLine1")}
             </span>
-            <span className="text-[28px] font-extrabold leading-[1.15] tracking-[-0.03em] text-v2-sky lg:text-[40px] lg:leading-[48px]">
+            <span className="text-[26px] font-extrabold leading-[31px] tracking-[-0.03em] text-v2-sky lg:text-[40px] lg:leading-[48px]">
               {t("v2.admission.route.titleLine2")}
             </span>
           </div>
         </div>
 
         {/* Desktop: pixel-perfect wavy route map from Paper */}
-        <div className="overflow-x-auto">
+        <div className="hidden overflow-x-auto lg:block">
           <RouteDiagram t={t} />
         </div>
 
-        {/* Mobile: straight responsive stepper (Paper has no mobile route map) */}
-        <div className="flex flex-col gap-10 rounded-2xl border border-v2-hairline bg-v2-paper p-8 lg:hidden">
-          <div className="relative flex flex-col gap-10">
-            {steps.map((step, i) => (
-              <div key={step.key} className="relative flex flex-col gap-3.5">
-                <div
-                  className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-[5px] border-v2-paper font-v2-heading text-[20px] font-extrabold leading-6 text-v2-paper shadow-[0_6px_18px_#0C183038] ${step.dot}`}
-                >
-                  {i + 1}
-                </div>
-                <div className="font-v2-heading text-[17px] font-bold leading-[22px] text-v2-navy">
-                  {t(`v2.admission.route.steps.${step.key}.title`)}
-                </div>
-                <div className="font-v2-body text-[14px] leading-[21px] text-v2-slate">
-                  {t(`v2.admission.route.steps.${step.key}.description`)}
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="flex items-center gap-3 border-t border-v2-hairline pt-8">
-            <div className="flex flex-col items-start gap-0.5">
-              <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-v2-crimson">
-                {t("v2.admission.route.finishEyebrow")}
-              </div>
-              <div className="font-v2-heading text-[16px] font-extrabold leading-5 text-v2-navy">
-                {t("v2.admission.route.finishTitle")}
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* Mobile: wavy route map from "Поступление — Mobile v3" */}
+        <MobileRouteDiagram t={t} />
       </div>
     </section>
   );

@@ -2,18 +2,27 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 // Transcribed from the Paper "EC Redesign" Home "CTA Band" artboard (1ZW-0).
+// Below lg it follows "Home — Mobile v3": dusk gradient, a small ridge and a
+// single full-width apply button.
 function CTABand() {
   const { t } = useTranslation();
 
   return (
-    <section
-      className="relative overflow-hidden"
-      style={{
-        backgroundImage:
-          "linear-gradient(180deg, #152235 0%, #223759 62%, #2E4A52 100%)",
-      }}
-    >
-      <div className="relative mx-auto flex max-w-[1440px] flex-col items-center gap-5 px-6 pt-16 pb-20 text-center lg:gap-[22px] lg:px-v2-gutter lg:pt-24 lg:pb-[170px]">
+    <section className="relative overflow-hidden bg-[linear-gradient(180deg,#0C1830_0%,#243F66_62%,#5A4A6A_100%)] lg:bg-[linear-gradient(180deg,#152235_0%,#223759_62%,#2E4A52_100%)]">
+      <div className="relative mx-auto flex max-w-[1440px] flex-col items-center gap-4 px-5 pt-14 pb-24 text-center lg:gap-[22px] lg:px-v2-gutter lg:pt-24 lg:pb-[170px]">
+      {/* Mobile ridge */}
+      <svg
+        width="390"
+        height="90"
+        viewBox="0 0 390 90"
+        aria-hidden="true"
+        preserveAspectRatio="none"
+        className="pointer-events-none absolute bottom-0 left-0 w-full lg:hidden"
+      >
+        <path d="M0 90L0 60 60 35 100 52 160 12 210 45 270 20 330 50 390 30V90Z" fill="#1C3154" />
+        <path d="M160 12l-14 15 9-4 6 6 7-8zM270 20l-12 13 8-3 5 5 6-7z" fill="#FFFFFF73" />
+        <path d="M0 90L0 76 90 66 190 75 290 62 390 72V90Z" fill="#08121F" />
+      </svg>
       <svg
         width="1440"
         height="200"
@@ -36,19 +45,20 @@ function CTABand() {
           fill="#08121F"
         />
       </svg>
-      <div className="relative font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.28em] text-[#8FA3CC]">
+      <div className="relative font-v2-heading text-[9px] font-semibold leading-3 tracking-[0.26em] text-[#8FA3CC] lg:text-[11px] lg:leading-[14px] lg:tracking-[0.28em]">
         {t("v2.home.cta.eyebrow")}
       </div>
-      <h2 className="relative font-v2-heading text-[32px] font-extrabold leading-[1.1] tracking-[-0.03em] text-v2-paper lg:text-[48px] lg:leading-[58px]">
+      <h2 className="relative font-v2-heading text-v2-h3 font-extrabold leading-[33px] tracking-[-0.03em] text-v2-paper lg:text-[48px] lg:leading-[58px]">
         {t("v2.home.cta.title")}
       </h2>
-      <p className="relative max-w-[560px] font-v2-body text-[16px] leading-7 text-[#B9C3D9] lg:text-[17px]">
-        {t("v2.home.cta.description")}
+      <p className="relative max-w-[560px] font-v2-body text-[14px] leading-[22px] text-[#B9C3D9] lg:text-[17px] lg:leading-7">
+        <span className="lg:hidden">{t("v2.home.cta.descriptionShort")}</span>
+        <span className="hidden lg:inline">{t("v2.home.cta.description")}</span>
       </p>
-      <div className="relative flex flex-wrap justify-center gap-3 pt-2">
+      <div className="relative flex w-full flex-col gap-3 lg:w-auto lg:flex-row lg:flex-wrap lg:justify-center lg:pt-2">
         <Link
           to="/admissions"
-          className="flex items-center gap-2.5 rounded-v2-sm bg-v2-crimson px-7 py-4 font-v2-heading text-[15px] font-bold leading-[18px] text-v2-paper"
+          className="flex items-center justify-center gap-2.5 rounded-v2-sm bg-v2-crimson p-4 font-v2-heading text-[15px] font-bold leading-[18px] text-v2-paper lg:px-7"
         >
           {t("v2.nav.applyButton")}
           <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true">
@@ -57,7 +67,7 @@ function CTABand() {
         </Link>
         <Link
           to="/academics"
-          className="flex items-center rounded-v2-sm border-[1.5px] border-white/70 px-7 py-[15px] font-v2-heading text-[15px] font-bold leading-[18px] text-v2-paper"
+          className="hidden items-center rounded-v2-sm border-[1.5px] border-white/70 px-7 py-[15px] font-v2-heading text-[15px] font-bold leading-[18px] text-v2-paper lg:flex"
         >
           {t("v2.home.cta.secondaryCta")}
         </Link>

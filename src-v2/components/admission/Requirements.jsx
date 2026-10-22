@@ -1,14 +1,33 @@
 import { useTranslation } from "react-i18next";
 
 // Transcribed from the Paper "EC Redesign" Admission "Requirements Docs" artboard (48E-0).
+// Below lg, "Поступление — Mobile v3" shows only a compact documents checklist.
 function Requirements() {
   const { t } = useTranslation();
   const requirementsList = t("v2.admission.requirements.requirementsList", { returnObjects: true });
   const documentsList = t("v2.admission.requirements.documentsList", { returnObjects: true });
+  const documentsListShort = t("v2.admission.requirements.documentsListShort", { returnObjects: true });
 
   return (
-    <section id="requirements" className="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 py-14 lg:gap-12 lg:px-v2-gutter lg:py-24">
-      <div className="flex flex-col gap-4">
+    <section id="requirements" className="mx-auto flex max-w-[1440px] flex-col gap-10 px-5 py-11 lg:gap-12 lg:px-v2-gutter lg:py-24">
+      {/* Mobile */}
+      <div className="flex flex-col gap-3.5 lg:hidden">
+        <div className="font-v2-heading text-[10px] font-semibold uppercase leading-3 tracking-[0.24em] text-v2-slate">
+          {t("v2.admission.requirements.documentsTitle")}
+        </div>
+        <div className="flex flex-col border-t border-v2-hairline">
+          {documentsListShort.map((item) => (
+            <div key={item} className="flex gap-3 border-b border-v2-hairline py-[13px]">
+              <div className="font-v2-heading text-v2-label font-extrabold leading-4 text-v2-crimson" aria-hidden="true">
+                ✓
+              </div>
+              <div className="font-v2-body text-[14px] leading-[18px] text-v2-navy">{item}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="hidden flex-col gap-4 lg:flex">
         <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-v2-slate">
           {t("v2.admission.requirements.eyebrow")}
         </div>
@@ -22,7 +41,7 @@ function Requirements() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-8 lg:flex-row">
+      <div className="hidden gap-8 lg:flex lg:flex-row">
         <div className="flex flex-1 flex-col gap-6 rounded-xl bg-v2-mist px-6 py-8 lg:px-10 lg:py-9">
           <div className="flex items-center gap-3.5">
             <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-v2-paper">

@@ -12,7 +12,7 @@ function DayInLife() {
   return (
     <section className="bg-v2-navy">
       <div className="mx-auto flex max-w-[1440px] flex-col lg:h-[560px] lg:flex-row">
-        <div className="relative h-[240px] shrink-0 overflow-hidden lg:h-auto lg:w-1/2">
+        <div className="relative aspect-[390/240] max-h-[480px] w-full shrink-0 overflow-hidden lg:aspect-auto lg:max-h-none lg:h-auto lg:w-1/2">
           <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${PHOTO})` }} />
           {/* Mobile only: fade into the navy panel so the white note stays readable */}
           <div
@@ -22,14 +22,15 @@ function DayInLife() {
                 "linear-gradient(180deg, rgba(12,24,48,0) 0%, rgba(12,24,48,0.75) 55%, #0C1830 100%)",
             }}
           />
-          <div className="absolute left-6 top-[192px] origin-top-left -rotate-6 whitespace-nowrap font-v2-accent-script text-[22px] font-semibold leading-7 text-white lg:left-8 lg:top-8 lg:text-[30px] lg:leading-[30px] lg:text-v2-navy">
+          <div className="absolute bottom-5 left-6 origin-bottom-left lg:bottom-auto lg:origin-top-left -rotate-6 whitespace-nowrap font-v2-accent-script text-[22px] font-semibold leading-7 text-white lg:left-8 lg:top-8 lg:text-[30px] lg:leading-[30px] lg:text-v2-navy">
             {t("v2.studentLifeIndex.day.scriptNote")}
           </div>
         </div>
 
         <div className="flex flex-1 flex-col justify-center gap-4 px-5 pt-9 pb-10 lg:gap-[26px] lg:py-0 lg:pl-16 lg:pr-[72px]">
           <div className="font-v2-heading text-[10px] font-semibold leading-3 tracking-[0.24em] text-[#8FA3CC] lg:text-[11px] lg:leading-[14px]">
-            {t("v2.studentLifeIndex.day.eyebrow")}
+            <span className="lg:hidden">{t("v2.studentLifeIndex.day.eyebrowShort")}</span>
+            <span className="hidden lg:inline">{t("v2.studentLifeIndex.day.eyebrow")}</span>
           </div>
           <h2 className="font-v2-heading text-[24px] font-extrabold leading-[30px] tracking-[-0.03em] text-white lg:text-[34px] lg:leading-[40px]">
             {t("v2.studentLifeIndex.day.title")}
@@ -45,7 +46,8 @@ function DayInLife() {
                     {moment.time}
                   </div>
                   <div className="font-v2-body text-[13px] leading-5 text-[#D6DCE8] lg:text-[15px] lg:leading-[23px]">
-                    {moment.text}
+                    <span className="lg:hidden">{moment.textShort ?? moment.text}</span>
+                    <span className="hidden lg:inline">{moment.text}</span>
                   </div>
                 </div>
               ))}

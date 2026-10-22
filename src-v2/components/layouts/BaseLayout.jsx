@@ -22,7 +22,7 @@ function BaseLayout() {
     <>
       <Header isHomePage={isHomePage} />
       <ScrollToTop />
-      <main className="pt-20">
+      <main className="pt-[60px] lg:pt-20">
         <Outlet />
       </main>
       <Footer />

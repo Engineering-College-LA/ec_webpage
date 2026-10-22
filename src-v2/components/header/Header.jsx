@@ -16,7 +16,7 @@ const HeaderProvider = ({ children }) => {
 function Header() {
   return (
     <HeaderProvider>
-      <header className="fixed top-0 z-50 flex h-20 w-full items-center border-b border-v2-hairline bg-v2-paper">
+      <header className="fixed top-0 z-50 flex h-[60px] w-full items-center border-b border-v2-hairline bg-v2-paper lg:h-20">
         <Navbar />
       </header>
       <MobileMenu />

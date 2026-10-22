@@ -6,7 +6,6 @@ export const navLinks = [
   { to: "/academics", label: "v2.nav.programs" },
   { to: "/admissions", label: "v2.nav.admissions" },
   { to: "/student-life", label: "v2.nav.studentLife", dropdown: true },
-  { to: "/career-test", label: "v2.nav.career" },
   { to: "/about", label: "v2.nav.about" },
   { to: "/#contact", label: "v2.nav.contacts" },
   { to: "/affiliations", label: "navbar.affiliations" },

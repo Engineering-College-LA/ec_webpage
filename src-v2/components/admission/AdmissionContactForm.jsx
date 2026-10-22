@@ -60,10 +60,10 @@ function AdmissionContactForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex grow flex-col gap-[18px] rounded-lg border border-v2-hairline p-6 shadow-[0_16px_40px_#0C18300F] lg:p-10"
+      className="flex grow flex-col gap-3.5 lg:gap-[18px] lg:rounded-lg lg:border lg:border-v2-hairline lg:p-10 lg:shadow-[0_16px_40px_#0C18300F]"
     >
-      <div className="flex flex-col gap-4 lg:flex-row lg:gap-4">
-        <div className="flex flex-1 flex-col gap-2">
+      <div className="flex flex-col gap-3.5 lg:flex-row lg:gap-4">
+        <div className="flex flex-1 flex-col gap-1.5 lg:gap-2">
           <label htmlFor="name" className="font-v2-heading text-[12px] font-semibold leading-4 text-v2-navy">
             {t("v2.admission.contact.form.nameLabel")}
           </label>
@@ -71,12 +71,12 @@ function AdmissionContactForm() {
             id="name"
             type="text"
             placeholder={t("v2.admission.contact.form.namePlaceholder")}
-            className="rounded-v2-sm border border-v2-hairline px-4 py-3.5 font-v2-body text-[15px] text-v2-navy placeholder:text-[#9AA0AE]"
+            className="rounded-v2-sm border border-v2-hairline p-3.5 lg:px-4 font-v2-body text-[15px] text-v2-navy placeholder:text-[#9AA0AE]"
             {...register("name", { required: true })}
           />
           {errors.name && <span className="text-xs text-v2-crimson">{t("v2.admission.contact.form.nameLabel")}</span>}
         </div>
-        <div className="flex flex-1 flex-col gap-2">
+        <div className="flex flex-1 flex-col gap-1.5 lg:gap-2">
           <label htmlFor="phone" className="font-v2-heading text-[12px] font-semibold leading-4 text-v2-navy">
             {t("v2.admission.contact.form.phoneLabel")}
           </label>
@@ -84,14 +84,14 @@ function AdmissionContactForm() {
             id="phone"
             type="tel"
             placeholder={t("v2.admission.contact.form.phonePlaceholder")}
-            className="rounded-v2-sm border border-v2-hairline px-4 py-3.5 font-v2-body text-[15px] text-v2-navy placeholder:text-[#9AA0AE]"
+            className="rounded-v2-sm border border-v2-hairline p-3.5 lg:px-4 font-v2-body text-[15px] text-v2-navy placeholder:text-[#9AA0AE]"
             {...register("phone", { required: true })}
           />
           {errors.phone && <span className="text-xs text-v2-crimson">{t("v2.admission.contact.form.phoneLabel")}</span>}
         </div>
       </div>
 
-      <div className="flex flex-col gap-2">
+      <div className="hidden flex-col gap-2 lg:flex">
         <label htmlFor="program" className="font-v2-heading text-[12px] font-semibold leading-4 text-v2-navy">
           {t("v2.admission.contact.form.programLabel")}
         </label>
@@ -110,7 +110,7 @@ function AdmissionContactForm() {
         </select>
       </div>
 
-      <div className="flex flex-col items-start gap-4 pt-1.5 lg:flex-row lg:items-center lg:justify-between">
+      <div className="flex flex-col items-stretch gap-3.5 lg:gap-4 lg:pt-1.5 lg:flex-row lg:items-center lg:justify-between">
         <label className="flex items-center gap-2.5">
           <input
             type="checkbox"
@@ -122,7 +122,7 @@ function AdmissionContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="flex items-center gap-2.5 whitespace-nowrap rounded-v2-sm bg-v2-crimson px-6 py-[15px] font-v2-heading text-[14px] font-bold leading-[18px] text-v2-paper disabled:opacity-60"
+          className="flex items-center justify-center gap-2.5 whitespace-nowrap rounded-v2-sm bg-v2-crimson p-4 font-v2-heading text-[15px] font-bold lg:px-6 lg:py-[15px] lg:text-[14px] leading-[18px] text-v2-paper disabled:opacity-60"
         >
           {isSubmitting ? t("v2.admission.contact.form.submitting") : t("v2.admission.contact.form.submit")}
           <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true">

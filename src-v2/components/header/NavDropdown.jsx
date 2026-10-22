@@ -57,12 +57,15 @@ function ExtracurricularRow({ activity, t }) {
 function NavDropdown({ open }) {
   const { t } = useTranslation();
 
-  if (!open) return null;
-
+  // Always mounted so it can fade/slide both in and out. `invisible` (also
+  // transitioned) keeps the closed panel out of hover, click and tab order.
   return (
     <div
-      className="absolute left-1/2 top-full z-50 flex -translate-x-1/2 rounded-[10px] border border-v2-hairline bg-v2-paper shadow-xl"
+      className={`absolute left-1/2 top-full z-50 flex -translate-x-1/2 rounded-[10px] border border-v2-hairline bg-v2-paper shadow-xl transition-[opacity,transform,visibility] duration-200 ease-out motion-reduce:transition-none ${
+        open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-2 opacity-0"
+      }`}
       role="menu"
+      aria-hidden={!open}
     >
       <div className="flex w-[350px] shrink-0 flex-col gap-0.5 px-5 py-6">
         <div className="px-3 pb-2.5 font-v2-heading text-[10px] font-semibold leading-3 tracking-[0.24em] text-v2-slate">

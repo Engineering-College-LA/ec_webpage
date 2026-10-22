@@ -55,10 +55,10 @@ function CampusGallery() {
 
         {/* Mobile: one wide photo, then two side by side */}
         <div className="flex flex-col gap-2 lg:hidden">
-          <Photo src={PHOTO_MAIN} className="h-[220px]" />
+          <Photo src={PHOTO_MAIN} className="aspect-[350/220]" />
           <div className="grid grid-cols-2 gap-2">
-            <Photo src={PHOTO_TOP} className="h-[150px]" />
-            <Photo src={PHOTO_PORTRAIT} className="h-[150px]" position="center 25%" />
+            <Photo src={PHOTO_TOP} className="aspect-[171/150]" />
+            <Photo src={PHOTO_PORTRAIT} className="aspect-[171/150]" position="center 25%" />
           </div>
         </div>
       </div>

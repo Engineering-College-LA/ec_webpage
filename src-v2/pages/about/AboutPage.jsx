@@ -3,6 +3,7 @@ import Story from "../../components/about/Story";
 import MissionVision from "../../components/about/MissionVision";
 import PartnersGrid from "../../components/about/PartnersGrid";
 import CTABand from "../../components/home/CTABand";
+import MapAndContactInfo from "../../components/map-info/MapAndContactInfo";
 
 // Transcribed from the Paper "EC Redesign" "О колледже — Desktop v3" artboard (2U8-0).
 function AboutPage() {
@@ -12,6 +13,7 @@ function AboutPage() {
       <Story />
       <MissionVision />
       <PartnersGrid />
+      <MapAndContactInfo />
       <CTABand />
     </>
   );

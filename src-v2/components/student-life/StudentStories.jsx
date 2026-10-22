@@ -30,7 +30,7 @@ const ArrowButton = ({ direction, disabled, onClick, label }) => (
 );
 
 // Transcribed from the Paper "EC Redesign" Student Life "Stories" frame (2SO-0).
-// Mobile has no Paper frame; it stacks the same card vertically.
+// "Студенческая жизнь — Mobile v3" has no stories block, so it's desktop-only.
 function StudentStories() {
   const { t } = useTranslation();
   const [index, setIndex] = useState(0);
@@ -42,7 +42,7 @@ function StudentStories() {
   const photo = STORY_PHOTOS[index % STORY_PHOTOS.length];
 
   return (
-    <section className="bg-v2-paper">
+    <section className="hidden bg-v2-paper lg:block">
       <div className="mx-auto flex max-w-[1440px] flex-col gap-8 px-5 py-14 lg:flex-row lg:items-center lg:gap-14 lg:px-[72px] lg:py-24">
         <div className="flex shrink-0 flex-col gap-[18px] lg:w-[300px]">
           <div className="font-v2-heading text-[10px] font-semibold leading-3 tracking-[0.24em] text-v2-slate lg:text-[11px] lg:leading-[14px]">

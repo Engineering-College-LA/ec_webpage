@@ -10,14 +10,13 @@ function MapAndContactInfo() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="overflow-hidden flex justify-center">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23411.176036473382!2d74.59697851083983!3d42.82222700000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb5d3e7906179%3A0x616a2e518d03e933!2s7%D0%B0%2C%201%20Sayakbay%20Karalaev%20St%2C%20Bishkek!5e0!3m2!1sen!2skg!4v1717356369877!5m2!1sen!2skg"
-              title="Location of Light Academy College in Bishkek, Kyrgyzstan"
-              width="600"
+              src="https://maps.google.com/maps?q=%D0%A1%D1%83%D1%85%D1%8D-%D0%91%D0%B0%D1%82%D0%BE%D1%80%D0%B0%2023%2C%20%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA&z=15&output=embed"
+              title="EC College on the map: Sukhe-Bator St 23, Bishkek"
               height="450"
               allow="fullscreen"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="rounded-lg"
+              className="w-full max-w-[600px] rounded-lg"
             ></iframe>
           </div>
           <div>

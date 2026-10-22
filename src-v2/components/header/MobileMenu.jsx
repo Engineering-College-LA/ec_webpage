@@ -4,7 +4,7 @@ import { useClickOutsideMouseDown } from "../../hooks/useClickOutside";
 import { twMerge } from "tailwind-merge";
 import { navLinks } from "../../config/constants";
 import { Link } from "react-router-dom";
-import LanguageSelecter from "../langage-selector/LanguageSelecter";
+import LanguageSwitch from "../langage-selector/LanguageSwitch";
 import { useTranslation } from "react-i18next";
 import Logo from "./Logo";
 import {
@@ -55,23 +55,34 @@ function MobileMenu() {
     setStudentLifeOpen(false);
   };
 
+  // The menu stays mounted so opening and closing can animate: the backdrop
+  // fades and the panel slides in from the right. `invisible` (applied after
+  // the transition via the visibility transition) keeps it out of the tab
+  // order and away from clicks while closed.
   return (
-    mobileMenuOpen && (
+    <div
+      className={twMerge("lg:hidden", mobileMenuOpen ? "" : "pointer-events-none")}
+      role="dialog"
+      aria-modal="true"
+      aria-hidden={!mobileMenuOpen}
+    >
       <div
         className={twMerge(
-          "lg:hidden",
-          mobileMenuOpen ? "bg-black bg-opacity-40" : "hidden",
+          "fixed inset-0 z-[60] bg-black/40 backdrop-blur-sm transition-[opacity,visibility] duration-300 ease-out motion-reduce:transition-none",
+          mobileMenuOpen ? "visible opacity-100" : "invisible opacity-0",
         )}
-        role="dialog"
-        aria-modal="true"
+      />
+      <div
+        ref={mobileMenuRef}
+        className={twMerge(
+          "fixed inset-y-0 right-0 z-[60] flex w-full flex-col overflow-y-auto bg-v2-paper shadow-[-12px_0_32px_#0C18301F] transition-[transform,visibility] duration-300 ease-out motion-reduce:transition-none sm:max-w-sm sm:ring-1 sm:ring-gray-900/10",
+          mobileMenuOpen ? "visible translate-x-0" : "invisible translate-x-full",
+        )}
       >
-        <div className="fixed inset-0 z-[60] blur-sm backdrop-blur-sm backdrop-filter" />
-        <div
-          ref={mobileMenuRef}
-          className="fixed inset-y-0 right-0 z-[60] flex w-full flex-col overflow-y-auto bg-v2-paper sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
-        >
           <div className="flex items-center justify-between border-b border-v2-hairline pt-2 pb-3.5 px-5">
             <Logo />
+            <div className="flex items-center gap-3">
+            <LanguageSwitch />
             <button
               type="button"
               onClick={handleCloseMenu}
@@ -88,6 +99,7 @@ function MobileMenu() {
                 />
               </svg>
             </button>
+            </div>
           </div>
 
           <div className="flex flex-1 flex-col gap-0 px-5 pt-2">
@@ -118,8 +130,14 @@ function MobileMenu() {
                         <span aria-hidden="true">{studentLifeOpen ? "−" : "+"}</span>
                       </button>
                     </div>
-                    {studentLifeOpen && (
-                      <div className="flex flex-col gap-4">
+                    <div
+                      className={twMerge(
+                        "-mt-4 grid transition-[grid-template-rows,opacity,margin] duration-300 ease-out motion-reduce:transition-none",
+                        studentLifeOpen ? "mt-0 grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",
+                      )}
+                      aria-hidden={!studentLifeOpen}
+                    >
+                      <div className={twMerge("flex min-h-0 flex-col gap-4 overflow-hidden", studentLifeOpen ? "" : "invisible")}>
                         <ActivityGroup
                           heading={t("v2.nav.dropdown.academicHeading")}
                           activities={academicActivities}
@@ -135,7 +153,7 @@ function MobileMenu() {
                           t={t}
                         />
                       </div>
-                    )}
+                    </div>
                   </div>
                 );
               }
@@ -181,14 +199,12 @@ function MobileMenu() {
             >
               {t("v2.nav.applyButton")} →
             </Link>
-            <div className="flex items-center justify-between font-v2-heading text-v2-label font-semibold leading-4 text-v2-slate">
+            <div className="font-v2-heading text-v2-label font-semibold leading-4 text-v2-slate">
               <a href="tel:+996312882424">+996 (312) 88-24-24</a>
-              <LanguageSelecter />
             </div>
           </div>
-        </div>
       </div>
-    )
+    </div>
   );
 }
 

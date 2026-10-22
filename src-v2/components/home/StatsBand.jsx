@@ -2,13 +2,36 @@ import { useTranslation } from "react-i18next";
 
 const stats = ["placements", "programs", "partners", "seats"];
 
+// Below lg the four stats sit in a 2×2 grid split by hairlines
+// ("Home — Mobile v3" artboard): left column has a right border, top row a
+// bottom border.
+const mobileCell = [
+  "border-r border-b border-white/[0.15] pb-[18px]",
+  "border-b border-white/[0.15] pb-[18px] pl-5",
+  "border-r border-white/[0.15] pt-[18px]",
+  "pt-[18px] pl-5",
+];
+
 // Transcribed from the Paper "EC Redesign" Home "Stats Band" artboard (1V1-0).
 function StatsBand() {
   const { t } = useTranslation();
 
   return (
     <section className="relative overflow-hidden bg-v2-navy">
-      <div className="relative mx-auto max-w-[1440px] px-6 py-10 lg:px-v2-gutter">
+      <div className="relative mx-auto max-w-[1440px] px-5 pt-7 pb-[72px] lg:px-v2-gutter lg:py-10">
+        {/* Mobile ridge */}
+        <svg
+          width="390"
+          height="80"
+          viewBox="0 0 390 80"
+          aria-hidden="true"
+          preserveAspectRatio="none"
+          className="pointer-events-none absolute bottom-0 left-0 w-full lg:hidden"
+        >
+          <path d="M0 80L0 60 50 40 90 55 140 20 180 45 230 10 280 42 330 25 390 50V80Z" fill="#1C3154" />
+          <path d="M140 20l-12 13 8-3 5 5 6-7zM230 10l-14 15 9-4 6 6 7-9z" fill="#FFFFFF80" />
+          <path d="M0 80L0 70 80 60 160 68 240 55 320 66 390 58V80Z" fill="#142541" />
+        </svg>
         <svg
           width="620"
           height="180"
@@ -30,18 +53,21 @@ function StatsBand() {
             fill="#142541"
           />
         </svg>
-        <div className="relative z-10 flex flex-col gap-8 lg:flex-row lg:flex-wrap lg:items-center lg:gap-0">
+        <div className="relative z-10 grid grid-cols-2 lg:flex lg:flex-row lg:flex-wrap lg:items-center">
           {stats.map((key, i) => (
             <div
               key={key}
-              className={`flex flex-col gap-1.5 lg:w-[220px] lg:shrink-0 ${
-                i > 0 ? "lg:border-l lg:border-white/[0.18] lg:px-8" : "lg:pr-8"
+              className={`flex flex-col gap-1 lg:w-[220px] lg:shrink-0 lg:gap-1.5 lg:border-0 lg:py-0 ${mobileCell[i]} ${
+                i > 0 ? "lg:border-l lg:border-white/[0.18] lg:px-8" : "lg:pl-0 lg:pr-8"
               }`}
             >
-              <div className="font-v2-heading text-[36px] font-extrabold leading-[1.15] tracking-[-0.03em] text-v2-paper lg:text-[44px] lg:leading-[54px]">
+              <div className="font-v2-heading text-[32px] font-extrabold leading-10 text-v2-paper lg:text-[44px] lg:leading-[54px] lg:tracking-[-0.03em]">
                 {t(`v2.home.stats.${key}.value`)}
               </div>
-              <div className="whitespace-pre-wrap font-v2-body text-[14px] leading-5 text-[#B9C3D9]">
+              <div className="font-v2-body text-[12px] leading-[17px] text-[#B9C3D9] lg:hidden">
+                {t(`v2.home.stats.${key}.labelShort`)}
+              </div>
+              <div className="hidden whitespace-pre-wrap font-v2-body text-[14px] leading-5 text-[#B9C3D9] lg:block">
                 {t(`v2.home.stats.${key}.label`)}
               </div>
             </div>

@@ -13,42 +13,62 @@ function AcademicsHero() {
     <section className="relative overflow-hidden bg-v2-navy">
       <div className="relative mx-auto flex max-w-[1440px] flex-col lg:h-[440px] lg:flex-row">
       <svg
-        width="620"
-        height="120"
-        viewBox="0 0 620 180"
-        preserveAspectRatio="none"
+        width="700"
+        height="60"
+        viewBox="0 0 700 60"
         aria-hidden="true"
         className="pointer-events-none absolute bottom-0 left-0 hidden lg:block"
+        style={{
+          maskImage: "linear-gradient(to right, #000 75%, transparent)",
+          WebkitMaskImage: "linear-gradient(to right, #000 75%, transparent)",
+        }}
       >
+        {/* Low back ridge with two peaks */}
         <path
-          d="M0 180L70 120 110 140 180 70 230 110 290 40 340 90 400 30 460 95 520 60 580 100 620 80V180Z"
+          d="M0 60V45L60 38 120 44 180 30 243 3 290 28 340 22 398 2 450 26 520 20 580 32 640 26 700 34V60Z"
           fill="#1C3154"
         />
+        {/* Snow caps, drawn on the peak slopes */}
         <path
-          d="M180 70 L203 88 L185 97 L174 88 L163 99 L145 105 ZM290 40 L310 60 L298 54 L287 48 L275 60 L263 72 ZM400 30 L427 59 L417 51 L406 46 L396 52 L373 57 Z"
+          d="M243 3L254 9 248 8 243 11 237 8 229 9ZM398 2L411 8 404 7 398 10 391 7 381 8Z"
           fill="#E9EDFF"
+          fillOpacity="0.85"
         />
+        {/* Front ridge */}
         <path
-          d="M0 180L60 150 130 160 210 118 280 150 350 105 430 145 500 120 560 150 620 132V180Z"
+          d="M0 60V52L80 46 160 52 240 42 320 50 400 40 480 50 560 44 640 50 700 46V60Z"
           fill="#142541"
         />
       </svg>
-      <div className="relative z-10 flex flex-col justify-center gap-5 px-6 py-10 lg:w-[700px] lg:shrink-0 lg:gap-[22px] lg:py-0 lg:pl-v2-gutter">
-        <div className="font-v2-heading text-[11px] font-semibold leading-[14px] tracking-[0.24em] text-[#8FA3CC]">
+      {/* Mobile ridge ("Направления — Mobile v3") */}
+      <svg
+        width="390"
+        height="60"
+        viewBox="0 0 390 60"
+        aria-hidden="true"
+        preserveAspectRatio="none"
+        className="pointer-events-none absolute bottom-0 left-0 w-full lg:hidden"
+      >
+        <path d="M0 60L0 44 60 28 100 40 160 10 210 36 270 16 330 40 390 26V60Z" fill="#142541" />
+        <path d="M160 10l-12 13 8-3 5 5 6-7zM270 16l-10 11 7-3 4 4 5-6z" fill="#FFFFFF59" />
+      </svg>
+      <div className="relative z-10 flex flex-col justify-center gap-4 px-5 pt-9 pb-v2-gutter lg:w-[700px] lg:shrink-0 lg:gap-[22px] lg:px-6 lg:py-0 lg:pl-v2-gutter">
+        <div className="font-v2-heading text-[10px] font-semibold leading-3 tracking-[0.24em] text-[#8FA3CC] lg:text-[11px] lg:leading-[14px]">
           {t("v2.academics.index.eyebrow")}
         </div>
         <div className="flex flex-col font-v2-heading">
-          <div className="text-[28px] font-extrabold leading-[1.15] tracking-[-0.035em] text-v2-paper lg:text-[40px] lg:leading-[48px]">
+          <div className="text-[32px] font-extrabold leading-[37px] tracking-[-0.035em] text-v2-paper lg:text-[40px] lg:leading-[48px]">
             {t("v2.academics.index.titleLine1")}
           </div>
-          <div className="text-[28px] font-extrabold leading-[1.15] tracking-[-0.035em] text-v2-step-4 lg:text-[40px] lg:leading-[48px]">
+          <div className="text-[32px] font-extrabold leading-[37px] tracking-[-0.035em] text-v2-step-4 lg:text-[40px] lg:leading-[48px]">
             {t("v2.academics.index.titleLine2")}
           </div>
         </div>
-        <p className="font-v2-body text-[16px] leading-[26px] text-[#C4CCDD] lg:w-[520px] lg:text-[17px] lg:leading-[27px]">
-          {t("v2.academics.index.description")}
+        <p className="font-v2-body text-[14px] leading-[22px] text-[#C4CCDD] lg:w-[520px] lg:text-[17px] lg:leading-[27px]">
+          <span className="lg:hidden">{t("v2.academics.index.descriptionShort")}</span>
+          <span className="hidden lg:inline">{t("v2.academics.index.description")}</span>
         </p>
-        <div className="flex flex-wrap gap-5 pt-1">
+        <div className="hidden flex-wrap gap-5 pt-1 lg:flex">
           {facts.map((key) => (
             <div key={key} className="flex items-center gap-2.5">
               <div className="h-2 w-2 shrink-0 rounded-full bg-v2-crimson" />
@@ -59,7 +79,7 @@ function AcademicsHero() {
           ))}
         </div>
       </div>
-      <div className="relative h-[220px] lg:h-auto lg:flex-1">
+      <div className="relative hidden lg:block lg:flex-1">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${PHOTO})` }} />
         <div className="absolute inset-y-0 left-0 hidden w-[320px] bg-gradient-to-r from-v2-navy to-transparent lg:block" />
       </div>
