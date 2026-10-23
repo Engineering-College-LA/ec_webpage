@@ -3,7 +3,6 @@ import { programs, programCategories } from "../../config/programs";
 import AcademicsHero from "../../components/academics/AcademicsHero";
 import FilterBar from "../../components/academics/FilterBar";
 import ProgramRow from "../../components/academics/ProgramRow";
-import CareerTestCallout from "../../components/academics/CareerTestCallout";
 import CTABand from "../../components/home/CTABand";
 
 // Transcribed from the Paper "EC Redesign" "Направления — Desktop v3" artboard (26E-0).
@@ -31,7 +30,6 @@ function Academics() {
           <ProgramRow key={program.slug} program={program} index={i} number={number} />
         ))}
       </div>
-      <CareerTestCallout />
       <CTABand />
     </>
   );
