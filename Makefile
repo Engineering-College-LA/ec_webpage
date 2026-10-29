@@ -1,18 +1,14 @@
-.PHONY: install dev dev-new build preview lint clean
+.PHONY: install dev build preview lint clean
 
 # Install dependencies
 install:
 	npm install
 
-# OLD design — this is what ships to production (src/, index.html)
+# Dev server (src-v2/, index.html) — this is what ships to production
 dev:
 	npm run dev
 
-# NEW design — work in progress, dev only (src-v2/, new-index.html)
-dev-new:
-	npm run dev:new
-
-# Production build — always builds the OLD design from src/
+# Production build — builds src-v2/ via index.html
 build:
 	npm run build
 
