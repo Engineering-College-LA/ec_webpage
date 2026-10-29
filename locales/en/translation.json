@@ -1115,37 +1115,7 @@
           "navDescription": "National Mathematics Competition",
           "mobileDescription": "National Mathematics Competition",
           "categoryLabel": "ACADEMIC LIFE",
-          "otherDescription": "National Mathematics Competition",
-          "heroTitleLine1": "Olympiads",
-          "heroTitleLine2": "Test your knowledge, develop your logic, win!",
-          "heroDescription": "National Mathematics Competition for students in grades 8–9: solve problems, develop your logical thinking, and compete for valuable prizes — a laptop, a smartphone, and headphones.",
-          "heroDescriptionShort": "Math competition for grades 8–9. Prizes: laptop, smartphone, headphones.",
-          "primaryCta": "Take part",
-          "secondaryCta": "How it works",
-          "statValue": "Grades 8–9",
-          "statLabel": "individual participation",
-          "statValueShort": "Gr. 8–9",
-          "statLabelShort": "participants",
-          "cycleEyebrow": "HOW IT WORKS",
-          "cycleTitleLine1": "Two rounds —",
-          "cycleTitleLine2": "and victory is yours",
-          "cycleDescription": "The competition runs in two stages — online and offline — with problems growing harder.",
-          "cycleSteps": [
-            { "title": "Registration", "description": "Submit your application and get ready for the first round.", "descriptionShort": "Submit your application" },
-            { "title": "Round 1 — Online, Nov 30", "description": "Solve mathematical problems online, showing your knowledge and logic.", "descriptionShort": "Online, Nov 30" },
-            { "title": "Round 2 — Final, Dec 26", "description": "The best from round 1 advance to the offline final.", "descriptionShort": "Final, Dec 26" },
-            { "title": "Awards", "description": "Winners receive a laptop, a smartphone, and headphones — and their teachers receive cash prizes.", "descriptionShort": "Prizes and awards" }
-          ],
-          "projectsEyebrow": "PRIZES",
-          "projectsTitleLine1": "Prizes for",
-          "projectsTitleLine2": "the winners",
-          "projectsTitleShort": "Prizes for the winners",
-          "projectsLink": "All prizes",
-          "projects": [
-            { "tag": "1st place", "title": "A laptop", "description": "The top prize for the competition winner — a laptop for learning and new projects.", "descriptionShort": "A laptop" },
-            { "tag": "2nd place", "title": "A smartphone", "description": "The second-place winner receives a smartphone.", "descriptionShort": "A smartphone" },
-            { "tag": "3rd place", "title": "Headphones", "description": "The third-place winner receives headphones.", "descriptionShort": "Headphones" }
-          ]
+          "otherDescription": "National Mathematics Competition"
         },
         "labs": {
           "navLabel": "Labs & Library",
