@@ -1,0 +1,1 @@
+import{j as r,t as s}from"./index-DwOwukQ6.js";function a({children:t,className:o="",...e}){return r.jsx("button",{className:s("px-6 py-3 border-none rounded-md bg-white font-medium text-black text-sm shadow-md cursor-pointer hover:opacity-90 transition-opacity disabled:bg-slate-300",o),...e,children:t})}export{a as B};
