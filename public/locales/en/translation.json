@@ -521,187 +521,83 @@
       "rights": "All rights reserved."
     }
   },
-  "olympiad": {
-    "title": "EC Young Innovators Olympiad",
-    "subtitle": "An olympiad of innovative ideas for 9th-grade students",
-    "slogan": "Come up with an idea. Prepare your project. Pitch to the jury. Build your future.",
-    "intro": [
-      "EC Young Innovators Olympiad is an educational olympiad for 9th-grade students, where every participant can propose an idea aimed at solving a real problem in their school, city, region, or society.",
-      "The olympiad is organized by Engineering College in cooperation with APRD.",
-      "The main goal of the project is to help students develop creative thinking, presentation skills, self-confidence, and an interest in engineering, technology, and entrepreneurship."
-    ],
-    "forWhom": {
-      "title": "Who is this olympiad for?",
-      "text": [
-        "The olympiad is intended for 9th-grade students.",
-        "Participation is individual. This means each participant develops their own idea, prepares a presentation, and pitches it to the jury."
-      ]
+  "mathOlympiad": {
+    "hero": {
+      "eyebrow": "NATIONAL COMPETITION",
+      "titleLine1": "National",
+      "titleLine2": "Mathematics Competition",
+      "subtitle": "Test your knowledge, develop your logic, achieve victory!",
+      "description": "Are you ready to challenge yourself, improve your mathematical skills, and win valuable prizes? Join our National Mathematics Competition for students in grades 8–9!",
+      "primaryCta": "Register now",
+      "secondaryCta": "How it works"
     },
-    "theme": {
-      "title": "Choose an idea",
-      "name": "\"Ideas that improve our community\"",
-      "intro": "Find a real problem around you and propose a clear solution.",
-      "inspirationLabel": "Directions",
-      "directions": [
-        "Education",
-        "Ecology",
-        "Health",
-        "Transport",
-        "Safety",
-        "Technology",
-        "Tourism",
-        "Social projects",
-        "City or regional development"
-      ]
-    },
-    "process": {
-      "title": "How does the olympiad work?",
-      "stepLabel": "STEP",
-      "steps": {
-        "registration": {
-          "title": "Submit your presentation",
-          "text": "Fill out the form and attach your finished presentation.",
-          "submitLabel": "Submit application",
-          "warning": "Be careful when submitting: double-check all fields and make sure you've attached the correct presentation. It will be difficult to edit your application after submission."
-        },
-        "selection": {
-          "title": "Await selection results",
-          "text": [
-            "Organizers will review all applications and presentations. Selection results will be announced on July 17.",
-            "If you're confident you'll make it through — start preparing your pitch now."
-          ],
-          "videoLabel": "How to prepare for your pitch"
-        },
-        "workshops": {
-          "title": "Free workshops",
-          "text": "Finalists get access to free educational workshops. Workshop topics:",
-          "workshopLabel": "Workshop {{number}}",
-          "registerLabel": "Register",
-          "items": [
-            {
-              "name": "How to find a good idea",
-              "desc": "Participants learn how to notice real problems around them and choose a strong topic for their project."
-            },
-            {
-              "name": "How to come up with a solution",
-              "desc": "Participants learn to turn a problem into a clear idea and build a simple prototype."
-            },
-            {
-              "name": "How to present a project",
-              "desc": "Participants prepare for their pitch and learn to talk about their idea confidently and clearly."
-            }
-          ]
-        },
-        "finalPitch": {
-          "title": "Time to shine",
-          "text": "The final will take place on July 29.",
-          "formatIntro": "Pitch format before the jury:",
-          "format": [
-            "5 minutes for the presentation",
-            "2 minutes for jury questions"
-          ],
-          "mentalIntro": "How to get mentally ready:",
-          "mentalTips": [
-            "Rehearse your pitch out loud several times — ideally in front of a live audience",
-            "Learn your key phrases, but don't memorize the script word for word",
-            "Prepare answers to possible jury questions",
-            "Get a good night's sleep and arrive early — calm matters more than a perfect script"
-          ]
-        }
-      }
-    },
-    "prepare": {
-      "title": "Prepare a presentation",
-      "text": "Participants need to prepare a 5–7 slide presentation. Use the template and follow this structure:",
-      "templateLabel": "Presentation template",
-      "structure": [
-        "Project name",
-        "What problem is being solved",
-        "Who faces this problem",
-        "What solution is proposed",
-        "What the benefit will be",
-        "Prototype, mockup, poster, or visual idea",
-        "Why the participant chose this topic"
-      ],
-      "prototypeText": "You can build a prototype with AI tools:",
-      "feedbackText": "Show your presentation and demo to friends, family, or classmates — gather feedback and improve your project before submitting.",
-      "prototypeList": [
-        { "name": "Lovable", "url": "https://lovable.dev" },
-        { "name": "Google AI Studio", "url": "https://aistudio.google.com" },
-        { "name": "Bolt", "url": "https://bolt.new" },
-        { "name": "Rork", "url": "https://rork.com" },
-        { "name": "v0", "url": "https://v0.dev" },
-        { "name": "Replit", "url": "https://replit.com" }
-      ]
-    },
-    "criteria": {
-      "title": "How will projects be evaluated?",
-      "intro": "The jury will evaluate projects against clear criteria:",
-      "list": [
-        "how important the problem is",
-        "how creative the idea is",
-        "whether the solution can be implemented",
-        "what social impact the project may have",
-        "how well the presentation is prepared",
-        "how the participant answers questions"
-      ],
-      "note": "The olympiad evaluates not only knowledge, but also thinking, initiative, confidence, and the desire to solve real problems."
-    },
-    "prizes": {
-      "title": "Prizes",
-      "intro": "Winners receive educational discounts on tuition at Engineering College:",
-      "places": [
-        "1st place — 100% tuition discount",
-        "2nd place — 50% tuition discount",
-        "3rd place — 25% tuition discount"
-      ],
-      "specialTitle": "There may also be special nominations:",
-      "special": [
-        "Most creative idea",
-        "Best social project",
-        "Best presentation",
-        "Best prototype",
-        "Audience choice award"
+    "intro": {
+      "paragraphs": [
+        "Mathematics is much more than numbers, formulas, and equations. It develops logical reasoning, analytical thinking, problem-solving skills, and the ability to find creative solutions to challenging problems.",
+        "The main goal of the competition is to increase students' interest in mathematics, assess their knowledge, develop their logical thinking, identify talented learners, and recognize the teachers who play an important role in their students' achievements.",
+        "We invite students in grades 8–9 from across the country to demonstrate their mathematical abilities, gain valuable experience, and compete with their peers!"
       ]
     },
     "why": {
-      "title": "Why take part?",
-      "intro": "Taking part in the olympiad is an opportunity to:",
-      "list": [
-        "show your potential",
-        "gain public-speaking experience",
-        "learn to create ideas and projects",
-        "get to know Engineering College",
-        "receive feedback from experts",
-        "compete for an educational discount",
-        "take the first step toward your future profession"
+      "eyebrow": "WHY PARTICIPATE",
+      "titleLine1": "Why should you",
+      "titleLine2": "participate",
+      "items": [
+        { "title": "Test your knowledge", "description": "Apply what you've learned at school and assess your level of preparation — see which topics need more work." },
+        { "title": "Develop your logical thinking", "description": "Solving problems helps you analyze information, compare approaches, and find effective, creative solutions." },
+        { "title": "Gain valuable experience", "description": "Manage your time effectively, apply your knowledge in practice, and build confidence in your abilities." },
+        { "title": "Build confidence in yourself", "description": "You don't need to know every topic perfectly — what matters is your willingness to learn and challenge yourself." }
+      ]
+    },
+    "prizes": {
+      "eyebrow": "PRIZES",
+      "titleLine1": "Valuable prizes",
+      "titleLine2": "for the winners",
+      "intro": "Knowledge, dedication, and hard work deserve recognition! Demonstrate your abilities and compete for the top three places.",
+      "places": [
+        { "place": "1st place", "prize": "A laptop" },
+        { "place": "2nd place", "prize": "A smartphone" },
+        { "place": "3rd place", "prize": "Headphones" }
+      ]
+    },
+    "teachers": {
+      "eyebrow": "FOR TEACHERS",
+      "titleLine1": "We value",
+      "titleLine2": "teachers, too",
+      "intro": "Behind every successful student is a teacher. Teachers of the students who win the top three places also receive cash prizes.",
+      "rewards": [
+        { "place": "Teacher of the 1st-place winner", "amount": "15,000 KGS" },
+        { "place": "Teacher of the 2nd-place winner", "amount": "10,000 KGS" },
+        { "place": "Teacher of the 3rd-place winner", "amount": "8,000 KGS" }
       ],
-      "note": "Even if a participant doesn't win, they gain valuable experience, new knowledge, and confidence in their abilities."
+      "aiLesson": {
+        "title": "Free Artificial Intelligence lesson for mathematics teachers",
+        "description": "Teachers will explore the possibilities of AI and learn how modern tools can make lesson preparation more efficient and learning materials more engaging."
+      }
     },
-    "organizer": {
-      "title": "Who organizes it?",
-      "collaboration": "The olympiad is organized by Engineering College in cooperation with",
-      "partner": "APRD",
-      "description": "The project aims to develop young talent, support students, and promote innovative thinking among 9th-grade students."
+    "process": {
+      "eyebrow": "HOW THE COMPETITION WORKS",
+      "titleLine1": "Two rounds —",
+      "titleLine2": "one final",
+      "rounds": [
+        { "label": "Round 1 · Online", "date": "November 30", "description": "Participants solve mathematical problems online, demonstrating their knowledge, attention to detail, and logical reasoning." },
+        { "label": "Round 2 · Offline", "date": "December 26", "description": "Students selected from the first round advance to the final stage and compete for the top prizes." }
+      ]
     },
-    "banner": {
-      "tag": "New",
-      "title": "EC Young Innovators Olympiad",
-      "text": "9th-graders: pitch an idea and win up to a 100% tuition scholarship.",
-      "cta": "Learn more"
+    "eligibility": {
+      "title": "Who can participate?",
+      "paragraphs": [
+        "All students in grades 8–9 who are interested in mathematics, want to test their knowledge, develop their logical thinking, and gain new experience are welcome.",
+        "You don't have to be the best math student in your class. If you enjoy solving problems, exploring different approaches, and learning new things, this competition is for you.",
+        "For teachers, the competition is also a great opportunity to support their students, help them discover their potential, and see the results of their hard work."
+      ]
     },
     "cta": {
-      "register": "Register & Submit",
-      "warning": "Before submitting, double-check your presentation carefully. Make sure every slide is complete and correct — you will not be able to edit your entry after submission.",
-      "deadlineLabel": "Submission deadline",
-      "deadlineDate": "July 16, 11:45 PM (Bishkek time)",
-      "closed": "Registration is closed",
-      "units": {
-        "days": "Days",
-        "hours": "Hours",
-        "minutes": "Minutes",
-        "seconds": "Seconds"
-      }
+      "eyebrow": "REGISTRATION",
+      "title": "Register today!",
+      "description": "Take part in the National Mathematics Competition, test your knowledge, compete for valuable prizes, and open the door to new opportunities. Your effort — your success!",
+      "button": "Contact us",
+      "note": "The registration form will be available here soon — email us to get the details early."
     }
   },
   "v2": {
@@ -1216,39 +1112,39 @@
         },
         "olympiads": {
           "navLabel": "Olympiads & Competitions",
-          "navDescription": "Young Innovators Olympiad and more",
-          "mobileDescription": "Young Innovators Olympiad and more",
+          "navDescription": "National Mathematics Competition",
+          "mobileDescription": "National Mathematics Competition",
           "categoryLabel": "ACADEMIC LIFE",
-          "otherDescription": "Young Innovators Olympiad",
+          "otherDescription": "National Mathematics Competition",
           "heroTitleLine1": "Olympiads",
-          "heroTitleLine2": "Show your idea to the jury.",
-          "heroDescription": "EC Young Innovators Olympiad is an innovation-ideas olympiad for 9th-grade students. Winners get a tuition discount.",
-          "heroDescriptionShort": "EC Young Innovators Olympiad — for 9th graders. Winners get a discount.",
+          "heroTitleLine2": "Test your knowledge, develop your logic, win!",
+          "heroDescription": "National Mathematics Competition for students in grades 8–9: solve problems, develop your logical thinking, and compete for valuable prizes — a laptop, a smartphone, and headphones.",
+          "heroDescriptionShort": "Math competition for grades 8–9. Prizes: laptop, smartphone, headphones.",
           "primaryCta": "Take part",
           "secondaryCta": "How it works",
-          "statValue": "Grade 9",
+          "statValue": "Grades 8–9",
           "statLabel": "individual participation",
-          "statValueShort": "Gr. 9",
+          "statValueShort": "Gr. 8–9",
           "statLabelShort": "participants",
           "cycleEyebrow": "HOW IT WORKS",
-          "cycleTitleLine1": "Four steps —",
-          "cycleTitleLine2": "to the final",
-          "cycleDescription": "The olympiad is run by Engineering College together with APRD.",
+          "cycleTitleLine1": "Two rounds —",
+          "cycleTitleLine2": "and victory is yours",
+          "cycleDescription": "The competition runs in two stages — online and offline — with problems growing harder.",
           "cycleSteps": [
-            { "title": "Send a presentation", "description": "A form and a 5–7 slide presentation using the template.", "descriptionShort": "5–7 slides from the template" },
-            { "title": "Selection", "description": "Organizers review the applications. Results on July 17.", "descriptionShort": "Results on July 17" },
-            { "title": "Workshops", "description": "Finalists learn for free: idea, solution, pitch.", "descriptionShort": "Free for finalists" },
-            { "title": "Final — July 29", "description": "A 5-minute pitch and 2 minutes of jury questions.", "descriptionShort": "5 min pitch + 2 min Q&A" }
+            { "title": "Registration", "description": "Submit your application and get ready for the first round.", "descriptionShort": "Submit your application" },
+            { "title": "Round 1 — Online, Nov 30", "description": "Solve mathematical problems online, showing your knowledge and logic.", "descriptionShort": "Online, Nov 30" },
+            { "title": "Round 2 — Final, Dec 26", "description": "The best from round 1 advance to the offline final.", "descriptionShort": "Final, Dec 26" },
+            { "title": "Awards", "description": "Winners receive a laptop, a smartphone, and headphones — and their teachers receive cash prizes.", "descriptionShort": "Prizes and awards" }
           ],
-          "projectsEyebrow": "IDEA AREAS",
-          "projectsTitleLine1": "Ideas that",
-          "projectsTitleLine2": "improve the community",
-          "projectsTitleShort": "Ideas for the community",
-          "projectsLink": "Presentation template",
+          "projectsEyebrow": "PRIZES",
+          "projectsTitleLine1": "Prizes for",
+          "projectsTitleLine2": "the winners",
+          "projectsTitleShort": "Prizes for the winners",
+          "projectsLink": "All prizes",
           "projects": [
-            { "tag": "Area", "title": "Education", "description": "How to make school more engaging and accessible", "descriptionShort": "School learning" },
-            { "tag": "Area", "title": "Ecology and the city", "description": "A clean city, transport, regional development", "descriptionShort": "Transport, region" },
-            { "tag": "Area", "title": "Technology", "description": "Digital solutions for health, safety, and tourism", "descriptionShort": "Health, safety" }
+            { "tag": "1st place", "title": "A laptop", "description": "The top prize for the competition winner — a laptop for learning and new projects.", "descriptionShort": "A laptop" },
+            { "tag": "2nd place", "title": "A smartphone", "description": "The second-place winner receives a smartphone.", "descriptionShort": "A smartphone" },
+            { "tag": "3rd place", "title": "Headphones", "description": "The third-place winner receives headphones.", "descriptionShort": "Headphones" }
           ]
         },
         "labs": {

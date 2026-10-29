@@ -21,8 +21,8 @@ const ThankYou = lazy(() => import("../pages/thank-you/ThankYou"));
 const CareerTestPage = lazy(() => import("../pages/careertest/CareerTest"));
 const NotFound = lazy(() => import("../pages/not-found/NotFound"));
 const AppLanding = lazy(() => import("../pages/app-landing/AppLanding"));
-const YoungInnovatorsOlympiad = lazy(
-  () => import("../pages/events/YoungInnovatorsOlympiad"),
+const NationalMathCompetition = lazy(
+  () => import("../pages/events/NationalMathCompetition"),
 );
 
 // Initialize Google Analytics
@@ -71,8 +71,8 @@ const router = createBrowserRouter([
         element: <Admission />,
       },
       {
-        path: "/events/young-innovators-olympiad",
-        element: <YoungInnovatorsOlympiad />,
+        path: "/events/national-math-competition",
+        element: <NationalMathCompetition />,
       },
       {
         path: "/thank-you",

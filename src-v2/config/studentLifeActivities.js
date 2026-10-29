@@ -40,7 +40,7 @@ export const studentLifeActivities = [
     template: "academic",
     icon: OlympiadsIcon,
     i18nKey: "olympiads",
-    primaryLink: "/events/young-innovators-olympiad",
+    primaryLink: "/events/national-math-competition",
     secondaryLink: "#cycle",
     // Paper academic artboard: hero photo and one photo per project card.
     heroImage: `${ASSETS}/4VGGRY57SRGNK37Z69ZBBS0ZBY.jpg`,
