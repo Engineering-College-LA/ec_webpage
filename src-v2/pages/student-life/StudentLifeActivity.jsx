@@ -11,6 +11,11 @@ function StudentLifeActivity() {
     return <Navigate to="/student-life" replace />;
   }
 
+  if (activity.customDetail) {
+    const CustomDetail = activity.customDetail;
+    return <CustomDetail />;
+  }
+
   return activity.template === "academic" ? (
     <AcademicActivityTemplate activity={activity} />
   ) : (

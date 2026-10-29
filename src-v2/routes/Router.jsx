@@ -21,9 +21,6 @@ const ThankYou = lazy(() => import("../pages/thank-you/ThankYou"));
 const CareerTestPage = lazy(() => import("../pages/careertest/CareerTest"));
 const NotFound = lazy(() => import("../pages/not-found/NotFound"));
 const AppLanding = lazy(() => import("../pages/app-landing/AppLanding"));
-const NationalMathCompetition = lazy(
-  () => import("../pages/events/NationalMathCompetition"),
-);
 
 // Initialize Google Analytics
 ReactGA.initialize("G-2M2GPPXSPW");
@@ -69,10 +66,6 @@ const router = createBrowserRouter([
       {
         path: "/admissions",
         element: <Admission />,
-      },
-      {
-        path: "/events/national-math-competition",
-        element: <NationalMathCompetition />,
       },
       {
         path: "/thank-you",
