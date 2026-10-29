@@ -2,7 +2,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { HeaderContext } from "./Header";
 import { twMerge } from "tailwind-merge";
 import { navLinks } from "../../config/constants";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import NavDropdown from "./NavDropdown";
 import LanguageSelecter from "../langage-selector/LanguageSelecter";
@@ -17,12 +17,12 @@ const MobileNavToggle = () => {
   return (
     <div className="flex items-center gap-2.5 lg:hidden">
       <LanguageSwitch className="hidden sm:inline-flex" />
-      <a
-        href="/admissions"
+      <Link
+        to="/admissions"
         className="flex items-center rounded-v2-sm bg-v2-crimson px-3.5 py-2.5 font-v2-heading text-v2-label font-bold leading-4 text-v2-paper"
       >
         {t("v2.nav.applyShort")}
-      </a>
+      </Link>
       <button
         type="button"
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -146,8 +146,8 @@ function Navbar() {
       </div>
       <div className="hidden items-center gap-5 lg:flex">
         <LanguageSelecter />
-        <a
-          href="/admissions"
+        <Link
+          to="/admissions"
           className="flex items-center gap-2 rounded-v2-sm bg-v2-crimson py-3 px-5 font-v2-heading text-[14px] font-bold leading-[18px] text-v2-paper"
         >
           {t("v2.nav.applyButton")}
@@ -161,7 +161,7 @@ function Navbar() {
               strokeLinejoin="round"
             />
           </svg>
-        </a>
+        </Link>
       </div>
       <MobileNavToggle />
     </nav>

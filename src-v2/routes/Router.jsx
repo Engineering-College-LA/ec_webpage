@@ -81,7 +81,10 @@ const router = createBrowserRouter([
     path: "*",
     element: <NotFound />,
   },
-]);
+], {
+  // Serve under /ec_webpage/ on GitHub Pages, at the root everywhere else.
+  basename: import.meta.env.BASE_URL.replace(/\/$/, "") || "/",
+});
 
 function GAListener() {
   const location = useLocation();
