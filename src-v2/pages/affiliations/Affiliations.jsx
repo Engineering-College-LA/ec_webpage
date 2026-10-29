@@ -1,5 +1,6 @@
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { partners } from "../../config/partners";
 import Eyebrow from "../../components/ui/Eyebrow";
 
@@ -58,20 +59,33 @@ function PartnerTile({ partner }) {
 function Affiliations() {
   const { t } = useTranslation();
   const benefits = t("v2.partnersPage.benefits", { returnObjects: true });
+  const { hash } = useLocation();
+
+  // Arriving from "Become a partner" on the About page: jump to that section.
+  // The section's scroll-mt already clears the sticky header.
+  useEffect(() => {
+    if (hash) document.querySelector(hash)?.scrollIntoView({ behavior: "smooth" });
+  }, [hash]);
 
   return (
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-v2-navy">
+        {/* Three-layer ridge. Snow caps are cut along each peak's own slopes
+            (lit left face, shaded right face), so they stay on the mountain
+            when the SVG stretches to the viewport width. */}
         <svg
-          viewBox="0 0 1440 120"
+          viewBox="0 0 1440 160"
           aria-hidden="true"
           preserveAspectRatio="none"
-          className="pointer-events-none absolute bottom-0 left-0 h-[60px] w-full lg:h-[120px]"
+          className="pointer-events-none absolute bottom-0 left-0 h-[64px] w-full lg:h-[150px]"
         >
-          <path d="M0 120V88L120 70 220 84 330 40 420 72 540 30 640 66 760 22 880 70 990 46 1110 78 1220 50 1330 74 1440 58V120Z" fill="#1C3154" />
-          <path d="M330 40l-16 15 10-3 6 6 8-8zM760 22l-18 17 11-4 7 7 9-10z" fill="#FFFFFF59" />
-          <path d="M0 120V104L160 94 320 104 480 90 640 102 800 88 960 100 1120 90 1280 102 1440 94V120Z" fill="#142541" />
+          <path d="M0 160 0 112 90 96 170 106 310 38 410 90 480 74 570 98 730 18 880 92 960 78 1050 102 1180 44 1300 94 1370 84 1440 98 1440 160Z" fill="#1C3154" />
+          <path d="M310 38 410 90 410 160 325 160ZM730 18 880 92 880 160 752.5 160ZM1180 44 1300 94 1300 160 1198 160Z" fill="#0A1426" fillOpacity="0.28" />
+          <path d="M310 38 311.6 53.8 299.7 48.3 288.8 55 275.7 54.6ZM730 18 732.4 40.5 715.8 32.7 700.6 42.2 682.6 41.7ZM1180 44 1181.9 59.2 1169.2 53.9 1157.8 60.3 1144.1 60Z" fill="#E6EDF8" fillOpacity="0.85" />
+          <path d="M310 38 342 54.6 327.6 48 311.6 53.8ZM730 18 778 41.7 756.4 32.2 732.4 40.5ZM1180 44 1218.4 60 1201.1 53.6 1181.9 59.2Z" fill="#9DB0CF" fillOpacity="0.7" />
+          <path d="M0 160 0 128 130 114 250 124 400 100 540 122 680 108 830 126 1000 102 1140 124 1290 108 1440 120 1440 160Z" fill="#172A48" />
+          <path d="M0 160 0 146 180 138 400 148 640 136 900 148 1150 138 1440 146 1440 160Z" fill="#132340" />
         </svg>
         <div className="relative mx-auto flex max-w-[1440px] flex-col gap-3.5 px-5 pt-9 pb-v2-gutter lg:gap-[22px] lg:px-v2-gutter lg:pt-24 lg:pb-[150px]">
           <Eyebrow className="text-[10px] leading-3 text-[#8FA3CC] lg:text-[11px] lg:leading-[14px]">

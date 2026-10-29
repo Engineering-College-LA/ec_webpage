@@ -133,15 +133,6 @@ const NavItem = ({ link }) => {
   );
 };
 
-/* Decorative placeholder — no site search feature exists yet; matches the
-   Paper header's search glyph for now, not wired up. */
-const SearchGlyph = () => (
-  <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" className="shrink-0">
-    <circle cx="8" cy="8" r="6" fill="none" stroke="#0E1B33" strokeWidth="1.6" />
-    <path d="M12.5 12.5L16 16" fill="none" stroke="#0E1B33" strokeWidth="1.6" strokeLinecap="round" />
-  </svg>
-);
-
 function Navbar() {
   const { t } = useTranslation();
 
@@ -154,7 +145,6 @@ function Navbar() {
         ))}
       </div>
       <div className="hidden items-center gap-5 lg:flex">
-        <SearchGlyph />
         <LanguageSelecter />
         <a
           href="/admissions"
