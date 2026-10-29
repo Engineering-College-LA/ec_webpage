@@ -15,7 +15,10 @@ const socialLinks = [
 ];
 
 // Same number as the Telegram/WhatsApp links above.
-const PHONE = { href: "tel:+996226142222", label: "+996 226 14 22 22" };
+const PHONE = {
+  href: "https://api.whatsapp.com/send?phone=996226142222",
+  label: "+996 226 14 22 22",
+};
 
 // Shorter labels used in the mobile footer ("Home — Mobile v3").
 const mobileLabel = {

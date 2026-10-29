@@ -200,7 +200,7 @@ function MobileMenu() {
               {t("v2.nav.applyButton")} →
             </Link>
             <div className="font-v2-heading text-v2-label font-semibold leading-4 text-v2-slate">
-              <a href="tel:+996312882424">+996 (312) 88-24-24</a>
+              <a href="https://api.whatsapp.com/send?phone=996226142222">+996 226 14 22 22</a>
             </div>
           </div>
       </div>

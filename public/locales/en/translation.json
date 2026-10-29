@@ -480,10 +480,10 @@
     "contactLinks": {
       "phone": "Phone",
       "email": "Email",
-      "addressLabel": "Suhe Bator, 23",
+      "addressLabel": "Suho Bator 23",
       "address": "Address"
     },
-    "copyright": "© 2024–2026. EC All rights reserved."
+    "copyright": "© 2024–2026. ОсОО \"Инженерный Колледж Лайт Академия\". All rights reserved."
   },
   "appLanding": {
     "hero": {
@@ -722,9 +722,9 @@
       }
     },
     "footer": {
-      "copyright": "© 2026 E|C Engineering College · 553 Frunze St, Bishkek · +996 (312) 88-24-24",
+      "copyright": "© 2026 E|C Engineering College · ОсОО \"Инженерный Колледж Лайт Академия\" · Suho Bator 23, Bishkek · +996 226 14 22 22",
       "tagline": "High goals. A bright tomorrow for Kyrgyzstan.",
-      "address": "553 Frunze St, Bishkek",
+      "address": "ОсОО \"Инженерный Колледж Лайт Академия\" · Suho Bator 23, Bishkek",
       "copyrightShort": "© 2026 E|C Engineering College"
     },
     "academics": {
