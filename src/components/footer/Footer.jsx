@@ -1,130 +1,106 @@
 import { useTranslation } from "react-i18next";
-import { footerColumns } from "../../config/constants";
-import Logo from "../header/Logo";
-import logoWhite from "../../assets/logo-white.svg";
-import { socialMediaIcons } from "../../config/icons";
 import { Link } from "react-router-dom";
+import LogoV2 from "../header/LogoV2";
+import LanguageSelecterV2 from "../langage-selector/LanguageSelecterV2";
+import LanguageSwitchV2 from "../langage-selector/LanguageSwitchV2";
 
-// Define social icons data
-const socialIcons = [
-  {
-    href: "https://www.instagram.com/light_academy.college",
-    icon: socialMediaIcons.instagram,
-    label: "Instagram",
-  },
-  {
-    href: "https://api.whatsapp.com/send?phone=996226142222",
-    icon: socialMediaIcons.whatsapp,
-    label: "WhatsApp",
-  },
-  {
-    href: "https://t.me/+996226142222",
-    icon: socialMediaIcons.telegram,
-    label: "Telegram",
-  },
+// Mirrors src-v2/components/footer/Footer.jsx (the "EC Redesign" footer,
+// Paper artboard 20B-0). Uses its own nav link list rather than the old
+// navLinks in config/constants, since that list's labels/shape are still
+// tied to the old Navbar.
+const footerLinks = [
+  { to: "/academics", label: "v2.nav.programs" },
+  { to: "/admissions", label: "v2.nav.admissions" },
+  { to: "/student-life", label: "v2.nav.studentLife" },
+  { to: "/about", label: "v2.nav.about" },
+  { to: "/#contact", label: "v2.nav.contacts" },
 ];
 
-// FooterColumn component
-const FooterColumn = ({ title, links }) => {
-  const { t } = useTranslation();
+const socialLinks = [
+  {
+    href: "https://www.instagram.com/engineering.college.la/",
+    label: "Instagram",
+  },
+  { href: "https://t.me/+996226142222", label: "Telegram" },
+  { href: "https://api.whatsapp.com/send?phone=996226142222", label: "WhatsApp" },
+];
 
-  return (
-    <div>
-      <p className="font-medium text-white">{t(title)}</p>
-      <ul className="mt-6 space-y-4 text-sm">
-        {links.map((link, index) => (
-          <li key={index}>
-            {link.href ? (
-              <a
-                href={link.href}
-                className="text-n-bluish-50 transition hover:opacity-75"
-              >
-                {link.labelStart && <span>{t(link.labelStart)}:</span>}{" "}
-                <span className="block">
-                  {link.label.includes(".") ? t(link.label) : link.label}
-                </span>
-              </a>
-            ) : (
-              <Link
-                to={link.to}
-                className="text-n-bluish-50 transition hover:opacity-75"
-              >
-                {link.labelStart && <span>{t(link.labelStart)}:</span>}{" "}
-                <span className="block">
-                  {link.label.includes(".") ? t(link.label) : link.label}
-                </span>
-              </Link>
-            )}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+// Same number as the Telegram/WhatsApp links above.
+const PHONE = {
+  href: "https://api.whatsapp.com/send?phone=996226142222",
+  label: "+996 226 14 22 22",
 };
 
-// SocialIcon component
-const SocialIcon = ({ href, icon, label }) => (
-  <li>
-    <a
-      href={href}
-      rel="noreferrer"
-      target="_blank"
-      className="text-n-bluish transition hover:opacity-75"
-    >
-      <span className="sr-only">{label}</span>
-      {icon}
-    </a>
-  </li>
-);
+// Shorter labels used in the mobile footer ("Home — Mobile v3").
+const mobileLabel = {
+  "v2.nav.studentLife": "v2.nav.studentLifeShort",
+};
 
-// SocialLinks component
-const SocialLinks = () => (
-  <ul className="mt-8 flex gap-6">
-    {socialIcons.map((socialIcon, index) => (
-      <SocialIcon
-        key={index}
-        href={socialIcon.href}
-        icon={socialIcon.icon}
-        label={socialIcon.label}
-      />
-    ))}
-  </ul>
-);
+const linkClass =
+  "whitespace-nowrap text-v2-label font-semibold leading-4 text-v2-footer-link";
 
-const Footer = () => {
+function Footer() {
   const { t } = useTranslation();
 
-  return (
-    <footer className="bg-n-blue-hard text-white">
-      <div className="mx-auto max-w-screen-xl space-y-8 px-8 py-16 lg:space-y-16">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-          <div>
-            <div>
-              <Logo logoSrc={logoWhite} width={200} height={56} />
-              {/* <span className="text-sm font-medium">
-                Engineering College | LA
-              </span> */}
-            </div>
+  const renderLabel = (link) => (
+    <>
+      <span className="lg:hidden">{t(mobileLabel[link.label] ?? link.label)}</span>
+      <span className="hidden lg:inline">{t(link.label)}</span>
+    </>
+  );
 
-            <SocialLinks />
-          </div>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
-            {footerColumns.map((column, index) => (
-              <FooterColumn
-                key={index}
-                title={column.title}
-                links={column.links}
-              />
-            ))}
+  return (
+    <footer className="flex flex-col gap-[22px] bg-v2-ink-deep px-5 pt-9 pb-7 lg:gap-7 lg:px-[72px] lg:pt-12 lg:pb-8">
+      <div className="flex flex-col items-start gap-[22px] lg:flex-row lg:items-center lg:justify-between lg:gap-6">
+        <LogoV2 variant="light" />
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-3 font-v2-heading lg:gap-x-8 lg:gap-y-2">
+          {footerLinks.map((link) =>
+            link.to.includes("#") ? (
+              <a key={link.label} href={link.to} className={linkClass}>
+                {renderLabel(link)}
+              </a>
+            ) : (
+              <Link key={link.label} to={link.to} className={linkClass}>
+                {renderLabel(link)}
+              </Link>
+            ),
+          )}
+        </div>
+        <a
+          href={PHONE.href}
+          className="font-v2-heading text-v2-body font-bold leading-[22px] text-v2-paper lg:hidden"
+        >
+          {PHONE.label}
+        </a>
+        <LanguageSwitchV2 tone="dark" className="lg:hidden" />
+        <div className="hidden items-center gap-4 font-v2-heading lg:flex">
+          {socialLinks.map((social) => (
+            <a
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noreferrer"
+              className="text-v2-label font-semibold leading-4 text-v2-footer-link"
+            >
+              {social.label}
+            </a>
+          ))}
+          <div className="flex items-center gap-1 border-l border-white/20 pl-3 text-v2-label font-semibold leading-4 text-v2-footer-link">
+            <LanguageSelecterV2 className="text-v2-footer-link" />
+            <span aria-hidden="true">⌄</span>
           </div>
         </div>
-
-        <p className="text-sm text-white">
-          {t("footer.copyright")}
-        </p>
+      </div>
+      <div className="flex flex-col gap-1 border-t border-white/[0.12] pt-4 font-v2-body text-[11px] leading-[14px] text-v2-footer-muted lg:hidden">
+        <div>{t("v2.footer.copyrightShort")}</div>
+        <div>{t("v2.footer.address")}</div>
+      </div>
+      <div className="hidden flex-col gap-2 border-t border-white/[0.12] pt-5 font-v2-body text-[12px] leading-4 text-v2-footer-muted lg:flex lg:flex-row lg:items-center lg:justify-between">
+        <div>{t("v2.footer.copyright")}</div>
+        <div>{t("v2.footer.tagline")}</div>
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;
