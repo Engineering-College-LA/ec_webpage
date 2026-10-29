@@ -8,6 +8,7 @@ import {
   HackathonsIcon,
   InternshipsIcon,
 } from "../components/icons/ActivityIcons";
+import NationalMathCompetition from "../pages/events/NationalMathCompetition";
 
 // Source: Paper "EC Redesign" file, page "v3 — Alpine", nav dropdown artboard (3FN-0).
 // template/childCount split confirmed against each activity's own artboard
@@ -40,11 +41,10 @@ export const studentLifeActivities = [
     template: "academic",
     icon: OlympiadsIcon,
     i18nKey: "olympiads",
-    primaryLink: "/events/national-math-competition",
-    secondaryLink: "#cycle",
-    // Paper academic artboard: hero photo and one photo per project card.
-    heroImage: `${ASSETS}/4VGGRY57SRGNK37Z69ZBBS0ZBY.jpg`,
-    projectImages: [{ src: `${ASSETS}/0GQWB9TS6KQB0HH9RYRQP1PGN9.jpg`, position: "50% 40%" }, { src: `${ASSETS}/1NRT7HH082XEJ9V3NQM3MYM4XC.jpg` }, { src: `${ASSETS}/7R8XZDBZ6VJ8WV17XPSMA17THH.jpg` }],
+    // Bespoke page (prizes, teacher rewards, AI lesson, registration) — no
+    // Paper artboard, so this bypasses AcademicActivityTemplate entirely
+    // instead of linking out to a second page that repeats the same content.
+    customDetail: NationalMathCompetition,
     image: `${ASSETS}/0GQWB9TS6KQB0HH9RYRQP1PGN9.jpg`,
   },
   {
