@@ -1,0 +1,58 @@
+/*
+  Design tokens for the v3 — Alpine redesign (src-v2 only).
+  Source of truth: Paper file "EC Redesign", page "v3 — Alpine".
+  Keep in sync by re-reading that page's tokens via the Paper MCP if it changes.
+  Prefixed --v2-* so nothing here can collide with the live site's tailwind.config.js tokens.
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800;900&family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Nabla&family=Hubballi&family=Caveat:wght@400;600&display=swap");
+
+:root {
+  /* colors */
+  --v2-color-paper: #ffffff;
+  --v2-color-ink: #0b0d12;
+  --v2-color-pencil: #6b7080;
+  --v2-color-line: #e3e5ec;
+  --v2-color-cobalt: #1f3fff;
+  --v2-color-cobalt-wash: #e9edff;
+  --v2-color-tape: #ffd23f;
+  --v2-color-mist: #f6f7fa;
+  --v2-color-slate: #5e6270;
+  --v2-color-hairline: #e3e7ef;
+  --v2-color-navy: #0c1830;
+  --v2-color-navy-2: #203860;
+  --v2-color-crimson: #9a1a3e;
+  --v2-color-sky: #3a70d2;
+  --v2-color-ink-deep: #08121f;
+  --v2-color-step-2: #385484;
+  --v2-color-step-3: #6888bc;
+  --v2-color-step-4: #88a4d8;
+  --v2-color-dusk: #243f66;
+  /* discovered on individual artboards, not in Paper's top-level token list */
+  --v2-color-ink-nav: #0e1b33; /* header nav link text */
+  --v2-color-blush: #fbeaee; /* extracurricular icon chip bg */
+  --v2-color-footer-muted: #8fa3cc; /* footer subtitle/copyright text */
+  --v2-color-footer-link: #dde3f0; /* footer nav/social link text */
+
+  /* type families */
+  --v2-font-display: "Unbounded", sans-serif;
+  --v2-font-heading: "Montserrat", sans-serif;
+  --v2-font-body: "Manrope", sans-serif;
+  --v2-font-mono: "IBM Plex Mono", monospace;
+  /* decorative accents — used sparingly, not part of the core type scale */
+  --v2-font-accent-display: "Nabla", sans-serif;
+  --v2-font-accent-script: "Caveat", cursive;
+  --v2-font-accent-alt: "Hubballi", sans-serif;
+
+  /* type scale */
+  --v2-text-label: 13px;
+  --v2-text-body: 18px;
+  --v2-text-h3: 28px;
+  --v2-text-h2: 56px;
+  --v2-text-display: 104px;
+
+  /* spacing & shape */
+  --v2-spacing-gutter: 64px;
+  --v2-radius-sm: 4px;
+  --v2-radius-pill: 999px;
+}

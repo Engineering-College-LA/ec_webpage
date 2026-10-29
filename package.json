@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
+    "dev:new": "vite --host --mode v2-dev",
     "build": "vite build",
     "build:ghpages": "BUILD_TARGET=ghpages vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",

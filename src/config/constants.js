@@ -22,7 +22,7 @@ const helpfulLinks = [
 
 const contactLinks = [
   {
-    href: "tel:+996226142222",
+    href: "https://api.whatsapp.com/send?phone=996226142222",
     label: "+996 226 14 22 22",
     labelStart: "footer.contactLinks.phone",
   },
