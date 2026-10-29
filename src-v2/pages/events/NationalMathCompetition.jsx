@@ -9,11 +9,10 @@ import {
   Headphones,
   Bot,
   Users,
-  Mail,
 } from "lucide-react";
 import Eyebrow from "../../components/ui/Eyebrow";
 
-const CONTACT_EMAIL = "info@college.edu.kg";
+const REGISTRATION_URL = "https://admission.college.edu.kg/";
 
 const ArrowIcon = ({ color = "#FFFFFF" }) => (
   <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true">
@@ -70,7 +69,9 @@ function NationalMathCompetition() {
           </p>
           <div className="flex flex-col gap-2.5 pt-2 lg:flex-row lg:gap-3">
             <a
-              href="#register"
+              href={REGISTRATION_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-center gap-2.5 rounded-v2-sm bg-v2-crimson p-4 font-v2-heading text-[15px] font-bold leading-[18px] text-v2-paper lg:px-7"
             >
               {m("hero.primaryCta")}
@@ -286,11 +287,13 @@ function NationalMathCompetition() {
           </div>
           <div className="flex flex-col gap-2.5 pt-2 lg:shrink-0 lg:items-end lg:gap-3 lg:pt-0">
             <a
-              href={`mailto:${CONTACT_EMAIL}`}
+              href={REGISTRATION_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-center gap-2.5 rounded-v2-sm bg-v2-crimson p-4 font-v2-heading text-[15px] font-bold leading-[18px] text-v2-paper lg:px-7"
             >
-              <Mail width={16} height={16} />
               {m("cta.button")}
+              <ArrowIcon />
             </a>
             <p className="font-v2-body text-[12px] leading-4 text-[#CFE0FF] lg:text-right">{m("cta.note")}</p>
           </div>
