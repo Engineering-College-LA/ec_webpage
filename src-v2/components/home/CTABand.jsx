@@ -9,7 +9,6 @@ function CTABand() {
 
   return (
     <section className="relative overflow-hidden bg-[linear-gradient(180deg,#0C1830_0%,#243F66_62%,#5A4A6A_100%)] lg:bg-[linear-gradient(180deg,#152235_0%,#223759_62%,#2E4A52_100%)]">
-      <div className="relative mx-auto flex max-w-[1440px] flex-col items-center gap-4 px-5 pt-14 pb-24 text-center lg:gap-[22px] lg:px-v2-gutter lg:pt-24 lg:pb-[170px]">
       {/* Mobile ridge */}
       <svg
         width="390"
@@ -45,6 +44,7 @@ function CTABand() {
           fill="#08121F"
         />
       </svg>
+      <div className="relative mx-auto flex max-w-[1440px] flex-col items-center gap-4 px-5 pt-14 pb-24 text-center lg:gap-[22px] lg:px-v2-gutter lg:pt-24 lg:pb-[170px]">
       <div className="relative font-v2-heading text-[9px] font-semibold leading-3 tracking-[0.26em] text-[#8FA3CC] lg:text-[11px] lg:leading-[14px] lg:tracking-[0.28em]">
         {t("v2.home.cta.eyebrow")}
       </div>

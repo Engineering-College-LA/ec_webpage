@@ -1,14 +1,33 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { partners } from "../../config/partners";
 
-const logos = [
-  { src: "https://app.paper.design/file-assets/01M3BYQQM7968GE3HW5M38VWAW/35QGQNDJFG8C58V16QBRRKGAXJ.png", w: 144, h: 53, mw: 96, mh: 36 },
-  { src: "https://app.paper.design/file-assets/01M3BYQQM7968GE3HW5M38VWAW/4YEPPCQMK9W17KCKC4RDN03Y17.png", w: 84, h: 84, mw: 56, mh: 56 },
-  { src: "https://app.paper.design/file-assets/01M3BYQQM7968GE3HW5M38VWAW/1RNZF3AV7K6AMZ09WP1M28QJH1.png", w: 72, h: 72, mw: 48, mh: 48 },
-  { src: "https://app.paper.design/file-assets/01M3BYQQM7968GE3HW5M38VWAW/0V1JPHDKTG6556651N7SBQGE9J.png", w: 72, h: 72, mw: 48, mh: 48 },
-  { src: "https://app.paper.design/file-assets/01M3BYQQM7968GE3HW5M38VWAW/7TX58DY9GNVK5Y5WERCW71T11K.png", w: 72, h: 72, mw: 48, mh: 48 },
-  { src: "https://app.paper.design/file-assets/01M3BYQQM7968GE3HW5M38VWAW/4ERFJC3EPFY0EJC6WWV5SAFJ6N.png", w: 150, h: 56, mw: 104, mh: 40 },
-  { src: "https://app.paper.design/file-assets/01M3BYQQM7968GE3HW5M38VWAW/101718Q725SSKTHMFA2EJ6VDJF.png", w: 200, h: 50, mw: 130, mh: 34 },
-];
+// Same list as the Partners page, so both stay in sync.
+// Light (white) logos sit on a navy tile so they stay visible.
+function PartnerTile({ partner }) {
+  const { name, url, logo, light, fill } = partner;
+  const tile = `flex h-24 items-center justify-center overflow-hidden rounded-[10px] shadow-[0_10px_30px_#08121F2E] lg:h-[150px] lg:rounded-xl ${
+    light ? "bg-v2-navy" : "bg-v2-paper"
+  } ${fill ? "" : "px-5 lg:px-8"}`;
+  const img = (
+    <img
+      src={logo}
+      alt={name}
+      loading="lazy"
+      draggable={false}
+      className={fill ? "h-full w-full object-cover" : "max-h-10 max-w-full object-contain lg:max-h-[72px]"}
+    />
+  );
+  return url ? (
+    <a href={url} target="_blank" rel="noopener noreferrer" aria-label={name} className={tile}>
+      {img}
+    </a>
+  ) : (
+    <div className={tile} aria-label={name}>
+      {img}
+    </div>
+  );
+}
 
 // Transcribed from the Paper "EC Redesign" About "Partners" artboard (4BC-0).
 // Below lg ("О колледже — Mobile v3"): two-column grid of smaller tiles.
@@ -54,17 +73,14 @@ function PartnersGrid() {
           <span className="hidden lg:inline">{t("v2.about.partners.description")}</span>
         </p>
       </div>
-      <div className="relative grid grid-cols-2 gap-3 lg:flex lg:flex-wrap lg:gap-5">
-        {logos.map((logo) => (
-          <div
-            key={logo.src}
-            className="flex h-24 shrink-0 items-center justify-center rounded-[10px] bg-v2-paper shadow-[0_10px_30px_#08121F2E] lg:h-[150px] lg:w-[309px] lg:rounded-xl"
-          >
-            <img src={logo.src} alt="" style={{ width: logo.mw, height: logo.mh }} className="max-w-[80%] object-contain lg:hidden" />
-            <img src={logo.src} alt="" style={{ width: logo.w, height: logo.h }} className="hidden max-w-[70%] object-contain lg:block" />
-          </div>
+      <div className="relative grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 lg:gap-5">
+        {partners.map((partner) => (
+          <PartnerTile key={partner.name} partner={partner} />
         ))}
-        <div className="flex h-24 shrink-0 flex-col items-start justify-center gap-1 rounded-[10px] border-[1.5px] border-dashed border-white/55 px-4 lg:h-[150px] lg:w-[309px] lg:gap-2 lg:rounded-xl lg:px-6">
+        <Link
+          to="/affiliations#become-partner"
+          className="flex h-24 flex-col items-start justify-center gap-1 rounded-[10px] border-[1.5px] border-dashed border-white/55 px-4 transition-colors hover:border-white lg:h-[150px] lg:gap-2 lg:rounded-xl lg:px-6"
+        >
           <div className="font-v2-heading text-[15px] font-extrabold leading-5 text-v2-paper lg:text-[20px] lg:leading-[26px]">
             {t("v2.about.partners.becomePartnerTitle")}
           </div>
@@ -72,7 +88,7 @@ function PartnersGrid() {
             <span className="lg:hidden">{t("v2.about.partners.becomePartnerSubtitleShort")}</span>
             <span className="hidden lg:inline">{t("v2.about.partners.becomePartnerSubtitle")}</span> →
           </div>
-        </div>
+        </Link>
       </div>
       </div>
     </section>

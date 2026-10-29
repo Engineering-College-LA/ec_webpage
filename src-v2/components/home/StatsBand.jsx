@@ -18,7 +18,6 @@ function StatsBand() {
 
   return (
     <section className="relative overflow-hidden bg-v2-navy">
-      <div className="relative mx-auto max-w-[1440px] px-5 pt-7 pb-[72px] lg:px-v2-gutter lg:py-10">
         {/* Mobile ridge */}
         <svg
           width="390"
@@ -53,6 +52,7 @@ function StatsBand() {
             fill="#142541"
           />
         </svg>
+      <div className="relative mx-auto max-w-[1440px] px-5 pt-7 pb-[72px] lg:px-v2-gutter lg:py-10">
         <div className="relative z-10 grid grid-cols-2 lg:flex lg:flex-row lg:flex-wrap lg:items-center">
           {stats.map((key, i) => (
             <div
