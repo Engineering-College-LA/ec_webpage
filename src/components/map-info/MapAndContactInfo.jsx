@@ -8,16 +8,14 @@ function MapAndContactInfo() {
     <div className="page py-10 lg:py-20 px-4 sm:px-6 md:px-8 text-slate-900">
       <div className="mt-16 lg:mt-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="overflow-hidden flex justify-center">
+          <div className="overflow-hidden flex justify-center w-full">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23411.176036473382!2d74.59697851083983!3d42.82222700000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb5d3e7906179%3A0x616a2e518d03e933!2s7%D0%B0%2C%201%20Sayakbay%20Karalaev%20St%2C%20Bishkek!5e0!3m2!1sen!2skg!4v1717356369877!5m2!1sen!2skg"
               title="Location of Light Academy College in Bishkek, Kyrgyzstan"
-              width="600"
-              height="450"
               allow="fullscreen"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="rounded-lg"
+              className="w-full h-[280px] sm:h-[400px] md:h-[450px] rounded-lg border-0 shadow-sm"
             ></iframe>
           </div>
           <div>

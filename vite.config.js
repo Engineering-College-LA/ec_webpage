@@ -1,6 +1,12 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
+// Default to "/" for custom domain (college.edu.kg). Use "/ec_webpage/" for GitHub Pages
+const isGHPages =
+  process.env.GITHUB_ACTIONS === "true" ||
+  process.env.CI === "true" ||
+  process.env.BUILD_TARGET === "ghpages";
+
 // Dev-only: when running in v2-dev mode, point index.html's entry script at
 // src-v2 instead of src, so the new design serves from "/" (keeping
 // react-router's path matching correct) without touching the on-disk
@@ -24,6 +30,7 @@ function v2DevEntry() {
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: isGHPages ? "/ec_webpage/" : "/",
   plugins: [react(), v2DevEntry()],
   server: {
     watch: {

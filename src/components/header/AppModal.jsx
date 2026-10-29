@@ -3,11 +3,24 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, Apple, Play, Smartphone, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import ReactGA from "react-ga4";
 import logoWhite from "../../assets/logo-white.svg";
 
 function AppModal({ isOpen, onClose }) {
   const { t } = useTranslation();
   const overlayRef = useRef(null);
+
+  const handleStoreClick = (platform) => {
+    try {
+      ReactGA.event({
+        category: "App",
+        action: "click_app_store",
+        label: platform,
+      });
+    } catch (err) {
+      console.warn("Analytics event failed:", err);
+    }
+  };
 
   useEffect(() => {
     const handleKey = (e) => {
@@ -80,6 +93,7 @@ function AppModal({ isOpen, onClose }) {
                   href="https://apps.apple.com/ua/app/engineering-college-app/id6755540603"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => handleStoreClick("App Store")}
                   className="flex-1 flex items-center justify-center gap-2 bg-n-blue-hard hover:bg-n-blue text-white rounded-xl py-3 px-4 transition-colors"
                 >
                   <Apple className="w-5 h-5 shrink-0" />
@@ -95,6 +109,7 @@ function AppModal({ isOpen, onClose }) {
                   href="https://play.google.com/store/apps/details?id=com.aprd.studentID&hl=en"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => handleStoreClick("Google Play")}
                   className="flex-1 flex items-center justify-center gap-2 bg-n-blue-hard hover:bg-n-blue text-white rounded-xl py-3 px-4 transition-colors"
                 >
                   <Play className="w-5 h-5 shrink-0 fill-white" />

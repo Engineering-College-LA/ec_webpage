@@ -31,13 +31,16 @@ const Admission = () => {
     }
   }, [location.hash]);
 
-  const renderList = (list) => (
-    <ul className="list-disc pl-5 space-y-1">
-      {list.map((item, index) => (
-        <li key={index}>{item}</li>
-      ))}
-    </ul>
-  );
+  const renderList = (list) => {
+    if (!Array.isArray(list)) return null;
+    return (
+      <ul className="list-disc pl-5 space-y-1">
+        {list.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    );
+  };
 
   // Highlight the sub-nav button for whichever section is in view.
   useEffect(() => {
@@ -59,25 +62,29 @@ const Admission = () => {
 
   const scrollTo = (id) => {
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (el) {
+      const yOffset = window.innerWidth < 640 ? -96 : -130;
+      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
   };
 
   const sch = (key, opts) => t(`admission.scholarship.${key}`, opts);
 
   return (
-    <div className="page pt-24 text-slate-900">
-      {/* Sticky sub-navigation */}
-      <nav className="sticky top-[72px] z-30 border-b border-slate-200 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-[860px] gap-2 overflow-x-auto px-4 py-3 no-scrollbar">
+    <div className="page pt-[96px] sm:pt-[124px] text-slate-900">
+      {/* ── Fixed Sub-Navigation Bar at TOP of Screen ── */}
+      <nav className="fixed top-[56px] sm:top-[64px] left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200/80">
+        <div className="mx-auto flex max-w-[860px] gap-2 overflow-x-auto px-4 py-2.5 no-scrollbar">
           <style>{`.no-scrollbar::-webkit-scrollbar{display:none;}`}</style>
           {SECTIONS.map(({ id, label }) => (
             <button
               key={id}
               onClick={() => scrollTo(id)}
-              className={`whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+              className={`whitespace-nowrap rounded-full px-4 py-1.5 text-xs sm:text-sm font-semibold transition-all duration-200 ${
                 active === id
-                  ? "bg-n-blue text-white"
-                  : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                  ? "bg-n-blue text-white shadow-sm"
+                  : "bg-slate-100/90 text-slate-600 hover:bg-slate-200 hover:text-slate-900"
               }`}
             >
               {t(label)}
@@ -158,7 +165,7 @@ const Admission = () => {
         <section id="scholarships" className="scroll-mt-[150px] pt-12">
           <h3 className="page-subtitle">{sch("title")}</h3>
           <div className="page-paragraph space-y-3">
-            {sch("intro", { returnObjects: true }).map((p, i) => (
+            {(Array.isArray(sch("intro", { returnObjects: true })) ? sch("intro", { returnObjects: true }) : []).map((p, i) => (
               <p key={i}>{p}</p>
             ))}
           </div>
@@ -175,7 +182,7 @@ const Admission = () => {
             {sch("howToTitle")}
           </h4>
           <div className="mt-2 space-y-3">
-            {sch("howToText", { returnObjects: true }).map((p, i) => (
+            {(Array.isArray(sch("howToText", { returnObjects: true })) ? sch("howToText", { returnObjects: true }) : []).map((p, i) => (
               <p key={i}>{p}</p>
             ))}
           </div>
@@ -184,7 +191,7 @@ const Admission = () => {
             {sch("importantTitle")}
           </h4>
           <div className="mt-2 space-y-3">
-            {sch("importantText", { returnObjects: true }).map((p, i) => (
+            {(Array.isArray(sch("importantText", { returnObjects: true })) ? sch("importantText", { returnObjects: true }) : []).map((p, i) => (
               <p key={i}>{p}</p>
             ))}
           </div>
@@ -192,7 +199,7 @@ const Admission = () => {
           <div className="mt-6 rounded-xl border border-n-bluish-50 bg-n-blue-light p-5">
             <h4 className="font-semibold text-slate-800">{sch("moreTitle")}</h4>
             <div className="mt-2 space-y-3">
-              {sch("moreText", { returnObjects: true }).map((p, i) => (
+              {(Array.isArray(sch("moreText", { returnObjects: true })) ? sch("moreText", { returnObjects: true }) : []).map((p, i) => (
                 <p key={i}>{p}</p>
               ))}
             </div>

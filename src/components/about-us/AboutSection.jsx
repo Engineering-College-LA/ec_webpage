@@ -20,7 +20,7 @@ const AboutSection = () => {
   return (
     <div className="page py-16 sm:py-24 px-4 sm:px-6 md:px-8 text-slate-900">
       <div className="flex flex-col items-center lg:flex-row justify-center gap-12">
-        <div className="w-full max-w-[600px] h-[400px] p-1.5 bg-white shadow-custom rounded-2xl">
+        <div className="w-full max-w-[600px] h-[220px] sm:h-[320px] md:h-[400px] p-1.5 bg-white shadow-custom rounded-2xl">
           <div className="w-full h-full bg-mission bg-no-repeat bg-cover bg-center rounded-2xl"></div>
         </div>
         <div className="w-full max-w-[500px]">

@@ -37,13 +37,15 @@ const DesktopNav = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="hidden lg:flex gap-x-6 lg:gap-x-8 font-medium items-center text-center">
+    <div className="hidden lg:flex items-center gap-x-3 lg:gap-x-5 xl:gap-x-7 font-medium text-center">
       {navLinks.map((link) => (
         <NavLink
           key={link.label}
           to={link.to}
           className={({ isActive }) =>
-            isActive ? "text-n-bluish-60 transition-colors" : "text-white text-sm xl:text-base"
+            `whitespace-nowrap text-xs lg:text-sm xl:text-[15px] transition-colors ${
+              isActive ? "text-n-bluish-60" : "text-white hover:text-n-bluish-50"
+            }`
           }
         >
           {t(link.label)}
@@ -58,8 +60,8 @@ function Navbar() {
 
   return (
     <>
-      <nav className="w-full flex item-center justify-between p-3 lg:px-8">
-        <Logo logoSrc={logoWhite} width={200} height={56} />
+      <nav className="w-full flex items-center justify-between py-2 px-3 lg:px-8">
+        <Logo logoSrc={logoWhite} width={180} height={48} />
         <DesktopNav />
         <div className="hidden lg:flex justify-end items-center gap-2">
           <AppButton onClick={() => setAppModalOpen(true)} />

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Hero from "../../components/hero/Hero";
 import AboutSection from "../../components/about-us/AboutSection";
+import TeachersSection from "../../components/about-us/TeachersSection";
 import ProgramsCatalog from "../../components/catalog/ProgramsCatalog";
 import FAQ from "../../components/faq/FAQ";
 import ReasonsToStudy from "../../components/reasons/ReasonsToStudy";
@@ -40,6 +41,9 @@ function Home() {
         <CEOQuote />
         {/* <QuoteSection /> */}
         <ProgramsCatalog />
+      </section>
+      <section id="teachers">
+        <TeachersSection />
       </section>
       <section id="reasons">
         <ReasonsToStudy />

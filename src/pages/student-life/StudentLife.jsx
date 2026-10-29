@@ -1,0 +1,725 @@
+import { useState, useEffect, useRef } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import ContactTelegram from "../../components/contact/ContactTelegram";
+import enactusLogo from "../../assets/enactus/enactus-logo.jpg";
+import enactusCelebration from "../../assets/enactus/enactus-celebration.jpg";
+import enactusPresentation from "../../assets/enactus/enactus-presentation.jpg";
+import {
+  Users,
+  Code2,
+  Trophy,
+  HeartHandshake,
+  Sparkles,
+  ArrowRight,
+  CheckCircle2,
+  ShieldCheck,
+  Award,
+  Crown,
+  Briefcase,
+  GraduationCap,
+  Trees,
+  Palette,
+  Dumbbell,
+  Target,
+  Zap,
+  X,
+  Send,
+  ExternalLink,
+  ChevronRight,
+  UserCheck,
+} from "lucide-react";
+
+/* ─── FULL ORGANIZATIONS DATA ─── */
+// NOTE FOR DEVELOPERS: To replace the registration links for any club, edit the `joinUrl` property below!
+const CLUBS_DATA = [
+  {
+    id: "support-center",
+    titleRu: "Центр поддержки и благополучия студентов",
+    titleEn: "Student Support & Wellbeing Center",
+    tagRu: "Забота & Конфиденциальность",
+    tagEn: "Care & Confidentiality",
+    icon: HeartHandshake,
+    accentColor: "from-[#1C3C71] via-blue-800 to-indigo-900",
+    badgeBg: "bg-blue-50 text-blue-700 border-blue-200",
+    // EDIT THIS PROPERTY TO CHANGE REAL REGISTRATION LINK:
+    joinUrl: "", // e.g. "https://t.me/ec_support_bot" or "https://forms.gle/..." (leave empty to open pop-up modal)
+    coverImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
+    photos: [
+      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=500&q=80",
+    ],
+    subtitleRu: "Забота о психологическом, эмоциональном и социальном благополучии каждого студента",
+    subtitleEn: "Caring for the psychological, emotional, and social wellbeing of every student",
+    introRu: "Обучение в колледже — это не только новые знания и профессиональные навыки, но и важный этап взросления. Центр поддержки и благополучия студентов Engineering College Light Academy помогает учащимся адаптироваться к учебной среде, справляться с трудностями и уверенно двигаться к своим образовательным и карьерным целям.",
+    introEn: "College education is not only about gaining knowledge and professional skills, but also an important phase of personal growth. The Student Support & Wellbeing Center at E|C helps students adapt, navigate challenges, and move confidently toward their goals.",
+    quoteRu: "Каждый студент может обратиться за индивидуальной и конфиденциальной поддержкой в течение всего периода обучения — не только в кризисной ситуации, но и тогда, когда необходим совет или внимание.",
+    quoteEn: "Every student can reach out for confidential individual support throughout their studies — not only during crisis situations, but whenever advice or guidance is needed.",
+    servicesRu: [
+      {
+        title: "Психологическая и эмоциональная поддержка",
+        desc: "Специалисты помогают справляться с учебным стрессом, эмоциональным напряжением, сложностями в общении и личными переживаниями.",
+      },
+      {
+        title: "Адаптация к обучению",
+        desc: "Поддержка в период поступления, помощь в привыкании к интенсивной программе, англоязычной академической среде и новым требованиям.",
+      },
+      {
+        title: "Предупреждение учебных трудностей",
+        desc: "Взаимодействие с преподавателями и Отделом по работе со студентами для своевременного выявления ситуаций, требующих помощи.",
+      },
+      {
+        title: "Развитие полезных навыков (Soft Skills)",
+        desc: "Практикумы по управлению стрессом, эмоциональной устойчивости, тайм-менеджменту, самоуправлению и взаимной поддержке.",
+      },
+      {
+        title: "Поддержка родителей",
+        desc: "Доверительный канал связи между колледжем и родителями. Соблюдение баланса между поддержкой и правом студента на конфиденциальность.",
+      },
+      {
+        title: "Помощь в выборе будущей профессии",
+        desc: "Понимание сильных сторон, подходящих специализаций, профессиональных траекторий и требований современной IT-индустрии.",
+      },
+    ],
+    servicesEn: [
+      {
+        title: "Psychological & Emotional Support",
+        desc: "Specialists help manage study stress, emotional tension, interpersonal challenges, and personal concerns.",
+      },
+      {
+        title: "Academic Adaptation",
+        desc: "Support during admission and adjustment to intensive coursework, English-speaking academic environment, and new requirements.",
+      },
+      {
+        title: "Prevention of Academic Difficulties",
+        desc: "Collaboration with faculty and Student Affairs to proactively identify situations requiring assistance.",
+      },
+      {
+        title: "Soft Skills Development",
+        desc: "Workshops on stress management, emotional resilience, time management, self-governance, and peer support.",
+      },
+      {
+        title: "Parental Engagement",
+        desc: "Trusted communication line between the college and parents, balancing support with student privacy.",
+      },
+      {
+        title: "Career & Specialty Guidance",
+        desc: "Understanding individual strengths, suitable specializations, career pathways, and modern IT industry expectations.",
+      },
+    ],
+    confidentialityRu: "Все обращения студентов рассматриваются конфиденциально с соблюдением законодательства КР. Центр работает независимо от дисциплинарных процедур: обращение НЕ влияет на оценки или академический статус.",
+    ctaBtnRu: "Записаться на консультацию",
+    ctaBtnEn: "Book a Consultation",
+  },
+  {
+    id: "enactus",
+    titleRu: "Enactus Engineering College",
+    titleEn: "Enactus Engineering College",
+    tagRu: "Лидерство & Соцпредпринимательство",
+    tagEn: "Leadership & Social Entrepreneurship",
+    icon: Sparkles,
+    logo: enactusLogo,
+    accentColor: "from-amber-600 via-orange-600 to-amber-700",
+    badgeBg: "bg-amber-50 text-amber-700 border-amber-200",
+    // EDIT THIS PROPERTY TO CHANGE REAL REGISTRATION LINK:
+    joinUrl: "", // e.g. "https://enactus.kg" or "https://forms.gle/..." (leave empty to open pop-up modal)
+    coverImage: enactusLogo,
+    photos: [
+      enactusCelebration,
+      enactusPresentation,
+    ],
+    subtitleRu: "Путь к лидерству, социальному предпринимательству и реальным проектам",
+    subtitleEn: "Path to leadership, social entrepreneurship, and real-world projects",
+    introRu: "Enactus — это международная некоммерческая организация, объединяющая студентов более чем из 30 стран. Участники создают собственные социальные и бизнес-проекты, развивают предпринимательское мышление и защищают честь колледжа на национальных соревнованиях и Enactus World Cup.",
+    introEn: "Enactus is an international non-profit organization uniting students from over 30 countries. Members build social startups, develop entrepreneurial mindsets, and represent the college at National & World Cups.",
+    achievementBadgeRu: "🏆 Награда «Прорыв года» — один из лучших результатов за наиболее короткий период развития на национальном уровне!",
+    achievementBadgeEn: "🏆 'Breakthrough of the Year' Award — one of the best national results in a record timeframe!",
+    highlightsRu: [
+      "Разработка и запуск реальных бизнес-стартапов",
+      "Участие в Национальном кубке и Enactus World Cup",
+      "Тренинги по питчингу, финансовому моделированию и PM",
+      "Нетворкинг с топ-предпринимателями и экспертами КР",
+      "Выездные тимбилдинги, мастер-классы и тренинги",
+    ],
+    highlightsEn: [
+      "Building & launching real business startups",
+      "Participating in National Cup & Enactus World Cup",
+      "Workshops on pitching, financial modeling & PM",
+      "Networking with top Kyrgyz & international entrepreneurs",
+      "Off-site teambuildings, masterclasses & bootcamps",
+    ],
+    careersRu: [
+      "Project Management",
+      "Product Management",
+      "Business Development",
+      "Marketing & PR",
+      "Entrepreneurship",
+      "Finance & Data Analytics",
+      "UX/UI Design",
+      "Software Engineering",
+    ],
+    ctaBtnRu: "Присоединиться к Enactus",
+    ctaBtnEn: "Join Enactus",
+  },
+  {
+    id: "student-council",
+    titleRu: "Студенческий парламент",
+    titleEn: "Student Parliament",
+    tagRu: "Голос студентов & Самоуправление",
+    tagEn: "Student Voice & Governance",
+    icon: Users,
+    accentColor: "from-purple-700 via-indigo-800 to-purple-950",
+    badgeBg: "bg-purple-50 text-purple-700 border-purple-200",
+    // EDIT THIS PROPERTY TO CHANGE REAL REGISTRATION LINK:
+    joinUrl: "", // e.g. "https://t.me/ec_parliament_bot" or "https://forms.gle/..." (leave empty to open pop-up modal)
+    coverImage: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80",
+    photos: [
+      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=500&q=80",
+    ],
+    subtitleRu: "Голос студентов. Пространство для инициатив. Возможность влиять на жизнь колледжа.",
+    subtitleEn: "The voice of students. Space for initiative. Opportunity to influence campus life.",
+    introRu: "Студенческий парламент — орган студенческого самоуправления, представляющий интересы учащихся перед администрацией. Парламент организует крупные мероприятия, поддерживает инициативы и развивает культуру лидерства.",
+    introEn: "The Student Parliament is the self-governing body representing student interests to administration, organizing major events, and fostering campus leadership.",
+    ministriesRu: [
+      {
+        role: "Президент",
+        icon: Crown,
+        color: "text-amber-500",
+        desc: "Руководит парламентом, определяет приоритеты, координирует работу министерств и представляет студентов перед руководством колледжа.",
+      },
+      {
+        role: "Вице-президент",
+        icon: ShieldCheck,
+        color: "text-indigo-500",
+        desc: "Помогает президенту, контролирует выполнение решений, организует календарь мероприятий и совместные проекты.",
+      },
+      {
+        role: "Министр спорта",
+        icon: Dumbbell,
+        color: "text-emerald-500",
+        desc: "Организует спортивные турниры, марафоны, формирует сборные команды колледжа и популяризирует здоровый образ жизни.",
+      },
+      {
+        role: "Министр культуры",
+        icon: Palette,
+        color: "text-rose-500",
+        desc: "Отвечает за концерты, тематические вечера, День открытых дверей, музыкальные, танцевальные и творческие инициативы.",
+      },
+      {
+        role: "Министр образования",
+        icon: GraduationCap,
+        color: "text-blue-500",
+        desc: "Представляет академические интересы, содействует мастер-классам, олимпиадам, связывает студентов с DevClub и ICPC.",
+      },
+      {
+        role: "Министр экологии",
+        icon: Trees,
+        color: "text-teal-500",
+        desc: "Развивает экологическую культуру, сортировку отходов, проводит акции по озеленению, субботники и волонтерские проекты.",
+      },
+    ],
+    ministriesEn: [
+      {
+        role: "President",
+        icon: Crown,
+        color: "text-amber-500",
+        desc: "Leads the parliament, sets strategic priorities, coordinates executive ministries, and represents student interests to college leadership.",
+      },
+      {
+        role: "Vice President",
+        icon: ShieldCheck,
+        color: "text-indigo-500",
+        desc: "Assists the president, oversees execution of decisions, manages the campus event calendar and joint projects.",
+      },
+      {
+        role: "Minister of Sports",
+        icon: Dumbbell,
+        color: "text-emerald-500",
+        desc: "Organizes sports tournaments, marathons, forms varsity college teams, and promotes a healthy lifestyle.",
+      },
+      {
+        role: "Minister of Culture",
+        icon: Palette,
+        color: "text-rose-500",
+        desc: "Oversees concerts, themed evenings, Open Days, music, dance, and creative performing arts initiatives.",
+      },
+      {
+        role: "Minister of Education",
+        icon: GraduationCap,
+        color: "text-blue-500",
+        desc: "Represents academic interests, facilitates workshops, olympiads, and bridges students with DevClub and ICPC.",
+      },
+      {
+        role: "Minister of Ecology",
+        icon: Trees,
+        color: "text-teal-500",
+        desc: "Promotes environmental sustainability, waste sorting, campus greening campaigns, community cleanups, and volunteer projects.",
+      },
+    ],
+    ctaBtnRu: "Подать заявку в Парламент",
+    ctaBtnEn: "Apply for Parliament",
+  },
+  {
+    id: "devclub",
+    titleRu: "DevClub Engineering College",
+    titleEn: "DevClub Engineering College",
+    tagRu: "От кода к IT-продуктам",
+    tagEn: "From Code to IT Products",
+    icon: Code2,
+    accentColor: "from-cyan-600 via-blue-700 to-cyan-900",
+    badgeBg: "bg-cyan-50 text-cyan-700 border-cyan-200",
+    // EDIT THIS PROPERTY TO CHANGE REAL REGISTRATION LINK:
+    joinUrl: "", // e.g. "https://t.me/ec_devclub" or "https://forms.gle/..." (leave empty to open pop-up modal)
+    coverImage: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80",
+    photos: [
+      "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=500&q=80",
+    ],
+    subtitleRu: "От учебного кода — к реальным IT-проектам при поддержке APRD",
+    subtitleEn: "From classroom code to production IT products supported by APRD",
+    introRu: "DevClub — студенческое сообщество для тех, кто хочет создавать реальные цифровые продукты. Участники проходят весь цикл разработки: от требований и архитектуры до код-ревью, тестирования и релиза.",
+    introEn: "DevClub is a student engineering community creating real digital products, walking through the entire SDLC: requirements, architecture, code reviews, testing, and production deployment.",
+    aprdCardRu: {
+      title: "🚀 Поддержка компании APRD",
+      desc: "APRD предоставляет участникам DevClub структурированные практические стажировки, коммерческие задачи, профессиональное наставничество от Senior-разработчиков и проекты с возможностью внедрения.",
+    },
+    aprdCardEn: {
+      title: "🚀 Industry Support by APRD",
+      desc: "APRD provides DevClub members with structured internships, commercial project tasks, Senior Engineer mentorship, and production-ready project deployment.",
+    },
+    workflowRu: [
+      "1. Формирование команды и выбор проекта",
+      "2. Анализ требований и архитектуры",
+      "3. Спринты разработки и код-ревью",
+      "4. Тестирование, доработка и рефакторинг",
+      "5. Презентация и запуск готового продукта",
+    ],
+    workflowEn: [
+      "1. Team Formation & Project Selection",
+      "2. Requirements Analysis & Architecture",
+      "3. Development Sprints & Code Reviews",
+      "4. Testing, Refactoring & Quality Assurance",
+      "5. Product Presentation & Production Launch",
+    ],
+    ctaBtnRu: "Присоединиться к DevClub",
+    ctaBtnEn: "Join DevClub",
+  },
+  {
+    id: "icpc",
+    titleRu: "ICPC Club — Олимпиадное программирование",
+    titleEn: "ICPC Club — Competitive Programming",
+    tagRu: "Алгоритмы & Победы",
+    tagEn: "Algorithms & Contests",
+    icon: Trophy,
+    accentColor: "from-emerald-600 via-teal-700 to-slate-900",
+    badgeBg: "bg-emerald-50 text-emerald-700 border-emerald-200",
+    // EDIT THIS PROPERTY TO CHANGE REAL REGISTRATION LINK:
+    joinUrl: "", // e.g. "https://t.me/ec_icpc_club" or "https://forms.gle/..." (leave empty to open pop-up modal)
+    coverImage: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
+    photos: [
+      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=500&q=80",
+    ],
+    subtitleRu: "Путь к международным соревнованиям и карьере в мировых IT-гигантах",
+    subtitleEn: "Path to international contests and careers at global tech leaders",
+    introRu: "ICPC (International Collegiate Programming Contest) — крупнейшее международное соревнование по алгоритмическому программированию. ICPC Club при E|C готовит студентов по методике Implementation First.",
+    introEn: "ICPC is the world's premier competitive programming contest. The ICPC Club at E|C prepares students using the Implementation First methodology.",
+    levelsRu: [
+      {
+        div: "Div 3 — Начинающий",
+        desc: "Синтаксис, условия, циклы, массивы, симуляции и базовый перебор. Самостоятельное решение задач.",
+      },
+      {
+        div: "Div 2 — Средний",
+        desc: "Структуры данных, алгоритмы на графах, бинарный поиск, динамическое программирование (DP).",
+      },
+      {
+        div: "Div 1 — Продвинутый",
+        desc: "Сложная олимпиадная математика, продвинутые структуры данных, командная стратегия на ICPC Regionals.",
+      },
+    ],
+    levelsEn: [
+      {
+        div: "Div 3 — Beginner",
+        desc: "Syntax, conditions, loops, arrays, simulations, and basic brute-force problem solving.",
+      },
+      {
+        div: "Div 2 — Intermediate",
+        desc: "Data structures, graph algorithms, binary search, dynamic programming (DP).",
+      },
+      {
+        div: "Div 1 — Advanced",
+        desc: "Advanced competitive math, complex data structures, and team strategy for ICPC Regionals.",
+      },
+    ],
+    modelRu: "⚡ Модель обучения «2+1»: 2 тематических занятия в неделю + 1 тренировочный контест по выходным с обязательным разбором и upsolving.",
+    modelEn: "⚡ '2+1' Training Model: 2 weekly core lectures + 1 weekend practice contest with mandatory solution analysis & upsolving.",
+    ctaBtnRu: "Присоединиться к ICPC Club",
+    ctaBtnEn: "Join ICPC Club",
+  },
+];
+
+export default function StudentLife() {
+  const { clubId } = useParams();
+  const navigate = useNavigate();
+  const { i18n } = useTranslation();
+  const lang = i18n.language?.startsWith("ru") ? "ru" : "en";
+
+  const [activeTab, setActiveTab] = useState(clubId || "support-center");
+
+  const navContainerRef = useRef(null);
+  const isManualClickRef = useRef(false);
+
+  useEffect(() => {
+    if (clubId && CLUBS_DATA.some((c) => c.id === clubId)) {
+      setActiveTab(clubId);
+      const element = document.getElementById(clubId);
+      if (element) {
+        const yOffset = window.innerWidth < 640 ? -96 : -130;
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }
+  }, [clubId]);
+
+  // Robust scroll listener to track current active section accurately during manual scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isManualClickRef.current) return;
+
+      const scrollPosition = window.scrollY + 200;
+      let currentSection = CLUBS_DATA[0].id;
+
+      for (const club of CLUBS_DATA) {
+        const el = document.getElementById(club.id);
+        if (el) {
+          const top = el.offsetTop;
+          if (scrollPosition >= top) {
+            currentSection = club.id;
+          }
+        }
+      }
+
+      setActiveTab(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Auto-scroll active tab pill inside the top sub-nav bar so it follows movement
+  useEffect(() => {
+    if (navContainerRef.current) {
+      const activeBtn = navContainerRef.current.querySelector(`[data-tab="${activeTab}"]`);
+      if (activeBtn) {
+        activeBtn.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      }
+    }
+  }, [activeTab]);
+
+  const handleTabChange = (tabId) => {
+    setActiveTab(tabId);
+    isManualClickRef.current = true;
+
+    if (tabId === "all") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const element = document.getElementById(tabId);
+      if (element) {
+        const yOffset = window.innerWidth < 640 ? -96 : -130;
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }
+
+    setTimeout(() => {
+      isManualClickRef.current = false;
+    }, 850);
+  };
+
+  // Click handler for Join buttons: opens external joinUrl or scrolls to bottom join section
+  const handleJoinClick = (club) => {
+    if (club.joinUrl && club.joinUrl.trim() !== "" && club.joinUrl !== "#") {
+      window.open(club.joinUrl, "_blank", "noopener,noreferrer");
+    } else {
+      navigate("/#contact");
+    }
+  };
+
+  return (
+    <div className="page pt-[96px] sm:pt-[124px] pb-16 text-slate-900">
+      {/* ── Fixed Sub-Navigation Bar at TOP of Screen ── */}
+      <nav className="fixed top-[56px] sm:top-[64px] left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200/80">
+        <div ref={navContainerRef} className="max-w-5xl mx-auto flex items-center gap-2 overflow-x-auto px-4 sm:px-6 lg:px-8 py-2.5 no-scrollbar">
+          <style>{`.no-scrollbar::-webkit-scrollbar{display:none;}`}</style>
+          {CLUBS_DATA.map((c) => (
+            <button
+              key={c.id}
+              data-tab={c.id}
+              onClick={() => handleTabChange(c.id)}
+              className={`whitespace-nowrap rounded-full px-4 py-1.5 text-xs sm:text-sm font-semibold transition-all duration-200 ${
+                activeTab === c.id
+                  ? "bg-n-blue text-white shadow-sm"
+                  : "bg-slate-100/90 text-slate-600 hover:bg-slate-200 hover:text-slate-900"
+              }`}
+            >
+              {c.id === "support-center"
+                ? lang === "ru" ? "Центр поддержки" : "Support Center"
+                : c.id === "enactus"
+                ? "Enactus Engineering"
+                : c.id === "student-council"
+                ? lang === "ru" ? "Студенческий парламент" : "Student Parliament"
+                : c.id === "devclub"
+                ? "DevClub Engineering"
+                : "ICPC Club"}
+            </button>
+          ))}
+        </div>
+      </nav>
+
+      {/* ── Main Container ── */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* ── Organization Cards & Sections (Full Continuous Feed) ── */}
+        <div className="space-y-16">
+          {CLUBS_DATA.map((club) => {
+            const IconComp = club.icon;
+            const title = lang === "ru" ? club.titleRu : club.titleEn;
+            const subtitle = lang === "ru" ? club.subtitleRu : club.subtitleEn;
+            const intro = lang === "ru" ? club.introRu : club.introEn;
+            const tag = lang === "ru" ? club.tagRu : club.tagEn;
+            const ctaBtn = lang === "ru" ? club.ctaBtnRu : club.ctaBtnEn;
+
+            return (
+              <div
+                key={club.id}
+                id={club.id}
+                className="scroll-mt-36 bg-white rounded-3xl border border-slate-200 shadow-custom overflow-hidden transition-all hover:shadow-xl"
+              >
+                {/* Header Banner */}
+                <div className={`bg-gradient-to-r ${club.accentColor} p-6 sm:p-10 text-white relative overflow-hidden`}>
+                  <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div className="space-y-3 max-w-3xl">
+                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-xs font-semibold uppercase tracking-wider text-white border border-white/20">
+                        <IconComp className="w-4 h-4" />
+                        <span>{tag}</span>
+                      </div>
+                      <h2 className="text-2xl sm:text-4xl font-extrabold leading-tight">
+                        {title}
+                      </h2>
+                      <p className="text-sm sm:text-base text-slate-200 font-medium">
+                        {subtitle}
+                      </p>
+                    </div>
+
+                    {club.logo && (
+                      <div className="shrink-0 hidden sm:flex items-center justify-center">
+                        <img
+                          src={club.logo}
+                          alt={title}
+                          className="w-20 h-20 md:w-24 md:h-24 rounded-2xl object-contain shadow-2xl border-2 border-white/30 bg-[#2f3743]"
+                        />
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Body Content */}
+                <div className="p-6 sm:p-10 space-y-8">
+                  {/* Photo & Intro Section */}
+                  <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                    <div className="md:col-span-8 space-y-4">
+                      <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-normal">
+                        {intro}
+                      </p>
+                    </div>
+                    
+                    {/* Organization Main Image Thumbnail */}
+                    <div className={`md:col-span-4 overflow-hidden rounded-2xl border border-slate-200 shadow-sm relative group ${club.coverImage === enactusLogo ? "bg-[#333d4b] flex items-center justify-center p-3" : "bg-slate-900"}`}>
+                      <img
+                        src={club.coverImage}
+                        alt={title}
+                        className={`w-full h-48 sm:h-52 ${club.coverImage === enactusLogo ? "object-contain" : "object-cover"} transition-transform duration-500 group-hover:scale-105`}
+                        onError={(e) => {
+                          e.target.src = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=500&q=80";
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Photo Gallery Grid */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                    {club.photos.map((imgUrl, imgIdx) => (
+                      <div key={imgIdx} className="overflow-hidden rounded-2xl border border-slate-200 h-44 sm:h-56 relative group bg-slate-900">
+                        <img
+                          src={imgUrl}
+                          alt={`${title} photo ${imgIdx + 1}`}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          onError={(e) => {
+                            e.target.src = "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=500&q=80";
+                          }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* ── 1. Support Center Specific View ── */}
+                  {club.id === "support-center" && (
+                    <div className="space-y-8 pt-4">
+                      <div className="p-5 rounded-2xl bg-blue-50/80 border border-blue-100 text-blue-900 font-medium italic text-sm sm:text-base">
+                        💬 "{lang === "ru" ? club.quoteRu : club.quoteEn}"
+                      </div>
+
+                      <div>
+                        <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+                          <Target className="w-5 h-5 text-blue-600" />
+                          <span>{lang === "ru" ? "Чем мы помогаем студентам:" : "Services Offered:"}</span>
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                          {(lang === "ru" ? club.servicesRu : club.servicesEn || []).map((srv, idx) => (
+                            <div key={idx} className="p-5 rounded-2xl bg-slate-50 border border-slate-200/70 space-y-2 hover:border-blue-300 transition-colors">
+                              <h4 className="font-bold text-slate-800 text-sm sm:text-base">{srv.title}</h4>
+                              <p className="text-xs sm:text-sm text-slate-600 leading-normal">{srv.desc}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                    </div>
+                  )}
+
+                  {/* ── 2. Enactus Specific View ── */}
+                  {club.id === "enactus" && (
+                    <div className="space-y-8 pt-4">
+                      {/* Achievement Banner */}
+                      <div className="p-5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-amber-500/10 border border-amber-300 text-amber-900 font-bold text-sm sm:text-base flex items-center gap-3">
+                        <Award className="w-6 h-6 text-amber-600 shrink-0" />
+                        <span>{lang === "ru" ? club.achievementBadgeRu : club.achievementBadgeEn}</span>
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                          <h3 className="text-base font-bold text-slate-900 mb-3 flex items-center gap-2">
+                            <CheckCircle2 className="w-5 h-5 text-amber-600" />
+                            <span>{lang === "ru" ? "Возможности для участников:" : "Member Opportunities:"}</span>
+                          </h3>
+                          <ul className="space-y-2.5">
+                            {(lang === "ru" ? club.highlightsRu : club.highlightsEn || []).map((item, idx) => (
+                              <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700 font-medium">
+                                <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" />
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div>
+                          <h3 className="text-base font-bold text-slate-900 mb-3 flex items-center gap-2">
+                            <Briefcase className="w-5 h-5 text-amber-600" />
+                            <span>{lang === "ru" ? "Карьерные направления:" : "Career Pathways:"}</span>
+                          </h3>
+                          <div className="flex flex-wrap gap-2">
+                            {(lang === "ru" ? club.careersRu : club.careersEn || []).map((car, idx) => (
+                              <span key={idx} className="px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-800 text-xs font-semibold">
+                                {car}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* ── 3. Student Parliament Specific View ── */}
+                  {club.id === "student-council" && (
+                    <div className="space-y-8 pt-4">
+                      <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+                        <Crown className="w-5 h-5 text-purple-600" />
+                        <span>{lang === "ru" ? "Структура Студенческого парламента:" : "Parliament Leadership & Ministries:"}</span>
+                      </h3>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {(lang === "ru" ? club.ministriesRu : club.ministriesEn || []).map((min, idx) => {
+                          const MinIcon = min.icon;
+                          return (
+                            <div key={idx} className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 hover:border-purple-300 transition-colors">
+                              <div className="flex items-center gap-2">
+                                <MinIcon className={`w-5 h-5 ${min.color}`} />
+                                <h4 className="font-extrabold text-slate-900 text-base">{min.role}</h4>
+                              </div>
+                              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{min.desc}</p>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* ── 4. DevClub Specific View ── */}
+                  {club.id === "devclub" && (
+                    <div className="space-y-8 pt-4">
+                      {/* APRD Card */}
+                      <div className="p-6 rounded-2xl bg-gradient-to-r from-cyan-900 to-blue-900 text-white space-y-2">
+                        <div className="font-bold text-cyan-300 text-lg">
+                          {(lang === "ru" ? club.aprdCardRu : club.aprdCardEn || club.aprdCardRu).title}
+                        </div>
+                        <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                          {(lang === "ru" ? club.aprdCardRu : club.aprdCardEn || club.aprdCardRu).desc}
+                        </p>
+                      </div>
+
+                      <div>
+                        <h3 className="text-base font-bold text-slate-900 mb-3 flex items-center gap-2">
+                          <Zap className="w-5 h-5 text-cyan-600" />
+                          <span>{lang === "ru" ? "Этапы разработки продуктов:" : "Product SDLC Stages:"}</span>
+                        </h3>
+                        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+                          {(lang === "ru" ? club.workflowRu : club.workflowEn || []).map((step, idx) => (
+                            <div key={idx} className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-center font-medium text-xs text-slate-700">
+                              {step}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* ── 5. ICPC Specific View ── */}
+                  {club.id === "icpc" && (
+                    <div className="space-y-8 pt-4">
+                      <div className="p-5 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-950 font-medium text-xs sm:text-sm">
+                        {lang === "ru" ? club.modelRu : club.modelEn || club.modelRu}
+                      </div>
+
+                      <div>
+                        <h3 className="text-base font-bold text-slate-900 mb-3 flex items-center gap-2">
+                          <Trophy className="w-5 h-5 text-emerald-600" />
+                          <span>{lang === "ru" ? "3 Уровня подготовки:" : "3 Division Levels:"}</span>
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                          {(lang === "ru" ? club.levelsRu : club.levelsEn || []).map((lvl, idx) => (
+                            <div key={idx} className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+                              <h4 className="font-extrabold text-emerald-700 text-base">{lvl.div}</h4>
+                              <p className="text-xs sm:text-sm text-slate-600 leading-normal">{lvl.desc}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* ── CRM APPLICATION BLOCK ── */}
+      <ContactTelegram />
+    </div>
+  );
+}

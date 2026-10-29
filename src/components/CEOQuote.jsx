@@ -11,7 +11,7 @@ const CEOQuote = () => {
           <div className="absolute -inset-4 border-2 border-dashed border-n-blue/30 rounded-full animate-[spin_20s_linear_infinite] group-hover:border-n-blue/60 transition-colors"></div>
 
           {/* Main Circular Container */}
-          <div className="relative z-10 w-64 h-64 sm:w-80 sm:h-80 md:w-[400px] md:h-[400px] p-2 bg-white shadow-custom rounded-full">
+          <div className="relative z-10 w-52 h-52 sm:w-80 sm:h-80 md:w-[400px] md:h-[400px] p-2 bg-white shadow-custom rounded-full">
             <div className="w-full h-full bg-quote bg-no-repeat bg-cover bg-top rounded-full border-4 border-slate-50">
               <div className="w-full h-full rounded-full shadow-[inset_0_2px_10px_rgba(0,0,0,0.1)]"></div>
             </div>
