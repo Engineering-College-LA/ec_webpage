@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const PHOTO =
   "https://app.paper.design/file-assets/01M3BYQQM7968GE3HW5M38VWAW/1NRT7HH082XEJ9V3NQM3MYM4XC.jpg";
@@ -48,12 +49,12 @@ function StudentLifeHero() {
             </svg>
             {t("v2.studentLifeIndex.hero.primaryCta")}
           </a>
-          <a
-            href="/admissions"
+          <Link
+            to="/admissions"
             className="hidden items-center rounded-v2-sm border-[1.5px] border-white/70 px-6 py-[15px] font-v2-heading text-[15px] font-bold leading-[18px] text-v2-paper lg:flex"
           >
             {t("v2.studentLifeIndex.hero.secondaryCta")}
-          </a>
+          </Link>
         </div>
       </div>
       </div>

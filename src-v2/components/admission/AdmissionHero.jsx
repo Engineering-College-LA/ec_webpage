@@ -105,9 +105,9 @@ function AdmissionHero() {
           <div className="font-v2-heading text-[22px] font-extrabold leading-[27px] text-v2-paper">
             {t("v2.admission.hero.entryCard.title")}
           </div>
-          <a href="/#admission-contact" className="font-v2-heading text-v2-label font-bold leading-4 text-v2-paper">
+          <Link to="/#admission-contact" className="font-v2-heading text-v2-label font-bold leading-4 text-v2-paper">
             {t("v2.admission.hero.entryCard.cta")} →
-          </a>
+          </Link>
         </div>
       </div>
       </div>

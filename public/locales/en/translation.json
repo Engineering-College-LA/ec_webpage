@@ -601,6 +601,13 @@
     }
   },
   "v2": {
+    "news": {
+      "icpc2026": {
+        "tag": "ACHIEVEMENTS",
+        "title": "E|C students advance to the ICPC NERC Finals",
+        "excerpt": "Team EC_CompetitivePromptEngineers placed 12th out of 50 at ICPC Kyrgyzstan 2026 and, for the first time in the college's history, advanced to the next stage — the North Eurasia Regional Finals."
+      }
+    },
     "nav": {
       "programs": "Programs",
       "admissions": "Admissions",
@@ -1334,6 +1341,12 @@
       }
     },
     "home": {
+      "news": {
+        "eyebrow": "NEWS",
+        "titleLine1": "What's new",
+        "titleLine2": "at E|C.",
+        "readMore": "Read the story"
+      },
       "hero": {
         "eyebrow": "ENGINEERING COLLEGE · BISHKEK",
         "titleLine1": "Engineers who build,",

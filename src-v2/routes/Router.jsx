@@ -16,6 +16,7 @@ import Affiliations from "../pages/affiliations/Affiliations";
 import StudentLifeIndex from "../pages/student-life/StudentLifeIndex";
 import StudentLifeActivity from "../pages/student-life/StudentLifeActivity";
 import { programs } from "../config/programs";
+import NewsArticle from "../pages/news/NewsArticle";
 
 const ThankYou = lazy(() => import("../pages/thank-you/ThankYou"));
 const CareerTestPage = lazy(() => import("../pages/careertest/CareerTest"));
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
         element: <Admission />,
       },
       {
+        path: "/news/:slug",
+        element: <NewsArticle />,
+      },
+      {
         path: "/thank-you",
         element: <ThankYou />,
       },
@@ -81,7 +86,10 @@ const router = createBrowserRouter([
     path: "*",
     element: <NotFound />,
   },
-]);
+], {
+  // Serve under /ec_webpage/ on GitHub Pages, at the root everywhere else.
+  basename: import.meta.env.BASE_URL.replace(/\/$/, "") || "/",
+});
 
 function GAListener() {
   const location = useLocation();
