@@ -7,6 +7,7 @@ import AdmissionPath from "../../components/home/AdmissionPath";
 import Community from "../../components/home/Community";
 import Stories from "../../components/home/Stories";
 import CTABand from "../../components/home/CTABand";
+import NewsBand from "../../components/home/NewsBand";
 
 // Transcribed from the Paper "EC Redesign" Home artboard (1T8-0).
 function Home() {
@@ -32,6 +33,7 @@ function Home() {
       <AdmissionPath />
       <Community />
       <Stories />
+      <NewsBand />
       <div id="contact">
         <CTABand />
       </div>

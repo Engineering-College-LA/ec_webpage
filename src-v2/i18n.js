@@ -9,7 +9,7 @@ i18n.use(Backend).use(LanguageDetector).use(initReactI18next).init({
   backend: {
     // BASE_URL is "/" on college.edu.kg and "/ec_webpage/" on GitHub Pages.
     loadPath: `${import.meta.env.BASE_URL}locales/{{lng}}/{{ns}}.json`,
-    queryStringParams: { v: "4" },
+    queryStringParams: { v: "5" },
   },
 });
 
