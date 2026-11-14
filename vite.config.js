@@ -9,10 +9,25 @@ const isGHPages =
     process.env.CI === "true" ||
     process.env.BUILD_TARGET === "ghpages");
 
+// public/invitation/index.html is a standalone static page, not an SPA route.
+// Production serves it via public/.htaccess; this mirrors that rule in dev and preview
+// so /invitation does not fall through to the SPA's index.html.
+const serveInvitation = (server) => {
+  server.middlewares.use((req, _res, next) => {
+    if (/^\/invitation\/?(\?.*)?$/.test(req.url)) req.url = "/invitation/index.html";
+    next();
+  });
+};
+const invitationPage = {
+  name: "invitation-static-page",
+  configureServer: serveInvitation,
+  configurePreviewServer: serveInvitation,
+};
+
 // https://vitejs.dev/config/
 export default defineConfig({
   base: isGHPages ? "/ec_webpage/" : "/",
-  plugins: [react()],
+  plugins: [react(), invitationPage],
   server: {
     watch: {
       usePolling: true,
