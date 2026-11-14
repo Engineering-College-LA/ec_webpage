@@ -1,4 +1,6 @@
 Options -MultiViews
 RewriteEngine On
+# Standalone static page (not part of the SPA): /invitation and /invitation/
+RewriteRule ^invitation/?$ invitation/index.html [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.html [QSA,L]
